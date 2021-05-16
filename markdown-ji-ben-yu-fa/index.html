@@ -1,0 +1,4800 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<meta name="keywords" content="张强强个人博客">
+<meta name="description" content="温故而知新">
+<meta name="theme-color" content="#000">
+<title>Markdown  | Gridea</title>
+<link rel="shortcut icon" href="/favicon.ico?v=1621183514277">
+<link rel="stylesheet" href="/media/css/muse.css">
+<link rel="stylesheet" href="/media/fonts/font-awesome.css">
+<link
+  href="//fonts.googleapis.com/css?family=Monda:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|Rosario:300,300italic,400,400italic,700,700italic|PT Mono:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext"
+  rel="stylesheet" type="text/css">
+
+<link href="/media/hljs/styles/darcula.css"
+  rel="stylesheet">
+
+<link rel="stylesheet" href="/styles/main.css">
+
+<script src="/media/hljs/highlight.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.0/velocity.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.0/velocity.ui.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css"
+  integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq" crossorigin="anonymous">
+
+
+<script>
+  window.MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ["\\(", "\\)"]],
+      displayMath: [['$$', '$$'], ["\\[", "\\]"]]
+    },
+    options: {
+      skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code', 'a', 'annotation', 'annotation-xml'],
+      ignoreHtmlClass: 'tex2jax_ignore|crayon-.*', // 'crayon-' 开头的类，属于Wordpress代码高亮库，这部分不需要处理，否则会导致显示不正确,这部分是正则式，多条之间用'|'分割
+      processHtmlClass: 'tex2jax_process'
+    },
+    //禁用右键菜单	
+    renderActions: {
+      addMenu: [0, '', '']
+    }
+  };
+</script>
+<script type="text/javascript"
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
+
+
+
+  <meta name="description" content="Markdown " />
+  <meta name="keywords" content="Markdown" />
+</head>
+
+<body>
+  <div class="head-top-line"></div>
+  <div class="header-box">
+    
+<div class="muse">
+  <header class="header bg-color ">
+    <div class="blog-header box-shadow-wrapper  " id="header">
+      <div class="nav-toggle" id="nav_toggle">
+        <div class="toggle-box">
+          <div class="line line-top"></div>
+          <div class="line line-center"></div>
+          <div class="line line-bottom"></div>
+        </div>
+      </div>
+      <div class="site-meta">       
+        <div class="site-title">
+          
+            <a href="/" class="brand">
+              <span>Gridea</span>
+            </a>  
+          
+        </div>
+        
+          <p class="subtitle">精于心，简于形</p>
+        
+      </div>
+      <nav class="site-nav" id="site_nav">
+        <ul id="nav_ul">
+          
+            
+            
+              
+            
+            <li class="nav-item ">
+              
+              
+                <a href="/" target="_self">
+                  <i class="fa fa-home"></i> 首页
+                </a>
+              
+            </li>
+          
+            
+            
+              
+            
+            <li class="nav-item ">
+              
+              
+                <a href="/archives/" target="_self">
+                  <i class="fa fa-archive"></i> 归档
+                </a>
+              
+            </li>
+          
+            
+            
+              
+            
+            <li class="nav-item ">
+              
+              
+                <a href="/tags/" target="_self">
+                  <i class="fa fa-tags"></i> 标签
+                </a>
+              
+            </li>
+          
+          
+            
+              <li class="nav-item ">
+                <a href="/friends/" target="_self">
+                  
+                    <i class="fa fa-address-book"></i> 友情链接
+                  
+                </a>
+              </li>
+            
+          
+          
+            <li id="fa_search" class="nav-item">
+              <a href="javascript:void(0);">
+                <i class="fa fa-search"></i> <span class="language" data-lan="search">搜索</span>
+              </a>
+            </li>
+          
+        </ul>
+      </nav>
+    </div>
+  </header>
+</div>
+
+<script type="text/javascript"> 
+ 
+  let showNav = true;
+
+  let navToggle = document.querySelector('#nav_toggle'),
+  siteNav = document.querySelector('#site_nav');
+  
+  function navClick() {
+    let sideBar = document.querySelector('.sidebar');
+    let navUl = document.querySelector('#nav_ul');
+    navToggle.classList.toggle('nav-toggle-active');
+    siteNav.classList.toggle('nav-menu-active');
+    if (siteNav.classList.contains('nav-menu-active')) {
+      siteNav.style = "height: " + (navUl.children.length * 42) +"px !important";
+    } else {
+      siteNav.style = "";
+    }
+  }
+
+  navToggle.addEventListener('click',navClick);  
+</script>
+  </div>
+  <div class="main-continer">
+    
+    <div
+      class="section-layout muse bg-color">
+      <div class="section-layout-wrapper">
+        
+
+<div class="sidebar">
+  
+    <div class="sidebar-box box-shadow-wrapper  right-motion" id="sidebar">
+      
+        <div class="post-list-sidebar">
+          <div class="sidebar-title">
+            <span id="tocSideBar" class="sidebar-title-item sidebar-title-active language" data-lan="index">文章目录</span>
+            <span id="metaSideBar" class="sidebar-title-item language" data-lan="preview">站点概览</span>
+          </div>
+        </div>
+      
+      <div class="sidebar-body muse" id="sidebar_body">
+        
+          
+            <div class="post-side-meta" id="post_side_meta">
+              
+<div class="sidebar-wrapper box-shadow-wrapper ">
+  <div class="sidebar-item">
+    <img class="site-author-image right-motion" src="/images/avatar.png"/>
+    <p class="site-author-name">张强强</p>
+    
+  </div>
+  <div class="sidebar-item side-item-stat right-motion">
+    <div class="sidebar-item-box">
+      <a href="/archives/">
+        
+        <span class="site-item-stat-count">37</span>
+        <span class="site-item-stat-name language" data-lan="article">文章</span>
+      </a>
+    </div>
+    <div class="sidebar-item-box">
+      <a href="">
+        <span class="site-item-stat-count">29</span>
+        <span class="site-item-stat-name language" data-lan="category">分类</span>
+      </a>
+    </div>
+    <div class="sidebar-item-box">
+      <a href="/tags/">
+        <span class="site-item-stat-count">29</span>
+        <span class="site-item-stat-name language" data-lan="tag">标签</span>
+      </a>
+    </div>
+  </div>
+  
+  
+
+
+  <div class="sidebar-item">
+    
+  </div>
+
+
+</div>
+            </div>
+            <div class="post-toc sidebar-body-active" id="post_toc" style="opacity: 1;">
+              <div class="toc-box right-motion">
+  <div class="toc-wrapper auto-number auto"
+    id="toc_wrapper">
+    <ul class="markdownIt-TOC">
+<li><a href="#%E7%AE%80%E4%BB%8B">简介</a></li>
+<li><a href="#markdown-%E5%BA%94%E7%94%A8">Markdown 应用</a></li>
+<li><a href="#markdown-%E6%A0%87%E9%A2%98">Markdown 标题</a>
+<ul>
+<li><a href="#1-%E4%BD%BF%E7%94%A8-%E5%92%8C-%E6%A0%87%E8%AE%B0%E4%B8%80%E7%BA%A7%E5%92%8C%E4%BA%8C%E7%BA%A7%E6%A0%87%E9%A2%98">1. 使用 = 和 - 标记一级和二级标题</a></li>
+<li><a href="#2-%E4%BD%BF%E7%94%A8-%E5%8F%B7%E6%A0%87%E8%AE%B0">2. 使用 # 号标记</a></li>
+</ul>
+</li>
+<li><a href="#markdown-%E6%AE%B5%E8%90%BD">Markdown 段落</a>
+<ul>
+<li><a href="#%E5%AD%97%E4%BD%93">字体</a></li>
+<li><a href="#%E5%88%86%E9%9A%94%E7%BA%BF">分隔线</a></li>
+<li><a href="#%E5%88%A0%E9%99%A4%E7%BA%BF">删除线</a></li>
+<li><a href="#%E4%B8%8B%E5%88%92%E7%BA%BF">下划线</a></li>
+<li><a href="#%E8%84%9A%E6%B3%A8">脚注</a></li>
+</ul>
+</li>
+<li><a href="#markdown-%E5%88%97%E8%A1%A8">Markdown 列表</a>
+<ul>
+<li><a href="#%E5%88%97%E8%A1%A8%E5%B5%8C%E5%A5%97">列表嵌套</a></li>
+</ul>
+</li>
+<li><a href="#markdown-%E5%8C%BA%E5%9D%97">Markdown 区块</a></li>
+<li><a href="#%E8%B6%85%E9%93%BE%E6%8E%A5">超链接</a></li>
+<li><a href="#%E8%A1%A8%E6%A0%BC">表格</a></li>
+<li><a href="#markdown-%E4%BB%A3%E7%A0%81">Markdown 代码</a>
+<ul>
+<li><a href="#%E4%BB%A3%E7%A0%81%E5%8C%BA%E5%9D%97">代码区块</a></li>
+</ul>
+</li>
+</ul>
+
+  </div>
+</div>
+
+<script>
+
+  let lastTop = 0, lList = [], hList = [], postBody, lastIndex = -1;
+  let active = 'active-show', activeClass = 'active-current';
+  let tocWrapper = document.querySelector('#toc_wrapper');
+  let tocContent = tocWrapper.children[0];
+  let autoNumber = tocWrapper && tocWrapper.classList.contains('auto-number');
+
+  function addTocNumber(elem, deep) {
+    if (!elem) {
+      return;
+    }
+    let prop = elem.__proto__;
+
+    if (prop === HTMLUListElement.prototype) {
+      for (let i = 0; i < elem.children.length; i++) {
+        addTocNumber(elem.children[i], deep + (i + 1) + '.');
+      }
+    } else if (prop === HTMLLIElement.prototype) {
+      // 保存li元素
+      if (elem.children[0] && elem.children[0].__proto__ === HTMLAnchorElement.prototype) {
+        lList.push(elem);
+      }
+      for (let i = 0; i < elem.children.length; i++) {
+        let cur = elem.children[i];
+        if (cur.__proto__ === HTMLAnchorElement.prototype) {
+          if (autoNumber) {
+            cur.text = deep + ' ' + cur.text;
+          }
+        } else if (cur.__proto__ === HTMLUListElement.prototype) {
+          addTocNumber(cur, deep);
+        }
+      }
+    }
+  }
+
+  function removeParentActiveClass() {
+    let parents = tocContent.querySelectorAll('.' + active)
+    parents.forEach(function (elem) {
+      elem.classList.remove(active);
+    });
+  }
+
+  function addActiveClass(index) {
+    if (index >= 0 && index < hList.length) {
+      lList[index].classList.add(activeClass);
+    }
+  }
+
+  function removeActiveClass(index) {
+    if (index >= 0 && index < hList.length) {
+      lList[index].classList.remove(activeClass);
+    }
+  }
+
+  function addActiveLiElemment(elem, parent) {
+    if (!elem || elem === parent) {
+      return;
+    } else {
+      if (elem.__proto__ === HTMLLIElement.prototype) {
+        elem.classList.add(active);
+      }
+      addActiveLiElemment(elem.parentElement, parent);
+    }
+  }
+
+  function showToc() {
+    if (tocWrapper) {
+      postBody = document.querySelector('#post_body');
+      for (let i = 0; i < postBody.children.length; i++) {
+        if (postBody.children[i].__proto__ === HTMLHeadingElement.prototype) {
+          hList.push(postBody.children[i]);
+        }
+      }
+      if (tocWrapper.classList.contains('compress')) {
+        tocContent.classList.add('closed');
+      } else if (tocWrapper.classList.contains('no_compress')) {
+        tocContent.classList.add('expanded');
+      } else {
+        if (hList.length > 10) {
+          active = 'active-hidden'
+          tocContent.classList.add('closed');
+        } else {
+          tocContent.classList.add('expanded');
+        }
+      }
+    }
+  }
+
+  (function () {
+    // 处理不是从#一级标题开始目录
+    if (tocContent.children.length === 1 && tocContent.children[0].__proto__ === HTMLLIElement.prototype) {
+      let con = tocContent.children[0].children[0];
+      tocContent.innerHTML = con.innerHTML;
+    }
+    let markdownItTOC = document.querySelector('.markdownIt-TOC');
+    let innerHeight = window.innerHeight;
+    markdownItTOC.style = `max-height: ${innerHeight - 80 > 0 ? innerHeight - 80 : innerHeight}px`
+    addTocNumber(tocContent, '');
+  })();
+
+  document.addEventListener('scroll', function (e) {
+    if (lList.length <= 0) {
+      return;
+    }
+    let scrollTop = document.scrollingElement.scrollTop + 10;
+    let dir;
+
+    if (lastTop - scrollTop > 0) {
+      dir = 'up';
+    } else {
+      dir = 'down';
+    }
+
+    lastTop = scrollTop;
+    if (scrollTop <= 0) {
+      if (lastIndex >= 0 && lastIndex < hList.length) {
+        lList[lastIndex].classList.remove(activeClass);
+      }
+      return;
+    }
+
+    let current = 0, hasFind = false;
+    for (let i = 0; i < hList.length; i++) {
+      if (hList[i].offsetTop > scrollTop) {
+        current = i;
+        hasFind = true;
+        break;
+      }
+    }
+    if (!hasFind && scrollTop > lList[lList.length - 1].offsetTop) {
+      current = hList.length - 1;
+    } else {
+      current--;
+    }
+    if (dir === 'down') {
+      if (current > lastIndex) {
+        addActiveClass(current);
+        removeActiveClass(lastIndex)
+        lastIndex = current;
+        removeParentActiveClass();
+        lList[current] && addActiveLiElemment(lList[current].parentElement, tocContent);
+      }
+    } else {
+      if (current < lastIndex) {
+        addActiveClass(current);
+        removeActiveClass(lastIndex);
+        lastIndex = current;
+        removeParentActiveClass();
+        lList[current] && addActiveLiElemment(lList[current].parentElement, tocContent);
+      }
+    }
+  });
+
+
+  window.addEventListener('load', function () {
+    showToc();
+    document.querySelector('#sidebar').style = 'display: block;';
+    tocWrapper.classList.add('toc-active');
+    setTimeout(function () {
+      if ("createEvent" in document) {
+        let evt = document.createEvent("HTMLEvents");
+        evt.initEvent("scroll", false, true);
+        document.dispatchEvent(evt);
+      }
+      else {
+        document.fireEvent("scroll");
+      }
+    }, 500)
+  })
+
+</script>
+            </div>
+          
+        
+      </div>
+    </div>
+  
+</div>
+<script>
+  const SIDEBAR_TITLE_ACTIVE = 'sidebar-title-active';
+  const SIDEBAR_BODY_ACTIVE = 'sidebar-body-active';
+  const SLIDE_UP_IN = 'slide-up-in';
+
+  let sidebar = document.querySelector('#sidebar'),
+  tocSideBar = document.querySelector('#tocSideBar'),
+  metaSideBar = document.querySelector('#metaSideBar'),
+  postToc = document.querySelector('#post_toc'),
+  postSiteMeta = document.querySelector('#post_side_meta'),
+  sidebarTitle = document.querySelector('.sidebar-title'),
+  sidebarBody = document.querySelector('#sidebar_body');
+
+  tocSideBar && tocSideBar.addEventListener('click', (e) => {
+    toggleSidebar(e);
+  });
+
+  metaSideBar && metaSideBar.addEventListener('click', (e) => {
+    toggleSidebar(e);
+  });
+
+  function toggleSidebar(e) {
+    let currentTitle = document.querySelector("."+SIDEBAR_TITLE_ACTIVE);
+    if (currentTitle == e.srcElement) {
+      return ;
+    }
+    let current, showElement, hideElement;
+    if (e.srcElement == metaSideBar) {
+      showElement = postSiteMeta;
+      hideElement = postToc;
+    } else if (e.srcElement == tocSideBar){
+      showElement = postToc;
+      hideElement = postSiteMeta;
+    }
+    currentTitle.classList.remove(SIDEBAR_TITLE_ACTIVE);
+    e.srcElement.classList.add(SIDEBAR_TITLE_ACTIVE);
+
+    window.Velocity(hideElement, 'stop');
+    window.Velocity(hideElement, 'transition.slideUpOut', {
+      display: 'none',
+      duration: 200,
+      complete: function () {
+        window.Velocity(showElement, 'transition.slideDownIn', {
+          duration: 200
+        });
+      }
+    })
+    hideElement.classList.remove(SIDEBAR_BODY_ACTIVE);
+    showElement.classList.add(SIDEBAR_BODY_ACTIVE);
+  }
+
+  postToc && postToc.addEventListener('transitionend', function() {
+    this.classList.remove(SLIDE_UP_IN);
+  });
+
+  if (sidebarBody) {
+    if (sidebarBody.classList.contains('pisces') || sidebarBody.classList.contains('gemini')) {
+      let hasFix = false;
+      let scrollEl = document.querySelector('.main-continer');
+      let limitTop = document.querySelector('#nav_ul').children.length * 42 + 162;
+      window.addEventListener('scroll', function(e) {
+        if (document.scrollingElement.scrollTop >= limitTop) {
+          if (!hasFix) {
+            sidebar.classList.add('sidebar-fixed');
+            hasFix = true;
+          }
+        } else {
+          if (hasFix) {
+            sidebar.classList.remove('sidebar-fixed');
+            hasFix = false;
+          }
+        }
+      });
+    }
+  }
+  
+</script>
+        <div class="section-box box-shadow-wrapper">
+          <div class="section bg-color post post-page">
+            <section class="post-header">
+  <h1 class="post-title">
+    <a class="post-title-link" href="https://clearlove443.github.io/markdown-ji-ben-yu-fa/">
+      Markdown 
+    </a>
+  </h1>
+  <div class="post-meta">
+    
+    <span class="meta-item pc-show">
+      <i class="fa fa-calendar-o"></i>
+      <span class="language" data-lan="publish">发布于</span>
+      <span class="publish-time" data-t="2021-02-27 14:39:07">2021-02-27</span>
+      <span class="post-meta-divider pc-show">|</span>
+    </span>
+    
+    <span class="meta-item">
+      <i class="fa fa-folder-o"></i>
+      <span class="pc-show language" data-lan="category-in">分类于</span>
+      
+      
+      <a href="https://clearlove443.github.io/HfdMa8YIq/">
+        <span>Markdown</span>
+      </a>
+      
+      
+    </span>
+    <span class="post-meta-divider">|</span>
+    
+    <span class="meta-item">
+      <i class="fa fa-clock-o"></i>
+      <span>6<span class="language" data-lan="minute">分钟</span></span>
+    </span>
+    <span class="meta-item">
+      <span class="post-meta-divider">|</span>
+      <i class="fa fa-file-word-o"></i>
+      <span>1441<span class="pc-show language" data-lan="words">字数</span></span>
+    </span>
+    
+    
+    
+    <span id="/markdown-ji-ben-yu-fa/" data-flag-title="Markdown " class="meta-item pc-show leancloud_visitors">
+      <span class="post-meta-divider">|</span>
+      <i class="fa fa-eye"></i>
+      <span><span class="language" data-lan="view">浏览量</span>：<span class="leancloud-visitors-count"></span></span>
+    </span>
+    
+  </div>
+</section>
+            <div class="post-body next-md-body" id="post_body">
+              <h1 id="简介">简介</h1>
+<p>Markdown 是一种纯文本格式的标记语言。通过简单的标记语法，它可以使普通文本内容具有一定的格式。<br>
+Markdown 语言在 2004 由约翰·格鲁伯（英语：John Gruber）创建。<br>
+Markdown 编写的文档可以导出 HTML 、Word、图像、PDF、Epub 等多种格式的文档。<br>
+Markdown 编写的文档后缀为 .md, .markdown</p>
+<h1 id="markdown-应用">Markdown 应用</h1>
+<p>Markdown 能被使用来撰写电子书，如：Gitbook。<br>
+当前许多网站都广泛使用 Markdown 来撰写帮助文档或是用于论坛上发表消息。例如：GitHub、简书、reddit、Diaspora、Stack Exchange、OpenStreetMap 、SourceForge等。</p>
+<h1 id="markdown-标题">Markdown 标题</h1>
+<h2 id="1-使用-和-标记一级和二级标题">1. 使用 = 和 - 标记一级和二级标题</h2>
+<pre><code>我展示的是一级标题
+=================
+我展示的是二级标题
+-----------------
+</code></pre>
+<p>效果如下：<br>
+<img src="https://clearlove443.github.io//post-images/1614412772893.jpg" alt="" loading="lazy"></p>
+<h2 id="2-使用-号标记">2. 使用 # 号标记</h2>
+<p>使用 # 号可表示 1-6 级标题，一级标题对应一个 # 号，二级标题对应两个 # 号，以此类推。</p>
+<pre><code># 这是一级标题
+## 这是二级标题
+### 这是三级标题
+#### 这是四级标题
+##### 这是五级标题
+###### 这是六级标题
+</code></pre>
+<p>效果如下：<br>
+<img src="https://clearlove443.github.io//post-images/1614412697511.gif" alt="" loading="lazy"></p>
+<h1 id="markdown-段落">Markdown 段落</h1>
+<p>Markdown 段落没有特殊的格式，直接编写文字就好，段落的换行是使用两个以上空格加上回车。<br>
+当然也可以在段落后面使用一个空行来表示重新开始一个段落。</p>
+<h2 id="字体">字体</h2>
+<p>Markdown 可以使用以下几种字体：</p>
+<pre><code>*斜体文本*
+_斜体文本_
+**粗体文本**
+__粗体文本__
+***粗斜体文本***
+___粗斜体文本___
+</code></pre>
+<p>效果如下：<br>
+<em>斜体文本</em><br>
+<em>斜体文本</em><br>
+<strong>粗体文本</strong><br>
+<strong>粗体文本</strong><br>
+<em><strong>粗斜体文本</strong></em><br>
+<em><strong>粗斜体文本</strong></em></p>
+<h2 id="分隔线">分隔线</h2>
+<p>你可以在一行中用三个以上的星号、减号、底线来建立一个分隔线，行内不能有其他东西。你也可以在星号或是减号中间插入空格。下面每种写法都可以建立分隔线：</p>
+<pre><code>***
+
+* * *
+
+*****
+
+- - -
+
+----------
+</code></pre>
+<h2 id="删除线">删除线</h2>
+<p>如果段落上的文字要添加删除线，只需要在文字的两端加上两个波浪线 *~~ 即可</p>
+<pre><code>~~BAIDU.COM~~
+</code></pre>
+<h2 id="下划线">下划线</h2>
+<p>下划线可以通过 HTML 的u标签来实现：</p>
+<pre><code>&lt;u&gt;带下划线文本&lt;/u&gt;
+</code></pre>
+<h2 id="脚注">脚注</h2>
+<p>脚注是对文本的补充说明。<br>
+Markdown 脚注的格式如下:</p>
+<pre><code>[^要注明的文本]
+</code></pre>
+<h1 id="markdown-列表">Markdown 列表</h1>
+<p>Markdown 支持有序列表和无序列表。</p>
+<p>无序列表使用星号(*)、加号(+)或是减号(-)作为列表标记，这些标记后面要添加一个空格，然后再填写内容：</p>
+<pre><code>* 第一项
+* 第二项
+* 第三项
+
++ 第一项
++ 第二项
++ 第三项
+
+
+- 第一项
+- 第二项
+- 第三项
+</code></pre>
+<p>显示效果如下：</p>
+<ul>
+<li>第一项</li>
+<li>第二项</li>
+<li>第三项</li>
+</ul>
+<ul>
+<li>第一项</li>
+<li>第二项</li>
+<li>第三项</li>
+</ul>
+<ul>
+<li>第一项</li>
+<li>第二项</li>
+<li>第三项</li>
+</ul>
+<p>有序列表使用数字并加上 . 号来表示，如：</p>
+<pre><code>1. 第一项
+2. 第二项
+3. 第三项
+</code></pre>
+<p>显示效果如下:</p>
+<ol>
+<li>第一项</li>
+<li>第二项</li>
+<li>第三项</li>
+</ol>
+<h2 id="列表嵌套">列表嵌套</h2>
+<p>列表嵌套只需在子列表中的选项前面添加四个空格即可：</p>
+<pre><code>1. 第一项：
+    - 第一项嵌套的第一个元素
+    - 第一项嵌套的第二个元素
+2. 第二项：
+    - 第二项嵌套的第一个元素
+    - 第二项嵌套的第二个元素
+</code></pre>
+<p>显示效果如下:</p>
+<ol>
+<li>第一项：
+<ul>
+<li>第一项嵌套的第一个元素</li>
+<li>第一项嵌套的第二个元素</li>
+</ul>
+</li>
+<li>第二项：
+<ul>
+<li>第二项嵌套的第一个元素</li>
+<li>第二项嵌套的第二个元素</li>
+</ul>
+</li>
+</ol>
+<h1 id="markdown-区块">Markdown 区块</h1>
+<p>Markdown 区块引用是在段落开头使用 &gt; 符号 ，然后后面紧跟一个空格符号：</p>
+<pre><code>&gt; 区块引用
+</code></pre>
+<p>显示效果如下：</p>
+<blockquote>
+<p>区块引用</p>
+</blockquote>
+<p>另外区块是可以嵌套的，一个 &gt; 符号是最外层，两个 &gt; 符号是第一层嵌套，以此类推：</p>
+<pre><code>&gt; 最外层
+&gt; &gt; 第一层嵌套
+&gt; &gt; &gt; 第二层嵌套
+</code></pre>
+<p>显示效果如下：</p>
+<blockquote>
+<p>最外层</p>
+<blockquote>
+<p>第一层嵌套</p>
+<blockquote>
+<p>第二层嵌套</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<p>区块中使用列表<br>
+区块中使用列表实例如下：</p>
+<pre><code>&gt; 区块中使用列表
+&gt; 1. 第一项
+&gt; 2. 第二项
+&gt; + 第一项
+&gt; + 第二项
+</code></pre>
+<p>显示效果如下：</p>
+<blockquote>
+<p>区块中使用列表</p>
+<ol>
+<li>第一项</li>
+<li>第二项</li>
+</ol>
+<ul>
+<li>第一项</li>
+<li>第二项</li>
+</ul>
+</blockquote>
+<p>列表中使用区块<br>
+如果要在列表项目内放进区块，那么就需要在 &gt; 前添加四个空格的缩进。<br>
+列表中使用区块实例如下：</p>
+<pre><code>* 第一项
+    &gt; 菜鸟教程
+* 第二项
+</code></pre>
+<p>显示效果如下：</p>
+<ul>
+<li>第一项
+<blockquote>
+<p>菜鸟教程</p>
+</blockquote>
+</li>
+<li>第二项</li>
+</ul>
+<h1 id="超链接">超链接</h1>
+<p>语法：</p>
+<pre><code>[超链接名](超链接地址 &quot;超链接title&quot;)
+title可加可不加
+</code></pre>
+<p>示例：</p>
+<pre><code>[简书](http://jianshu.com)
+[百度](http://baidu.com)
+</code></pre>
+<p>注：Markdown本身语法不支持链接在新页面中打开，貌似简书做了处理，是可以的。别的平台可能就不行了，如果想要在新页面中打开的话可以用html语言的a标签代替。</p>
+<pre><code>&lt;a href=&quot;超链接地址&quot; target=&quot;_blank&quot;&gt;超链接名&lt;/a&gt;
+示例
+&lt;a href=&quot;https://www.jianshu.com/u/1f5ac0cf6a8b&quot; target=&quot;_blank&quot;&gt;简书&lt;/a&gt;
+</code></pre>
+<h1 id="表格">表格</h1>
+<pre><code>|表头|表头|表头|
+|:---|:--:|---:|
+|内容|内容|内容|
+|内容|内容|内容|
+
+第二行分割表头和内容。
+- 有一个就行，为了对齐，多加了几个
+文字默认居左
+-两边加：表示文字居中
+-右边加：表示文字居右
+</code></pre>
+<p>实例如下：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">左对齐</th>
+<th style="text-align:right">右对齐</th>
+<th style="text-align:center">居中对齐</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">单元格</td>
+<td style="text-align:right">单元格</td>
+<td style="text-align:center">单元格</td>
+</tr>
+<tr>
+<td style="text-align:left">单元格</td>
+<td style="text-align:right">单元格</td>
+<td style="text-align:center">单元格</td>
+</tr>
+</tbody>
+</table>
+<h1 id="markdown-代码">Markdown 代码</h1>
+<p>单行代码：代码之间分别用一个反引号包起来</p>
+<pre><code>`printf()` 函数
+</code></pre>
+<p>显示效果如下：<br>
+<code>printf()</code> 函数</p>
+<h2 id="代码区块">代码区块</h2>
+<p>用 ``` 包裹一段代码，并指定一种语言（也可以不指定）：<br>
+实例如下：</p>
+<pre><code class="language-javascript">$(document).ready(function () {
+    alert('RUNOOB');
+});
+</code></pre>
+
+            </div>
+            
+            
+              <div class="post-footer">
+  <ul class="post-copyright">
+    <li class="post-copyright-author">
+      <strong class="language" data-lan="author">本文作者：</strong>
+      张强强
+    </li>
+    <li class="post-copyright-link">
+      <strong class="language" data-lan="link">本文链接：</strong>
+      <a href="https://clearlove443.github.io/markdown-ji-ben-yu-fa/" title="Markdown ">https://clearlove443.github.io/markdown-ji-ben-yu-fa/</a>
+    </li>
+    <li class="post-copyright-license">
+      <strong class="language" data-lan="copyright">版权声明： </strong>
+      本博客所有文章除特别声明外，均采用<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i> BY-NC-SA</a> 许可协议。转载请注明出处！
+    </li>
+  </ul>
+  <div class="tags">
+    
+      <a href="https://clearlove443.github.io/HfdMa8YIq/"># Markdown</a>
+    
+  </div>
+  <div class="nav">
+    <div class="nav-prev">
+      
+        <i class="fa fa-chevron-left"></i>
+        <a class="nav-pc-next" title="JavaScript 箭头函数（Lambda表达式）" href="https://clearlove443.github.io/javascript-jian-tou-han-shu-lambda-biao-da-shi/">JavaScript 箭头函数（Lambda表达式）</a class="nav-pc-next">
+        <a class="nav-mobile-prev" title="JavaScript 箭头函数（Lambda表达式）" href="https://clearlove443.github.io/javascript-jian-tou-han-shu-lambda-biao-da-shi/">上一篇</a>
+      
+    </div>
+    <div class="nav-next">
+      
+        <a class="nav-pc-next" title="Welcome To Python" href="https://clearlove443.github.io/welcome-to-python/">Welcome To Python</a>
+        <a class="nav-mobile-next" title="Welcome To Python" href="https://clearlove443.github.io/welcome-to-python/">下一篇</a>
+        <i class="fa fa-chevron-right"></i>
+      
+    </div>
+  </div>
+</div>
+            
+            
+  
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-box">
+  <footer class="footer">
+    <div class="copyright">
+      Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | © 2019-2020 Theme By <a
+        href="https://github.com/hsxyhao/gridea-theme-next" target="_blank">HsxyHao</a>
+    </div>
+    <div class="poweredby">
+      Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
+    </div>
+  </footer>
+  
+  
+  <div class="drawer-box left" id="drawer_box">
+    <span class="muse-line muse-line-first"></span>
+    <span class="muse-line muse-line-middle"></span>
+    <span class="muse-line muse-line-last"></span>
+  </div>
+  
+  <div class="muse back-to-top" id="back_to_top">
+    <i class="fa fa-arrow-up"></i>
+    
+  </div>
+  
+  
+  
+  
+
+  
+</div>
+<script>
+
+  let sideBarOpen = 'sidebar-open';
+  let body = document.body;
+  let back2Top = document.querySelector('#back_to_top'),
+    back2TopText = document.querySelector('#back_to_top_text'),
+    drawerBox = document.querySelector('#drawer_box'),
+    rightSideBar = document.querySelector('.sidebar'),
+    viewport = document.querySelector('body');
+
+  function scrollAnimation(currentY, targetY) {
+
+    let needScrollTop = targetY - currentY
+    let _currentY = currentY
+    setTimeout(() => {
+      const dist = Math.ceil(needScrollTop / 10)
+      _currentY += dist
+      window.scrollTo(_currentY, currentY)
+      if (needScrollTop > 10 || needScrollTop < -10) {
+        scrollAnimation(_currentY, targetY)
+      } else {
+        window.scrollTo(_currentY, targetY)
+      }
+    }, 1)
+  }
+
+  back2Top.addEventListener("click", function (e) {
+    scrollAnimation(document.scrollingElement.scrollTop, 0);
+    e.stopPropagation();
+    return false;
+  });
+
+  window.addEventListener('scroll', function (e) {
+    let percent = document.scrollingElement.scrollTop / (document.scrollingElement.scrollHeight - document.scrollingElement.clientHeight) * 100;
+    if (percent > 1 && !back2Top.classList.contains('back-top-active')) {
+      back2Top.classList.add('back-top-active');
+    }
+    if (percent == 0) {
+      back2Top.classList.remove('back-top-active');
+    }
+    if (back2TopText) {
+      back2TopText.textContent = Math.floor(percent);
+    }
+  });
+
+
+  let hasCacu = false;
+  window.onresize = function () {
+    calcuHeight();
+  }
+
+  function calcuHeight() {
+    // 动态调整站点概览高度
+    if (!hasCacu && back2Top.classList.contains('pisces') || back2Top.classList.contains('gemini')) {
+      let sideBar = document.querySelector('.sidebar');
+      let navUl = document.querySelector('#site_nav');
+      sideBar.style = 'margin-top:' + (navUl.offsetHeight + navUl.offsetTop + 15) + 'px;';
+      hasCacu = true;
+    }
+  }
+  calcuHeight();
+
+  let open = false, MOTION_TIME = 300, RIGHT_MOVE_DIS = '320px';
+
+  if (drawerBox) {
+    let rightMotions = document.querySelectorAll('.right-motion');
+    let right = drawerBox.classList.contains('right');
+
+    let transitionDir = right ? "transition.slideRightIn" : "transition.slideLeftIn";
+
+    let openProp, closeProp;
+    if (right) {
+      openProp = {
+        paddingRight: RIGHT_MOVE_DIS
+      };
+      closeProp = {
+        paddingRight: '0px'
+      };
+    } else {
+      openProp = {
+        paddingLeft: RIGHT_MOVE_DIS
+      };
+      closeProp = {
+        paddingLeft: '0px'
+      };
+    }
+
+    drawerBox.onclick = function () {
+      open = !open;
+      window.Velocity(rightSideBar, 'stop');
+      window.Velocity(viewport, 'stop');
+      window.Velocity(rightMotions, 'stop');
+      if (open) {
+        window.Velocity(rightSideBar, {
+          width: RIGHT_MOVE_DIS
+        }, {
+          duration: MOTION_TIME,
+          begin: function () {
+            window.Velocity(rightMotions, transitionDir, {});
+          }
+        })
+        window.Velocity(viewport, openProp, {
+          duration: MOTION_TIME
+        });
+      } else {
+        window.Velocity(rightSideBar, {
+          width: '0px'
+        }, {
+          duration: MOTION_TIME,
+          begin: function () {
+            window.Velocity(rightMotions, {
+              opacity: 0
+            });
+          }
+        })
+        window.Velocity(viewport, closeProp, {
+          duration: MOTION_TIME
+        });
+      }
+      for (let i = 0; i < drawerBox.children.length; i++) {
+        drawerBox.children[i].classList.toggle('muse-line');
+      }
+      drawerBox.classList.toggle(sideBarOpen);
+    }
+  }
+
+  // 链接跳转
+  let newWindow = 'true'
+  if (newWindow === 'true') {
+    let links = document.querySelectorAll('.post-body a')
+    links.forEach(item => {
+      if (!item.classList.contains('btn')) {
+        item.setAttribute("target", "_blank");
+      }
+    })
+  }
+
+  let faSearch = document.querySelector('#fa_search');
+  faSearch.addEventListener('click', function () {
+    document.querySelector('#search_mask').style = ''
+  })
+
+  // 代码高亮
+  hljs.initHighlightingOnLoad();
+  
+  // 离开当前页title变化
+  var leaveTitle = "";
+  if (leaveTitle) {
+    document.addEventListener('visibilitychange', function () {
+      if (document.visibilityState == 'hidden') {
+        normal_title = document.title;
+        document.title = leaveTitle;
+      } else {
+        document.title = normal_title;
+      }
+    });
+  }
+
+</script>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+
+<script>
+  let images = document.querySelectorAll('.section img');
+  console.log(images);
+  images.forEach(image => {
+    var parent = image.parentElement;
+    var next = image.nextElementSibling;
+    parent.removeChild(image);
+    var aelem = document.createElement('a');
+    aelem.href = image.src;
+    aelem.dataset['fancybox'] = 'images';
+    aelem.dataset['rel'] = 'fancybox-button';
+    aelem.classList.add('fancybox');
+    aelem.appendChild(image);
+    parent.insertBefore(aelem, next);
+  })
+</script>
+    <div class="reward-mask" style="display: none;">
+  <div class="reward-relative">
+    <span class="close" aria-hidden="true">x</span>
+    <div class="reward-body">
+      <h2>感谢您的支持，我会继续努力的!</h2>
+      <div class="reward-img-box">
+        <div style="position: relative; width: 140px; height: 140px;">
+          
+          
+          
+        </div>
+      </div>
+      <p class="reward-word">扫码打赏，你说多少就多少</p>
+      <p class="reward-tip">打开微信扫一扫，即可进行扫码打赏哦</p>
+    </div>
+    <div class="bottom">
+      
+      
+    </div>
+  </div>
+</div>
+<style>
+  .reward-mask {
+    position: fixed;
+    z-index: 99999;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #00000054;
+  }
+
+  .reward-relative {
+    position: relative;
+    width: 480px;
+    text-align: center;
+    margin: 0 auto;
+    border-radius: 5px;
+    background-color: #fff;
+    top: 50%;
+    margin-top: -205px;
+  }
+
+  .reward-relative .close {
+    position: absolute;
+    right: 10px;
+    font-weight: normal;
+    font-size: 16px;
+    color: #929292;
+  }
+
+  .reward-body {
+    padding: 40px 20px 20px;
+  }
+
+  .bottom {
+    display: flex;
+  }
+
+  .reward-btn {
+    text-align: center;
+  }
+
+  .reward-btn-text {
+    display: inline-block;
+    cursor: pointer;
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    border-radius: 50%;
+    background-color: #ff9734;
+    color: #FFF;
+    margin-top: 20px;
+  }
+
+  .pay-text {
+    margin-top: 10px;
+    padding: 10px;
+    flex: 1;
+    transition: all .2s linear;
+  }
+
+  .pay-text:hover {
+    background-color: #a5a5a536;
+  }
+
+  .reward-body h2 {
+    padding-top: 10px;
+    text-align: center;
+    color: #a3a3a3;
+    font-size: 16px;
+    font-weight: normal;
+    margin: 0 0 20px;
+  }
+
+  .reward-body h2:after,
+  .reward-body h2:before {
+    font-family: Arial, Helvetica, sans-serif;
+    background: 0 0;
+    width: 0;
+    height: 0;
+    font-style: normal;
+    color: #eee;
+    font-size: 80px;
+    position: absolute;
+    top: 20px;
+  }
+
+  .reward-body h2:before {
+    content: '\201c';
+    left: 50px;
+  }
+
+  .reward-body h2:after {
+    content: '\201d';
+    right: 80px;
+  }
+
+  .reward-img-box {
+    display: inline-block;
+    padding: 10px;
+    border: 6px solid #ea5f00;
+    margin: 0 auto;
+    border-radius: 3px;
+    position: relative;
+  }
+
+  .reward-img {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+  }
+
+  @media (max-width: 767px) {
+    .reward-relative {
+      height: 100%;
+      top: 0px;
+      margin-top: 0;
+      width: auto;
+    }
+
+    .reward-relative .bottom {
+      flex-direction: column;
+    }
+
+    .reward-relative .pay-text {
+      width: 80%;
+      margin: 5px auto;
+      border: 1px solid silver;
+      padding: 6px;
+      border-radius: 4px;
+    }
+
+    .reward-body h2:after {
+      right: 40px;
+    }
+
+    .reward-body h2:after,
+    .reward-body h2:before {
+      font-size: 60px;
+    }
+
+    .reward-body h2:before {
+      left: 20px;
+    }
+  }
+</style>
+<script>
+  !function () {
+    var mask = document.querySelector('.reward-mask');
+    let close = document.querySelector('.reward-relative .close');
+    let rewardBtn = document.querySelector('.reward-btn');
+
+    let zfb = document.querySelector('#zfb'),
+      wx = document.querySelector('#wx'),
+      zfbBtn = document.querySelector('#zfbBtn'),
+      wxBtn = document.querySelector('#wxBtn');
+
+    if (zfbBtn && wxBtn) {
+      zfbBtn.addEventListener('click', () => {
+        window.Velocity(zfb, 'transition.slideLeftIn', {
+          duration: 400
+        });
+        window.Velocity(wx, 'transition.slideRightOut', {
+          display: 'none',
+          duration: 400
+        });
+      });
+
+      wxBtn.addEventListener('click', () => {
+        window.Velocity(wx, 'transition.slideRightIn', {
+          duration: 400
+        });
+        window.Velocity(zfb, 'transition.slideLeftOut', {
+          display: 'none',
+          duration: 400
+        });
+      });
+    }
+
+    rewardBtn.addEventListener('click', (e) => {
+      window.Velocity(mask, 'transition.slideDownIn', {
+        duration: 400
+      })
+    });
+
+    close.addEventListener('click', (e) => {
+      e.preventDefault();
+      window.Velocity(mask, 'transition.slideUpOut', {
+        duration: 400
+      })
+    })
+  }()
+</script>
+
+  </div>
+</body>
+
+<div class="search-mask" id="search_mask" style="display: none;">
+  <div class="search-box">
+    <div class="search-title">
+      <i class="fa fa-search"></i>
+      <div class="input-box">
+        <input id="search" type="text" class="language" data-lan="search" placeholder="搜索">
+      </div>
+      <i id="close" class="fa fa-times-circle"></i>
+    </div>
+    <div class="stat-box">
+      <span id="stat_count">0</span><span class="language" data-lan="stat">条相关条目，使用了</span><span id="stat_times">0</span><span class="language" data-lan="stat-time">毫秒</span>
+      <hr>
+    </div>
+    <div class="result" id="result">
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://clearlove443.github.io/EIm2DvbAz/"" data-c="
+          &lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;select {
+    /*Chrome和Firefox里面的边框是不一样的，所以复写了一下*/
+    border: solid 1px #000;
+
+    /*很关键：将默认的select选择框样式清除*/
+    appearance:none;
+    -moz-appearance:none;
+    -webkit-appearance:none;
+
+    /*在选择框的最右侧中间显示小箭头图片*/
+    background: url(&amp;quot;http://ourjs.github.io/static/2015/arrow.png&amp;quot;) no-repeat scroll right center transparent;
+
+
+    /*为下拉小箭头留出一点位置，避免被文字覆盖*/
+    padding-right: 14px;
+
+
+    /*清除ie的默认选择框样式清除，隐藏下拉箭头*/
+    select::-ms-expand { display: none; }
+}
+&lt;/code&gt;&lt;/pre&gt;
+">修改css中select的下拉箭头样式</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://clearlove443.github.io/hUR_fwtxZ/"" data-c="
+          &lt;p&gt;容器使用绝对定位&lt;code&gt;position: fixed;&lt;/code&gt;后, 高度就不会被计算在父容器里面。就会造成把一些元素遮挡住。&lt;br&gt;
+解决办法：添加一个空的容器。用来代替不被计算的容器。&lt;/p&gt;
+">html 滚动条拉不到最底下</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://clearlove443.github.io/3opacq1jP/"" data-c="
+          &lt;p&gt;前端开发工作中，经常需要将HTML的左右尖括号等转义成实体形式。我们不能把&amp;lt;，&amp;gt;，&amp;amp;等直接显示在最终看到的网页里。需要将其转义后才能在网页上显示。&lt;/p&gt;
+&lt;p&gt;转义字符（Escape Sequence）也称字符实体(Character Entity)。定义转义字符串的主要原因是&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;“&amp;lt;”和“&amp;gt;”等符号已经用来表示HTML TAG，因此不能直接当作文本中的符号来使用。但有时需求是在HTML页面上使用这些符号，所以需要定义它的转义字符串。&lt;/li&gt;
+&lt;li&gt;有些字符在ASCII字符集中没有定义（如版权符号“©”）。因此需要使用转义字符（“©”对应的转义字符是“©”）来表示。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;这里提供两个函数escape和unescape，分别实现将HTML转义为实体和回转。&lt;/p&gt;
+&lt;h1 id=&#34;方式一-一个映射表正则替换&#34;&gt;方式一、一个映射表+正则替换&lt;/h1&gt;
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;var keys = Object.keys || function(obj) {
+    obj = Object(obj)
+    var arr = []   
+    for (var a in obj) arr.push(a)
+    return arr
+}
+var invert = function(obj) {
+    obj = Object(obj)
+    var result = {}
+    for (var a in obj) result[obj[a]] = a
+    return result
+}
+`var entityMap = {
+    escape: {
+      &#39;&amp;amp;&#39;: &#39;&amp;amp;&#39;,
+      &#39;&amp;lt;&#39;: &#39;&amp;lt;&#39;,
+      &#39;&amp;gt;&#39;: &#39;&amp;gt;&#39;,
+      &#39;&amp;quot;&#39;: &#39;&amp;quot;&#39;,
+      &amp;quot;&#39;&amp;quot;: &#39;&#39;&#39;
+    }
+}`
+entityMap.unescape = invert(entityMap.escape)
+var entityReg = {
+    escape: RegExp(&#39;[&#39; + keys(entityMap.escape).join(&#39;&#39;) + &#39;]&#39;, &#39;g&#39;),
+    unescape: RegExp(&#39;(&#39; + keys(entityMap.unescape).join(&#39;|&#39;) + &#39;)&#39;, &#39;g&#39;)
+}
+ 
+// 将HTML转义为实体
+function escape(html) {
+    if (typeof html !== &#39;string&#39;) return &#39;&#39;
+    return html.replace(entityReg.escape, function(match) {
+        return entityMap.escape[match]
+    })
+}
+// 将实体转回为HTML
+function unescape(str) {
+    if (typeof str !== &#39;string&#39;) return &#39;&#39;
+    return str.replace(entityReg.unescape, function(match) {
+        return entityMap.unescape[match]
+    })   
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h1 id=&#34;方式二-利用浏览器dom-api&#34;&gt;方式二、利用浏览器DOM API&lt;/h1&gt;
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;// 将HTML转义为实体
+function escape(html){
+    var elem = document.createElement(&#39;div&#39;)
+    var txt = document.createTextNode(html)
+    elem.appendChild(txt)
+    return elem.innerHTML;
+}
+// 将实体转回为HTML
+function unescape(str) {
+    var elem = document.createElement(&#39;div&#39;)
+    elem.innerHTML = str
+    return elem.innerText || elem.textContent
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;有个缺陷是只能转义“&amp;lt; &amp;gt; &amp;amp; ”，对于单引号，双引号都不转义。另外一些非ASCII也不能转义。选择时须注意。&lt;/p&gt;
+&lt;h1 id=&#34;比较&#34;&gt;比较：&lt;/h1&gt;
+&lt;p&gt;方式1 代码量较大，但灵活性，完整性都比方式2强。可根据需求添加或减少映射表entityMap，且可以运行在任意JS环境中。&lt;/p&gt;
+&lt;p&gt;方式2 为hack方式，代码量少很多，利用浏览器内部API就行了转义和转回（主流浏览器都支持）。不具完整性，很明显只能在浏览器环境中使用（比如不能在Node.js中跑）。&lt;/p&gt;
+">将HTML特殊转义为实体字符</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://clearlove443.github.io/l-XCTPBqa/"" data-c="
+          &lt;h1 id=&#34;htmlcss基础&#34;&gt;html+css基础&lt;/h1&gt;
+&lt;h2 id=&#34;html和css的关系&#34;&gt;Html和CSS的关系&lt;/h2&gt;
+&lt;p&gt;学习web前端开发基础技术需要掌握：HTML、CSS、JavaScript语言。下面我们就来了解下这三门技术都是用来实现什么的：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;HTML是网页内容的载体。内容就是网页制作者放在页面上想要让用户浏览的信息，可以包含文字、图片、视频等。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;CSS样式是表现。就像网页的外衣。比如，标题字体、颜色变化，或为标题加入背景图片、边框等。所有这些用来改变内容外观的东西称之为表现。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;JavaScript是用来实现网页上的特效效果。如：鼠标滑过弹出下拉菜单。或鼠标滑过表格的背景颜色改变。还有焦点新闻（新闻图片）的轮换。可以这么理解，有动画的，有交互的一般都是用JavaScript来实现的。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;标签大小写&#34;&gt;标签大小写&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;HTML标签不区分大小写，&lt;code&gt;&amp;lt;h1&amp;gt;和&amp;lt;H1&amp;gt;&lt;/code&gt;是一样的，但建议小写，因为大部分程序员都以小写为准。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;固定的结构&#34;&gt;固定的结构&lt;/h2&gt;
+&lt;p&gt;一个HTML文件是有自己固定的结构的。&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;html&amp;gt;
+    &amp;lt;head&amp;gt;...&amp;lt;/head&amp;gt;
+    &amp;lt;body&amp;gt;...&amp;lt;/body&amp;gt;
+&amp;lt;/html&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;代码讲解：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;code&gt;&amp;lt;html&amp;gt;&amp;lt;/html&amp;gt;&lt;/code&gt;称为根标签，所有的网页标签都在&lt;code&gt;&amp;lt;html&amp;gt;&lt;/code&gt;...&lt;code&gt;&amp;lt;/html&amp;gt;&lt;/code&gt;中。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;&amp;lt;head&amp;gt;&lt;/code&gt; 标签用于定义文档的头部，它是所有头部元素的容器。头部元素有&lt;code&gt;&amp;lt;title&amp;gt;、&amp;lt;script&amp;gt;、 &amp;lt;style&amp;gt;、&amp;lt;link&amp;gt;、 &amp;lt;meta&amp;gt;&lt;/code&gt;等标签，头部标签在下一小节中会有详细介绍。&lt;/li&gt;
+&lt;li&gt;在&lt;code&gt;&amp;lt;body&amp;gt;&lt;/code&gt;和&lt;code&gt;&amp;lt;/body&amp;gt;&lt;/code&gt;标签之间的内容是网页的主要内容，如&lt;code&gt;&amp;lt;h1&amp;gt;、&amp;lt;p&amp;gt;、&amp;lt;a&amp;gt;、&amp;lt;img&amp;gt;&lt;/code&gt;等网页内容标签，在这里的标签中的内容会在浏览器中显示出来。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;head-部分&#34;&gt;head 部分&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;下面这些标签可用在 head 部分：&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;head&amp;gt;
+    &amp;lt;title&amp;gt;...&amp;lt;/title&amp;gt;
+    &amp;lt;meta&amp;gt;
+    &amp;lt;link&amp;gt;
+    &amp;lt;style&amp;gt;...&amp;lt;/style&amp;gt;
+    &amp;lt;script&amp;gt;...&amp;lt;/script&amp;gt;
+&amp;lt;/head&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;代码注释不仅方便程序员自己回忆起以前代码的用途，还可以帮助其他程序员很快的读懂你的程序的功能，方便多人合作开发网页代码。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;语法：&lt;/p&gt;
+&lt;!--注释文字 --&gt;
+&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;CSS注释代码&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;就像在Html的注释一样，在CSS中也有注释语句：用/&lt;em&gt;注释语句&lt;/em&gt;/来标明（Html中使用&lt;!--注释语句--&gt;)&lt;/p&gt;
+&lt;h2 id=&#34;语义化&#34;&gt;语义化&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;语义化：说的通俗点就是：明白每个标签的用途（在什么情况下我可以使用这个标签才合理）比如，网页上的文章的标题就得用标题标签，网页上的各个栏目的栏目名称也可以使用标题标签。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;语义化的作用&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;更容易被搜索引擎收录。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;更容易让屏幕阅读器读出网页内容。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;认识标签第一部分&#34;&gt;认识标签（第一部分）&lt;/h1&gt;
+&lt;h2 id=&#34;p&#34;&gt;&lt;code&gt;&amp;lt;p&amp;gt;&lt;/code&gt;&lt;/h2&gt;
+&lt;p&gt;如果想在网页上显示文章，这时就需要&lt;code&gt;&amp;lt;p&amp;gt;&lt;/code&gt;标签了，把文章的段落放到&lt;code&gt;&amp;lt;p&amp;gt;&lt;/code&gt;标签中。&lt;/p&gt;
+&lt;p&gt;语法：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;p&amp;gt;段落文本&amp;lt;/p&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;hx&#34;&gt;&lt;code&gt;&amp;lt;hx&amp;gt;&lt;/code&gt;&lt;/h2&gt;
+&lt;p&gt;标题标签一共有6个，h1、h2、h3、h4、h5、h6分别为一级标题、二级标题、三级标题、四级标题、五级标题、六级标题。并且依据重要性递减。&lt;code&gt;&amp;lt;h1&amp;gt;&lt;/code&gt;是最高的等级。&lt;/p&gt;
+&lt;p&gt;语法：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;hx&amp;gt;标题文本&amp;lt;/hx&amp;gt;(x为1-6)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;文章的标题前面已经说过了，可以使用标题标签，另外网页上的各个栏目的标题也可使用它们&lt;/p&gt;
+&lt;h2 id=&#34;strongem&#34;&gt;&lt;code&gt;&amp;lt;strong&amp;gt;/&amp;lt;em&amp;gt;&lt;/code&gt;&lt;/h2&gt;
+&lt;p&gt;有了段落又有了标题，现在如果想在一段话中特别强调某几个文字，这时候就可以用到&lt;code&gt;&amp;lt;em&amp;gt;&lt;/code&gt;或&lt;code&gt;&amp;lt;strong&amp;gt;&lt;/code&gt;标签。&lt;/p&gt;
+&lt;p&gt;但两者在强调的语气上有区别:&lt;code&gt;&amp;lt;em&amp;gt;&lt;/code&gt; 表示强调，&lt;code&gt;&amp;lt;strong&amp;gt;&lt;/code&gt; 表示更强烈的强调。并且在浏览器中&lt;code&gt;&amp;lt;em&amp;gt;&lt;/code&gt; 默认用斜体表示，&lt;code&gt;&amp;lt;strong&amp;gt;&lt;/code&gt; 用粗体表示。两个标签相比，目前国内前端程序员更喜欢使用&lt;code&gt;&amp;lt;strong&amp;gt;&lt;/code&gt;表示强调&lt;/p&gt;
+&lt;h2 id=&#34;em-strong-span的区别&#34;&gt;&lt;code&gt;&amp;lt;em&amp;gt;、&amp;lt;strong&amp;gt;、&amp;lt;span&amp;gt;&lt;/code&gt;的区别：&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;&amp;lt;em&amp;gt;&lt;/code&gt;和&lt;code&gt;&amp;lt;strong&amp;gt;&lt;/code&gt;标签是为了强调一段话中的关键字时使用，它们的语义是强调。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;&amp;lt;span&amp;gt;&lt;/code&gt;标签是没有语义的，它的作用就是为了设置单独的样式用的，把一段话圈起来，然后用css设置样式。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;qblockquote&#34;&gt;&lt;code&gt;&amp;lt;q&amp;gt;/&amp;lt;blockquote&amp;gt;&lt;/code&gt;&lt;/h2&gt;
+&lt;h3 id=&#34;q标签短文本引用&#34;&gt;q标签，短文本引用&lt;/h3&gt;
+&lt;p&gt;比如在你的网页的文章里想引用某个作家的一句诗，这样会使你的文章更加出彩，那么&lt;q&gt;标签是你所需要的。&lt;br&gt;
+语法：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;q&amp;gt;引用文本&amp;lt;/q&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;注意要引用的文本不用加双引号，浏览器会对q标签自动添加双引号。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;注意这里用&lt;code&gt;&amp;lt;q&amp;gt;&lt;/code&gt;标签的真正关键点不是它的默认样式双引号（如果这样我们不如自己在键盘上输入双引号就行了），而是它的语义：引用别人的话&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;blockquote标签长文本引用&#34;&gt;blockquote标签，长文本引用&lt;/h3&gt;
+&lt;p&gt;&lt;code&gt;&amp;lt;blockquote&amp;gt;&lt;/code&gt;的作用也是引用别人的文本。但它是对长文本的引用&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;&amp;lt;q&amp;gt;&lt;/code&gt;标签是对简短文本的引用，比如说引用一句话就用到&lt;code&gt;&amp;lt;q&amp;gt;&lt;/code&gt;标签。&lt;/p&gt;
+&lt;p&gt;语法:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;blockquote&amp;gt;引用文本&amp;lt;/blockquote&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;浏览器对&lt;code&gt;&amp;lt;blockquote&amp;gt;&lt;/code&gt;标签的解析是缩进样式&lt;/p&gt;
+&lt;h2 id=&#34;br&#34;&gt;&lt;code&gt;&amp;lt;br/&amp;gt;&lt;/code&gt;&lt;/h2&gt;
+&lt;p&gt;换行标签&lt;code&gt;&amp;lt;br/&amp;gt;&lt;/code&gt;&lt;br&gt;
+&lt;br/&gt;标签作用相当于word文档中的回车。只有一个开始标签，没有结束标签。&lt;/p&gt;
+&lt;h2 id=&#34;hr&#34;&gt;&lt;code&gt;&amp;lt;hr/&amp;gt;&lt;/code&gt;&lt;/h2&gt;
+&lt;p&gt;分割线标签&lt;code&gt;&amp;lt;hr/&amp;gt;&lt;/code&gt;&lt;br&gt;
+&lt;code&gt;&amp;lt;hr/&amp;gt;&lt;/code&gt;标签的在浏览器中的默认样式线条比较粗，颜色为灰色&lt;/p&gt;
+&lt;h2 id=&#34;nbsp&#34;&gt;&lt;code&gt;&amp;amp;nbsp;&lt;/code&gt;&lt;/h2&gt;
+&lt;p&gt;html特殊字符&lt;/p&gt;
+&lt;p&gt;空格：&lt;code&gt;&amp;amp;nbsp;&lt;/code&gt;(;分号必不可少)&lt;/p&gt;
+&lt;h2 id=&#34;address&#34;&gt;&lt;code&gt;&amp;lt;address&amp;gt;&lt;/code&gt;&lt;/h2&gt;
+&lt;p&gt;address标签，为网页加入地址信息&lt;/p&gt;
+&lt;p&gt;语法：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;address&amp;gt;地址信息&amp;lt;/address&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;如：&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;&amp;lt;address&amp;gt;&lt;/code&gt;北京市西城区德外大街10号&lt;code&gt;&amp;lt;/address&amp;gt;&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;在浏览器上显示的样式为斜体，如果不喜欢斜体，当然可以，可以在后面的课程中使用css样式来修改它&lt;code&gt;&amp;lt;address&amp;gt;&lt;/code&gt;标签的默认样式&lt;/p&gt;
+&lt;h2 id=&#34;code&#34;&gt;&lt;code&gt;&amp;lt;code&amp;gt;&lt;/code&gt;&lt;/h2&gt;
+&lt;p&gt;在介绍语言技术的网站中，必免不了在网页中显示一些计算机专业的编程代码，当代码为一行代码时，你就可以使用&lt;code&gt;&amp;lt;code&amp;gt;&lt;/code&gt;标签了，如下面例子：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;code&amp;gt;var i=i+300;&amp;lt;/code&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;语法：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;code&amp;gt;代码语言&amp;lt;/code&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;注意：在文章中一般如果要插入多行代码时不能使用&lt;code&gt;&amp;lt;code&amp;gt;&lt;/code&gt;标签，如果是多行代码，可以使用&lt;code&gt;&amp;lt;pre&amp;gt;&lt;/code&gt;标签。&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;&amp;lt;pre&amp;gt;&lt;/code&gt; 标签的主要作用:预格式化的文本。被包围在 pre 元素中的文本通常会保留空格和换行符。如果用以前的方法，回车需要输入&lt;code&gt;&amp;lt;br&amp;gt;&lt;/code&gt;签，空格需要输入&lt;code&gt;&amp;amp;nbsp;&lt;/code&gt;。&lt;/p&gt;
+&lt;p&gt;注意：&lt;code&gt;&amp;lt;pre&amp;gt;&lt;/code&gt;标签不只是为显示计算机的源代码时用的，在你需要在网页中预显示格式时都可以使用它，只是&lt;code&gt;&amp;lt;pre&amp;gt;&lt;/code&gt;标签的一个常见应用就是用来展示计算机的源代码。&lt;/p&gt;
+&lt;h1 id=&#34;认识标签第二部分&#34;&gt;认识标签（第二部分）&lt;/h1&gt;
+&lt;h2 id=&#34;无序列表&#34;&gt;无序列表&lt;/h2&gt;
+&lt;p&gt;ul-li是没有前后顺序的信息列表。&lt;/p&gt;
+&lt;p&gt;语法：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;ul&amp;gt;
+    &amp;lt;li&amp;gt;信息&amp;lt;/li&amp;gt;
+    &amp;lt;li&amp;gt;信息&amp;lt;/li&amp;gt;
+    ......
+&amp;lt;/ul&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;举例：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;ul&amp;gt;
+    &amp;lt;li&amp;gt;精彩少年&amp;lt;/li&amp;gt;
+    &amp;lt;li&amp;gt;美丽突然出现&amp;lt;/li&amp;gt;
+    &amp;lt;li&amp;gt;触动心灵的旋律&amp;lt;/li&amp;gt;
+&amp;lt;/ul&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;ul-li在网页中显示的默认样式一般为：每项li前都自带一个圆点&lt;/p&gt;
+&lt;h2 id=&#34;有序列表&#34;&gt;有序列表&lt;/h2&gt;
+&lt;p&gt;语法：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;ol&amp;gt;
+    &amp;lt;li&amp;gt;信息&amp;lt;/li&amp;gt;
+    &amp;lt;li&amp;gt;信息&amp;lt;/li&amp;gt;
+    ......
+&amp;lt;/ol&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;举例：&lt;/p&gt;
+&lt;p&gt;下面是一个热点课程下载排行榜：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;ol&amp;gt;
+    &amp;lt;li&amp;gt;前端开发面试心法 &amp;lt;/li&amp;gt;
+    &amp;lt;li&amp;gt;零基础学习html&amp;lt;/li&amp;gt;
+    &amp;lt;li&amp;gt;JavaScript全攻略&amp;lt;/li&amp;gt;
+&amp;lt;/ol&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;code&gt;&amp;lt;ol&amp;gt;&lt;/code&gt;在网页中显示的默认样式一般为：每项&lt;code&gt;&amp;lt;li&amp;gt;&lt;/code&gt;前都自带一个序号，序号默认从1开始&lt;/p&gt;
+&lt;h2 id=&#34;div容器标签&#34;&gt;&lt;code&gt;&amp;lt;div&amp;gt;&lt;/code&gt;容器标签&lt;/h2&gt;
+&lt;p&gt;在网页制作过程过中，可以把一些独立的逻辑部分划分出来，放在一个&lt;code&gt;&amp;lt;div&amp;gt;&lt;/code&gt;标签中，这个&lt;code&gt;&amp;lt;div&amp;gt;&lt;/code&gt;标签的作用就相当于一个容器。&lt;/p&gt;
+&lt;p&gt;语法：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;div&amp;gt;…&amp;lt;/div&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;确定逻辑部分：&lt;/p&gt;
+&lt;p&gt;什么是逻辑部分？它是页面上相互关联的一组元素。如网页中的独立的栏目版块，就是一个典型的逻辑部分。如下图所示：图中用红色边框标出的部分就是一个逻辑部分，就可以使用&lt;code&gt;&amp;lt;div&amp;gt;&lt;/code&gt;标签作为容器&lt;/p&gt;
+&lt;p&gt;注释：&lt;code&gt;&amp;lt;div&amp;gt;&lt;/code&gt; 是一个块级元素，也就是说，浏览器通常会在 div 元素前后放置一个换行符。&lt;/p&gt;
+&lt;h2 id=&#34;创建表格&#34;&gt;创建表格&lt;/h2&gt;
+&lt;p&gt;创建表格的五个元素：&lt;/p&gt;
+&lt;p&gt;table、tbody、tr、th、td&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;&amp;lt;table&amp;gt;…&amp;lt;/table&amp;gt;&lt;/code&gt;：整个表格以&lt;code&gt;&amp;lt;table&amp;gt;&lt;/code&gt;标记开始、&lt;code&gt;&amp;lt;/table&amp;gt;&lt;/code&gt;标记结束。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;&amp;lt;tbody&amp;gt;…&amp;lt;/tbody&amp;gt;&lt;/code&gt;：当表格内容非常多时，表格会下载一点显示一点，但如果加上&lt;code&gt;&amp;lt;tbody&amp;gt;&lt;/code&gt;标签后，这个表格就要等表格内容全部下载完才会显示。如右侧代码编辑器中的代码。（这个标签基本上不怎么用了）&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;&amp;lt;tr&amp;gt;…&amp;lt;/tr&amp;gt;&lt;/code&gt;：表格的一行，所以有几对tr 表格就有几行。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;&amp;lt;td&amp;gt;…&amp;lt;/td&amp;gt;&lt;/code&gt;：表格的一个单元格，一行中包含几对&lt;code&gt;&amp;lt;td&amp;gt;...&amp;lt;td/&amp;gt;&lt;/code&gt;，说明一行中就有几列。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;&amp;lt;th&amp;gt;…&amp;lt;/th&amp;gt;&lt;/code&gt;：表格的头部的一个单元格，表格表头。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;表格中列的个数，取决于一行中数据单元格的个数。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;表格还是需要添加一些标签进行优化，可以添加标题和摘要&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;&amp;lt;table summary=&amp;quot;本表格记录2012年到2013年库存记录，记录包括U盘和耳机库存量&amp;quot;&amp;gt;&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;&amp;lt;caption&amp;gt;2012年到2013年库存记录&amp;lt;/caption&amp;gt;&lt;/code&gt;&lt;/p&gt;
+&lt;h2 id=&#34;超链接&#34;&gt;超链接&lt;/h2&gt;
+&lt;p&gt;使用&lt;code&gt;&amp;lt;a&amp;gt;&lt;/code&gt;标签，链接到别一个页面&lt;/p&gt;
+&lt;p&gt;使用&lt;code&gt;&amp;lt;a&amp;gt;&lt;/code&gt;标签可实现超链接，它在网页制作中可以说是无处不在，只要有链接的地方，就会有这个标签。&lt;/p&gt;
+&lt;p&gt;语法：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;a href = &amp;quot;目标网址&amp;quot;&amp;gt;链接显示的文本&amp;lt;/a&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;例如：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;a href = &amp;quot;http://www.imooc.com&amp;quot;&amp;gt;click here!&amp;lt;/a&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;上面例子作用是单击click here!文字，网页链接到&lt;a href=&#34;http://www.imooc.com&#34;&gt;慕课网&lt;/a&gt;这个网页。&lt;/p&gt;
+&lt;h2 id=&#34;网页插入图片&#34;&gt;网页插入图片&lt;/h2&gt;
+&lt;p&gt;认识&lt;code&gt;&amp;lt;img&amp;gt;&lt;/code&gt;标签，为网页插入图片&lt;/p&gt;
+&lt;p&gt;在网页的制作中为使网页炫丽美观，肯定是缺少不了图片，可以使用&lt;code&gt;&amp;lt;img&amp;gt;&lt;/code&gt;标签来插入图片。&lt;/p&gt;
+&lt;p&gt;语法：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;img src=&amp;quot;图片地址&amp;quot; alt=&amp;quot;下载失败时的替换文本&amp;quot; title = &amp;quot;提示文本&amp;quot;&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;举例：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;img src = &amp;quot;myimage.gif&amp;quot; alt = &amp;quot;My Image&amp;quot; title = &amp;quot;My Image&amp;quot; /&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;讲解：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;src：标识图像的位置；&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;alt：指定图像的描述性文本，当图像不可见时（下载不成功时），可看到该属性指定的文本；&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;title：提供在图像可见时对图像的描述(鼠标滑过图片时显示的文本)；&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;图像可以是GIF，PNG，JPEG格式的图像文件。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h1 id=&#34;表单标签与用户进行交互&#34;&gt;表单标签（与用户进行交互）&lt;/h1&gt;
+&lt;h2 id=&#34;form&#34;&gt;&lt;code&gt;&amp;lt;form&amp;gt;&lt;/code&gt;&lt;/h2&gt;
+&lt;p&gt;表单是可以把浏览者输入的数据传送到服务器端，这样服务器端程序就可以处理表单传过来的数据。&lt;/p&gt;
+&lt;p&gt;语法：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;form method=&amp;quot;传送方式&amp;quot; action=&amp;quot;服务器文件&amp;quot;&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;讲解：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;&amp;lt;form&amp;gt;&lt;/code&gt; ：&lt;code&gt;&amp;lt;form&amp;gt;&lt;/code&gt;标签是成对出现的，以&lt;code&gt;&amp;lt;form&amp;gt;&lt;/code&gt;开始，以&lt;code&gt;&amp;lt;/form&amp;gt;&lt;/code&gt;结束。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;action ：浏览者输入的数据被传送到的地方,比如一个PHP页面(save.php)。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;method ： 数据传送的方式（get/post）。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;input&#34;&gt;&lt;code&gt;&amp;lt;input&amp;gt;&lt;/code&gt;&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;&amp;lt;input&amp;gt;&lt;/code&gt;输入框&lt;/p&gt;
+&lt;p&gt;文本输入框、密码输入框&lt;/p&gt;
+&lt;p&gt;当用户要在表单中键入字母、数字等内容时，就会用到文本输入框。文本框也可以转化为密码输入框。&lt;/p&gt;
+&lt;p&gt;语法：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;form&amp;gt;
+    &amp;lt;input type=&amp;quot;text/password&amp;quot; name=&amp;quot;名称&amp;quot; value=&amp;quot;文本&amp;quot; /&amp;gt;
+&amp;lt;/form&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ol&gt;
+&lt;li&gt;type：&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;当type=&amp;quot;text&amp;quot;时，输入框为文本输入框;&lt;/p&gt;
+&lt;p&gt;当type=&amp;quot;password&amp;quot;时, 输入框为密码输入框。&lt;/p&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;
+&lt;p&gt;name：为文本框命名，以备后台程序ASP 、PHP使用。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;value：为文本输入框设置默认值。(一般起到提示作用)&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;textarea&#34;&gt;&lt;code&gt;&amp;lt;textarea&amp;gt;&lt;/code&gt;&lt;/h2&gt;
+&lt;p&gt;文本域，支持多行文本输入&lt;/p&gt;
+&lt;p&gt;当用户需要在表单中输入大段文字时，需要用到文本输入域。&lt;/p&gt;
+&lt;p&gt;语法：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;textarea rows=&amp;quot;行数&amp;quot; cols=&amp;quot;列数&amp;quot;&amp;gt;文本&amp;lt;/textarea&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;&amp;lt;textarea&amp;gt;&lt;/code&gt;标签是成对出现的，以&lt;code&gt;&amp;lt;textarea&amp;gt;&lt;/code&gt;开始，以&lt;code&gt;&amp;lt;/textarea&amp;gt;&lt;/code&gt;结束。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;cols ：多行输入域的列数。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;rows ：多行输入域的行数。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;单选框复选框&#34;&gt;单选框，复选框&lt;/h2&gt;
+&lt;p&gt;单选框，复选框&lt;/p&gt;
+&lt;p&gt;语法：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;input type=&amp;quot;radio/checkbox&amp;quot; value=&amp;quot;值&amp;quot; name=&amp;quot;名称&amp;quot; checked=&amp;quot;checked&amp;quot;/&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;type:&lt;/p&gt;
+&lt;p&gt;当type=&amp;quot;radio&amp;quot;时，控件为单选框&lt;/p&gt;
+&lt;p&gt;当type=&amp;quot;checkbox&amp;quot;时，控件为复选框&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;value：提交数据到服务器的值（后台程序PHP使用）&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;name：为控件命名，以备后台程序ASP、PHP使用&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;checked：当设置checked=&amp;quot;checked&amp;quot;时，该选项被默认选中&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;注意：同一组的单选按钮，name取值一定要一致，这样同一组的单选按钮才可以起到单选的作用。&lt;/p&gt;
+&lt;h2 id=&#34;select&#34;&gt;&lt;code&gt;&amp;lt;select&amp;gt;&lt;/code&gt;&lt;/h2&gt;
+&lt;p&gt;下拉列表框，节省空间&lt;/p&gt;
+&lt;p&gt;下拉列表在网页中也常会用到，它可以有效的节省网页空间。既可以单选、又可以多选。&lt;/p&gt;
+&lt;p&gt;语法：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;option value=&amp;quot;提交值&amp;quot;&amp;gt;选项&amp;lt;/option&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;提交值是向服务器提交的值，选项是显示的值。&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;form action=&amp;quot;save.php&amp;quot; method=&amp;quot;post&amp;quot; &amp;gt;
+    &amp;lt;label&amp;gt;爱好:&amp;lt;/label&amp;gt;
+    &amp;lt;select&amp;gt;
+        &amp;lt;option value=&amp;quot;看书&amp;quot;&amp;gt;看书&amp;lt;/option&amp;gt;
+        &amp;lt;option value=&amp;quot;旅游&amp;quot; selected=&amp;quot;selected&amp;quot;&amp;gt;旅游&amp;lt;/option&amp;gt;
+        &amp;lt;option value=&amp;quot;运动&amp;quot;&amp;gt;运动&amp;lt;/option&amp;gt;
+        &amp;lt;option value=&amp;quot;购物&amp;quot;&amp;gt;购物&amp;lt;/option&amp;gt;
+    &amp;lt;/select&amp;gt;
+&amp;lt;/form&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;下拉列表框进行多选&#34;&gt;下拉列表框进行多选&lt;/h2&gt;
+&lt;p&gt;使用下拉列表框进行多选&lt;/p&gt;
+&lt;p&gt;下拉列表也可以进行多选操作，在&lt;code&gt;&amp;lt;select&amp;gt;&lt;/code&gt;标签中设置&lt;code&gt;multiple=&amp;quot;multiple&amp;quot;&lt;/code&gt;属性，&lt;/p&gt;
+&lt;p&gt;就可以实现多选功能，进行多选时按下Ctrl键同时进行单击，可以选择多个选项。&lt;/p&gt;
+&lt;p&gt;如下代码：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;form action=&amp;quot;save.php&amp;quot; method=&amp;quot;post&amp;quot; &amp;gt;
+    &amp;lt;label&amp;gt;爱好:&amp;lt;/label&amp;gt;
+    &amp;lt;select multiple=&amp;quot;multiple&amp;quot;&amp;gt;
+        &amp;lt;option value=&amp;quot;看书&amp;quot;&amp;gt;看书&amp;lt;/option&amp;gt;
+        &amp;lt;option value=&amp;quot;旅游&amp;quot;&amp;gt;旅游&amp;lt;/option&amp;gt;
+        &amp;lt;option value=&amp;quot;运动&amp;quot;&amp;gt;运动&amp;lt;/option&amp;gt;
+        &amp;lt;option value=&amp;quot;购物&amp;quot;&amp;gt;购物&amp;lt;/option&amp;gt;
+    &amp;lt;/select&amp;gt;
+&amp;lt;/form&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;提交按钮&#34;&gt;提交按钮&lt;/h2&gt;
+&lt;p&gt;提交按钮：当用户需要提交表单信息到服务器时，需要用到提交按钮。&lt;/p&gt;
+&lt;p&gt;语法：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;input type=&amp;quot;submit&amp;quot; value=&amp;quot;提交&amp;quot;&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;type：只有当type值设置为submit时，按钮才有提交作用&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;value：按钮上显示的文字&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;重置按钮&#34;&gt;重置按钮&lt;/h2&gt;
+&lt;p&gt;重置按钮，重置表单信息&lt;/p&gt;
+&lt;p&gt;当用户需要重置表单信息到初始时的状态时，比如用户输入“用户名”后，发现书写有误，可以使用重置按钮使输入框恢复到初始状态。只需要把type设置为&amp;quot;reset&amp;quot;就可以。&lt;/p&gt;
+&lt;p&gt;语法：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;input type=&amp;quot;reset&amp;quot; value=&amp;quot;重置&amp;quot;&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;type：只有当type值设置为reset时，按钮才有重置作用&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;value：按钮上显示的文字&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h1 id=&#34;css样式&#34;&gt;css样式&lt;/h1&gt;
+&lt;h2 id=&#34;认识css样式&#34;&gt;认识css样式&lt;/h2&gt;
+&lt;p&gt;CSS全称为“层叠样式表 (Cascading Style Sheets)”，它主要是用于定义HTML内容在浏览器内的显示样式，如文字大小、颜色、字体加粗等。&lt;/p&gt;
+&lt;p&gt;如下列代码：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;p{
+    font-size:12px;
+    color:red;
+    font-weight:bold;
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;使用CSS样式的一个好处是通过定义某个样式，可以让不同网页位置的文字有着统一的字体、字号或者颜色等。&lt;/p&gt;
+&lt;h2 id=&#34;css代码语法&#34;&gt;CSS代码语法&lt;/h2&gt;
+&lt;p&gt;css 样式由选择符和声明组成，而声明又由属性和值组成&lt;/p&gt;
+&lt;p&gt;选择符{属性:值}&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;p{color:red;}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;选择符：又称选择器，指明网页中要应用样式规则的元素，如本例中是网页中所有的段（p）的文字将变成蓝色，而其他的元素（如ol）不会受到影响。&lt;/p&gt;
+&lt;p&gt;声明：在英文大括号“｛｝”中的的就是声明，属性和值之间用英文冒号“：”分隔。当有多条声明时，中间可以英文分号“;”分隔，如下所示：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;p{font-size:12px;color:red;}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;插入形式&#34;&gt;插入形式&lt;/h2&gt;
+&lt;p&gt;从CSS 样式代码插入的形式来看基本可以分为以下3种：&lt;/p&gt;
+&lt;p&gt;内联式、嵌入式和外部式三种&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;内联式css样式&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;就是把css代码直接写在现有的HTML标签中，如下面代码：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;&amp;lt;p style=&amp;quot;color:red&amp;quot;&amp;gt;这里文字是红色。&amp;lt;/p&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;css样式代码要写在style=&amp;quot;&amp;quot;双引号中，如果有多条css样式代码设置可以写在一起，中间用分号隔开。如下代码：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;&amp;lt;p style=&amp;quot;color:red;font-size:12px&amp;quot;&amp;gt;这里文字是红色。&amp;lt;/p&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;嵌入式css样式，&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;就是可以把css样式代码写在&lt;code&gt;&amp;lt;style type=&amp;quot;text/css&amp;quot;&amp;gt;&amp;lt;/style&amp;gt;&lt;/code&gt;标签之间。如下面代码实现把三个&lt;code&gt;&amp;lt;span&amp;gt;&lt;/code&gt;标签中的文字设置为红色：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;&amp;lt;style type=&amp;quot;text/css&amp;quot;&amp;gt;
+span{
+    color:red;
+}
+&amp;lt;/style&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;嵌入式css样式必须写在&lt;code&gt;&amp;lt;style&amp;gt;&amp;lt;/style&amp;gt;&lt;/code&gt;之间，并且一般情况下嵌入式css样式写在&lt;code&gt;&amp;lt;head&amp;gt;&amp;lt;/head&amp;gt;&lt;/code&gt;之间。&lt;/p&gt;
+&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;外部式css样式&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;写在单独的一个文件中&lt;/p&gt;
+&lt;p&gt;外部式css样式(也可称为外联式)就是把css代码写一个单独的外部文件中，这个css样式文件以“.css”为扩展名，在&lt;code&gt;&amp;lt;head&amp;gt;&lt;/code&gt;内（不是在&lt;code&gt;&amp;lt;style&amp;gt;&lt;/code&gt;标签内）使用&lt;code&gt;&amp;lt;link&amp;gt;&lt;/code&gt;标签将css样式文件链接到HTML文件内，如下面代码：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;link href=&amp;quot;base.css&amp;quot; rel=&amp;quot;stylesheet&amp;quot; type=&amp;quot;text/css&amp;quot; /&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;注意：&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;css样式文件名称以有意义的英文字母命名，如 main.css。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;rel=&amp;quot;stylesheet&amp;quot; type=&amp;quot;text/css&amp;quot;&lt;/code&gt; 是固定写法不可修改。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;&amp;lt;link&amp;gt;&lt;/code&gt;标签位置一般写在&lt;code&gt;&amp;lt;head&amp;gt;&lt;/code&gt;标签之内。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h1 id=&#34;css选择器&#34;&gt;CSS选择器&lt;/h1&gt;
+&lt;p&gt;每一条css样式定义由两部分组成，形式如下：&lt;/p&gt;
+&lt;p&gt;选择器{&lt;/p&gt;
+&lt;p&gt;样式;&lt;/p&gt;
+&lt;p&gt;}&lt;/p&gt;
+&lt;p&gt;在{}之前的部分就是“选择器”，“选择器”指明了{}中的“样式”的作用对象，也就是“样式”作用于网页中的哪些元素&lt;/p&gt;
+&lt;h2 id=&#34;标签选择器&#34;&gt;标签选择器&lt;/h2&gt;
+&lt;p&gt;标签选择器其实就是html代码中的标签。如右侧代码编辑器中的&lt;code&gt;&amp;lt;html&amp;gt;、&amp;lt;body&amp;gt;、&amp;lt;h1&amp;gt;、&amp;lt;p&amp;gt;、&amp;lt;img&amp;gt;&lt;/code&gt;。例如下面代码：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;p{font-size:12px;line-height:1.6em;}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;上面的css样式代码的作用：为p标签设置12px字号，行间距设置1.6em的样式。&lt;/p&gt;
+&lt;h2 id=&#34;类选择器&#34;&gt;类选择器&lt;/h2&gt;
+&lt;p&gt;类选择器在css样式编码中是最常用到的，如右侧代码编辑器中的代码:可以实现为“胆小如鼠”、“勇气”字体设置为红色。&lt;/p&gt;
+&lt;p&gt;语法：&lt;/p&gt;
+&lt;p&gt;.类选器名称{css样式代码;}&lt;/p&gt;
+&lt;p&gt;注意：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;英文圆点开头&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;其中类选器名称可以任意起名（但不要起中文噢）&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;使用方法：&lt;/p&gt;
+&lt;p&gt;第一步：使用合适的标签把要修饰的内容标记起来，如下：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;span&amp;gt;胆小如鼠&amp;lt;/span&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;第二步：使用class=&amp;quot;类选择器名称&amp;quot;为标签设置一个类，如下：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;span class=&amp;quot;stress&amp;quot;&amp;gt;胆小如鼠&amp;lt;/span&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;第三步：设置类选器css样式，如下：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;.stress{color:red;}/*类前面要加入一个英文圆点*/
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;id选择器&#34;&gt;ID选择器&lt;/h2&gt;
+&lt;p&gt;在很多方面，ID选择器都类似于类选择符，但也有一些重要的区别：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;为标签设置id=&amp;quot;ID名称&amp;quot;，而不是class=&amp;quot;类名称&amp;quot;。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;ID选择符的前面是井号（#）号，而不是英文圆点（.）。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;类和id选择器的区别&#34;&gt;类和ID选择器的区别&lt;/h2&gt;
+&lt;p&gt;相同点：可以应用于任何元素&lt;/p&gt;
+&lt;p&gt;不同点：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;ID选择器只能在文档中使用一次。与类选择器不同，在一个HTML文档中，ID选择器只能使用一次，而且仅一次。而类选择器可以使用多次。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;下面代码是正确的：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;p&amp;gt;三年级时，我还是一个&amp;lt;span class=&amp;quot;stress&amp;quot;&amp;gt;胆小如鼠&amp;lt;/span&amp;gt;的小女孩，上课从来不敢回答老师提出的问题，生怕回答错了老师会批评我。就一直没有这个&amp;lt;span class=&amp;quot;stress&amp;quot;&amp;gt;勇气&amp;lt;/span&amp;gt;来回答老师提出的问题。&amp;lt;/p&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;而下面代码是错误的：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;p&amp;gt;三年级时，我还是一个&amp;lt;span id=&amp;quot;stress&amp;quot;&amp;gt;胆小如鼠&amp;lt;/span&amp;gt;的小女孩，上课从来不敢回答老师提出的问题，生怕回答错了老师会批评我。就一直没有这个&amp;lt;span id=&amp;quot;stress&amp;quot;&amp;gt;勇气&amp;lt;/span&amp;gt;来回答老师提出的问题。&amp;lt;/p&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;可以使用类选择器词列表方法为一个元素同时设置多个样式。我们可以为一个元素同时设多个样式，但只可以用类选择器的方法实现，ID选择器是不可以的（不能使用 ID 词列表）。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;下面的代码是正确的(完整代码见右侧代码编辑器)&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;.stress{
+    color:red
+}
+.bigsize{
+    font-size:25px;
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;p&amp;gt;到了&amp;lt;span class=&amp;quot;stress bigsize&amp;quot;&amp;gt;三年级&amp;lt;/span&amp;gt;下学期时，我们班上了一节公开课...&amp;lt;/p&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;上面代码的作用是为“三年级”三个文字设置文本颜色为红色并且字号为25px&lt;/p&gt;
+&lt;p&gt;下面的代码是不正确的(完整代码见右侧代码编辑器)&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;#stressid{
+    color:red;
+}
+
+#bigsizeid{
+    font-size:25px;
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;p&amp;gt;到了&amp;lt;span id=&amp;quot;stressid bigsizeid&amp;quot;&amp;gt;三年级&amp;lt;/span&amp;gt;下学期时，我们班上了一节公开课...&amp;lt;/p&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;上面代码不可以实现为“三年级”三个文字设置文本颜色为红色并且字号为25px的作用。&lt;/p&gt;
+&lt;h2 id=&#34;子选择器&#34;&gt;子选择器&lt;/h2&gt;
+&lt;p&gt;还有一个比较有用的选择器子选择器，即大于符号(&amp;gt;),用于选择指定标签元素的子元素。如下面的代码：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;.food&amp;gt;li{border:1px solid red;}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;这行代码会使class名为food下的子元素li加入红色实线边框。&lt;/p&gt;
+&lt;h2 id=&#34;包含后代选择器&#34;&gt;包含(后代)选择器&lt;/h2&gt;
+&lt;p&gt;包含选择器，即加入空格,用于选择指定标签元素下的后辈元素。如右侧代码编辑器中的代码：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;.first span{color:red;}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;请注意这个选择器与子选择器的区别&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;子选择器（child selector）仅是指它的直接后代，或者你可以理解为作用于子元素的第一代后代&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;后代选择器是作用于所有子后代元素。后代选择器通过空格来进行选择，而子选择器是通过“&amp;gt;”进行选择。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;总结：&amp;gt;作用于元素的第一代后代，空格作用于元素的所有后代。&lt;/p&gt;
+&lt;h1 id=&#34;通用选择器&#34;&gt;通用选择器&lt;/h1&gt;
+&lt;p&gt;通用选择器是功能最强大的选择器，它使用一个（*）号指定，它的作用是匹配html中任意标签元素，如下使用下面代码使用html中任意标签元素字体颜色全部设置为红色：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;* {color:red;}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;伪类选择符&#34;&gt;伪类选择符&lt;/h2&gt;
+&lt;p&gt;更有趣的是伪类选择符，为什么叫做伪类选择符，它允许给html不存在的标签设置样式，比如说我们给html中一个标签元素的鼠标滑过的状态来设置字体颜色：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;a:hover{color:red;}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;这行代码会使被&lt;code&gt;&amp;lt;a&amp;gt;&amp;lt;/a&amp;gt;&lt;/code&gt;标签包裹的文字内容中的“胆小如鼠”字体颜色在鼠标滑过时变为红色。&lt;/p&gt;
+&lt;h2 id=&#34;分组选择符&#34;&gt;分组选择符&lt;/h2&gt;
+&lt;p&gt;当你想为html中多个标签元素设置同一个样式时，可以使用分组选择符（，），如下代码为右侧代码编辑器中的h1、span标签同时设置字体颜色为红色：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;h1,span{color:red;}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;它相当于下面两行代码：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;h1{color:red;}
+
+span{color:red;}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h1 id=&#34;css的继承-层叠和特殊性&#34;&gt;CSS的继承、层叠和特殊性。&lt;/h1&gt;
+&lt;h2 id=&#34;继承&#34;&gt;继承&lt;/h2&gt;
+&lt;p&gt;CSS的某些样式是具有继承性的，那么什么是继承呢？继承是一种规则，它允许样式不仅应用于某个特定html标签元素，而且应用于其后代。比如下面代码：如某种颜色应用于p标签，这个颜色设置不仅应用p标签，还应用于p标签中的所有子元素文本，这里子元素为span标签。&lt;/p&gt;
+&lt;p&gt;但注意有一些css样式是不具有继承性的。如border:1px solid red;&lt;/p&gt;
+&lt;h2 id=&#34;权值&#34;&gt;权值&lt;/h2&gt;
+&lt;p&gt;根据权值来判断使用哪个css样式&lt;/p&gt;
+&lt;p&gt;浏览器是根据权值来判断使用哪种css样式的，权值高的就使用哪种css样式。&lt;/p&gt;
+&lt;p&gt;下面是权值的规则：&lt;/p&gt;
+&lt;p&gt;标签的权值为1，类选择符的权值为10，ID选择符的权值最高为100。例如下面的代码：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;p{color:red;} /*权值为1*/
+
+p span{color:green;} /*权值为1+1=2*/
+
+.warning{color:white;} /*权值为10*/
+
+p span.warning{color:purple;} /*权值为1+1+10=12*/
+
+#footer .note p{color:yellow;} /*权值为100+10+1=111*/
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;注意：还有一个权值比较特殊--继承也有权值但很低，有的文献提出它只有0.1，所以可以理解为继承的权值最低&lt;/p&gt;
+&lt;h2 id=&#34;层叠&#34;&gt;层叠&lt;/h2&gt;
+&lt;p&gt;我们来思考一个问题：如果在html文件中对于同一个元素可以有多个css样式存在并且这多个css样式具有相同权重值怎么办？好，这一小节中的层叠帮你解决这个问题。&lt;/p&gt;
+&lt;p&gt;层叠就是在html文件中对于同一个元素可以有多个css样式存在，当有相同权重的样式存在时，会根据这些css样式的前后顺序来决定，处于最后面的css样式会被应用。&lt;/p&gt;
+&lt;p&gt;如下面代码:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;p{color:red;}
+
+p{color:green;}
+
+&amp;lt;p class=&amp;quot;first&amp;quot;&amp;gt;三年级时，我还是一个&amp;lt;span&amp;gt;胆小如鼠&amp;lt;/span&amp;gt;的小女孩。&amp;lt;/p&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;最后 p 中的文本会设置为green，这个层叠很好理解，理解为后面的样式会覆盖前面的样式。&lt;/p&gt;
+&lt;p&gt;所以前面的css样式优先级就不难理解了：&lt;/p&gt;
+&lt;p&gt;内联样式表（标签内部）&amp;gt; 嵌入样式表（当前文件中）&amp;gt; 外部样式表（外部文件中）。&lt;/p&gt;
+&lt;h2 id=&#34;重要性&#34;&gt;重要性&lt;/h2&gt;
+&lt;p&gt;重要性&lt;/p&gt;
+&lt;p&gt;我们在做网页代码的时，有些特殊的情况需要为某些样式设置具有最高权值，怎么办？这时候我们可以使用!important来解决。&lt;/p&gt;
+&lt;p&gt;如下代码：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;p{color:red!important;}
+
+p{color:green;}
+
+&amp;lt;p class=&amp;quot;first&amp;quot;&amp;gt;三年级时，我还是一个&amp;lt;span&amp;gt;胆小如鼠&amp;lt;/span&amp;gt;的小女孩。&amp;lt;/p&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;这时 p 段落中的文本会显示的red红色。&lt;/p&gt;
+&lt;p&gt;注意：!important要写在分号的前面&lt;/p&gt;
+&lt;h1 id=&#34;css格式化排版&#34;&gt;CSS格式化排版&lt;/h1&gt;
+&lt;h2 id=&#34;文字排版&#34;&gt;文字排版&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;文字排版--字体&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;我们可以使用css样式为网页中的文字设置字体、字号、颜色等样式属性。下面我们来看一个例子，下面代码实现：为网页中的文字设置字体为宋体。&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;body{font-family:&amp;quot;宋体&amp;quot;;}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;这里注意不要设置不常用的字体，因为如果用户本地电脑上如果没有安装你设置的字体，就会显示浏览器默认的字体。（因为用户是否可以看到你设置的字体样式取决于用户本地电脑上是否安装你设置的字体。）&lt;/p&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;文字排版--字号、颜色&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;可以使用下面代码设置网页中文字的字号为12像素，并把字体颜色设置为#666(灰色)：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;body{font-size:12px;color:#666}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;文字排版--粗体&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;我们还可以使用css样式来改变文字的样式：粗体、斜体、下划线、删除线，可以使用下面代码实现设置文字以粗体样式显示出来。&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;p span{font-weight:bold;}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ol start=&#34;4&#34;&gt;
+&lt;li&gt;文字排版--斜体&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;以下代码可以实现文字以斜体样式在浏览器中显示：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;p a{font-style:italic;}
+
+&amp;lt;p&amp;gt;三年级时，我还是一个&amp;lt;a&amp;gt;胆小如鼠&amp;lt;/a&amp;gt;的小女孩。&amp;lt;/p&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ol start=&#34;5&#34;&gt;
+&lt;li&gt;文字排版--下划线&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;有些情况下想为文字设置为下划线样式，这样可以在视觉上强调文字，可以使用下面代码来实现：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;p a{text-decoration:underline;}
+
+&amp;lt;p&amp;gt;三年级时，我还是一个&amp;lt;a&amp;gt;胆小如鼠&amp;lt;/a&amp;gt;的小女孩。&amp;lt;/p&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;删除线，在电商网站上经常见。&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;p a{text-decoration:line-through;}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;段落排版&#34;&gt;段落排版&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;段落排版--缩进&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;中文文字中的段前习惯空两个文字的空白，这个特殊的样式可以用下面代码来实现：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;p{text-indent:2em;}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;注意：2em的意思就是文字的2倍大小。&lt;/p&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;段落排版--行间距&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;这一小节我们来学习一下另一个在段落排版中起重要作用的行间距属性（line-height），如下代码实现设置段落行间距为1.5倍。&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;p{line-height:1.5em;}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;段落排版--字间距、字母间距&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;文字间隔、字母间隔设置：&lt;/p&gt;
+&lt;p&gt;如果想在网页排版中设置文字间隔或者字母间隔就可以使用 letter-spacing来实现，如下面代码：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;h1{
+    letter-spacing:50px;
+}
+
+...
+
+&amp;lt;h1&amp;gt;了不起的盖茨比&amp;lt;/h1&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;注意：这个样式使用在英文单词时，是设置字母与字母之间的间距。&lt;/p&gt;
+&lt;p&gt;单词间距设置：&lt;/p&gt;
+&lt;p&gt;如果我想设置英文单词之间的间距呢？可以使用word-spacing来实现。如下代码：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;h1{
+    word-spacing:50px;
+}
+...
+&amp;lt;h1&amp;gt;welcome to imooc!&amp;lt;/h1&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h1 id=&#34;css盒模型&#34;&gt;CSS盒模型&lt;/h1&gt;
+&lt;h2 id=&#34;元素分类&#34;&gt;元素分类&lt;/h2&gt;
+&lt;p&gt;在讲解CSS布局之前，我们需要提前知道一些知识，在CSS中，html中的标签元素大体被分为三种不同的类型：块状元素、内联元素和内联块状元素。&lt;/p&gt;
+&lt;p&gt;常用的块状元素有：&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;&amp;lt;div&amp;gt;、&amp;lt;p&amp;gt;、&amp;lt;h1&amp;gt;...&amp;lt;h6&amp;gt;、&amp;lt;ol&amp;gt;、&amp;lt;ul&amp;gt;、&amp;lt;dl&amp;gt;、&amp;lt;table&amp;gt;、&amp;lt;address&amp;gt;、&amp;lt;blockquote&amp;gt; 、&amp;lt;form&amp;gt;&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;常用的内联元素有：&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;&amp;lt;a&amp;gt;、&amp;lt;span&amp;gt;、&amp;lt;br&amp;gt;、&amp;lt;i&amp;gt;、&amp;lt;em&amp;gt;、&amp;lt;strong&amp;gt;、&amp;lt;label&amp;gt;、&amp;lt;q&amp;gt;、&amp;lt;var&amp;gt;、&amp;lt;cite&amp;gt;、&amp;lt;code&amp;gt;&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;常用的内联块状元素有：&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;&amp;lt;img&amp;gt;、&amp;lt;input&amp;gt;&lt;/code&gt;&lt;/p&gt;
+&lt;h2 id=&#34;元素分类-块级元素&#34;&gt;元素分类--块级元素&lt;/h2&gt;
+&lt;p&gt;什么是块级元素？在html中&lt;code&gt;&amp;lt;div&amp;gt;、 &amp;lt;p&amp;gt;、&amp;lt;h1&amp;gt;、&amp;lt;form&amp;gt;、&amp;lt;ul&amp;gt;&lt;/code&gt; 和 &lt;code&gt;&amp;lt;li&amp;gt;&lt;/code&gt;就是块级元素。设置display:block就是将元素显示为块级元素。如下代码就是将行内元素a转换为块状元素，从页使用a元素具有块状元素特点。&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;a{display:block;}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;块级元素特点：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;每个块级元素都从新的一行开始，并且其后的元素也另起一行。（真霸道，一个块级元素独占一行）&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;元素的高度、宽度、行高以及顶和底边距都可设置。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;元素宽度在不设置的情况下，是它本身父容器的100%（和父元素的宽度一致），除非设定一个宽度。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;元素分类-行内元素&#34;&gt;元素分类--行内元素&lt;/h2&gt;
+&lt;p&gt;在html中，&lt;code&gt;&amp;lt;span&amp;gt;、&amp;lt;a&amp;gt;、&amp;lt;label&amp;gt;、&amp;lt;input&amp;gt;、 &amp;lt;img&amp;gt;&lt;/code&gt;、 &lt;code&gt;&amp;lt;strong&amp;gt;&lt;/code&gt; 和&lt;code&gt;&amp;lt;em&amp;gt;&lt;/code&gt;就是典型的行内元素（inline）元素。当然块状元素也可以通过代码display:inline将元素设置为行内元素。&lt;/p&gt;
+&lt;p&gt;行内元素特点：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;和其他元素都在一行上；&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;元素的高度、宽度、行高及顶部和底部边距不可设置；&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;元素的宽度就是它包含的文字或图片的宽度，不可改变。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;元素分类-内联块状元素&#34;&gt;元素分类--内联块状元素&lt;/h2&gt;
+&lt;p&gt;内联块状元素（inline-block）就是同时具备内联元素、块状元素的特点，代码display:inline-block就是将元素设置为内联块状元素。(css2.1新增)，&lt;code&gt;&amp;lt;img&amp;gt;、&amp;lt;input&amp;gt;&lt;/code&gt;标签就是这种内联块状标签。&lt;/p&gt;
+&lt;p&gt;inline-block元素特点：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;和其他元素都在一行上；&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;元素的高度、宽度、行高以及顶和底边距都可设置。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;盒模型-边框一&#34;&gt;盒模型--边框（一）&lt;/h2&gt;
+&lt;p&gt;盒子模型的边框就是围绕着内容及补白的线，这条线你可以设置它的粗细、样式和颜色(边框三个属性)。&lt;/p&gt;
+&lt;p&gt;如下面代码为div来设置边框粗细为2px、样式为实心的、颜色为红色的边框：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;div{
+    border:2px solid red;
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;上面是border代码的缩写形式，可以分开写：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;div{
+    border-width:2px;
+    border-style:solid;
+    border-color:red;
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;注意：&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;border-style（边框样式）常见样式有：&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;dashed（虚线）| dotted（点线）| solid（实线）。&lt;/p&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;border-color（边框颜色）中的颜色可设置为十六进制颜色，如:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;border-color:#888;//前面的井号不要忘掉。&lt;/p&gt;
+&lt;h2 id=&#34;盒模型-边框二&#34;&gt;盒模型--边框（二）&lt;/h2&gt;
+&lt;p&gt;现在有一个问题，如果有想为p标签单独设置下边框，而其它三边都不设置边框样式怎么办呢？css样式中允许只为一个方向的边框设置样式：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;div{border-bottom:1px solid red;}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;同样可以使用下面代码实现其它三边上、右、左边框的设置：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;border-top:1px solid red;
+
+border-right:1px solid red;
+
+border-left:1px solid red;
+···
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;盒模型-边界&#34;&gt;盒模型--边界&lt;/h2&gt;
+&lt;p&gt;元素与其它元素之间的距离可以使用边界（margin）来设置。边界也是可分为上、右、下、左。如下代码：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;div{margin:20px 10px 15px 30px;}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;也可以分开写：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;div{
+    margin-top:20px;
+    margin-right:10px;
+    margin-bottom:15px;
+    margin-left:30px;
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;如果上下左右的边界都为10px;可以这么写：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;div{ margin:10px;}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;如果上下边界一样为10px，左右一样为20px，可以这么写：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;div{ margin:10px 20px;}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;总结一下：padding和margin的区别，padding在边框里，margin在边框外。&lt;/p&gt;
+&lt;h2 id=&#34;盒模型-填充&#34;&gt;盒模型--填充&lt;/h2&gt;
+&lt;p&gt;元素内容与边框之间是可以设置距离的，称之为填充。填充也可分为上、右、下、左。如下代码：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;div{padding:20px 10px15px 30px;}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;顺序一定不要搞混。可以分开写上面代码：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;div{
+    padding-top:20px;
+    padding-right:10px;
+    padding-bottom:15px;
+    padding-left:30px;
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;如果上、右、下、左的填充都为10px;可以这么写&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;div{padding:10px;}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;如果上下填充一样为10px，左右一样为20px，可以这么写：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;div{padding:10px 20px;}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;盒模型代码简写&#34;&gt;盒模型代码简写&lt;/h2&gt;
+&lt;p&gt;还记得在讲盒模型时外边距(margin)、内边距(padding)和边框(border)设置上下左右四个方向的边距是按照顺时针方向设置的：上右下左。具体应用在margin和padding的例子如下：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;margin:10px 15px 12px 14px;/*上设置为10px、右设置为15px、下设置为12px、左设置为14px*/
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;通常有下面三种缩写方法:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;如果top、right、bottom、left的值相同，如下面代码：&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;margin:10px 10px 10px 10px;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;可缩写为：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;margin:10px;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;如果top和bottom值相同、left和 right的值相同，如下面代码：&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;margin:10px 20px 10px 20px;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;可缩写为：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;margin:10px 20px;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;如果left和right的值相同，如下面代码：&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;margin:10px 20px 30px 20px;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;可缩写为：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;margin:10px 20px 30px;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;注意：padding、border的缩写方法和margin是一致的。&lt;/p&gt;
+&lt;h2 id=&#34;颜色值缩写&#34;&gt;颜色值缩写&lt;/h2&gt;
+&lt;p&gt;关于颜色的css样式也是可以缩写的，当你设置的颜色是16进制的色彩值时，如果每两位的值相同，可以缩写一半。&lt;/p&gt;
+&lt;p&gt;例子1：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;p{color:#000000;}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;可以缩写为：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;p{color: #000;}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;例子2：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;p{color: #336699;}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;可以缩写为：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;p{color: #369;}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h1 id=&#34;css布局模型&#34;&gt;CSS布局模型&lt;/h1&gt;
+&lt;h2 id=&#34;css布局模型-2&#34;&gt;css布局模型&lt;/h2&gt;
+&lt;p&gt;清楚了CSS 盒模型的基本概念、 盒模型类型， 我们就可以深入探讨网页布局的基本模型了。布局模型与盒模型一样都是 CSS 最基本、 最核心的概念。 但布局模型是建立在盒模型基础之上，又不同于我们常说的 CSS 布局样式或 CSS 布局模板。如果说布局模型是本，那么 CSS 布局模板就是末了，是外在的表现形式。&lt;/p&gt;
+&lt;p&gt;CSS包含3种基本的布局模型，用英文概括为：Flow、Layer 和 Float。&lt;/p&gt;
+&lt;p&gt;在网页中，元素有三种布局模型：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;流动模型（Flow）&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;浮动模型 (Float)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;层模型（Layer）&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;流动模型&#34;&gt;流动模型&lt;/h2&gt;
+&lt;p&gt;流动（Flow）：自上而下。&lt;/p&gt;
+&lt;p&gt;先来说一说流动模型，流动（Flow）是默认的网页布局模式。也就是说网页在默认状态下的 HTML 网页元素都是根据流动模型来分布网页内容的。&lt;/p&gt;
+&lt;p&gt;流动布局模型具有2个比较典型的特征：&lt;/p&gt;
+&lt;p&gt;第一点，块状元素都会在所处的包含元素内自上而下按顺序垂直延伸分布，因为在默认状态下，块状元素的宽度都为100%。实际上，块状元素都会以行的形式占据位置。如右侧代码编辑器中三个块状元素标签(div，h1，p)宽度显示为100%。&lt;/p&gt;
+&lt;p&gt;第二点，在流动模型下，内联元素都会在所处的包含元素内从左到右水平分布显示。（内联元素可不像块状元素这么霸道独占一行）&lt;/p&gt;
+&lt;p&gt;右侧代码编辑器中内联元素标签a、span、em、strong都是内联元素。&lt;/p&gt;
+&lt;h2 id=&#34;浮动模型&#34;&gt;浮动模型&lt;/h2&gt;
+&lt;p&gt;块状元素这么霸道都是独占一行，如果现在我们想让两个块状元素并排显示，怎么办呢？不要着急，设置元素浮动就可以实现这一愿望。任何元素在默认情况下是不能浮动的，但可以用CSS定义为浮动，如div、p、table、img等元素都可以被定义为浮动。如下代码可以实现两个div元素一行显示。&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;div{
+    width:200px;
+    height:200px;
+    border:2px red solid;
+    float:left;
+}
+
+&amp;lt;div id=&amp;quot;div1&amp;quot;&amp;gt;&amp;lt;/div&amp;gt;
+
+&amp;lt;div id=&amp;quot;div2&amp;quot;&amp;gt;&amp;lt;/div&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;注意：设置浮动的同时一定要先设置块状元素的宽度，且需要浮动的几个元素宽度加起来一定要小于容器元素的宽度。&lt;/p&gt;
+&lt;h2 id=&#34;层模型&#34;&gt;层模型&lt;/h2&gt;
+&lt;p&gt;什么是层布局模型？层布局模型就像是图像软件PhotoShop中非常流行的图层编辑功能一样，每个图层能够精确定位操作，但在网页设计领域，由于网页大小的活动性，层布局没能受到热捧。但是在网页上局部使用层布局还是有其方便之处的。下面我们来学习一下html中的层布局。&lt;/p&gt;
+&lt;p&gt;如何让html元素在网页中精确定位，就像图像软件PhotoShop中的图层一样可以对每个图层能够精确定位操作。CSS定义了一组定位（positioning）属性来支持层布局模型。&lt;/p&gt;
+&lt;p&gt;层模型有三种形式：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;绝对定位(position: absolute)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;相对定位(position: relative)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;固定定位(position: fixed)&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;层模型-绝对定位相对于父类&#34;&gt;层模型--绝对定位（相对于父类）&lt;/h3&gt;
+&lt;p&gt;如果想为元素设置层模型中的绝对定位，需要设置position:absolute(表示绝对定位)，这条语句的作用将元素从文档流中拖出来，然后使用left、right、top、bottom属性相对于其最接近的一个具有定位属性的父包含块进行绝对定位。如果不存在这样的包含块，则相对于body元素，即相对于浏览器窗口。&lt;/p&gt;
+&lt;p&gt;如下面代码可以实现div元素相对于浏览器窗口向右移动100px，向下移动50px。&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;div{
+    width:200px;
+    height:200px;
+    border:2px red solid;
+    position:absolute;
+    left:100px;
+    top:50px;
+}
+
+&amp;lt;div id=&amp;quot;div1&amp;quot;&amp;gt;&amp;lt;/div&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;层模型-相对定位相对于以前&#34;&gt;层模型--相对定位（相对于以前）&lt;/h3&gt;
+&lt;p&gt;如果想为元素设置层模型中的相对定位，需要设置position:relative（表示相对定位），它通过left、right、top、bottom属性确定元素在正常文档流中的偏移位置。相对定位完成的过程是首先按static(float)方式生成一个元素(并且元素像层一样浮动了起来)，然后相对于以前的位置移动，移动的方向和幅度由left、right、top、bottom属性确定，偏移前的位置保留不动。&lt;/p&gt;
+&lt;p&gt;如下代码实现相对于以前位置向下移动50px，向右移动100px;&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;#div1{
+    width:200px;
+    height:200px;
+    border:2px red solid;
+    position:relative;
+    left:100px;
+    top:50px;
+}
+
+&amp;lt;div id=&amp;quot;div1&amp;quot;&amp;gt;&amp;lt;/div&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;层模型-固定定位相对于网页窗口&#34;&gt;层模型--固定定位（相对于网页窗口）&lt;/h3&gt;
+&lt;p&gt;固定住某一坐标。&lt;/p&gt;
+&lt;p&gt;fixed：表示固定定位，与absolute定位类型类似，但它的相对移动的坐标是视图（屏幕内的网页窗口）本身。由于视图本身是固定的，它不会随浏览器窗口的滚动条滚动而变化，除非你在屏幕中移动浏览器窗口的屏幕位置，或改变浏览器窗口的显示大小，因此固定定位的元素会始终位于浏览器窗口内视图的某个位置，不会受文档流动影响，这与background-attachment:fixed?属性功能相同。以下代码可以实现相对于浏览器视图向右移动100px，向下移动50px。并且拖动滚动条时位置固定不变。&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;#div1{
+    width:200px;
+    height:200px;
+    border:2px red solid;
+    position:fixed;
+    left:100px;
+    top:50px;
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;relative与absolute组合使用&#34;&gt;Relative与Absolute组合使用&lt;/h2&gt;
+&lt;p&gt;小伙伴们学习了12-6小节的相对定位的方法：使用position:absolute可以实现被设置元素相对于浏览器（body）设置定位以后，大家有没有想过可不可以相对于其它元素进行定位呢？答案是肯定的，当然可以。使用position:relative来帮忙，但是必须遵守下面规范：&lt;/p&gt;
+&lt;p&gt;1、参照定位的元素必须是相对定位元素的前辈元素：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;div id=&amp;quot;box1&amp;quot;&amp;gt;&amp;lt;!--参照定位的元素--&amp;gt;
+
+&amp;lt;div id=&amp;quot;box2&amp;quot;&amp;gt;相对参照元素进行定位&amp;lt;/div&amp;gt;&amp;lt;!--相对定位元素--&amp;gt;
+
+&amp;lt;/div&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;从上面代码可以看出box1是box2的父元素（父元素当然也是前辈元素了）。&lt;/p&gt;
+&lt;p&gt;2、参照定位的元素必须加入position:relative;&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;#box1{
+    width:200px;
+    height:200px;
+    position:relative;
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;3、定位元素加入position:absolute，便可以使用top、bottom、left、right来进行偏移定位了。&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;#box2{
+    position:absolute;
+    top:20px;
+    left:30px;
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;这样box2就可以相对于父元素box1定位了（这里注意参照物就可以不是浏览器了，而可以自由设置了）。&lt;/p&gt;
+">HTML、CSS知识点总结</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://clearlove443.github.io/DBgvbp5Vm/"" data-c="
+          &lt;h1 id=&#34;front&#34;&gt;Front&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;CSS、JavaScript 查找浏览器兼容性&lt;br&gt;
+&lt;a href=&#34;https://caniuse.com/&#34;&gt;caniuse&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;html 官方文档&lt;br&gt;
+&lt;a href=&#34;https://html.spec.whatwg.org/&#34;&gt;HTML&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;MDN WEB DOC&lt;br&gt;
+&lt;a href=&#34;https://developer.mozilla.org/&#34;&gt;MDN WEB DOC&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;JSON 工具&lt;br&gt;
+&lt;a href=&#34;https://www.bejson.com/color/&#34;&gt;JSON&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;api&#34;&gt;API&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;postwoman&lt;br&gt;
+&lt;a href=&#34;https://postwoman.com.cn/&#34;&gt;postwoman&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;maven、gradle 依赖包&lt;br&gt;
+&lt;a href=&#34;https://mvnrepository.com/&#34;&gt;mvnrepository&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;CORS support in Spring Framework&lt;br&gt;
+&lt;a href=&#34;https://spring.io/blog/2015/06/08/cors-support-in-spring-framework#javaconfig&#34;&gt;CROS&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;database&#34;&gt;Database&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;SQL Server 数据类型&lt;br&gt;
+&lt;a href=&#34;https://docs.microsoft.com/zh-cn/sql/t-sql/data-types/data-types-transact-sql?view=sql-server-ver15&#34;&gt;SQL Server Data Types&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;PostgreSQL 数据类型&lt;br&gt;
+&lt;a href=&#34;https://www.postgresql.org/docs/9.1/datatype.html&#34;&gt;PostgreSQL Data Types&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;PostgreSQL_通过 schema 控制用户权限&lt;br&gt;
+&lt;a href=&#34;https://juejin.cn/post/6844903842107097102&#34;&gt;PostgreSQL schema&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;tool&#34;&gt;Tool&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;各种在线工具&lt;br&gt;
+&lt;a href=&#34;https://tool.lu/&#34;&gt;tools&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+">一些有用的网站集锦</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://clearlove443.github.io/o5-90Wn27/"" data-c="
+          &lt;h1 id=&#34;创建空字典&#34;&gt;创建空字典&lt;/h1&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;&amp;gt;&amp;gt;&amp;gt; dic = {}
+&amp;gt;&amp;gt;&amp;gt; type(dic)
+&amp;lt;type &#39;dict&#39;&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h1 id=&#34;直接赋值创建&#34;&gt;直接赋值创建&lt;/h1&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;&amp;gt;&amp;gt;&amp;gt; dic = {&#39;spam&#39;:1, &#39;egg&#39;:2, &#39;bar&#39;:3}
+&amp;gt;&amp;gt;&amp;gt; dic
+{&#39;bar&#39;: 3, &#39;egg&#39;: 2, &#39;spam&#39;: 1}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h1 id=&#34;通过关键字dict和关键字参数创建&#34;&gt;通过关键字dict和关键字参数创建&lt;/h1&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;&amp;gt;&amp;gt;&amp;gt; dic = dict(spam = 1, egg = 2, bar =3)
+&amp;gt;&amp;gt;&amp;gt; dic
+{&#39;bar&#39;: 3, &#39;egg&#39;: 2, &#39;spam&#39;: 1}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h1 id=&#34;通过二元组列表创建&#34;&gt;通过二元组列表创建&lt;/h1&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;&amp;gt;&amp;gt;&amp;gt; list = [(&#39;spam&#39;, 1), (&#39;egg&#39;, 2), (&#39;bar&#39;, 3)]
+&amp;gt;&amp;gt;&amp;gt; dic = dict(list)
+&amp;gt;&amp;gt;&amp;gt; dic
+{&#39;bar&#39;: 3, &#39;egg&#39;: 2, &#39;spam&#39;: 1}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h1 id=&#34;dict和zip结合创建&#34;&gt;dict和zip结合创建&lt;/h1&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;&amp;gt;&amp;gt;&amp;gt; dic = dict(zip(&#39;abc&#39;, [1, 2, 3]))
+&amp;gt;&amp;gt;&amp;gt; dic
+{&#39;a&#39;: 1, &#39;c&#39;: 3, &#39;b&#39;: 2}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h1 id=&#34;通过字典推导式创建&#34;&gt;通过字典推导式创建&lt;/h1&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;&amp;gt;&amp;gt;&amp;gt; dic = {i:2*i for i in range(3)}
+&amp;gt;&amp;gt;&amp;gt; dic
+{0: 0, 1: 2, 2: 4}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h1 id=&#34;通过dictfromkeys创建&#34;&gt;通过dict.fromkeys()创建&lt;/h1&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;&amp;gt;&amp;gt;&amp;gt; dic = dict.fromkeys(range(3), &#39;x&#39;)
+&amp;lt;!-- more --&amp;gt;
+
+&amp;gt;&amp;gt;&amp;gt; dic
+{0: &#39;x&#39;, 1: &#39;x&#39;, 2: &#39;x&#39;}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h1 id=&#34;其他&#34;&gt;其他&lt;/h1&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;&amp;gt;&amp;gt;&amp;gt; list = [&#39;x&#39;, 1, &#39;y&#39;, 2, &#39;z&#39;, 3]
+&amp;gt;&amp;gt;&amp;gt; dic = dict(zip(list[::2], list[1::2]))
+&amp;gt;&amp;gt;&amp;gt; dic
+{&#39;y&#39;: 2, &#39;x&#39;: 1, &#39;z&#39;: 3}
+&lt;/code&gt;&lt;/pre&gt;
+">Python创建字典（Map）</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://clearlove443.github.io/html-zhong-yin-yong-zi-yuan-lu-jing-wen-ti/"" data-c="
+          &lt;p&gt;../和./和/的区别&lt;/p&gt;
+&lt;p&gt;./ 当前目录&lt;br&gt;
+../ 父级目录&lt;br&gt;
+/ 根目录&lt;/p&gt;
+&lt;p&gt;./SRC/  这样写表示，当前目录中的SRC文件夹；  ../SRC/  这样写表示，当前目录的上一层目录中SRC文件夹； /SRC/   这样写表示，项目根目录（可以指磁盘根目录，也可以指项目根目录，具体根据实际情况而定）&lt;/p&gt;
+&lt;p&gt;比如说&lt;code&gt;C:\Users\jj\Desktop\colors7\index.html&lt;/code&gt;中 的&lt;code&gt;&amp;lt;link type=&amp;quot;text/css&amp;quot; href=&amp;quot;/css/index.css&amp;quot;&amp;gt;&lt;/code&gt;会跳到&lt;code&gt;file:///C:/css/index.css&lt;/code&gt; 。就报错啦&lt;/p&gt;
+&lt;p&gt;什么？ 你要直接写 href=&amp;quot;css/index.css&amp;quot;？目前的测试效果是等同于当前目录，即./&lt;/p&gt;
+">html 中引用资源路径问题</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://clearlove443.github.io/xiu-gai-powershell-dai-ma-ye-wei-utf-8/"" data-c="
+          &lt;h1 id=&#34;通过注册表修改&#34;&gt;通过注册表修改&lt;/h1&gt;
+&lt;p&gt;以下代码存为 *.reg 文件：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Windows Registry Editor Version 5.00
+
+[HKEY_CURRENT_USER\Console\%SystemRoot%_System32_WindowsPowerShell_v1.0_powershell.exe]
+&amp;quot;CodePage&amp;quot;=dword:0000fde9
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;双击运行此文件。&lt;/p&gt;
+&lt;p&gt;注：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;65001(UTF-8) 的十六进制表示为：0000fde9&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;963(GBK) 的十六进制表示为：000003a8&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;手动修改&#34;&gt;手动修改&lt;/h1&gt;
+&lt;p&gt;每次启动后输入：&lt;code&gt;chcp 65001&lt;/code&gt;&lt;/p&gt;
+&lt;h1 id=&#34;第三方控制台&#34;&gt;第三方控制台&lt;/h1&gt;
+&lt;p&gt;&lt;code&gt;Conemu/Cmder&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;在此 Settings&amp;gt;Startup&amp;gt;Environment 选项下，添加 chcp 65001&lt;br&gt;
+注：yarn 的进度条在其中有问题&lt;/p&gt;
+">修改 PowerShell 代码页为 UTF-8</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://clearlove443.github.io/css-flex-bu-ju/"" data-c="
+          &lt;h1 id=&#34;flex-基本概念&#34;&gt;Flex 基本概念：&lt;/h1&gt;
+&lt;p&gt;&lt;img src=&#34;https://clearlove443.github.io//post-images/1621048971492.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
+在 flex 容器中默认存在两条轴，水平主轴(main axis) 和垂直的交叉轴(cross axis)，这是默认的设置，当然你可以通过修改使垂直方向变为主轴，水平方向变为交叉轴，这个我们后面再说。&lt;br&gt;
+在容器中的每个单元块被称之为 flex item，每个项目占据的主轴空间为 (main size), 占据的交叉轴的空间为 (cross size)。&lt;br&gt;
+这里需要强调，不能先入为主认为宽度就是 main size，高度就是 cross size，这个还要取决于你主轴的方向，如果你垂直方向是主轴，那么项目的高度就是 main size。&lt;/p&gt;
+&lt;h1 id=&#34;flex-容器&#34;&gt;Flex 容器：&lt;/h1&gt;
+&lt;p&gt;首先，实现 flex 布局需要先指定一个容器，任何一个容器都可以被指定为 flex 布局，这样容器内部的元素就可以使用 flex 来进行布局。&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;.container {
+    display: flex | inline-flex;       //可以有两种取值
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;分别生成一个块状或行内的 flex 容器盒子。简单说来，如果你使用块元素如 div，你就可以使用 flex，而如果你使用行内元素，你可以使用 inline-flex。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;需要注意的是：当时设置 flex 布局之后，子元素的 float、clear、vertical-align 的属性将会失效。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;有下面六种属性可以设置在容器上，它们分别是：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;flex-direction&lt;/li&gt;
+&lt;li&gt;flex-wrap&lt;/li&gt;
+&lt;li&gt;flex-flow&lt;/li&gt;
+&lt;li&gt;justify-content&lt;/li&gt;
+&lt;li&gt;align-items&lt;/li&gt;
+&lt;li&gt;align-content&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;flex-direction-决定主轴的方向即项目的排列方向&#34;&gt;&lt;strong&gt;flex-direction: 决定主轴的方向(即项目的排列方向)&lt;/strong&gt;&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;.container {
+    flex-direction: row | row-reverse | column | column-reverse;
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;默认值：row，主轴为水平方向，起点在左端。&lt;br&gt;
+&lt;img src=&#34;https://clearlove443.github.io//post-images/1621049217411.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
+&lt;p&gt;row-reverse：主轴为水平方向，起点在右端&lt;br&gt;
+&lt;img src=&#34;https://clearlove443.github.io//post-images/1621049252735.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
+&lt;p&gt;column：主轴为垂直方向，起点在上沿&lt;br&gt;
+&lt;img src=&#34;https://clearlove443.github.io//post-images/1621049291796.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
+&lt;p&gt;column-reverse：主轴为垂直方向，起点在下沿&lt;br&gt;
+&lt;img src=&#34;https://clearlove443.github.io//post-images/1621049332850.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;flex-wrap-决定容器内项目是否可换行&#34;&gt;&lt;strong&gt;flex-wrap: 决定容器内项目是否可换行&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;默认情况下，项目都排在主轴线上，使用 flex-wrap 可实现项目的换行。&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;.container {
+    flex-wrap: nowrap | wrap | wrap-reverse;
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;默认值：nowrap 不换行，即当主轴尺寸固定时，当空间不足时，项目尺寸会随之调整而并不会挤到下一行。&lt;br&gt;
+&lt;img src=&#34;https://clearlove443.github.io//post-images/1621049612229.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
+wrap：项目主轴总尺寸超出容器时换行，第一行在上方&lt;br&gt;
+&lt;img src=&#34;https://clearlove443.github.io//post-images/1621049641985.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
+wrap-reverse：换行，第一行在下方&lt;br&gt;
+&lt;img src=&#34;https://clearlove443.github.io//post-images/1621049689998.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;flex-flow-flex-direction-和-flex-wrap-的简写形式&#34;&gt;&lt;strong&gt;flex-flow: flex-direction 和 flex-wrap 的简写形式&lt;/strong&gt;&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;.container {
+    flex-flow: &amp;lt;flex-direction&amp;gt; || &amp;lt;flex-wrap&amp;gt;;
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;默认值为: row nowrap，感觉没什么卵用，老老实实分开写就好了。这样就不用记住这个属性了。&lt;/p&gt;
+&lt;h2 id=&#34;justify-content定义了项目在主轴的对齐方式&#34;&gt;&lt;strong&gt;justify-content：定义了项目在主轴的对齐方式&lt;/strong&gt;&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;.container {
+    justify-content: flex-start | flex-end | center | space-between | space-around;
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;建立在主轴为水平方向时测试，即 flex-direction: row&lt;/strong&gt;&lt;br&gt;
+默认值: flex-start 左对齐&lt;br&gt;
+&lt;img src=&#34;https://clearlove443.github.io//post-images/1621049868381.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
+flex-end：右对齐&lt;br&gt;
+&lt;img src=&#34;https://clearlove443.github.io//post-images/1621049897223.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
+center：居中&lt;br&gt;
+&lt;img src=&#34;https://clearlove443.github.io//post-images/1621049940597.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
+space-between：两端对齐，项目之间的间隔相等，即剩余空间等分成间隙。&lt;br&gt;
+&lt;img src=&#34;https://clearlove443.github.io//post-images/1621049973681.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
+space-around：每个项目两侧的间隔相等，所以项目之间的间隔比项目与边缘的间隔大一倍。&lt;br&gt;
+&lt;img src=&#34;https://clearlove443.github.io//post-images/1621050008821.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;align-items-定义了项目在交叉轴上的对齐方式&#34;&gt;&lt;strong&gt;align-items: 定义了项目在交叉轴上的对齐方式&lt;/strong&gt;&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;.container {
+    align-items: flex-start | flex-end | center | baseline | stretch;
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;建立在主轴为水平方向时测试，即 flex-direction: row&lt;/strong&gt;&lt;br&gt;
+默认值为 stretch 即如果项目未设置高度或者设为 auto，将占满整个容器的高度。&lt;br&gt;
+&lt;img src=&#34;https://clearlove443.github.io//post-images/1621050095241.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
+假设容器高度设置为 100px，而项目都没有设置高度的情况下，则项目的高度也为 100px。&lt;br&gt;
+flex-start：交叉轴的起点对齐&lt;br&gt;
+&lt;img src=&#34;https://clearlove443.github.io//post-images/1621050113240.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
+假设容器高度设置为 100px，而项目分别为 20px, 40px, 60px, 80px, 100px, 则如上图显示。&lt;br&gt;
+flex-end：交叉轴的终点对齐&lt;br&gt;
+&lt;img src=&#34;https://clearlove443.github.io//post-images/1621050134538.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
+center：交叉轴的中点对齐&lt;br&gt;
+&lt;img src=&#34;https://clearlove443.github.io//post-images/1621050170920.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
+baseline: 项目的第一行文字的基线对齐&lt;br&gt;
+&lt;img src=&#34;https://clearlove443.github.io//post-images/1621050193759.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
+以文字的底部为主，仔细看图可以理解。&lt;/p&gt;
+&lt;h2 id=&#34;align-content-定义了多根轴线的对齐方式如果项目只有一根轴线那么该属性将不起作用&#34;&gt;&lt;strong&gt;align-content: 定义了多根轴线的对齐方式，如果项目只有一根轴线，那么该属性将不起作用&lt;/strong&gt;&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;.container {
+    align-content: flex-start | flex-end | center | space-between | space-around | stretch;
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;这个这样理解：&lt;/p&gt;
+&lt;p&gt;当你 flex-wrap 设置为 nowrap 的时候，容器仅存在一根轴线，因为项目不会换行，就不会产生多条轴线。&lt;/p&gt;
+&lt;p&gt;当你 flex-wrap 设置为 wrap 的时候，容器可能会出现多条轴线，这时候你就需要去设置多条轴线之间的对齐方式了。&lt;/p&gt;
+&lt;p&gt;建立在主轴为水平方向时测试，即 flex-direction: row, flex-wrap: wrap&lt;/p&gt;
+&lt;p&gt;默认值为 stretch，看下面的图就很好理解了&lt;br&gt;
+&lt;img src=&#34;https://clearlove443.github.io//post-images/1621050293135.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
+从图可以看出又三条轴线(因为容器宽度有限)，当值为 stretch 时会三条轴线平分容器的垂直方向上的空间。&lt;/p&gt;
+&lt;p&gt;值得注意的是，虽然在每条轴线上项目的默认值也为 stretch，但是由于我每个项目我都设置了高度，所以它并没有撑开整个容器。如果项目不设置高度的话就会变成下面这样：&lt;br&gt;
+&lt;img src=&#34;https://clearlove443.github.io//post-images/1621050309523.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
+这个我在前面也有提到(align-items)，这里重点还是理解三条轴线会平分垂直轴上的空间。&lt;/p&gt;
+&lt;p&gt;flex-start：轴线全部在交叉轴上的起点对齐&lt;br&gt;
+&lt;img src=&#34;https://clearlove443.github.io//post-images/1621050326437.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
+flex-end：轴线全部在交叉轴上的终点对齐&lt;br&gt;
+&lt;img src=&#34;https://clearlove443.github.io//post-images/1621050345264.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
+center：轴线全部在交叉轴上的中间对齐&lt;br&gt;
+&lt;img src=&#34;https://clearlove443.github.io//post-images/1621050363709.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
+space-between：轴线两端对齐，之间的间隔相等，即剩余空间等分成间隙。&lt;br&gt;
+&lt;img src=&#34;https://clearlove443.github.io//post-images/1621050381176.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
+space-around：每个轴线两侧的间隔相等，所以轴线之间的间隔比轴线与边缘的间隔大一倍。&lt;br&gt;
+&lt;img src=&#34;https://clearlove443.github.io//post-images/1621050401011.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
+&lt;p&gt;到这里关于容器上的所有属性都讲完了，接下来就来讲讲关于在 flex item 上的属性&lt;/p&gt;
+&lt;h1 id=&#34;flex-项目属性&#34;&gt;Flex 项目属性：&lt;/h1&gt;
+&lt;p&gt;有六种属性可运用在 item 项目上：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;order&lt;/li&gt;
+&lt;li&gt;flex-basis&lt;/li&gt;
+&lt;li&gt;flex-grow&lt;/li&gt;
+&lt;li&gt;flex-shrink&lt;/li&gt;
+&lt;li&gt;flex&lt;/li&gt;
+&lt;li&gt;align-self&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;order-定义项目在容器中的排列顺序数值越小排列越靠前默认值为-0&#34;&gt;&lt;strong&gt;order: 定义项目在容器中的排列顺序，数值越小，排列越靠前，默认值为 0&lt;/strong&gt;&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;.item {
+    order: &amp;lt;integer&amp;gt;;
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://clearlove443.github.io//post-images/1621050559125.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
+在 HTML 结构中，虽然 -2，-1 的 item 排在后面，但是由于分别设置了 order，使之能够排到最前面&lt;/p&gt;
+&lt;h2 id=&#34;flex-basis-定义了在分配多余空间之前项目占据的主轴空间浏览器根据这个属性计算主轴是否有多余空间&#34;&gt;&lt;strong&gt;flex-basis: 定义了在分配多余空间之前，项目占据的主轴空间，浏览器根据这个属性，计算主轴是否有多余空间&lt;/strong&gt;&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;.item {
+    flex-basis: &amp;lt;length&amp;gt; | auto;
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;默认值：auto，即项目本来的大小, 这时候 item 的宽高取决于 width 或 height 的值。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;当主轴为水平方向的时候，当设置了 flex-basis，项目的宽度设置值会失效，flex-basis 需要跟 flex-grow 和 flex-shrink 配合使用才能发挥效果。&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;当 flex-basis 值为 0 % 时，是把该项目视为零尺寸的，故即使声明该尺寸为 140px，也并没有什么用。&lt;/li&gt;
+&lt;li&gt;当 flex-basis 值为 auto 时，则跟根据尺寸的设定值(假如为 100px)，则这 100px 不会纳入剩余空间。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;flex-grow-定义项目的放大比例&#34;&gt;&lt;strong&gt;flex-grow: 定义项目的放大比例&lt;/strong&gt;&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;.item {
+    flex-grow: &amp;lt;number&amp;gt;;
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;默认值为 0，即如果存在剩余空间，也不放大&lt;br&gt;
+&lt;img src=&#34;https://clearlove443.github.io//post-images/1621050729793.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
+当所有的项目都以 flex-basis 的值进行排列后，仍有剩余空间，那么这时候 flex-grow 就会发挥作用了。&lt;br&gt;
+如果所有项目的 flex-grow 属性都为 1，则它们将等分剩余空间。(如果有的话)&lt;/p&gt;
+&lt;p&gt;如果一个项目的 flex-grow 属性为 2，其他项目都为 1，则前者占据的剩余空间将比其他项多一倍。&lt;/p&gt;
+&lt;p&gt;当然如果当所有项目以 flex-basis 的值排列完后发现空间不够了，且 flex-wrap：nowrap 时，此时 flex-grow 则不起作用了，这时候就需要接下来的这个属性。&lt;/p&gt;
+&lt;h2 id=&#34;flex-shrink-定义了项目的缩小比例&#34;&gt;&lt;strong&gt;flex-shrink: 定义了项目的缩小比例&lt;/strong&gt;&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;.item {
+    flex-shrink: &amp;lt;number&amp;gt;;
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;默认值: 1，即如果空间不足，该项目将缩小，负值对该属性无效。&lt;br&gt;
+&lt;img src=&#34;https://clearlove443.github.io//post-images/1621050789296.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
+这里可以看出，虽然每个项目都设置了宽度为 50px，但是由于自身容器宽度只有 200px，这时候每个项目会被同比例进行缩小，因为默认值为 1。&lt;br&gt;
+同理可得：&lt;/p&gt;
+&lt;p&gt;如果所有项目的 flex-shrink 属性都为 1，当空间不足时，都将等比例缩小。&lt;/p&gt;
+&lt;p&gt;如果一个项目的 flex-shrink 属性为 0，其他项目都为 1，则空间不足时，前者不缩小。&lt;/p&gt;
+&lt;h2 id=&#34;flex-flex-grow-flex-shrink-和-flex-basis的简写&#34;&gt;&lt;strong&gt;flex: flex-grow, flex-shrink 和 flex-basis的简写&lt;/strong&gt;&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;.item{
+    flex: none | [ &amp;lt;&#39;flex-grow&#39;&amp;gt; &amp;lt;&#39;flex-shrink&#39;&amp;gt;? || &amp;lt;&#39;flex-basis&#39;&amp;gt; ]
+} 
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;flex 的默认值是以上三个属性值的组合。假设以上三个属性同样取默认值，则 flex 的默认值是 0 1 auto。&lt;/p&gt;
+&lt;p&gt;有关快捷值：auto (1 1 auto) 和 none (0 0 auto)&lt;/p&gt;
+&lt;p&gt;关于 flex 取值，还有许多特殊的情况，可以按以下来进行划分：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;当 flex 取值为一个非负数字，则该数字为 flex-grow 值，flex-shrink 取 1，flex-basis 取 0%，如下是等同的：&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;.item {flex: 1;}
+.item {
+   flex-grow: 1;
+   flex-shrink: 1;
+   flex-basis: 0%;
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;当 flex 取值为 0 时，对应的三个值分别为 0 1 0%&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;.item {flex: 0;}
+.item {
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: 0%;
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;当 flex 取值为一个长度或百分比，则视为 flex-basis 值，flex-grow 取 1，flex-shrink 取 1，有如下等同情况（注意 0% 是一个百分比而不是一个非负数字）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;.item-1 {flex: 0%;}
+.item-1 {
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 0%;
+}
+
+.item-2 {flex: 24px;}
+.item-2 {
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 24px;
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;当 flex 取值为两个非负数字，则分别视为 flex-grow 和 flex-shrink 的值，flex-basis 取 0%，如下是等同的：&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;.item {flex: 2 3;}
+.item {
+    flex-grow: 2;
+    flex-shrink: 3;
+    flex-basis: 0%;
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;当 flex 取值为一个非负数字和一个长度或百分比，则分别视为 flex-grow 和 flex-basis 的值，flex-shrink 取 1，如下是等同的：&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;.item {flex: 11 32px;}
+.item {
+    flex-grow: 11;
+    flex-shrink: 1;
+    flex-basis: 32px;
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;容器下的子元素的宽度和比容器和小的时候起作用。 grow 定义了子元素的尺寸增长因子，容器中除去子元素之和剩下的尺寸会按照各个子元素的 grow 值进行平分加大各个子元素上。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;当 flex-wrap 为 wrap | wrap-reverse，且子项宽度和不及父容器宽度时，flex-grow 会起作用，子项会根据 flex-grow 设定的值放大（为0的项不放大）&lt;/li&gt;
+&lt;li&gt;当 flex-wrap 为 wrap | wrap-reverse，且子项宽度和超过父容器宽度时，首先一定会换行，换行后，每一行的右端都可能会有剩余空间（最后一行包含的子项可能比前几行少，所以剩余空间可能会更大），这时 flex-grow 会起作用，若当前行所有子项的 flex-grow 都为0，则剩余空间保留，若当前行存在一个子项的 flex-grow 不为0，则剩余空间会被 flex-grow 不为0的子项占据&lt;/li&gt;
+&lt;li&gt;当 flex-wrap 为 nowrap，且子项宽度和不及父容器宽度时，flex-grow 会起作用，子项会根据 flex-grow 设定的值放大（为0的项不放大）&lt;/li&gt;
+&lt;li&gt;当 flex-wrap 为 nowrap，且子项宽度和超过父容器宽度时，flex-shrink 会起作用，子项会根据 flex-shrink 设定的值进行缩小（为0的项不缩小）。但这里有一个较为特殊情况，就是当这一行所有子项 flex-shrink 都为0时，也就是说所有的子项都不能缩小，就会出现讨厌的横向滚动条&lt;/li&gt;
+&lt;li&gt;总结上面四点，可以看出不管在什么情况下，在同一时间，flex-shrink 和 flex-grow 只有一个能起作用，这其中的道理细想起来也很浅显：空间足够时，flex-grow 就有发挥的余地，而空间不足时，flex-shrink 就能起作用。当然，flex-wrap 的值为 wrap | wrap-reverse 时，表明可以换行，既然可以换行，一般情况下空间就总是足够的，flex-shrink 当然就不会起作用&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;align-self-允许单个项目有与其他项目不一样的对齐方式&#34;&gt;&lt;strong&gt;align-self: 允许单个项目有与其他项目不一样的对齐方式&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;单个项目覆盖 align-items 定义的属性&lt;/p&gt;
+&lt;p&gt;默认值为 auto，表示继承父元素的 align-items 属性，如果没有父元素，则等同于 stretch。&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;.item {
+     align-self: auto | flex-start | flex-end | center | baseline | stretch;
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;这个跟 align-items 属性时一样的，只不过 align-self 是对单个项目生效的，而 align-items 则是对容器下的所有项目生效的。&lt;br&gt;
+&lt;img src=&#34;https://clearlove443.github.io//post-images/1621051180455.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
+">CSS Flex 布局</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://clearlove443.github.io/css-display-shu-xing-xiang-jie/"" data-c="
+          &lt;h1 id=&#34;display的所有属性&#34;&gt;display的所有属性&lt;/h1&gt;
+&lt;pre&gt;&lt;code&gt;/* CSS 1 */
+display: none;
+display: inline;
+display: block;
+display: list-item;
+
+/* CSS 2.1 */
+display: inline-block;
+
+display: table;
+display: inline-table;
+display: table-cell;
+display: table-column;
+display: table-column-group;
+display: table-footer-group;
+display: table-header-group;
+display: table-row;
+display: table-row-group;
+display: table-caption;
+/* CSS 2.1 */
+
+/* CSS 3 */
+display: inline-list-item;
+display: flex;
+display: box;
+display: inline-flex;
+
+display: grid;
+display: inline-grid;
+
+display: ruby;
+display: ruby-base;
+display: ruby-text;
+display: ruby-base-container;
+display: ruby-text-container;
+/* CSS 3 */
+
+/* Experimental values */
+display: contents;
+display: run-in;
+/* Experimental values */
+
+/* Global values */
+display: inherit;
+display: initial;
+display: unset;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;下面就display的重要属性进行讲解，并配合一些相关的例子&lt;/p&gt;
+&lt;h1 id=&#34;基本属性&#34;&gt;基本属性&lt;/h1&gt;
+&lt;h2 id=&#34;display-none&#34;&gt;&lt;strong&gt;display: none&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;none 是 CSS 1 就提出来的属性，将元素设置为none的时候既不会占据空间，也无法显示，相当于该元素不存在。&lt;br&gt;
+该属性可以用来改善重排与重绘，同时我也经常用它来做模态窗等效果。&lt;/p&gt;
+&lt;h2 id=&#34;display-inline&#34;&gt;&lt;strong&gt;display: inline&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;inline也是 CSS 1 提出的属性，它主要用来设置行内元素属性，设置了该属性之后设置高度、宽度都无效，同时text-align属性设置也无效，但是设置了line-height会让inline元素居中&lt;/p&gt;
+&lt;h2 id=&#34;display-block&#34;&gt;&lt;strong&gt;display: block&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;设置元素为块状元素，如果不指定宽高，默认会继承父元素的宽度，并且独占一行，即使宽度有剩余也会独占一行，高度一般以子元素撑开的高度为准，当然也可以自己设置宽度和高度。&lt;/p&gt;
+&lt;h2 id=&#34;display-list-item&#34;&gt;&lt;strong&gt;display: list-item&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;此属性默认会把元素作为列表显示，要完全模仿列表的话还需要加上 &lt;code&gt;list-style-position，list-style-type&lt;/code&gt;&lt;/p&gt;
+&lt;h2 id=&#34;display-inline-block&#34;&gt;&lt;strong&gt;display: inline-block&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;inline-block&lt;/code&gt;为 CSS 2.1 新增的属性。 &lt;code&gt;inline-block&lt;/code&gt;既具有block的宽高特性又具有inline的同行元素特性。 通过&lt;code&gt;inline-block&lt;/code&gt;结合&lt;code&gt;text-align: justify&lt;/code&gt; 还可以实现固定宽高的列表两端对齐布局&lt;/p&gt;
+&lt;h2 id=&#34;display-table&#34;&gt;&lt;strong&gt;display: table&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;table 此元素会作为块级表格来显示（类似table），表格前后带有换行符。CSS表格能够解决所有那些我们在使用绝对定位和浮动定位进行多列布局时所遇到的问题。例如，&lt;code&gt;display:table&lt;/code&gt;的CSS声明能够让一个HTML元素和它的子节点像table元素一样。使用基于表格的CSS布局，使我们能够轻松定义一个单元格的边界、背景等样式， 而不会产生因为使用了table那样的制表标签所导致的语义化问题。&lt;/p&gt;
+&lt;p&gt;利用table的特性，我们能够轻易的实现三栏布局，并且能够兼容IE8&lt;/p&gt;
+&lt;h2 id=&#34;display-inline-list-item&#34;&gt;&lt;strong&gt;display: inline-list-item&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;我在MDN上面看到有这个属性，但是我实际尝试发现这个属性是不能使用的，在 &lt;a href=&#34;https://caniuse.com/?search=inline-list-item&#34;&gt;caniuse&lt;/a&gt; 上面也没有找到这个元素的兼容性，所以应该是不能使用的，支持度全无。&lt;/p&gt;
+&lt;h2 id=&#34;display-flex&#34;&gt;&lt;strong&gt;display: flex&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;flex是一种弹性布局属性&lt;br&gt;
+&lt;strong&gt;注意，设为Flex布局以后，子元素的float、clear和vertical-align属性将失效。&lt;/strong&gt;&lt;br&gt;
+主要属性有两大类：容器属性和项目的属性&lt;/p&gt;
+&lt;h3 id=&#34;容器属性&#34;&gt;容器属性&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;flex-direction: 属性决定主轴的方向（即项目的排列方向）。&lt;/li&gt;
+&lt;li&gt;flex-wrap: 默认情况下，项目都排在一条线（又称&amp;quot;轴线&amp;quot;）上。flex-wrap属性定义，如果一条轴线排不下，如何换行。&lt;/li&gt;
+&lt;li&gt;flex-flow: 属性是flex-direction属性和flex-wrap属性的简写形式，默认值为row nowrap。&lt;/li&gt;
+&lt;li&gt;justify-content: 属性定义了项目在主轴上的对齐方式。&lt;/li&gt;
+&lt;li&gt;align-items: 属性定义项目在交叉轴上如何对齐。&lt;/li&gt;
+&lt;li&gt;align-content: 属性定义了多根轴线的对齐方式。如果项目只有一根轴线，该属性不起作用。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;项目属性&#34;&gt;项目属性&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;order: 定义项目的排列顺序。数值越小，排列越靠前，默认为0。&lt;/li&gt;
+&lt;li&gt;flex-grow: 定义项目的放大比例，默认为0，即如果存在剩余空间，也不放大。&lt;/li&gt;
+&lt;li&gt;flex-shrink: 属性定义了项目的缩小比例，默认为1，即如果空间不足，该项目将缩小。&lt;/li&gt;
+&lt;li&gt;flex-basis: 属性定义了在分配多余空间之前，项目占据的主轴空间（main size）。浏览器根据这个属性，计算主轴是否有多余空间。它的默认值为auto，即项目的本来大小。&lt;/li&gt;
+&lt;li&gt;flex: 属性是flex-grow, flex-shrink 和 flex-basis的简写，默认值为0 1 auto。后两个属性可选。&lt;/li&gt;
+&lt;li&gt;align-self: 属性允许单个项目有与其他项目不一样的对齐方式，可覆盖align-items属性。默认值为auto，表示继承父元素的align-items属性，如果没有父元素，则等同于stretch。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;display-webkit-box&#34;&gt;&lt;strong&gt;display: -webkit-box&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;由于某X5浏览器某些版本还不支持最新版的flex布局，所以为了保证良好的运行，建议还是使用display: box，box和flex布局的主要差别如下:&lt;/p&gt;
+&lt;h3 id=&#34;容器属性-2&#34;&gt;容器属性&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;display: box&lt;br&gt;
+该显示样式的新值可将此元素及其直系子代加入弹性框模型中。Flexbox 模型只适用于直系子代。&lt;/li&gt;
+&lt;li&gt;box-orient&lt;br&gt;
+值：horizontal | vertical | inherit&lt;br&gt;
+框的子代是如何排列的？还有两个值：inline-axis（真正的默认值）和 block-axis，但是它们分别映射到水平和垂直方向。&lt;/li&gt;
+&lt;li&gt;box-pack&lt;br&gt;
+值：start | end | center | justify&lt;br&gt;
+设置沿 box-orient 轴的框排列方式。因此，如果 box-orient 是水平方向，就会选择框的子代的水平排列方式，反之亦然。&lt;/li&gt;
+&lt;li&gt;box-align&lt;br&gt;
+值：start | end | center | baseline | stretch&lt;br&gt;
+基本上而言是 box-pack 的同级属性。设置框的子代在框中的排列方式。如果方向是水平的，该属性就会决定垂直排列，反之亦然。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;项目属性-2&#34;&gt;项目属性&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;box-flex&lt;br&gt;
+值：0 | 任意整数&lt;br&gt;
+该子代的弹性比。弹性比为 1 的子代占据父代框的空间是弹性比为 2 的同级属性的两倍。其默认值为 0，也就是不具有弹性&lt;/li&gt;
+&lt;/ul&gt;
+">CSS display 属性详解</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://clearlove443.github.io/css-ji-chu-kuai-ji-yuan-su-yu-xing-nei-yuan-su/"" data-c="
+          &lt;pre&gt;&lt;code&gt;文章总结了什么是块级元素、行内元素；有哪些块级元素、行内元素；块级元素与行内元素间的相互转换；行内置换元素的特殊性。
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h1 id=&#34;什么是块级元素-行内元素&#34;&gt;什么是块级元素、行内元素&lt;/h1&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;&lt;/th&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;是否独占一行&lt;/th&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;width、height&lt;/th&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;padding、margin&lt;/th&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;默认宽高&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;块级元素&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;是&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;有效&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;有效&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;撑满父元素&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;行内元素&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;否&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;无效&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;padding有效；margin水平方向有效，竖直方向无效&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;随内部元素的内容变化&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;行内块级元素&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;否&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;有效&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;有效&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;随内部元素的内容变化&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;块级元素&#34;&gt;块级元素：&lt;/h2&gt;
+&lt;pre&gt;&lt;code&gt;独占一行；元素的宽高、以及内外边距都可设置；元素宽度在不设置的情况下，是它本身父容器的100%
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;行内元素&#34;&gt;行内元素：&lt;/h2&gt;
+&lt;pre&gt;&lt;code&gt;不会自动进行换行；元素的宽高不可设置；内边距可以设置、外边距水平方向有效，竖直方向无效；元素宽度在不设置的情况下，随内部元素的内容变化。
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h1 id=&#34;有哪些块级元素-行内元素&#34;&gt;有哪些块级元素、行内元素&lt;/h1&gt;
+&lt;h2 id=&#34;常见块级元素&#34;&gt;常见块级元素：&lt;/h2&gt;
+&lt;pre&gt;&lt;code&gt;div , h1---h6 , p , ul , ol , dl , table , form
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;div - 常用块级元素，也是css layout的主要标签&lt;/li&gt;
+&lt;li&gt;h1---h6 标题&lt;/li&gt;
+&lt;li&gt;p - 段落&lt;/li&gt;
+&lt;li&gt;ul - 非排序列表&lt;/li&gt;
+&lt;li&gt;ol - 排序表单&lt;/li&gt;
+&lt;li&gt;dl - 定义列表&lt;/li&gt;
+&lt;li&gt;table - 表格&lt;/li&gt;
+&lt;li&gt;form - 交互表单&lt;/li&gt;
+&lt;li&gt;hr - 水平分隔线&lt;/li&gt;
+&lt;li&gt;pre - 格式化文本&lt;/li&gt;
+&lt;li&gt;address - 地址&lt;/li&gt;
+&lt;li&gt;blockquote - 块引用&lt;/li&gt;
+&lt;li&gt;header - HTML5区段头或页头。&lt;/li&gt;
+&lt;li&gt;footer - HTML5区段尾或页尾。&lt;/li&gt;
+&lt;li&gt;section - HTML5一个页面区段。&lt;/li&gt;
+&lt;li&gt;article - HTML5文章内容。&lt;/li&gt;
+&lt;li&gt;aside - HTML5伴随内容。&lt;/li&gt;
+&lt;li&gt;hgroup - HTML5标题组。&lt;/li&gt;
+&lt;li&gt;menu - HTML5菜单列表&lt;/li&gt;
+&lt;li&gt;figcaption - HTML5图文信息组标题&lt;/li&gt;
+&lt;li&gt;figure - HTML5图文信息组&lt;/li&gt;
+&lt;li&gt;audio - HTML5音频播放&lt;/li&gt;
+&lt;li&gt;video - HTML5视频&lt;/li&gt;
+&lt;li&gt;output - HTML5表单输出&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;常见行内元素&#34;&gt;常见行内元素：&lt;/h2&gt;
+&lt;pre&gt;&lt;code&gt;span , a  ,strong  ,b ,em  , i  , big  ,small  ,label 
+img , input  , select ,textarea（属于行内置换元素，下文详解）
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;span - 常用内联容器，定义文本内区块&lt;/li&gt;
+&lt;li&gt;a - 锚点&lt;/li&gt;
+&lt;li&gt;strong - 粗体强调&lt;/li&gt;
+&lt;li&gt;b - 粗体&lt;/li&gt;
+&lt;li&gt;em - 强调&lt;/li&gt;
+&lt;li&gt;i - 斜体&lt;/li&gt;
+&lt;li&gt;small - 小字体文本&lt;/li&gt;
+&lt;li&gt;big - 大字体&lt;/li&gt;
+&lt;li&gt;sub - 下标&lt;/li&gt;
+&lt;li&gt;sup - 上标&lt;/li&gt;
+&lt;li&gt;label - 表格标签&lt;/li&gt;
+&lt;li&gt;img - 图片* input - 输入框&lt;/li&gt;
+&lt;li&gt;select - 项目选择&lt;/li&gt;
+&lt;li&gt;textarea - 多行文本输入框&lt;/li&gt;
+&lt;li&gt;abbr - 缩写&lt;/li&gt;
+&lt;li&gt;code - 计算机代码(在引用源码的时候需要)&lt;/li&gt;
+&lt;li&gt;acronym - 首字&lt;/li&gt;
+&lt;li&gt;bdo - bidi override&lt;/li&gt;
+&lt;li&gt;br - 换行&lt;/li&gt;
+&lt;li&gt;cite - 引用&lt;/li&gt;
+&lt;li&gt;dfn - 定义字段&lt;/li&gt;
+&lt;li&gt;font - 字体设定(不推荐)&lt;/li&gt;
+&lt;li&gt;kbd - 定义键盘文本&lt;/li&gt;
+&lt;li&gt;q - 短引用&lt;/li&gt;
+&lt;li&gt;s - 中划线(不推荐)&lt;/li&gt;
+&lt;li&gt;samp - 定义范例计算机代码&lt;/li&gt;
+&lt;li&gt;strike - 中划线&lt;/li&gt;
+&lt;li&gt;tt - 电传文本&lt;/li&gt;
+&lt;li&gt;u - 下划线&lt;/li&gt;
+&lt;li&gt;var - 定义变量&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;行内元素与块级元素间的相互转换&#34;&gt;行内元素与块级元素间的相互转换&lt;/h1&gt;
+&lt;pre&gt;&lt;code&gt;行内元素和块级元素都不是绝对的，可以相互转换,，通常有这些方式可以转换。
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ol&gt;
+&lt;li&gt;display，将元素设置为块级、行内或是其它。&lt;/li&gt;
+&lt;li&gt;float，隐形地把内联元素转换为行内块级元素。不会占据一行，相当于display：inline-block;&lt;/li&gt;
+&lt;li&gt;position,属性值为absolute、fixed时,隐形地把内联元素转换为块级元素，其它属性值不会做转换。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h1 id=&#34;置换元素&#34;&gt;置换元素&lt;/h1&gt;
+&lt;p&gt;&lt;code&gt;&amp;lt;img&amp;gt;、&amp;lt;input&amp;gt;、&amp;lt;textarea&amp;gt;、&amp;lt;select&amp;gt;、&amp;lt;object&amp;gt;&lt;/code&gt;是行内元素，但是它们却可以设置宽高，这是为什么呢？因为它们是行内置换元素。&lt;br&gt;
+置换元素：内容不受CSS视觉格式化模型控制，CSS渲染模型并不考虑对此内容的渲染，且元素本身一般拥有固有尺寸（宽度，高度，宽高比）的元素，被称之为置换元素。浏览器根据元素的标签和属性，来决定元素的具体显示内容。 例如：浏览器会根据&lt;code&gt;&amp;lt;img&amp;gt;&lt;/code&gt;标签的src属性的值来读取图片信息并显示出来，而如果查看html代码，则看不到图片的实际内容；&lt;code&gt;&amp;lt;input&amp;gt;&lt;/code&gt;标签的type属性来决定是显示输入框，还是单选按钮等。&lt;br&gt;
+置换元素在其显示中生成了框，这也就是有的内联元素能够设置宽高的原因。&lt;/p&gt;
+">CSS基础-块级元素与行内元素</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://clearlove443.github.io/javascript-zhong-require-he-import-de-qu-bie/"" data-c="
+          &lt;h1 id=&#34;遵循的模块化规范不一样&#34;&gt;遵循的模块化规范不一样&lt;/h1&gt;
+&lt;p&gt;require/exports 出生在野生规范当中，什么叫做野生规范？即这些规范是 JavaScript 社区中的开发者自己草拟的规则，得到了大家的承认或者广泛的应用。比如 CommonJS、AMD、CMD 等等。import/export 则是名门正派。TC39 制定的新的 ECMAScript 版本，即 ES6（ES2015）中包含进来。&lt;/p&gt;
+&lt;h1 id=&#34;出现的时间不同&#34;&gt;出现的时间不同&lt;/h1&gt;
+&lt;p&gt;require/exports 相关的规范由于野生性质，在 2010 年前后出生。AMD、CMD 相对命比较短，到 2014 年基本上就摇摇欲坠了。一开始大家还比较喜欢在浏览器上采用这种异步小模块的加载方式，但并不是银弹。随着 Node.js 流行和 Browsersify 的兴起，运行时异步加载逐渐被构建时模块合并分块所替代。Wrapper 函数再也不需要了。 2014 年 Webpack 还是新玩意，现在已经是前端必备神器了。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Browsersify、Webpack 一开始的目的就是打包 CommonJS 模块。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;CommonJS 作为 Node.js 的规范，一直沿用至今。由于 npm 上 CommonJS 的类库众多，以及 CommonJS 和 ES6 之间的差异，Node.js 无法直接兼容 ES6。所以现阶段 require/exports 任然是必要且实必须的。出自 ES6 的  import/export 相对就晚了许多。被大家所熟知和使用也是 2015 年之后的事了。 这其实要感谢 babel（原来项目名叫做 6to5，后更名为 babel） 这个神一般的项目。由于有了 babel 将还未被宿主环境（各浏览器、Node.js）直接支持的 ES6 Module 编译为 ES5 的 CommonJS —— 也就是 require/exports 这种写法 —— Webpack 插上 babel-loader 这个翅膀才开始高飞，大家也才可以称 &amp;quot; 我在使用 ES6！ &amp;quot;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;这也就是为什么前面说 require/exports 是必要且必须的。因为事实是，目前你编写的 import/export 最终都是编译为 require/exports 来执行的。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 id=&#34;requireexports-和-importexport-形式不一样&#34;&gt;require/exports 和 import/export 形式不一样&lt;/h1&gt;
+&lt;p&gt;require/exports 的用法只有以下三种简单的写法：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;const fs = require(&#39;fs&#39;)
+exports.fs = fs
+module.exports = fs
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;而 import/export 的写法就多种多样：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;import fs from &#39;fs&#39;
+import {default as fs} from &#39;fs&#39;
+import * as fs from &#39;fs&#39;
+import {readFile} from &#39;fs&#39;
+import {readFile as read} from &#39;fs&#39;
+import fs, {readFile} from &#39;fs&#39;
+
+export default fs
+export const fs
+export function readFile
+export {readFile, read}
+export * from &#39;fs&#39;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h1 id=&#34;requireexports-和-importexport-本质上的差别&#34;&gt;require/exports 和 import/export 本质上的差别&lt;/h1&gt;
+&lt;p&gt;形式上看起来五花八门，但本质上：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;CommonJS 还是 ES6 Module 输出都可以看成是一个具备多个属性或者方法的对象；&lt;/li&gt;
+&lt;li&gt;default 是 ES6 Module 所独有的关键字，export default fs 输出默认的接口对象，import fs from &#39;fs&#39; 可直接导入这个对象；&lt;/li&gt;
+&lt;li&gt;ES6 Module 中导入模块的属性或者方法是强绑定的，包括基础类型；而 CommonJS 则是普通的值传递或者引用传递。&lt;/li&gt;
+&lt;/ol&gt;
+">JavaScript 中 require 和 import 的区别</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://clearlove443.github.io/nodejs-xie-wen-jian/"" data-c="
+          &lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;const fs = require(&#39;fs&#39;)
+ let finalProvince = &#39;2222&#39;
+fs.writeFile(&#39;temp.js&#39;, JSON.stringify(finalProvince), (err) =&amp;gt; {
+  if (err) throw err;
+  console.log(&#39;The file has been saved!&#39;);
+})
+&lt;/code&gt;&lt;/pre&gt;
+">node.js 写文件</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://clearlove443.github.io/javascript-zhong-shu-zu-zhuan-huan-cheng-zhi-ding-mo-ban/"" data-c="
+          &lt;p&gt;进行省市县三级联动的时候，需要把数据转换成指定类型的对象。&lt;br&gt;
+就需要对对象的解构。&lt;/p&gt;
+&lt;h1 id=&#34;起因&#34;&gt;起因&lt;/h1&gt;
+&lt;p&gt;省市区联动，或者城市名称匹配，是很常用的功能。在实现他们的时候，经常会出现这样的情况：拿到的行政区划数据 和 渲染所需要的结构 不相符。通常我会用JS把它们处理成合适的结构。&lt;/p&gt;
+&lt;h1 id=&#34;核心思路&#34;&gt;核心思路&lt;/h1&gt;
+&lt;p&gt;遍历其子元素或属性，在遍历的回调函数中，通过临时对象，将数据重新组织成需要的结构，再将其push进一个新构建的数组中。遍历完成后，该数组就是想要的最后结果。&lt;/p&gt;
+&lt;h1 id=&#34;两种套路数组-vs-对象&#34;&gt;两种套路：数组 VS 对象。&lt;/h1&gt;
+&lt;p&gt;对于数组和对象，有不同的遍历方式。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;对于数组，视情况可用map(), forEach()，filter()等方法；&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;对于对象，可以结合使用for in与 Object.keys() 来遍历其属性。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;注：Object.keys()可以返回一个由一个给定对象的自身可枚举属性组成的数组，数组中属性名的排列顺序和使用 for…in 循环遍历该对象时返回的顺序一致 （两者的主要区别是 一个 for-in 循环还会枚举其原型链上的属性）。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 id=&#34;例子&#34;&gt;例子&lt;/h1&gt;
+&lt;h1 id=&#34;1-数组&#34;&gt;1、数组&lt;/h1&gt;
+&lt;p&gt;有组数据&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;var data1 = [{&amp;quot;provinceCode&amp;quot;:&amp;quot;33&amp;quot;,&amp;quot;provinceName&amp;quot;:&amp;quot;浙江省&amp;quot;,&amp;quot;cityCode&amp;quot;:&amp;quot;3301&amp;quot;,&amp;quot;cityName&amp;quot;:&amp;quot;杭州市&amp;quot;},{&amp;quot;provinceCode&amp;quot;:&amp;quot;33&amp;quot;,&amp;quot;provinceName&amp;quot;:&amp;quot;浙江省&amp;quot;,&amp;quot;cityCode&amp;quot;:&amp;quot;3302&amp;quot;,&amp;quot;cityName&amp;quot;:&amp;quot;宁波市&amp;quot;},{&amp;quot;provinceCode&amp;quot;:&amp;quot;33&amp;quot;,&amp;quot;provinceName&amp;quot;:&amp;quot;浙江省&amp;quot;,&amp;quot;cityCode&amp;quot;:&amp;quot;3303&amp;quot;,&amp;quot;cityName&amp;quot;:&amp;quot;温州市&amp;quot;}];
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;需要转换成&lt;code&gt;{provinceCode:&amp;quot;&amp;quot;,provinceName:&amp;quot;&amp;quot;,children:[]}&lt;/code&gt;这种类型的模版。具体实现如下&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;function formatdata(data) {
+	var data = [...data]
+     // 对象模版
+	var city = {
+		provinceCode: &amp;quot;&amp;quot;,
+		provinceName: &amp;quot;&amp;quot;,
+		children: []
+	};
+	city.provinceCode = data[0].provinceCode;
+	city.provinceName = data[0].provinceName;
+	// 方法一
+	// var children = [];
+	// data.forEach(i = &amp;gt;{
+	// 	var {
+	// 		cityCode: cityCode,
+	// 		cityName: cityName
+	// 	} = i;
+	// 	children.push({
+	// 		cityCode: cityCode,
+	// 		cityName: cityName
+	// 	});
+	// }) city.children = children;
+	// 方法二：	
+	city.children = data1.map(i =&amp;gt;{
+		var {
+			cityCode: cityCode,
+			cityName: cityName
+		} = i;
+		return {
+			cityCode: cityCode,
+			cityName: cityName
+		};
+	});
+	var city_json = JSON.stringify(city); // 对像转换成json 
+	var city2 = JSON.parse(city_json, (key, value) =&amp;gt;{
+		return value
+	}); // json 转换成对象
+	console.log(city_json);
+	console.log(city2);
+}
+formatdata(data1)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h1 id=&#34;2-对象&#34;&gt;2、对象&lt;/h1&gt;
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;const fs = require(&#39;fs&#39;)
+const rawData = {
+  &amp;quot;北京市&amp;quot;:{
+    &amp;quot;市辖区&amp;quot;:[&amp;quot;东城区&amp;quot;,&amp;quot;西城区&amp;quot;,&amp;quot;朝阳区&amp;quot;,&amp;quot;丰台区&amp;quot;,&amp;quot;石景山区&amp;quot;,&amp;quot;海淀区&amp;quot;,&amp;quot;门头沟区&amp;quot;,&amp;quot;房山区&amp;quot;,&amp;quot;通州区&amp;quot;,&amp;quot;顺义区&amp;quot;,&amp;quot;昌平区&amp;quot;,&amp;quot;大兴区&amp;quot;,&amp;quot;怀柔区&amp;quot;,&amp;quot;平谷区&amp;quot;,&amp;quot;密云区&amp;quot;,&amp;quot;延庆区&amp;quot;]
+  },
+  &amp;quot;天津市&amp;quot;:{
+    &amp;quot;市辖区&amp;quot;:[&amp;quot;和平区&amp;quot;,&amp;quot;河东区&amp;quot;,&amp;quot;河西区&amp;quot;,&amp;quot;南开区&amp;quot;,&amp;quot;河北区&amp;quot;,&amp;quot;红桥区&amp;quot;,&amp;quot;东丽区&amp;quot;,&amp;quot;西青区&amp;quot;,&amp;quot;津南区&amp;quot;,&amp;quot;北辰区&amp;quot;,&amp;quot;武清区&amp;quot;,&amp;quot;宝坻区&amp;quot;,&amp;quot;滨海新区&amp;quot;,&amp;quot;宁河区&amp;quot;,&amp;quot;静海区&amp;quot;,&amp;quot;蓟州区&amp;quot;]
+  }
+}
+//目标结构
+// const options = [{
+//   value: &#39;浙江&#39;,
+//   label: &#39;浙江&#39;,
+//   children: [{
+//     value: &#39;hangzhou&#39;,
+//     label: &#39;Hangzhou&#39;,
+//     children: [{
+//       value: &#39;xihu&#39;,
+//       label: &#39;West Lake&#39;,
+//     }],
+//
+//   }]
+// }];
+const finalArr = []
+for (let prop of Object.keys(rawData)){
+      let tempObj = {}
+      tempObj.label = prop
+      tempObj.value = prop
+      tempObj.children = []
+
+      for (let pr of Object.keys(rawData[prop])){
+        let tempTempObj = {}
+        tempTempObj.label = pr
+        tempTempObj.value = pr
+
+        let tempTempArr = []
+    
+     //最内层变成数组的了   
+     rawData[prop][pr].map(
+          item =&amp;gt; {
+            let tempTempTempObj = {}
+            tempTempTempObj.label = item
+            tempTempTempObj.value = item
+            tempTempArr.push(tempTempTempObj)
+          }
+        )
+
+        tempTempObj.children = tempTempArr
+        tempObj.children.push(tempTempObj)
+      }
+      finalArr.push(tempObj)
+
+}
+console.log(finalArr);
+
+fs.writeFile(&#39;temp.js&#39;, JSON.stringify(finalArr), (err) =&amp;gt; {
+  if (err) throw err;
+  console.log(&#39;The file has been saved!&#39;);
+})
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;运行&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;node test.js
+&lt;/code&gt;&lt;/pre&gt;
+">做省市区联动时，将数据调整到合适结构的两种常用方法</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://clearlove443.github.io/javascript-dui-xiang-yu-json-dui-xiang-de-xiang-hu-zhuan-huan/"" data-c="
+          &lt;h1 id=&#34;一-全局json对象&#34;&gt;一、全局JSON对象&lt;/h1&gt;
+&lt;p&gt;ES5定义了全局对象JSON，对解析JSON的行为制定了规范。&lt;br&gt;
+JSON对象有两个方法：stringify() 和 parse()。&lt;/p&gt;
+&lt;h1 id=&#34;二-javascript-对象序列化为-json对象&#34;&gt;二、JavaScript 对象序列化为 JSON对象&lt;/h1&gt;
+&lt;p&gt;JSON.stringify( js对象 [, 过滤器] [, 选项])&lt;br&gt;
+二三参数可选，js对象中的函数和原型成员将被忽略，值为undefined的属性也被跳过。&lt;br&gt;
+默认情况下，返回的JSON不包含任何空格字符和缩进。&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;var book = {
+            title: &amp;quot;Professional JavaScript&amp;quot;,
+            authors: [&amp;quot;Nicholas C. Zakas&amp;quot;],
+            edition: 3,
+            year: 2011
+           };
+ 
+var jsonText = JSON.stringify(book);
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;过滤器为数组：JSON.stingify() 的结果只包含数组中列出的属性。&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;var book = {
+            title: &amp;quot;Professional JavaScript&amp;quot;,
+            authors: [&amp;quot;Nicholas C. Zakas&amp;quot;],
+            edition: 3,
+            year: 2011
+           };
+ 
+var jsonText = JSON.stringify(book, [&amp;quot;title&amp;quot;, &amp;quot;edition&amp;quot;]);
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;jsonText的值为 {&amp;quot;title&amp;quot;: &amp;quot;Professional JavaScript&amp;quot;, &amp;quot;edition&amp;quot;: 3}&lt;/p&gt;
+&lt;p&gt;过滤器为函数：函数接收两个参数，键名和值(key, value)。函数体中根据键名处理对应的值。&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;var book = {
+            title: &amp;quot;Professional JavaScript&amp;quot;,
+            authors: [&amp;quot;Nicholas C. Zakas&amp;quot;],
+            edition: 3,
+            year: 2011
+           };
+ 
+var jsonText = JSON.stringify(book, function(key, value){
+    switch(key){
+        case &amp;quot;authors&amp;quot;:
+            return value.join(&amp;quot;,&amp;quot;)        
+        case &amp;quot;year&amp;quot;:
+             return 5000;           
+        case &amp;quot;edition&amp;quot;:
+             return undefined;
+        default:
+             return value;
+    }
+});
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;序列化后的 jsonText 值为：{&amp;quot;title&amp;quot;: &amp;quot;Professional JavaScript&amp;quot;, &amp;quot;authors&amp;quot;: &amp;quot;Nicholas C. Zakas&amp;quot;, &amp;quot;year&amp;quot;: 5000}&lt;/p&gt;
+&lt;p&gt;第三个参数用于控制结果的缩进：&lt;br&gt;
+参数为数值 ----- 表示缩进的空格数。&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;var book = {
+            title: &amp;quot;Professional JavaScript&amp;quot;,
+            authors: [&amp;quot;Nicholas C. Zakas&amp;quot;],
+            edition: 3,
+            year: 2011
+           };
+ 
+var jsonText = JSON.stringify(book, null, 4);
+jsonText 中的字符串：
+{
+    &amp;quot;title&amp;quot;: &amp;quot;Professional JavaScript&amp;quot;,
+    &amp;quot;authors&amp;quot;: [
+        &amp;quot;Nicholas C. Zakas&amp;quot;
+    ],
+    &amp;quot;edition&amp;quot;: 3,
+    &amp;quot;year&amp;quot;: 2011
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;参数为字符串 ----- 表示使用该字符串进行缩进。&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;var book = {
+            title: &amp;quot;Professional JavaScript&amp;quot;,
+            authors: [&amp;quot;Nicholas C. Zakas&amp;quot;],
+            edition: 3,
+            year: 2011
+           };
+ 
+var jsonText = JSON.stringify(book, null, &amp;quot; - -&amp;quot;);
+jsonText 中的字符串：
+{
+--&amp;quot;title&amp;quot;: &amp;quot;Professional JavaScript&amp;quot;,
+--&amp;quot;authors&amp;quot;: [
+----&amp;quot;Nicholas C. Zakas&amp;quot;
+--],
+--&amp;quot;edition&amp;quot;: 3,
+--&amp;quot;year&amp;quot;: 2011
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;（还可以为对象定义 toJSON() 方法，实现对其进行自定义序列化的需求。）&lt;/p&gt;
+&lt;h1 id=&#34;三-json对象解析为-javascript-对象&#34;&gt;三、JSON对象解析为 JavaScript 对象&lt;/h1&gt;
+&lt;p&gt;JSON.parse(json对象 [, 还原函数])&lt;br&gt;
+还原参数接收两个参数，键和值。如果返回undefined，则表示从结果中删除相应的键；如果返回其他值，则将该值插入到结果中。&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;var book = {
+            title: &amp;quot;Professional JavaScript&amp;quot;,
+            authors: [&amp;quot;Nicholas C. Zakas&amp;quot;],
+            edition: 3,
+            year: 2011,
+            releaseDate: new Date(2011, 11, 1)
+           };
+ 
+var jsonText = JSON.stringify(book);        
+var bookCopy = JSON.parse(jsonText, function(key, value){
+    if (key == &amp;quot;releaseDate&amp;quot;){
+        return new Date(value);
+    } else {
+        return value;
+    }
+});
+&lt;/code&gt;&lt;/pre&gt;
+">JavaScript 对象与 JSON 对象的相互转换</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://clearlove443.github.io/javascript-zhong-mapforeachreducefilterde-qu-bie/"" data-c="
+          &lt;h1 id=&#34;map&#34;&gt;map()&lt;/h1&gt;
+&lt;p&gt;map()方法按照原始数组元素顺序依次处理元素，返回一个新的数组，数组中的元素为原始数组调用函数处理后的值。可看作是对原数组进行映射。&lt;/p&gt;
+&lt;p&gt;注意：map()方法不会对空数组进行检测。&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;array.map(function(currentValue,index,arr), thisValue)
+//参数：当前元素、当前元素的索引、当前元素所属的数组
+
+var wallets = people.map(function (dude) {
+return dude.wallet;
+});
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h1 id=&#34;foreach&#34;&gt;forEach()&lt;/h1&gt;
+&lt;p&gt;forEach()方法用于遍历数组的每个元素，将元素传给回调函数。&lt;/p&gt;
+&lt;p&gt;注意：forEach()对于空数组是不会调用回调函数的。&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;array.forEach(function(currentValue, index, arr), thisValue)
+//参数：当前元素、当前元素的索引、当前元素所属的数组
+
+people.forEach(function (dude) {
+dude.pickUpSoap();
+});
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h1 id=&#34;reduce&#34;&gt;reduce()&lt;/h1&gt;
+&lt;p&gt;reduce()方法是让数组中的前项和后项做某种计算，并累计最终值。&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;array.reduce(function(total, currentValue, currentIndex, arr), initialValue)初始值
+//参数：初始值(计算结束的返回值)、当前元素、当前元素的索引、当前元素所属的数组
+
+var totalMoney = wallets.reduce(function (countedMoney, wallet) {
+return countedMoney + wallet.money;
+}, 0);
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h1 id=&#34;filter&#34;&gt;filter()&lt;/h1&gt;
+&lt;p&gt;filter()方法会筛选出数组中符合条件的项，组成一个新数组。&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;array.filter(function(currentValue,index,arr), thisValue)
+//参数：当前元素、当前元素的索引、当前元素所属的数组
+
+var fatWallets = wallets.filter(function (wallet) {
+return wallet.money &amp;gt; 100;
+});
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h1 id=&#34;总结&#34;&gt;总结&lt;/h1&gt;
+&lt;h2 id=&#34;相同点&#34;&gt;相同点：&lt;/h2&gt;
+&lt;p&gt;都会循环遍历数组中的每一项；&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;map()、forEach()和filter()方法里每次执行匿名函数都支持3个参数，参数分别是：当前元素、当 前元素的索引、当前元素所属的数组；&lt;/li&gt;
+&lt;li&gt;匿名函数中的this都是指向window；&lt;/li&gt;
+&lt;li&gt;只能遍历数组。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;不同点&#34;&gt;不同点：&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;map()速度比forEach()快；&lt;/li&gt;
+&lt;li&gt;map()和filter()会返回一个新数组，不对原数组产生影响；forEach()不会产生新数组，返回 undefined；reduce()函数是把数组缩减为一个值(比如求和、求积)；&lt;/li&gt;
+&lt;li&gt;map()里可以用return，而forEach()里用return不起作用，forEach()不能用break，会直接报错；&lt;/li&gt;
+&lt;li&gt;reduce()有4个参数，第一个参数为初始值。&lt;/li&gt;
+&lt;/ol&gt;
+">JavaScript 中 map()、forEach()、reduce()、filter()的区别</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://clearlove443.github.io/markdown-liu-cheng-tu/"" data-c="
+          &lt;h1 id=&#34;1-横向流程图源码格式&#34;&gt;1、横向流程图源码格式：&lt;/h1&gt;
+&lt;pre&gt;&lt;code class=&#34;language-mermaid&#34;&gt;graph LR
+A[方形] --&amp;gt;B(圆角)
+    B --&amp;gt; C{条件a}
+    C --&amp;gt;|a=1| D[结果1]
+    C --&amp;gt;|a=2| E[结果2]
+    F[横向流程图]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h1 id=&#34;2-竖向流程图源码格式&#34;&gt;2、竖向流程图源码格式：&lt;/h1&gt;
+&lt;pre&gt;&lt;code class=&#34;language-mermaid&#34;&gt;graph TD
+A[方形] --&amp;gt; B(圆角)
+    B --&amp;gt; C{条件a}
+    C --&amp;gt; |a=1| D[结果1]
+    C --&amp;gt; |a=2| E[结果2]
+    F[竖向流程图]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h1 id=&#34;3-标准流程图源码格式&#34;&gt;3、标准流程图源码格式：&lt;/h1&gt;
+&lt;pre&gt;&lt;code class=&#34;language-flow&#34;&gt;st=&amp;gt;start: 开始框
+op=&amp;gt;operation: 处理框
+cond=&amp;gt;condition: 判断框(是或否?)
+sub1=&amp;gt;subroutine: 子流程
+io=&amp;gt;inputoutput: 输入输出框
+e=&amp;gt;end: 结束框
+st-&amp;gt;op-&amp;gt;cond
+cond(yes)-&amp;gt;io-&amp;gt;e
+cond(no)-&amp;gt;sub1(right)-&amp;gt;op
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h1 id=&#34;4-标准流程图源码格式横向&#34;&gt;4、标准流程图源码格式（横向）：&lt;/h1&gt;
+&lt;pre&gt;&lt;code class=&#34;language-flow&#34;&gt;st=&amp;gt;start: 开始框
+op=&amp;gt;operation: 处理框
+cond=&amp;gt;condition: 判断框(是或否?)
+sub1=&amp;gt;subroutine: 子流程
+io=&amp;gt;inputoutput: 输入输出框
+e=&amp;gt;end: 结束框
+st(right)-&amp;gt;op(right)-&amp;gt;cond
+cond(yes)-&amp;gt;io(bottom)-&amp;gt;e
+cond(no)-&amp;gt;sub1(right)-&amp;gt;op
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h1 id=&#34;5-uml-时序图源码样例&#34;&gt;5、UML 时序图源码样例：&lt;/h1&gt;
+&lt;pre&gt;&lt;code class=&#34;language-sequence&#34;&gt;对象A-&amp;gt;对象B: 对象B你好吗?（请求）
+Note right of 对象B: 对象B的描述
+Note left of 对象A: 对象A的描述(提示)
+对象B--&amp;gt;对象A: 我很好(响应)
+对象A-&amp;gt;对象B: 你真的好吗？
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h1 id=&#34;6-uml-时序图源码复杂样例&#34;&gt;6、UML 时序图源码复杂样例：&lt;/h1&gt;
+&lt;pre&gt;&lt;code class=&#34;language-sequence&#34;&gt;Title: 标题：复杂使用
+对象A-&amp;gt;对象B: 对象B你好吗?（请求）
+Note right of 对象B: 对象B的描述
+Note left of 对象A: 对象A的描述(提示)
+对象B--&amp;gt;对象A: 我很好(响应)
+对象B-&amp;gt;小三: 你好吗
+小三--&amp;gt;&amp;gt;对象A: 对象B找我了
+对象A-&amp;gt;对象B: 你真的好吗？
+Note over 小三,对象B: 我们是朋友
+participant C
+Note right of C: 没人陪我玩
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h1 id=&#34;7-uml-标准时序图样例&#34;&gt;7、UML 标准时序图样例：&lt;/h1&gt;
+&lt;pre&gt;&lt;code class=&#34;language-mermaid&#34;&gt;%% 时序图例子,-&amp;gt; 直线，--&amp;gt;虚线，-&amp;gt;&amp;gt;实线箭头
+  sequenceDiagram
+    participant 张三
+    participant 李四
+    张三-&amp;gt;王五: 王五你好吗？
+    loop 健康检查
+        王五-&amp;gt;王五: 与疾病战斗
+    end
+    Note right of 王五: 合理 食物 &amp;lt;br/&amp;gt;看医生...
+    李四--&amp;gt;&amp;gt;张三: 很好!
+    王五-&amp;gt;李四: 你怎么样?
+    李四--&amp;gt;王五: 很好!
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h1 id=&#34;8-甘特图样例&#34;&gt;8、甘特图样例：&lt;/h1&gt;
+&lt;pre&gt;&lt;code class=&#34;language-mermaid&#34;&gt;        gantt
+        dateFormat  YYYY-MM-DD
+        title 软件开发甘特图
+        section 设计
+        需求                      :done,    des1, 2014-01-06,2014-01-08
+        原型                      :active,  des2, 2014-01-09, 3d
+        UI设计                     :         des3, after des2, 5d
+    未来任务                     :         des4, after des3, 5d
+        section 开发
+        学习准备理解需求                      :crit, done, 2014-01-06,24h
+        设计框架                             :crit, done, after des2, 2d
+        开发                                 :crit, active, 3d
+        未来任务                              :crit, 5d
+        耍                                   :2d
+        section 测试
+        功能测试                              :active, a1, after des3, 3d
+        压力测试                               :after a1  , 20h
+        测试报告                               : 48h
+&lt;/code&gt;&lt;/pre&gt;
+">VS Code实现markdown画流程图</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://clearlove443.github.io/angular-zu-jian-chuan-zhi-fang-fa/"" data-c="
+          &lt;h1 id=&#34;一组件之间传值的方法&#34;&gt;一.组件之间传值的方法&lt;/h1&gt;
+&lt;h2 id=&#34;1父子组件之间的传值方法&#34;&gt;1.父子组件之间的传值方法&lt;/h2&gt;
+&lt;h3 id=&#34;11-ininput和output方法&#34;&gt;1.1 @InInput和@Output方法&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;export class testExample implements OnInit{
+	@Input test:any = {};
+	@Output testFun = new EventEmitter&amp;lt;any&amp;gt;();
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;&amp;lt;test-example [test]=&amp;quot;test&amp;quot; (testFun)=&amp;quot;testFun($event)&amp;quot;&amp;gt;&amp;lt;/test-example&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;@Input修饰的变量为父组件传入子组件的输入属性. @Outpue修饰的子组件传入父组件的输出属性.&lt;/p&gt;
+&lt;h3 id=&#34;12-inputs和outputs&#34;&gt;1.2 inputs和outputs&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;@Component({
+     //...
+    inputs:[&#39;test&#39;],
+    outputs:[&#39;testFun&#39;]
+})
+ 
+export class testExample implements OnInit{
+    test:any = {};
+    testFun = new 	EventEmitter&amp;lt;any&amp;gt;();
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;13-viewchild父组件获取子组件的引用&#34;&gt;1.3 @ViewChild,父组件获取子组件的引用&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;import { Component,AfterViewInit,ViewChild } from &#39;@angular/core&#39;;
+@Component({
+    selector:&#39;collection&#39;,
+    template:`
+        &amp;lt;contact-collect (click)=&amp;quot;collectTheContact()&amp;quot;&amp;gt;&amp;lt;/contact-collect&amp;gt;
+    `
+})
+export class CollectionComponent {
+    @ViewChild(ContactCollectComponent) contactCollect: ContactCollectComponent;
+    ngAfterViewInit(){
+        //...
+    }
+     
+    collectTheContact(){
+        this.contactCollect.collectTheContact();
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;ViewChild是属性装饰器,用来从模板视图中获取匹配的元素.视图查询在ngAfterViewInit钩子函数调用前完成,因此在ngAfterViewInit钩子函数中,就能正常获取查询的元素.&lt;br&gt;
+ViewChildren装饰器用来从模板中获取匹配的多个元素,返回的结果是一个QueryList集合, 使用模板变量名设置查询条件&lt;/p&gt;
+&lt;h3 id=&#34;14-局部变量父组件获取子组件引用&#34;&gt;1.4 局部变量，父组件获取子组件引用&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;template:`
+        &amp;lt;contact-collect (click)=&amp;quot;collectTheContact()&amp;quot; #collect&amp;gt;&amp;lt;/contact-collect&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;绑定局部变量collect(以#号标记),以此来获取子组件类的实例对象.&lt;/p&gt;
+&lt;h2 id=&#34;2非父子组件之间传值&#34;&gt;2.非父子组件之间传值&lt;/h2&gt;
+&lt;h3 id=&#34;21-service&#34;&gt;2.1 service&lt;/h3&gt;
+&lt;p&gt;需要双向的触发(发送信息/接收信息)&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;service.ts
+import { Component, Injectable, EventEmitter } from &amp;quot;@angular/core&amp;quot;;
+@Injectable()
+export class myService {
+  public info: string = &amp;quot;&amp;quot;;
+  constructor() {}
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;组件1向service传递信息&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;import { myService } from &#39;../../service/myService.service&#39;;
+...
+constructor(
+  public service: myService
+) { }
+
+changeInfo() {
+  this.service.info = this.service.info + &amp;quot;1234&amp;quot;;
+}
+...
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;组件2从service获取信息&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;import { myService } from &#39;../../service/myService.service&#39;;
+...
+constructor(
+  public service: myService
+) { }
+
+showInfo() {
+  alert(this.service.info);
+}
+...
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;22-使用behaviorsubject&#34;&gt;2.2 使用BehaviorSubject&lt;/h3&gt;
+&lt;p&gt;发布者订阅者模式,当数据改变时,订阅者也能得到响应&lt;br&gt;
+service&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;import { Injectable } from &#39;@angular/core&#39;;
+import { Subject } from &#39;rxjs&#39;;
+@Injectable()
+export class PcServiceService {
+    constructor() { }
+    // 创建Subject实例
+    emitChangeSource = new Subject&amp;lt;any&amp;gt;();
+    // 创建Observable
+    changeEmitted$ = this.emitChangeSource.asObservable();
+    // 调用该方法发布消息
+    emitChange(change: any): void {
+        this.emitChangeSource.next(change);
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;组件调用service的方法传信息和接收信息&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;constructor(public service: PcServiceService) {
+}
+changeValue(): void {
+  // 调用服务发布消息
+  this.service.emitChange(this.user);
+}
+
+form!: any;
+constructor(public service: PcServiceService) {
+    // 订阅消息
+    service.emitChangeSource.subscribe(text =&amp;gt; {
+      this.form = text;
+    });
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;23-路由传值&#34;&gt;2.3 路由传值&lt;/h3&gt;
+&lt;h4 id=&#34;231-在查询参数中传递&#34;&gt;2.3.1 在查询参数中传递&lt;/h4&gt;
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;//传递数据
+...
+&amp;lt;a [routerLink]=&amp;quot;[&#39;/stock&#39;]&amp;quot; [queryParams]=&amp;quot;{id: 1}&amp;quot;&amp;gt;股票详情&amp;lt;/a&amp;gt;
+// http://localhost:4200/stock?id=1
+
+//接受参数
+...
+import { ActivatedRoute } from &#39;@amgular/router&#39;;
+export class StockComponent implements OnInit {
+    private stockId: number;    
+    constructor(private routeInfo: ActivatedRoute)
+    ngOnInit() {
+        this.stockId = this.routeInfo.snapshot.queryParams[&#39;id&#39;];
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id=&#34;232-在路由路径中传递&#34;&gt;2.3.2 在路由路径中传递&lt;/h4&gt;
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;//修改配置
+const routes: Routes = [
+  {path: &#39;&#39;, redirectTo: &#39;/index&#39;, pathMatch: &#39;full&#39;},
+  {path: &#39;index&#39;, component: IndexComponent},
+  {path: &#39;stock/:id&#39;, component: StocksComponent },
+  {path: &#39;**&#39;, component: ErrorPageComponent }
+];
+
+//传递数据
+...[
+](url)&amp;lt;a [routerLink]=&amp;quot;[&#39;/stock&#39;, 1]&amp;quot;&amp;gt;股票详情&amp;lt;/a&amp;gt;
+// http://localhost:4200/stock/1
+
+//接受参数
+...
+import { ActivatedRoute } from &#39;@amgular/router&#39;;
+export class StockComponent implements OnInit {
+    private stockId: number;    
+    constructor(private routeInfo: ActivatedRoute)
+    ngOnInit() {
+        this.stockId = this.routeInfo.snapshot.params[&#39;id&#39;];
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id=&#34;233-在路由配置中传递&#34;&gt;2.3.3 在路由配置中传递&lt;/h4&gt;
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;//路由配置配置
+const routes: Routes = [
+  {path: &#39;&#39;, redirectTo: &#39;/index&#39;, pathMatch: &#39;full&#39;},
+  {path: &#39;index&#39;, component: IndexComponent, data: {title: &#39;Index Page&#39;}},
+  {path: &#39;stock/:id&#39;, component: StocksComponent, data: {title: &#39;Stock Page&#39;}},
+  {path: &#39;**&#39;, component: ErrorPageComponent, data: {title: &#39;Stock Page&#39;}}
+];
+//接受参数
+this.title = this.routeInfo.snapshot.date[0][&#39;title&#39;];
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h1 id=&#34;二其它传值方式&#34;&gt;二.其它传值方式&lt;/h1&gt;
+&lt;p&gt;cookie、session、storage&lt;/p&gt;
+">Angular组件传值方法</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://clearlove443.github.io/maven-chang-yong-ming-ling/"" data-c="
+          &lt;p&gt;1、mvn compile 编译,将Java 源程序编译成 class 字节码文件。&lt;br&gt;
+2、mvn test 测试，并生成测试报告&lt;br&gt;
+3、mvn clean 将以前编译得到的旧的 class 字节码文件删除&lt;br&gt;
+4、mvn pakage 打包,动态 web工程打 war包，Java工程打 jar 包。&lt;br&gt;
+5、mvn install 将项目生成 jar 包放在仓库中，以便别的模块调用&lt;/p&gt;
+">Maven 常用命令</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://clearlove443.github.io/javascript-gao-jie-han-shu/"" data-c="
+          &lt;p&gt;最近在学习函数式编程，整个 team 都在吭一本叫&lt;a href=&#34;https://github.com/MostlyAdequate/mostly-adequate-guide&#34;&gt;《Mostly adequate guide》&lt;/a&gt;的编程教材，难度确实挺大的，不过新意满满。今天就讲讲 FP 基础中的基础——高阶函数。&lt;/p&gt;
+&lt;h2 id=&#34;function-object&#34;&gt;Function Object&lt;/h2&gt;
+&lt;p&gt;什么是函数？在大多数编程语言中，函数是一段独立的代码块，用来抽象处理某些通用功能的方法；主要操作是给函数传入特定对象（参数），并在方法调用结束后获得一个新的对象（返回值）。&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-Javascript&#34;&gt;function greeting(name) {
+  return `Hello ${name}`;
+}
+
+console.log( greeting(&#39;Onion&#39;) ); // Hello Onion
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;但是在 Javascript、Haskell、Clojure 这类语言中，函数是另一种更高级的存在，俗称一等公民；它除了是代码块以外，它还是一种特殊类型的对象——Function Object。&lt;/p&gt;
+&lt;p&gt;为什么说 Fuction 也是对象呢？还是看上面的示例函数——&lt;code&gt;greeting&lt;/code&gt;，我们事实上是可以打印出它的固有属性（properties）的：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-Javascript&#34;&gt;console.log(greeting.length, greeting.name);  // 1 &#39;greeting&#39;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;这里&lt;code&gt;length&lt;/code&gt;是参数列表长度，&lt;code&gt;name&lt;/code&gt;就是它定义的名字了。是不是和对象很接近了？我们甚至可以给它添加新的属性和方法：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-Javascript&#34;&gt;greeting.displayName = &#39;Garlic&#39;;
+greeting.innerName = () =&amp;gt; &#39;Ginger&#39;;
+
+console.log(greeting.displayName); // Garlic
+console.log(greeting.innerName()); // Ginger
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;是吧？这么看，函数已经包含了几乎所有的 Object 功能了。当然，生产中尽量不要给函数添加随机属性，毕竟代码是给人阅读的，不要随便增加团队的认知成本。&lt;/p&gt;
+&lt;h2 id=&#34;high-order-function&#34;&gt;high order function&lt;/h2&gt;
+&lt;p&gt;上面提到了函数是一种特殊的对象，因此在 js 语言中，函数事实上也可以像普通 object 一样成为其他函数里的参数或是返回值。我们将参数或是范围值为函数的函数称为&lt;strong&gt;高阶函数&lt;/strong&gt;。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Higher-Order function is a function that receives a function as an argument or returns the function as output&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;function-参数&#34;&gt;Function 参数&lt;/h3&gt;
+&lt;p&gt;我们先看一下函数如何成为参数，最经典的案例就是 Array#map。给了例子，实现一个让数组所有元素+1 的操作，传统的做法如下所示：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;const arr1 = [1, 2, 3];
+const arr2 = [];
+
+for(let i = 0; i &amp;lt; arr1.length; i++) {
+  arr2.push(++arr1[i]);
+}
+console.log(arr2)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;如果使用高阶函数 map：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;const arr1 = [1, 2, 3];
+
+const arr3 = arr1.map( function callback(element, index, array) {
+  return element+1;
+});
+
+console.log(arr3); // [2, 3, 4]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;map 是 Array.prototype 的原生方法，它的第一个参数是一个 callback 函数，第二个参数是用来绑定 callback 的 this。这里，callback 的作用是迭代调用数组里的元素，并将返回值组装成一个新的数组。这个 map 的&lt;strong&gt;函数参数&lt;/strong&gt;本身还有三个参数：element，index 和 array，分别表示迭代时的元素，索引，以及原始数组。&lt;/p&gt;
+&lt;p&gt;上面的代码使用 es6 的箭头函数，可以写得更简洁一点：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;const arr1 = [1, 2, 3];
+
+const arr3 = arr1.map(e =&amp;gt; e+1);
+
+console.log(arr3); // [2, 3, 4]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;讲真，我们经常用到高阶函数，Array 里还有好多类似的函数，如 fliter、reduce 等等。这类高阶函数可以明显的改善代码质量，并切能确保不会对原始数组产生副作用。&lt;/p&gt;
+&lt;h3 id=&#34;fucntion-返回值&#34;&gt;Fucntion 返回值&lt;/h3&gt;
+&lt;p&gt;返回值是函数的函数，我们也经常使用，最著名的就是 Function#bind。&lt;/p&gt;
+&lt;p&gt;给个案例，如下函数 greeting 会打印出&lt;code&gt;this&lt;/code&gt;的&lt;code&gt;name&lt;/code&gt;，但是 greeting 并不是一个纯函数，因为它的 this 绑定不明确，可能会在不同的运行上下文中会返回不同的结果。&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;function greeting() {
+  return `Hello ${this.name}`;
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;如果想明确它的结果该怎么办呢？嗯，为 greeting 绑定一个 object。这个 helloOnion 就是&lt;code&gt;greeting.bind&lt;/code&gt;后返回的新函数。&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;let helloOnoin = greeting.bind({name: &#39;Onion&#39;});
+
+console.log(helloOnoin()); // Hello Onion
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;code&gt;bind&lt;/code&gt;方法创建一个新的函数，在&lt;code&gt;bind&lt;/code&gt;被调用时，这个新函数的&lt;code&gt;this&lt;/code&gt;被&lt;code&gt;bind&lt;/code&gt;的第一个参数指定，其余的参数将作为新函数的参数供调用时使用。我们可以试着写一个乞丐版的 myBind 方法（bind 还能绑定参数，这个先略过了），这样可以更清晰地看到什么是返回函数的高阶函数了。&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;Function.prototype.myBind = function(context) {
+  let func = this; // method is attached to the prototype, so just refer to it as this.
+  return function newFn() {
+    return func.apply(context, arguments);
+  }
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;这里给 Function 的原型链加了一个新的函数 myBind，并用到了闭包（在内存里保留了原始函数和目标&lt;code&gt;this&lt;/code&gt;）；之后，调用 myBind 返回一个新的函数，并且在该函数运行时调用原始函数，左后通过&lt;code&gt;apply&lt;/code&gt;执行时绑定目标 this。看一下效果：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;let helloOnoin = greeting.myBind({name: &#39;Onion&#39;});
+
+console.log(helloOnoin()); // Hello Onoin
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;我这里再写一个健壮一点的 bind 实现，大家自己体会一下，bind 是如何将前几个参数也绑定了的：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;Function.prototype.bind = function(context, ...args) {
+  let func = this;
+  return function () {
+    return func.call(context, ...args, ...arguments);
+  }
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;函数柯里化&#34;&gt;函数柯里化&lt;/h2&gt;
+&lt;p&gt;高阶函数还在一种叫&lt;strong&gt;柯里化&lt;/strong&gt;的方法里大显身手。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;在数学和计算机科学中，柯里化是一种将使用多个参数的函数转换成一系列使用一个参数的函数，并且返回接受余下的参数而且返回结果的新函数的技术。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;柯里化&lt;/strong&gt;，通俗点说就是先给原始函数传入几个参数，它会生成一个新的函数，然后让新的函数去处理接下来的参数。我们先不去管 curry 的实现，看看柯里函数的用法。比如，实现一个 add 函数——简单的两数相加，正常的运行就是直接加两参数运行——add(1,2)。但是这里我们先给它做个柯里化处理，并产生了一个新的函数——curryingAdd。&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;function curry(fn) { ... }
+
+function add(a, b) { return a+b; }
+
+const curryingAdd = curry(add);
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;柯里化后的 curryingAdd，从普通函数变成了高阶函数：它支持一次传入一个参数（比如 10）并返回一个新的函数——addTen。我们运行&lt;code&gt;addTen(1)&lt;/code&gt;，它会记录之前已经传入的 10，并把 10 和 1 相加得到 11。是不是觉得很&lt;strong&gt;没用&lt;/strong&gt;？哈哈，这说明你 FP 学的不够深。&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;const addTen = curryAdd(10);
+
+console.log(addTen(1)); // 11
+console.log(addTen(100)); // 110
+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;柯里化的作用就是将普通函数转变成高阶函数，实现动态创建函数、延迟计算、参数复用等等作用。篇幅有限，我不做深入讲解了。它实现上，就是返回一个高阶函数，通过闭包把传入的参数保存起来。当传入的参数数量不足时，递归调用 bind 方法；数量足够时则立即执行函数。学习一下 javascript 的高阶用法还是有意义的。&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;function curry(fn) {
+  const arity = fn.length;
+
+  return function $curry(...args) {
+    if( args.length &amp;lt; arity ) {
+      return $curry.bind(null, ...args);
+    }
+    return fn.apply(null, args);
+  }
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;compose&#34;&gt;compose&lt;/h2&gt;
+&lt;p&gt;compose 也是一个高阶函数里重要的一课。compose 就是组合函数，将子函数串联起来执行，一个函数的输出结果是另一个函数的输入参数，一旦第一个函数开始执行，会像多米诺骨牌一样推导执行后续函数。还是举个例子：我实现了一个带 Hello 的&lt;code&gt;greeting&lt;/code&gt;函数，并希望在&lt;code&gt;greeting&lt;/code&gt;调用结束后把返回值都显示成大写状态。&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;const greeting = name =&amp;gt; `Hello ${name}`;
+const toUpper = str =&amp;gt; str.toUpperCase();
+
+toUpper(greeting(&#39;Onion&#39;)); // HELLO ONION
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;传统的手段就是嵌套两个函数使用——&lt;code&gt;toUpper(greeting(&#39;Onion&#39;))&lt;/code&gt;，但是有时候这种嵌套可能会很多，比如下面这个态势：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;f(g(h(i(j(k(&#39;Onion&#39;))))))
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;再看看 compose 的用法：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;const composedFn = compose(f, g, h, i, j, k)
+console.log( composedFn(&#39;Onion&#39;) )
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;是不是这一个 composedFn 函数比那种一层层的嵌套要美观的多？OK，怎么实现 compose 函数呢？把源码贴在这里了。如果你觉得写&lt;code&gt;(...fns) =&amp;gt; (...args) =&amp;gt; ..&lt;/code&gt;这类代码不可思议的话，建议吭一下上面提到的教程&lt;a href=&#34;https://github.com/MostlyAdequate/mostly-adequate-guide&#34;&gt;《Mostly adequate guide》&lt;/a&gt;，吭完你就发现再正常不过了。&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;// compose: ( (a-&amp;gt;b), (b-&amp;gt;c), ..., (y-&amp;gt;z) ) -&amp;gt; a -&amp;gt; z
+const compose = (...fns) =&amp;gt; (...args) =&amp;gt; fns.reduceRight((res, fn) =&amp;gt; [fn.apply(null, res)], args)[0];
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;小结&#34;&gt;小结&lt;/h2&gt;
+&lt;p&gt;这一期快速科普了 JS 高阶函数，现实开发中很多人都觉得没啥用，但是面试官很喜欢问这类问题。倒不是说面试官懂很多，大概率他也只是看题库问问题罢了。我是觉得学习这类方法的意义还是在于思维训练——为 FP 编程打好基础。OK，努力成为一个更优秀的开发人员吧。&lt;/p&gt;
+">JavaScript 高阶函数</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://clearlove443.github.io/jquery-ajax-shi-yong/"" data-c="
+          &lt;h1 id=&#34;使用ajax获取的值作为函数的返回值&#34;&gt;使用Ajax获取的值作为函数的返回值&lt;/h1&gt;
+&lt;p&gt;ajax默认使用异步方式，要将异步改为同步方式&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;var errorMessage =  test(&#39;&#39;, &#39;&#39;, &#39;&#39;);
+
+function test(checkedCode, checkedName, subScreenId) {
+    let errorMessage = &#39;&#39;;
+    let request = {
+        &amp;quot;checkedCode&amp;quot;:checkedCode,
+        &amp;quot;checkedName&amp;quot;:checkedName,
+        &amp;quot;subScreenId&amp;quot;:subScreenId
+    };
+    $.ajax({
+        url: &#39;&#39;,
+        type:&#39;post&#39;,
+        dataType: &amp;quot;json&amp;quot;,
+        data : request,
+        async: false, //请求方式：同步
+    }).done(function(data, textStatus, jqXHR){				
+        errorMessage = data;			
+    }).fail(function(jqXHR, textStatus, errorThrown){				
+        console.log(errorThrown);				
+    });
+    return errorMessage;	
+    }
+&lt;/code&gt;&lt;/pre&gt;
+">Jquery Ajax使用</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://clearlove443.github.io/python-zi-dian-mapbian-li-fang-fa/"" data-c="
+          &lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;a = {&#39;a&#39;: &#39;1&#39;, &#39;b&#39;: &#39;2&#39;, &#39;c&#39;: &#39;3&#39;}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h1 id=&#34;1遍历key值&#34;&gt;（1）遍历key值&lt;/h1&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;for key in a:
+    print(key+&#39;:&#39;+a[key])
+
+for key in a.keys():
+    print(key+&#39;:&#39;+a[key])
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h1 id=&#34;2遍历value值&#34;&gt;（2）遍历value值&lt;/h1&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;for value in a.values():
+    print(value)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h1 id=&#34;3遍历字典项&#34;&gt;（3）遍历字典项&lt;/h1&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;for kv in a.items():
+    print(kv)
+
+&amp;gt;&amp;gt;&amp;gt;(&#39;a&#39;, &#39;1&#39;)
+&amp;gt;&amp;gt;&amp;gt;(&#39;b&#39;, &#39;2&#39;)
+&amp;gt;&amp;gt;&amp;gt;(&#39;c&#39;, &#39;3&#39;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h1 id=&#34;4遍历字典健值&#34;&gt;（4）遍历字典健值&lt;/h1&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;for key,value in a.items():
+    print(key+&#39;:&#39;+value)
+
+for (key,value) in a.items():
+    print(key+&#39;:&#39;+value)
+
+&amp;gt;&amp;gt;&amp;gt;a:1
+&amp;gt;&amp;gt;&amp;gt;b:2
+&amp;gt;&amp;gt;&amp;gt;c:3
+&lt;/code&gt;&lt;/pre&gt;
+">Python 字典（Map）遍历方法</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://clearlove443.github.io/python-lie-biao-listbian-li-fang-fa/"" data-c="
+          &lt;p&gt;#方法1&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;for i in list:  #多个值相同的时候，取的下标不正确
+    print (&amp;quot;序号：%s   值：%s&amp;quot; % (list.index(i) + 1, i))
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;#方法2&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;for i in range(len(list)):
+    print (&amp;quot;序号：%s   值：%s&amp;quot; % (i + 1, list[i]))
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;#方法3&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;for i, val in enumerate(list):
+    print (&amp;quot;序号：%s   值：%s&amp;quot; % (i + 1, val))
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;#方法4&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;for i, val in enumerate(list, 2):
+    print (&amp;quot;序号：%s   值：%s&amp;quot; % (i + 1, val))
+&lt;/code&gt;&lt;/pre&gt;
+">Python 列表（List）遍历方法</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://clearlove443.github.io/jquery-zhong-attr-yu-prop-de-qu-bie-xiang-jie/"" data-c="
+          &lt;h1 id=&#34;attr&#34;&gt;.attr()&lt;/h1&gt;
+&lt;p&gt;获取匹配的元素集合中的第一个元素的属性的值  或 设置每一个匹配元素的一个或多个属性&lt;/p&gt;
+&lt;h1 id=&#34;prop&#34;&gt;.prop()&lt;/h1&gt;
+&lt;p&gt;获取匹配的元素集中第一个元素的属性（property）值或设置每一个匹配元素的一个或多个属性。&lt;/p&gt;
+&lt;h1 id=&#34;prop函数的结果&#34;&gt;prop()函数的结果:&lt;/h1&gt;
+&lt;pre&gt;&lt;code&gt;  1.如果有相应的属性，返回指定属性值。
+  2.如果没有相应的属性，返回值是空字符串。
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h1 id=&#34;attr函数的结果&#34;&gt;attr()函数的结果:&lt;/h1&gt;
+&lt;pre&gt;&lt;code&gt;  1.如果有相应的属性，返回指定属性值。
+  2.如果没有相应的属性，返回值是undefined。
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h1 id=&#34;总结&#34;&gt;总结&lt;/h1&gt;
+&lt;p&gt;对于HTML元素本身就带有的固有属性，在处理时，使用prop方法。&lt;br&gt;
+对于HTML元素我们自己自定义的DOM属性，在处理时，使用attr方法。&lt;br&gt;
+具有 true 和 false 两个属性的属性，如 checked, selected 或者 disabled 使用prop()&lt;/p&gt;
+">Jquery中attr与prop的区别详解</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://clearlove443.github.io/python-lian-xu-yun-xing-duo-tiao-pi-chu-li-wu-xiao/"" data-c="
+          &lt;p&gt;在 os.system 中连续执行多条语句的情况，语句如下&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;cmd1 = &#39;cd &#39; + filepath + i
+cmd2 = &#39;.\gradlew build&#39;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;如果分为两次执行，即: os.system(cmd1) os.system(cmd2)，在执行第二条语句的时候会提示gradlew 不是内部命令，也就是没有进入到相应的路径。&lt;/p&gt;
+&lt;p&gt;os.system 的工作原理如下：&lt;br&gt;
+Execute the command (a string) in a subshell. This is implemented by calling the Standard C function system(), and has the same limitations...&lt;/p&gt;
+&lt;p&gt;关于子进程的创建需要明确两点：父进程的环境变量 (environment variables) 会默认传递到子进程中(工作目录PWD就是环境变量之一)&lt;br&gt;
+使用 system 函数，子进程无法影响父进程中的环境变量&lt;br&gt;
+根据这两点，执行 os.system(path) 引发的工作目录变更作用范围仅限于第一个被创建的子进程，故而当前的工作目录没有变更，到执行 os.system(upd) 就会报错&lt;/p&gt;
+&lt;p&gt;要达到预期的效果，如果仍使用os.system，有两种方法。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;确保工作目录的变更和svn都在子进程中进行，可以使用复合语句（如 os.system(&#39;cd path-to-repo &amp;amp;&amp;amp; svn ci&#39;)）或多个语句（如os.system(&#39;cd path-to-repo; svn ci&#39;)）。&lt;/li&gt;
+&lt;li&gt;先在父进程中切换工作目录(os.chdir(&#39;path-to-repo&#39;))，再利用1.中提到的原理，执行子进程即可(os.system(&#39;svn ci&#39;))。&lt;/li&gt;
+&lt;/ul&gt;
+">Python 连续运行多条批处理无效</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://clearlove443.github.io/javascript-shu-zu-zhuan-zi-fu-chuan/"" data-c="
+          &lt;p&gt;JavaScript 允许数组与字符串之间相互转换。其中 Array 方法对象定义了 3 个方法，可以把数组转换为字符串，如表所示&lt;br&gt;
+|数组方法|	说明|&lt;br&gt;
+|toString()|	将数组转换成一个字符串|&lt;br&gt;
+|toLocalString()|	把数组转换成本地约定的字符串|&lt;br&gt;
+|join()|	将数组元素连接起来以构建一个字符串|&lt;/p&gt;
+">JavaScript 数组转字符串</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://clearlove443.github.io/pan-duan-jquery-dui-xiang-de-lei-xing/"" data-c="
+          &lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;if( jquery对象.is(&amp;quot;input&amp;quot;) ){
+    alert(&#39;input&#39;);
+} else if( jquery对象.is(&amp;quot;select&amp;quot;) ){
+    alert(&#39;select&#39;);
+}
+&lt;/code&gt;&lt;/pre&gt;
+">判断 jQuery 对象的类型</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://clearlove443.github.io/jquery-huo-qu-yuan-su-fu-jie-dian-zi-jie-dian-xiong-di-jie-dian/"" data-c="
+          &lt;p&gt;获取节点元素&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;$(&amp;quot;#test1&amp;quot;).parent(); // 父节点
+$(&amp;quot;#test1&amp;quot;).parents(); // 全部父节点
+$(&amp;quot;#test1&amp;quot;).parents(&amp;quot;.mui-content&amp;quot;);//返回class为mui-content的父节点
+$(&amp;quot;#test1&amp;quot;).children(); // 全部子节点
+$(&amp;quot;#test1&amp;quot;).children(&amp;quot;#test1&amp;quot;); //返回id为test1的子节点
+$(&amp;quot;#test1&amp;quot;).contents(); // 返回id为test里面的所有内容，包括节点和文本
+$(&amp;quot;#test1&amp;quot;).contents(&amp;quot;#test1&amp;quot;); //返回id为test里面的id为#test1的节点和文本
+$(&amp;quot;#test1&amp;quot;).prev();  // 上一个兄弟节点
+$(&amp;quot;#test1&amp;quot;).prevAll(); // 之前所有兄弟节点
+$(&amp;quot;#test1&amp;quot;).next(); // 下一个兄弟节点
+$(&amp;quot;#test1&amp;quot;).nextAll(); // 之后所有兄弟节点
+$(&amp;quot;#test1&amp;quot;).siblings(); // 所有兄弟节点
+$(&amp;quot;#test1&amp;quot;).siblings(&amp;quot;#test2&amp;quot;); //返回id为test2的兄弟节点
+$(&amp;quot;#test&amp;quot;).find(&amp;quot;#test1&amp;quot;); // 选中id为test后代中 id为test1的节点
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;注意上面的方法 返回的是jquery 集合 需要继续用jq的方法操作或取值&lt;br&gt;
+如果想要转为dom 直接操作的只需要 取它的下标即可&lt;br&gt;
+如: $(&amp;quot;#test1&amp;quot;).parent()[0] 返回的就是dom节点&lt;/p&gt;
+">jQuery 获取元素(父节点,子节点,兄弟节点)</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://clearlove443.github.io/javascript-pan-duan-zi-fu-chuan-shi-bu-shi-wei-kong/"" data-c="
+          &lt;p&gt;判断字符串是否为空，代码如下：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;var test=&amp;quot;&amp;quot;;
+if(!test){
+    alert(&amp;quot;为空&amp;quot;);
+}
+
+if(!!test){
+    alert(&amp;quot;不为空&amp;quot;);
+}
+&lt;/code&gt;&lt;/pre&gt;
+">JavaScript 判断字符串是不是为空</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://clearlove443.github.io/jquery-jian-cha-mou-ge-yuan-su-zai-ye-mian-shang-shi-fou-cun-zai/"" data-c="
+          &lt;p&gt;用jQuery检查某个元素在网页上是否存在时，应该根据获取元素的长度来判断，代码如下：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;if($(&amp;quot;#tt&amp;quot;).length &amp;gt; 0) {
+    // 元素存在时执行的代码
+}
+&lt;/code&gt;&lt;/pre&gt;
+">jQuery检查某个元素在页面上是否存在</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://clearlove443.github.io/ce-shi-javascript-yun-xing-shi-jian/"" data-c="
+          &lt;h1 id=&#34;有时候需要知道指定的方法运行了多长时间可以使用以下的方法&#34;&gt;有时候需要知道指定的方法运行了多长时间，可以使用以下的方法。&lt;/h1&gt;
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;$(function () {
+        console.time(&amp;quot;测试 fn 速度: &amp;quot;);
+        testFunction();
+        console.timeEnd(&amp;quot;测试 fn 速度: &amp;quot;);
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;另外，console 还有其他比较有趣的方法。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;console.count(label)  输出运行次数&lt;/li&gt;
+&lt;li&gt;console.table(object|array)  输出表格形态的数据（在动态绘制的检查时用的较多）&lt;/li&gt;
+&lt;li&gt;console.group(label) 和 console.groupEnd(label) 将 console 结果进行分组（分类及减少输出版面，但也加大了我们的脑回路呀）（group = groupCollapsed 是一样的）&lt;/li&gt;
+&lt;li&gt;console.trace() 检测方法的调用来源，超级赞&lt;/li&gt;
+&lt;li&gt;console.profile(label) 和 console.profileEnd(label) 是 time 的升级版，不但测速，直接测性能了，需要到 profile 面板里面才能看到结果&lt;/li&gt;
+&lt;li&gt;console.assert(boolean, string) 提示报错可以少个判断&lt;/li&gt;
+&lt;/ul&gt;
+">测试 JavaScript 运行时间</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://clearlove443.github.io/vbs-wen-jian-kai-ji-zi-qi-dong/"" data-c="
+          &lt;p&gt;打开开始菜单中的启动i项文件夹 C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Startup，把需要启动的文件复制到这里，电脑重启后就可以自启动了。&lt;/p&gt;
+">批处理文件开机自启动</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://clearlove443.github.io/python-duo-xian-cheng-yun-xing-pi-chu-li-wen-jian/"" data-c="
+          &lt;ul&gt;
+&lt;li&gt;有时需要同时运行多个不同的批处理文件，可以使用多线程方式来实现。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;import os
+import threading
+
+reports = [&#39;1&#39;, &#39;2&#39;, &#39;3&#39;, &#39;4&#39;] # 批处理文件名
+filepath = &#39;**&#39; # 批处理文件路径
+
+
+def run_bat(i):  # 定义运行python文件函数
+    os.system(filepath + i + &#39;.bat&#39;)
+
+
+if __name__ == &#39;__main__&#39;:  # 多线程运行python文件
+    for i in reports:
+        task = threading.Thread(target=run_bat, args=(i, ))
+        task.start()
+&lt;/code&gt;&lt;/pre&gt;
+">Python 多线程运行批处理文件</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://clearlove443.github.io/bat-pi-chu-li-wen-jian-yun-xing-shi-yin-cang-cmd-chuang-kou/"" data-c="
+          &lt;h1 id=&#34;直接执行cmd-命令的时候显示的黑框不太美观-可以把黑框隐藏掉-推荐使用第一种&#34;&gt;直接执行cmd 命令的时候，显示的黑框不太美观。可以把黑框隐藏掉。推荐使用第一种。&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;新建个vbs文件&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code&gt;set ws=WScript.CreateObject(&amp;quot;WScript.Shell&amp;quot;) 
+&#39;ws.Run &amp;quot;yy.bat&amp;quot;,0
+
+Dim cmd1
+cmd = &amp;quot;java -jar 11.war&amp;quot;
+&#39;ws.Run cmd, 0
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;可以在vbs 文件调用需要执行的批处理文件，或者把批处理直接定义在vbs 里面&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;编辑bat文件，在开头处写入&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code&gt;@echo off
+if &amp;quot;%1&amp;quot; == &amp;quot;h&amp;quot; goto begin
+mshtavbscript:createobject(&amp;quot;wscript.shell&amp;quot;).run(&amp;quot;&amp;quot;&amp;quot;%~nx0&amp;quot;&amp;quot; h&amp;quot;,0)(window.close)&amp;amp;&amp;amp;exit
+:begin
+REM
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;缺点：这个方法运行bat时，cmd窗口还是闪了一下。&lt;/p&gt;
+">bat 批处理文件运行时隐藏cmd 窗口</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://clearlove443.github.io/javascript-jian-tou-han-shu-lambda-biao-da-shi/"" data-c="
+          &lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Lambda表达式(箭头函数)用于表示一个函数，所以它和函数一样，也拥有参数、返回值、函数体，但它没有函数名，所以Lambda表达式相当于一个匿名函数。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;使用方法&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code&gt;()=&amp;gt;{}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;小括号里放参数，大括号里放函数体&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;箭头函数做回调参数&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;[5, 8, 9].map(item =&amp;gt; item + 1);// -&amp;gt; [6, 9, 10]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;当箭头函数有一个参数时，参数两边的括号是可有可无的&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;const foo = bar =&amp;gt; bar + 1;
+const bar = (baz) =&amp;gt; baz + 1;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;箭头函数不带参数时，必须要用括号&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;const foo = () =&amp;gt; &amp;quot;foo&amp;quot;;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;如果函数体不是只一行，应该用花括号，并显式地返回（如果需要返回值）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;const foo = bar =&amp;gt; {
+const baz = 5;
+return bar + baz;
+};
+foo(1); // -&amp;gt; 6
+&lt;/code&gt;&lt;/pre&gt;
+">JavaScript 箭头函数（Lambda表达式）</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://clearlove443.github.io/markdown-ji-ben-yu-fa/"" data-c="
+          &lt;h1 id=&#34;简介&#34;&gt;简介&lt;/h1&gt;
+&lt;p&gt;Markdown 是一种纯文本格式的标记语言。通过简单的标记语法，它可以使普通文本内容具有一定的格式。&lt;br&gt;
+Markdown 语言在 2004 由约翰·格鲁伯（英语：John Gruber）创建。&lt;br&gt;
+Markdown 编写的文档可以导出 HTML 、Word、图像、PDF、Epub 等多种格式的文档。&lt;br&gt;
+Markdown 编写的文档后缀为 .md, .markdown&lt;/p&gt;
+&lt;h1 id=&#34;markdown-应用&#34;&gt;Markdown 应用&lt;/h1&gt;
+&lt;p&gt;Markdown 能被使用来撰写电子书，如：Gitbook。&lt;br&gt;
+当前许多网站都广泛使用 Markdown 来撰写帮助文档或是用于论坛上发表消息。例如：GitHub、简书、reddit、Diaspora、Stack Exchange、OpenStreetMap 、SourceForge等。&lt;/p&gt;
+&lt;h1 id=&#34;markdown-标题&#34;&gt;Markdown 标题&lt;/h1&gt;
+&lt;h2 id=&#34;1-使用-和-标记一级和二级标题&#34;&gt;1. 使用 = 和 - 标记一级和二级标题&lt;/h2&gt;
+&lt;pre&gt;&lt;code&gt;我展示的是一级标题
+=================
+我展示的是二级标题
+-----------------
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;效果如下：&lt;br&gt;
+&lt;img src=&#34;https://clearlove443.github.io//post-images/1614412772893.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;2-使用-号标记&#34;&gt;2. 使用 # 号标记&lt;/h2&gt;
+&lt;p&gt;使用 # 号可表示 1-6 级标题，一级标题对应一个 # 号，二级标题对应两个 # 号，以此类推。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;# 这是一级标题
+## 这是二级标题
+### 这是三级标题
+#### 这是四级标题
+##### 这是五级标题
+###### 这是六级标题
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;效果如下：&lt;br&gt;
+&lt;img src=&#34;https://clearlove443.github.io//post-images/1614412697511.gif&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
+&lt;h1 id=&#34;markdown-段落&#34;&gt;Markdown 段落&lt;/h1&gt;
+&lt;p&gt;Markdown 段落没有特殊的格式，直接编写文字就好，段落的换行是使用两个以上空格加上回车。&lt;br&gt;
+当然也可以在段落后面使用一个空行来表示重新开始一个段落。&lt;/p&gt;
+&lt;h2 id=&#34;字体&#34;&gt;字体&lt;/h2&gt;
+&lt;p&gt;Markdown 可以使用以下几种字体：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;*斜体文本*
+_斜体文本_
+**粗体文本**
+__粗体文本__
+***粗斜体文本***
+___粗斜体文本___
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;效果如下：&lt;br&gt;
+&lt;em&gt;斜体文本&lt;/em&gt;&lt;br&gt;
+&lt;em&gt;斜体文本&lt;/em&gt;&lt;br&gt;
+&lt;strong&gt;粗体文本&lt;/strong&gt;&lt;br&gt;
+&lt;strong&gt;粗体文本&lt;/strong&gt;&lt;br&gt;
+&lt;em&gt;&lt;strong&gt;粗斜体文本&lt;/strong&gt;&lt;/em&gt;&lt;br&gt;
+&lt;em&gt;&lt;strong&gt;粗斜体文本&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;h2 id=&#34;分隔线&#34;&gt;分隔线&lt;/h2&gt;
+&lt;p&gt;你可以在一行中用三个以上的星号、减号、底线来建立一个分隔线，行内不能有其他东西。你也可以在星号或是减号中间插入空格。下面每种写法都可以建立分隔线：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;***
+
+* * *
+
+*****
+
+- - -
+
+----------
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;删除线&#34;&gt;删除线&lt;/h2&gt;
+&lt;p&gt;如果段落上的文字要添加删除线，只需要在文字的两端加上两个波浪线 *~~ 即可&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;~~BAIDU.COM~~
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;下划线&#34;&gt;下划线&lt;/h2&gt;
+&lt;p&gt;下划线可以通过 HTML 的u标签来实现：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;u&amp;gt;带下划线文本&amp;lt;/u&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;脚注&#34;&gt;脚注&lt;/h2&gt;
+&lt;p&gt;脚注是对文本的补充说明。&lt;br&gt;
+Markdown 脚注的格式如下:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;[^要注明的文本]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h1 id=&#34;markdown-列表&#34;&gt;Markdown 列表&lt;/h1&gt;
+&lt;p&gt;Markdown 支持有序列表和无序列表。&lt;/p&gt;
+&lt;p&gt;无序列表使用星号(*)、加号(+)或是减号(-)作为列表标记，这些标记后面要添加一个空格，然后再填写内容：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;* 第一项
+* 第二项
+* 第三项
+
++ 第一项
++ 第二项
++ 第三项
+
+
+- 第一项
+- 第二项
+- 第三项
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;显示效果如下：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;第一项&lt;/li&gt;
+&lt;li&gt;第二项&lt;/li&gt;
+&lt;li&gt;第三项&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;第一项&lt;/li&gt;
+&lt;li&gt;第二项&lt;/li&gt;
+&lt;li&gt;第三项&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;第一项&lt;/li&gt;
+&lt;li&gt;第二项&lt;/li&gt;
+&lt;li&gt;第三项&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;有序列表使用数字并加上 . 号来表示，如：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;1. 第一项
+2. 第二项
+3. 第三项
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;显示效果如下:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;第一项&lt;/li&gt;
+&lt;li&gt;第二项&lt;/li&gt;
+&lt;li&gt;第三项&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;列表嵌套&#34;&gt;列表嵌套&lt;/h2&gt;
+&lt;p&gt;列表嵌套只需在子列表中的选项前面添加四个空格即可：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;1. 第一项：
+    - 第一项嵌套的第一个元素
+    - 第一项嵌套的第二个元素
+2. 第二项：
+    - 第二项嵌套的第一个元素
+    - 第二项嵌套的第二个元素
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;显示效果如下:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;第一项：
+&lt;ul&gt;
+&lt;li&gt;第一项嵌套的第一个元素&lt;/li&gt;
+&lt;li&gt;第一项嵌套的第二个元素&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;第二项：
+&lt;ul&gt;
+&lt;li&gt;第二项嵌套的第一个元素&lt;/li&gt;
+&lt;li&gt;第二项嵌套的第二个元素&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h1 id=&#34;markdown-区块&#34;&gt;Markdown 区块&lt;/h1&gt;
+&lt;p&gt;Markdown 区块引用是在段落开头使用 &amp;gt; 符号 ，然后后面紧跟一个空格符号：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;&amp;gt; 区块引用
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;显示效果如下：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;区块引用&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;另外区块是可以嵌套的，一个 &amp;gt; 符号是最外层，两个 &amp;gt; 符号是第一层嵌套，以此类推：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;&amp;gt; 最外层
+&amp;gt; &amp;gt; 第一层嵌套
+&amp;gt; &amp;gt; &amp;gt; 第二层嵌套
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;显示效果如下：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;最外层&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;第一层嵌套&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;第二层嵌套&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;区块中使用列表&lt;br&gt;
+区块中使用列表实例如下：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;&amp;gt; 区块中使用列表
+&amp;gt; 1. 第一项
+&amp;gt; 2. 第二项
+&amp;gt; + 第一项
+&amp;gt; + 第二项
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;显示效果如下：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;区块中使用列表&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;第一项&lt;/li&gt;
+&lt;li&gt;第二项&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;第一项&lt;/li&gt;
+&lt;li&gt;第二项&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;列表中使用区块&lt;br&gt;
+如果要在列表项目内放进区块，那么就需要在 &amp;gt; 前添加四个空格的缩进。&lt;br&gt;
+列表中使用区块实例如下：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;* 第一项
+    &amp;gt; 菜鸟教程
+* 第二项
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;显示效果如下：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;第一项
+&lt;blockquote&gt;
+&lt;p&gt;菜鸟教程&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;第二项&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;超链接&#34;&gt;超链接&lt;/h1&gt;
+&lt;p&gt;语法：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;[超链接名](超链接地址 &amp;quot;超链接title&amp;quot;)
+title可加可不加
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;示例：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;[简书](http://jianshu.com)
+[百度](http://baidu.com)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;注：Markdown本身语法不支持链接在新页面中打开，貌似简书做了处理，是可以的。别的平台可能就不行了，如果想要在新页面中打开的话可以用html语言的a标签代替。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;a href=&amp;quot;超链接地址&amp;quot; target=&amp;quot;_blank&amp;quot;&amp;gt;超链接名&amp;lt;/a&amp;gt;
+示例
+&amp;lt;a href=&amp;quot;https://www.jianshu.com/u/1f5ac0cf6a8b&amp;quot; target=&amp;quot;_blank&amp;quot;&amp;gt;简书&amp;lt;/a&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h1 id=&#34;表格&#34;&gt;表格&lt;/h1&gt;
+&lt;pre&gt;&lt;code&gt;|表头|表头|表头|
+|:---|:--:|---:|
+|内容|内容|内容|
+|内容|内容|内容|
+
+第二行分割表头和内容。
+- 有一个就行，为了对齐，多加了几个
+文字默认居左
+-两边加：表示文字居中
+-右边加：表示文字居右
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;实例如下：&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;左对齐&lt;/th&gt;
+&lt;th style=&#34;text-align:right&#34;&gt;右对齐&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;居中对齐&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;单元格&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;单元格&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;单元格&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;单元格&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;单元格&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;单元格&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h1 id=&#34;markdown-代码&#34;&gt;Markdown 代码&lt;/h1&gt;
+&lt;p&gt;单行代码：代码之间分别用一个反引号包起来&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;`printf()` 函数
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;显示效果如下：&lt;br&gt;
+&lt;code&gt;printf()&lt;/code&gt; 函数&lt;/p&gt;
+&lt;h2 id=&#34;代码区块&#34;&gt;代码区块&lt;/h2&gt;
+&lt;p&gt;用 ``` 包裹一段代码，并指定一种语言（也可以不指定）：&lt;br&gt;
+实例如下：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;$(document).ready(function () {
+    alert(&#39;RUNOOB&#39;);
+});
+&lt;/code&gt;&lt;/pre&gt;
+">Markdown </a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://clearlove443.github.io/welcome-to-python/"" data-c="
+          &lt;h2 id=&#34;python-简介&#34;&gt;Python 简介&lt;/h2&gt;
+&lt;p&gt;Python 是一个高层次的结合了解释性、编译性、互动性和面向对象的脚本语言。&lt;/p&gt;
+&lt;p&gt;Python 的设计具有很强的可读性，相比其他语言经常使用英文关键字，其他语言的一些标点符号，它具有比其他语言更有特色语法结构。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Python 是一种解释型语言： 这意味着开发过程中没有了编译这个环节。类似于PHP和Perl语言。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Python 是交互式语言： 这意味着，您可以在一个 Python 提示符 &amp;gt;&amp;gt;&amp;gt; 后直接执行代码。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Python 是面向对象语言: 这意味着Python支持面向对象的风格或代码封装在对象的编程技术。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Python 是初学者的语言：Python 对初级程序员而言，是一种伟大的语言，它支持广泛的应用程序开发，从简单的文字处理到 WWW 浏览器再到游戏。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;python-发展历史&#34;&gt;Python 发展历史&lt;/h2&gt;
+&lt;p&gt;Python 是由 Guido van Rossum 在八十年代末和九十年代初，在荷兰国家数学和计算机科学研究所设计出来的。&lt;/p&gt;
+&lt;p&gt;Python 本身也是由诸多其他语言发展而来的,这包括 ABC、Modula-3、C、C++、Algol-68、SmallTalk、Unix shell 和其他的脚本语言等等。&lt;/p&gt;
+&lt;p&gt;像 Perl 语言一样，Python 源代码同样遵循 GPL(GNU General Public License)协议。&lt;/p&gt;
+&lt;p&gt;现在 Python 是由一个核心开发团队在维护，Guido van Rossum 仍然占据着至关重要的作用，指导其进展。&lt;/p&gt;
+&lt;p&gt;Python 2.7 被确定为最后一个 Python 2.x 版本，它除了支持 Python 2.x 语法外，还支持部分 Python 3.1 语法&lt;/p&gt;
+&lt;h2 id=&#34;python-特点&#34;&gt;Python 特点&lt;/h2&gt;
+&lt;p&gt;1.易于学习：Python有相对较少的关键字，结构简单，和一个明确定义的语法，学习起来更加简单。&lt;/p&gt;
+&lt;p&gt;2.易于阅读：Python代码定义的更清晰。&lt;/p&gt;
+&lt;p&gt;3.易于维护：Python的成功在于它的源代码是相当容易维护的。&lt;/p&gt;
+&lt;p&gt;4.一个广泛的标准库：Python的最大的优势之一是丰富的库，跨平台的，在UNIX，Windows和Macintosh兼容很好。&lt;/p&gt;
+&lt;p&gt;5.互动模式：互动模式的支持，您可以从终端输入执行代码并获得结果的语言，互动的测试和调试代码片断。&lt;/p&gt;
+&lt;p&gt;6.可移植：基于其开放源代码的特性，Python已经被移植（也就是使其工作）到许多平台。&lt;/p&gt;
+&lt;p&gt;7.可扩展：如果你需要一段运行很快的关键代码，或者是想要编写一些不愿开放的算法，你可以使用C或C++完成那部分程序，然后从你的Python程序中调用。&lt;/p&gt;
+&lt;p&gt;8.数据库：Python提供所有主要的商业数据库的接口。&lt;/p&gt;
+&lt;p&gt;9.GUI编程：Python支持GUI可以创建和移植到许多系统调用。&lt;/p&gt;
+&lt;p&gt;10.可嵌入: 你可以将Python嵌入到C/C++程序，让你的程序的用户获得&amp;quot;脚本化&amp;quot;的能力。&lt;/p&gt;
+">Welcome To Python</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://clearlove443.github.io/about/"" data-c="
+          &lt;blockquote&gt;
+&lt;p&gt;欢迎来到我的小站呀，很高兴遇见你！🤝&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;关于本站&#34;&gt;🏠 关于本站&lt;/h2&gt;
+&lt;h2 id=&#34;博主是谁&#34;&gt;👨‍💻 博主是谁&lt;/h2&gt;
+&lt;h2 id=&#34;兴趣爱好&#34;&gt;⛹ 兴趣爱好&lt;/h2&gt;
+&lt;h2 id=&#34;联系我呀&#34;&gt;📬 联系我呀&lt;/h2&gt;
+">关于</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://clearlove443.github.io/hello-gridea/"" data-c="
+          &lt;p&gt;👏  欢迎使用 &lt;strong&gt;Gridea&lt;/strong&gt; ！&lt;br&gt;
+✍️  &lt;strong&gt;Gridea&lt;/strong&gt; 一个静态博客写作客户端。你可以用它来记录你的生活、心情、知识、笔记、创意... ...&lt;/p&gt;
+&lt;!-- more --&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/getgridea/gridea&#34;&gt;Github&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;https://gridea.dev/&#34;&gt;Gridea 主页&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;http://fehey.com/&#34;&gt;示例网站&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;特性&#34;&gt;特性👇&lt;/h2&gt;
+&lt;p&gt;📝  你可以使用最酷的 &lt;strong&gt;Markdown&lt;/strong&gt; 语法，进行快速创作&lt;/p&gt;
+&lt;p&gt;🌉  你可以给文章配上精美的封面图和在文章任意位置插入图片&lt;/p&gt;
+&lt;p&gt;🏷️  你可以对文章进行标签分组&lt;/p&gt;
+&lt;p&gt;📋  你可以自定义菜单，甚至可以创建外部链接菜单&lt;/p&gt;
+&lt;p&gt;💻  你可以在 &lt;strong&gt;Windows&lt;/strong&gt;，&lt;strong&gt;MacOS&lt;/strong&gt; 或 &lt;strong&gt;Linux&lt;/strong&gt; 设备上使用此客户端&lt;/p&gt;
+&lt;p&gt;🌎  你可以使用 &lt;strong&gt;𝖦𝗂𝗍𝗁𝗎𝖻 𝖯𝖺𝗀𝖾𝗌&lt;/strong&gt; 或 &lt;strong&gt;Coding Pages&lt;/strong&gt; 向世界展示，未来将支持更多平台&lt;/p&gt;
+&lt;p&gt;💬  你可以进行简单的配置，接入 &lt;a href=&#34;https://github.com/gitalk/gitalk&#34;&gt;Gitalk&lt;/a&gt; 或 &lt;a href=&#34;https://github.com/SukkaW/DisqusJS&#34;&gt;DisqusJS&lt;/a&gt; 评论系统&lt;/p&gt;
+&lt;p&gt;🇬🇧  你可以使用&lt;strong&gt;中文简体&lt;/strong&gt;或&lt;strong&gt;英语&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;🌁  你可以任意使用应用内默认主题或任意第三方主题，强大的主题自定义能力&lt;/p&gt;
+&lt;p&gt;🖥  你可以自定义源文件夹，利用 OneDrive、百度网盘、iCloud、Dropbox 等进行多设备同步&lt;/p&gt;
+&lt;p&gt;🌱 当然 &lt;strong&gt;Gridea&lt;/strong&gt; 还很年轻，有很多不足，但请相信，它会不停向前 🏃&lt;/p&gt;
+&lt;p&gt;未来，它一定会成为你离不开的伙伴&lt;/p&gt;
+&lt;p&gt;尽情发挥你的才华吧！&lt;/p&gt;
+&lt;p&gt;😘 Enjoy~&lt;/p&gt;
+">Hello Gridea</a>
+      </div>
+      
+    </div>
+    <div class="page">
+      <div id="page_ul"></div>
+    </div>
+  </div>
+</div>
+<script>
+  !function () {
+    let searchMask = document.querySelector('#search_mask');
+    let result = document.querySelector('#result');
+    let items = document.querySelectorAll('.item');
+    let searchBox = document.querySelector('#search');
+    let statCount = document.querySelector('#stat_count');
+    let statTimes = document.querySelector('#stat_times');
+    let pageUl = document.querySelector('#page_ul');
+    let close = document.querySelector('#close');
+    
+    close.addEventListener('click', function() {
+      searchMask.style = 'display: none;'
+    })
+
+    let finds = [];
+    let contents = [];
+    let pageSize = 10;
+    items.forEach(item => {
+      let a = item.querySelector('a');
+      contents.push({
+        title: a.innerText,
+        details: a.dataset.c,
+        link: a.href
+      })
+      item.remove();
+    })
+
+    function insertStr(soure, start, count) {
+      let newStr = soure.substr(start, count);
+      return soure.slice(0, start) + '<em>' + newStr + '</em>' + soure.slice(start + count);
+    }
+
+    pageUl.addEventListener('click', function(event) {
+      let target = event.target;
+      if (target.__proto__ === HTMLSpanElement.prototype) {
+        appendResults(parseInt(target.dataset.i));
+      }
+    })
+
+    function appendResults(index) {
+      let htmlResult = '';
+      let start = index || 0;
+      let end = Math.min(start + pageSize, finds.length);
+      for (let i = start; i < end; i++) {
+        const current = finds[i];
+        let html = current.title;
+        let sum = 0;
+        let positions = current.positions;
+        positions.forEach(position => {
+          html = insertStr(html, position.start + sum, position.count);
+          sum += 9;
+        })
+        htmlResult += `<div class="item"><a class="result-title" href="${current.link}">${html}</a></div>`;
+      }
+      result.innerHTML = htmlResult;
+      pageUl.innerHTML = '';
+      let count = finds.length / pageSize;
+      let lis = '';
+      if (start !== 0) {
+        lis += `<span class="fa fa-angle-left" data-i='${start - 1}'></span>`;
+      }
+      for (let i = 0; i < count; i++) {
+        lis += `<span class='${i === start?'current':''}' data-i='${i}'>${i+1}</span>`;     
+      }
+      if (start+1 < count) {
+        lis += `<span class="fa fa-angle-right" data-i='${start+1}'></span>`;  
+      }
+      pageUl.innerHTML = lis;
+    }
+
+    function search(delay) {
+      let timer = null
+      return function () {
+        clearTimeout(timer)
+        timer = setTimeout(() => {
+          let start = Date.now();
+          let segments = searchBox.value.split(' ').filter(c => c != '');
+          if (segments.length <= 0) {
+            return;
+          }
+          finds = [];
+          let htmlResult = '';
+          contents.forEach(content => {
+            let title = content.title;
+            let positions = [];
+            let find = false;
+            segments.forEach((segment) => {
+              segment = segment.replace('<','&lt;').replace('>','&gt;');
+              if (content.title.includes(segment)) {
+                find = true;
+                positions.push({
+                  start: content.title.indexOf(segment),
+                  count: segment.length
+                })
+              } else if (content.details.includes(segment)) {
+                find = true;
+              }
+            });
+            if (find) {
+              finds.push({
+                title: content.title,
+                link: content.link,
+                positions
+              });
+            }
+          })
+          appendResults(0);
+          statCount.textContent = finds.length;
+          statTimes.textContent = Date.now() - start;
+        }, delay)
+      }
+    }
+    searchBox.addEventListener('input', search(200));
+  }()
+</script>
+
+<input hidden id="copy" />
+<script>
+  !function () {
+    let times = document.querySelectorAll('.publish-time');
+    for (let i = 0; i < times.length; i++) {
+      let date = times[i].dataset.t;
+      let time = Math.floor((new Date().getTime() - new Date(date).getTime()) / 1000);
+      if (time < 60) {
+        str = time + '秒之前';
+      } else if (time < 3600) {
+        str = Math.floor(time / 60) + '分钟之前';
+      } else if (time >= 3600 && time < 86400) {
+        str = Math.floor(time / 3600) + '小时之前';
+      } else if (time >= 86400 && time < 259200) {
+        str = Math.floor(time / 86400) + '天之前';
+      } else {
+        str = times[i].textContent;
+      }
+      times[i].textContent = str;
+    }
+  }();
+</script>
+
+<script>
+  let language = '';
+  if (language !== '') {
+    let map = new Map();
+    if (language === 'en') {
+      map.set('search', 'Search');
+      map.set('category', 'Categories');
+      map.set('article', 'Articles');
+      map.set('tag', 'Tags');
+      map.set('top', 'Top');
+      map.set('publish', 'published');
+      map.set('minute', ' minutes');
+      map.set('read-more', 'Read More');
+      map.set('view', 'View');
+      map.set('words', ' words');
+      map.set('category-in', 'category in');
+      map.set('preview', 'Meta');
+      map.set('index', 'Toc');
+      map.set('no-archives', "You haven't created yet");
+      map.set('archives', " articles in total");
+      map.set('cloud-tags', " tags in total");
+      map.set('copyright', "Copyright: ");
+      map.set('author', "Author: ");
+      map.set('link', "Link: ");
+      map.set('leave-message', "Leave a message");
+      map.set('format', "Links Format");
+      map.set('site-name', "Name: ");
+      map.set('site-link', "Link: ");
+      map.set('site-desc', "Desc: ");
+      map.set('stat', " related results, taking ");
+      map.set('stat-time', " ms");
+      map.set('site-img', "Image: ");
+    }
+
+    if (map.size > 0) {
+      let lanElems = document.querySelectorAll('.language');
+      lanElems.forEach(elem => {
+        let lan = elem.dataset.lan, text = map.get(lan);
+        if (elem.__proto__ === HTMLInputElement.prototype) {
+          elem.placeholder = text
+        } else {
+          if (elem.dataset.count) {
+            text = elem.dataset.count + text;
+          }
+          elem.textContent = text;
+        }
+      })
+    }
+  }
+  //拿来主义(真香)^_^，Clipboard 实现摘自掘金 https://juejin.im/post/5aefeb6e6fb9a07aa43c20af
+  window.Clipboard = (function (window, document, navigator) {
+    var textArea,
+      copy;
+
+    // 判断是不是ios端
+    function isOS() {
+      return navigator.userAgent.match(/ipad|iphone/i);
+    }
+    //创建文本元素
+    function createTextArea(text) {
+      textArea = document.createElement('textArea');
+      textArea.value = text;
+      textArea.style.width = 0;
+      textArea.style.height = 0;
+      textArea.clientHeight = 0;
+      textArea.clientWidth = 0;
+      document.body.appendChild(textArea);
+    }
+    //选择内容
+    function selectText() {
+      var range,
+        selection;
+
+      if (isOS()) {
+        range = document.createRange();
+        range.selectNodeContents(textArea);
+        selection = window.getSelection();
+        selection.removeAllRanges();
+        selection.addRange(range);
+        textArea.setSelectionRange(0, 999999);
+      } else {
+        textArea.select();
+      }
+    }
+
+    //复制到剪贴板
+    function copyToClipboard() {
+      try {
+        document.execCommand("Copy")
+      } catch (err) {
+        alert("复制错误！请手动复制！")
+      }
+      document.body.removeChild(textArea);
+    }
+
+    copy = function (text) {
+      createTextArea(text);
+      selectText();
+      copyToClipboard();
+    };
+
+    return {
+      copy: copy
+    };
+  })(window, document, navigator);
+
+  function copyCode(e) {
+    if (e.srcElement.tagName === 'SPAN' && e.srcElement.classList.contains('copy-code')) {
+      let code = e.currentTarget.querySelector('code');
+      var text = code.innerText;
+      if (e.srcElement.textContent === '复制成功') {
+        return;
+      }
+      e.srcElement.textContent = '复制成功';
+      (function (elem) {
+        setTimeout(() => {
+          if (elem.textContent === '复制成功') {
+            elem.textContent = '复制代码'
+          }
+        }, 1000);
+      })(e.srcElement)
+      Clipboard.copy(text);
+    }
+  }
+
+  let pres = document.querySelectorAll('pre');
+  pres.forEach(pre => {
+    let code = pre.querySelector('code');
+    let copyElem = document.createElement('span');
+    copyElem.classList.add('copy-code');
+    copyElem.textContent = '复制代码';
+    pre.appendChild(copyElem);
+    pre.onclick = copyCode
+  })
+
+</script>
+<script src="/media/js/motion.js"></script>
+
+
+<script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+<script>
+  var scroll = new SmoothScroll('a[href*="#"]', {
+    speed: 200
+  });
+</script>
+
+
+<script src="/media/js/mouse/peace.js"></script>
+
+
+
+
+</html>
