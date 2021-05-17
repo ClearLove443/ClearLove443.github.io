@@ -9,7 +9,7 @@
 <meta name="description" content="温故而知新">
 <meta name="theme-color" content="#000">
 <title>Gridea</title>
-<link rel="shortcut icon" href="/favicon.ico?v=1621183514277">
+<link rel="shortcut icon" href="/favicon.ico?v=1621256673365">
 <link rel="stylesheet" href="/media/css/muse.css">
 <link rel="stylesheet" href="/media/fonts/font-awesome.css">
 <link
@@ -185,19 +185,19 @@
     <div class="sidebar-item-box">
       <a href="/archives/">
         
-        <span class="site-item-stat-count">37</span>
+        <span class="site-item-stat-count">38</span>
         <span class="site-item-stat-name language" data-lan="article">文章</span>
       </a>
     </div>
     <div class="sidebar-item-box">
       <a href="">
-        <span class="site-item-stat-count">29</span>
+        <span class="site-item-stat-count">30</span>
         <span class="site-item-stat-name language" data-lan="category">分类</span>
       </a>
     </div>
     <div class="sidebar-item-box">
       <a href="/tags/">
-        <span class="site-item-stat-count">29</span>
+        <span class="site-item-stat-count">30</span>
         <span class="site-item-stat-name language" data-lan="tag">标签</span>
       </a>
     </div>
@@ -238,6 +238,16 @@
           <small class="language" data-lan="tag">标签</small>
         </h2>
       </div>
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       
       
       
@@ -2406,6 +2416,70 @@ img , input  , select ,textarea（属于行内置换元素，下文详解）
 置换元素：内容不受CSS视觉格式化模型控制，CSS渲染模型并不考虑对此内容的渲染，且元素本身一般拥有固有尺寸（宽度，高度，宽高比）的元素，被称之为置换元素。浏览器根据元素的标签和属性，来决定元素的具体显示内容。 例如：浏览器会根据&lt;code&gt;&amp;lt;img&amp;gt;&lt;/code&gt;标签的src属性的值来读取图片信息并显示出来，而如果查看html代码，则看不到图片的实际内容；&lt;code&gt;&amp;lt;input&amp;gt;&lt;/code&gt;标签的type属性来决定是显示输入框，还是单选按钮等。&lt;br&gt;
 置换元素在其显示中生成了框，这也就是有的内联元素能够设置宽高的原因。&lt;/p&gt;
 ">CSS基础-块级元素与行内元素</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://clearlove443.github.io/bu-tong-yu-yan-bian-li-list-map-he-dui-xiang/"" data-c="
+          &lt;h1 id=&#34;javascript&#34;&gt;JavaScript&lt;/h1&gt;
+&lt;p&gt;原生javascript没有List&lt;/p&gt;
+&lt;h2 id=&#34;遍历数组&#34;&gt;遍历数组&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;{
+    let array = new Array();
+    array.push(&amp;quot;test1&amp;quot;);
+    array.push(&amp;quot;test2&amp;quot;);
+    array.forEach(v =&amp;gt; console.log(v));	    // test1 test2
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;遍历map&#34;&gt;遍历map&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;{
+    let map = new Map();
+    map.set(&amp;quot;1&amp;quot;,&amp;quot;test1&amp;quot;);
+    map.set(&amp;quot;2&amp;quot;,&amp;quot;test2&amp;quot;);
+    map.forEach((v,k,map) =&amp;gt; console.log({k,v}));   // {k: &amp;quot;1&amp;quot;, v: &amp;quot;test1&amp;quot;} {k: &amp;quot;2&amp;quot;, v: &amp;quot;test2&amp;quot;}
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;遍历对象&#34;&gt;遍历对象&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;{
+    let object = new Object();
+    object = {1:&amp;quot;test1&amp;quot;,2:&amp;quot;test2&amp;quot;};
+    for(let k in object){
+        let v = object[i];
+        console.log({k,v})    // {k: &amp;quot;1&amp;quot;, v: &amp;quot;test1&amp;quot;} {k: &amp;quot;2&amp;quot;, v: &amp;quot;test2&amp;quot;}
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h1 id=&#34;python&#34;&gt;python&lt;/h1&gt;
+&lt;h2 id=&#34;遍历数组-2&#34;&gt;遍历数组&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;list = [1, 2, 3, 4]
+for i in range(len(list)):
+    print(&amp;quot;序号：%s   值：%s&amp;quot; % (i + 1, list[i]))  # 序号：1   值：1 序号：2   值：2 序号：3   值：3 序号：4   值：4
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;遍历map字典&#34;&gt;遍历map(字典)&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;map = {&amp;quot;a&amp;quot;: &amp;quot;1&amp;quot;, &amp;quot;b&amp;quot;: &amp;quot;2&amp;quot;, &amp;quot;c&amp;quot;: &amp;quot;3&amp;quot;}
+
+for k, v in map.items():
+    print({k, v})  # {&amp;quot;1&amp;quot;, &amp;quot;a&amp;quot;} {&amp;quot;2&amp;quot;, &amp;quot;b&amp;quot;} {&amp;quot;3&amp;quot;, &amp;quot;c&amp;quot;}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;遍历json对象&#34;&gt;遍历json对象&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;import json
+json = &amp;quot;{ &amp;quot;name&amp;quot;:&amp;quot;Bill&amp;quot;, &amp;quot;age&amp;quot;:63, &amp;quot;city&amp;quot;:&amp;quot;Seattle&amp;quot;}&amp;quot;
+map = json.loads(json)
+for k, v in map.items():
+    print({k, v})
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h1 id=&#34;java&#34;&gt;java&lt;/h1&gt;
+&lt;h2 id=&#34;遍历list&#34;&gt;遍历list&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;String[] array = {&amp;quot;1&amp;quot; ,&amp;quot;2&amp;quot;, &amp;quot;3&amp;quot;, &amp;quot;4&amp;quot;};
+List&amp;lt;String&amp;gt; list = Arrays.asList(array);
+list.forEach(v -&amp;gt; System.out.println(v));   // 1 2 3 4
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;遍历map-2&#34;&gt;遍历map&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;Map&amp;lt;String, String&amp;gt; map = new HashMap&amp;lt;&amp;gt;();
+map.put(&amp;quot;1&amp;quot;, &amp;quot;test1&amp;quot;);
+map.put(&amp;quot;2&amp;quot;, &amp;quot;test2&amp;quot;);
+map.forEach((k, v) -&amp;gt; System.out.println(&amp;quot;k:&amp;quot; + k + &amp;quot; v:&amp;quot; + v)); // k:1 v:test1 k:2 v:test2
+&lt;/code&gt;&lt;/pre&gt;
+">不同语言遍历list map 和对象</a>
       </div>
       
       <div class="item">

@@ -8,7 +8,7 @@
 <meta name="keywords" content="张强强个人博客">
 <meta name="description" content="温故而知新">
 <meta name="theme-color" content="#000">
-<title>修改css中select的下拉箭头样式 | Gridea</title>
+<title>不同语言遍历list map 和对象 | Gridea</title>
 <link rel="shortcut icon" href="/favicon.ico?v=1621256673365">
 <link rel="stylesheet" href="/media/css/muse.css">
 <link rel="stylesheet" href="/media/fonts/font-awesome.css">
@@ -52,8 +52,8 @@
 
 
 
-  <meta name="description" content="修改css中select的下拉箭头样式" />
-  <meta name="keywords" content="select,css" />
+  <meta name="description" content="不同语言遍历list map 和对象" />
+  <meta name="keywords" content="list,map,JavaScript,Python" />
 </head>
 
 <body>
@@ -191,7 +191,8 @@
       <div class="sidebar-body muse" id="sidebar_body">
         
           
-            
+            <div class="post-side-meta" id="post_side_meta">
+              
 <div class="sidebar-wrapper box-shadow-wrapper ">
   <div class="sidebar-item">
     <img class="site-author-image right-motion" src="/images/avatar.png"/>
@@ -229,6 +230,210 @@
 
 
 </div>
+            </div>
+            <div class="post-toc sidebar-body-active" id="post_toc" style="opacity: 1;">
+              <div class="toc-box right-motion">
+  <div class="toc-wrapper auto-number auto"
+    id="toc_wrapper">
+    <ul class="markdownIt-TOC">
+<li><a href="#javascript">JavaScript</a>
+<ul>
+<li><a href="#%E9%81%8D%E5%8E%86%E6%95%B0%E7%BB%84">遍历数组</a></li>
+<li><a href="#%E9%81%8D%E5%8E%86map">遍历map</a></li>
+<li><a href="#%E9%81%8D%E5%8E%86%E5%AF%B9%E8%B1%A1">遍历对象</a></li>
+</ul>
+</li>
+<li><a href="#python">python</a>
+<ul>
+<li><a href="#%E9%81%8D%E5%8E%86%E6%95%B0%E7%BB%84-2">遍历数组</a></li>
+<li><a href="#%E9%81%8D%E5%8E%86map%E5%AD%97%E5%85%B8">遍历map(字典)</a></li>
+<li><a href="#%E9%81%8D%E5%8E%86json%E5%AF%B9%E8%B1%A1">遍历json对象</a></li>
+</ul>
+</li>
+<li><a href="#java">java</a>
+<ul>
+<li><a href="#%E9%81%8D%E5%8E%86list">遍历list</a></li>
+<li><a href="#%E9%81%8D%E5%8E%86map-2">遍历map</a></li>
+</ul>
+</li>
+</ul>
+
+  </div>
+</div>
+
+<script>
+
+  let lastTop = 0, lList = [], hList = [], postBody, lastIndex = -1;
+  let active = 'active-show', activeClass = 'active-current';
+  let tocWrapper = document.querySelector('#toc_wrapper');
+  let tocContent = tocWrapper.children[0];
+  let autoNumber = tocWrapper && tocWrapper.classList.contains('auto-number');
+
+  function addTocNumber(elem, deep) {
+    if (!elem) {
+      return;
+    }
+    let prop = elem.__proto__;
+
+    if (prop === HTMLUListElement.prototype) {
+      for (let i = 0; i < elem.children.length; i++) {
+        addTocNumber(elem.children[i], deep + (i + 1) + '.');
+      }
+    } else if (prop === HTMLLIElement.prototype) {
+      // 保存li元素
+      if (elem.children[0] && elem.children[0].__proto__ === HTMLAnchorElement.prototype) {
+        lList.push(elem);
+      }
+      for (let i = 0; i < elem.children.length; i++) {
+        let cur = elem.children[i];
+        if (cur.__proto__ === HTMLAnchorElement.prototype) {
+          if (autoNumber) {
+            cur.text = deep + ' ' + cur.text;
+          }
+        } else if (cur.__proto__ === HTMLUListElement.prototype) {
+          addTocNumber(cur, deep);
+        }
+      }
+    }
+  }
+
+  function removeParentActiveClass() {
+    let parents = tocContent.querySelectorAll('.' + active)
+    parents.forEach(function (elem) {
+      elem.classList.remove(active);
+    });
+  }
+
+  function addActiveClass(index) {
+    if (index >= 0 && index < hList.length) {
+      lList[index].classList.add(activeClass);
+    }
+  }
+
+  function removeActiveClass(index) {
+    if (index >= 0 && index < hList.length) {
+      lList[index].classList.remove(activeClass);
+    }
+  }
+
+  function addActiveLiElemment(elem, parent) {
+    if (!elem || elem === parent) {
+      return;
+    } else {
+      if (elem.__proto__ === HTMLLIElement.prototype) {
+        elem.classList.add(active);
+      }
+      addActiveLiElemment(elem.parentElement, parent);
+    }
+  }
+
+  function showToc() {
+    if (tocWrapper) {
+      postBody = document.querySelector('#post_body');
+      for (let i = 0; i < postBody.children.length; i++) {
+        if (postBody.children[i].__proto__ === HTMLHeadingElement.prototype) {
+          hList.push(postBody.children[i]);
+        }
+      }
+      if (tocWrapper.classList.contains('compress')) {
+        tocContent.classList.add('closed');
+      } else if (tocWrapper.classList.contains('no_compress')) {
+        tocContent.classList.add('expanded');
+      } else {
+        if (hList.length > 10) {
+          active = 'active-hidden'
+          tocContent.classList.add('closed');
+        } else {
+          tocContent.classList.add('expanded');
+        }
+      }
+    }
+  }
+
+  (function () {
+    // 处理不是从#一级标题开始目录
+    if (tocContent.children.length === 1 && tocContent.children[0].__proto__ === HTMLLIElement.prototype) {
+      let con = tocContent.children[0].children[0];
+      tocContent.innerHTML = con.innerHTML;
+    }
+    let markdownItTOC = document.querySelector('.markdownIt-TOC');
+    let innerHeight = window.innerHeight;
+    markdownItTOC.style = `max-height: ${innerHeight - 80 > 0 ? innerHeight - 80 : innerHeight}px`
+    addTocNumber(tocContent, '');
+  })();
+
+  document.addEventListener('scroll', function (e) {
+    if (lList.length <= 0) {
+      return;
+    }
+    let scrollTop = document.scrollingElement.scrollTop + 10;
+    let dir;
+
+    if (lastTop - scrollTop > 0) {
+      dir = 'up';
+    } else {
+      dir = 'down';
+    }
+
+    lastTop = scrollTop;
+    if (scrollTop <= 0) {
+      if (lastIndex >= 0 && lastIndex < hList.length) {
+        lList[lastIndex].classList.remove(activeClass);
+      }
+      return;
+    }
+
+    let current = 0, hasFind = false;
+    for (let i = 0; i < hList.length; i++) {
+      if (hList[i].offsetTop > scrollTop) {
+        current = i;
+        hasFind = true;
+        break;
+      }
+    }
+    if (!hasFind && scrollTop > lList[lList.length - 1].offsetTop) {
+      current = hList.length - 1;
+    } else {
+      current--;
+    }
+    if (dir === 'down') {
+      if (current > lastIndex) {
+        addActiveClass(current);
+        removeActiveClass(lastIndex)
+        lastIndex = current;
+        removeParentActiveClass();
+        lList[current] && addActiveLiElemment(lList[current].parentElement, tocContent);
+      }
+    } else {
+      if (current < lastIndex) {
+        addActiveClass(current);
+        removeActiveClass(lastIndex);
+        lastIndex = current;
+        removeParentActiveClass();
+        lList[current] && addActiveLiElemment(lList[current].parentElement, tocContent);
+      }
+    }
+  });
+
+
+  window.addEventListener('load', function () {
+    showToc();
+    document.querySelector('#sidebar').style = 'display: block;';
+    tocWrapper.classList.add('toc-active');
+    setTimeout(function () {
+      if ("createEvent" in document) {
+        let evt = document.createEvent("HTMLEvents");
+        evt.initEvent("scroll", false, true);
+        document.dispatchEvent(evt);
+      }
+      else {
+        document.fireEvent("scroll");
+      }
+    }, 500)
+  })
+
+</script>
+            </div>
           
         
       </div>
@@ -316,8 +521,8 @@
           <div class="section bg-color post post-page">
             <section class="post-header">
   <h1 class="post-title">
-    <a class="post-title-link" href="https://clearlove443.github.io/EIm2DvbAz/">
-      修改css中select的下拉箭头样式
+    <a class="post-title-link" href="https://clearlove443.github.io/bu-tong-yu-yan-bian-li-list-map-he-dui-xiang/">
+      不同语言遍历list map 和对象
     </a>
   </h1>
   <div class="post-meta">
@@ -325,7 +530,7 @@
     <span class="meta-item pc-show">
       <i class="fa fa-calendar-o"></i>
       <span class="language" data-lan="publish">发布于</span>
-      <span class="publish-time" data-t="2021-05-16 12:16:45">2021-05-16</span>
+      <span class="publish-time" data-t="2021-05-13 10:34:54">2021-05-13</span>
       <span class="post-meta-divider pc-show">|</span>
     </span>
     
@@ -334,14 +539,26 @@
       <span class="pc-show language" data-lan="category-in">分类于</span>
       
       
-      <a href="https://clearlove443.github.io/VP6SqdiuD/">
-        <span>select</span>
+      <a href="https://clearlove443.github.io/2PlYWPlIF/">
+        <span>list</span>
       </a>、
       
       
       
-      <a href="https://clearlove443.github.io/EUwKkiqiL/">
-        <span>css</span>
+      <a href="https://clearlove443.github.io/CfZeBrZuA/">
+        <span>map</span>
+      </a>、
+      
+      
+      
+      <a href="https://clearlove443.github.io/eQfKHXc2A/">
+        <span>JavaScript</span>
+      </a>、
+      
+      
+      
+      <a href="https://clearlove443.github.io/fgqMyhyli/">
+        <span>Python</span>
       </a>
       
       
@@ -350,17 +567,17 @@
     
     <span class="meta-item">
       <i class="fa fa-clock-o"></i>
-      <span>1<span class="language" data-lan="minute">分钟</span></span>
+      <span>3<span class="language" data-lan="minute">分钟</span></span>
     </span>
     <span class="meta-item">
       <span class="post-meta-divider">|</span>
       <i class="fa fa-file-word-o"></i>
-      <span>128<span class="pc-show language" data-lan="words">字数</span></span>
+      <span>357<span class="pc-show language" data-lan="words">字数</span></span>
     </span>
     
     
     
-    <span id="/EIm2DvbAz/" data-flag-title="修改css中select的下拉箭头样式" class="meta-item pc-show leancloud_visitors">
+    <span id="/bu-tong-yu-yan-bian-li-list-map-he-dui-xiang/" data-flag-title="不同语言遍历list map 和对象" class="meta-item pc-show leancloud_visitors">
       <span class="post-meta-divider">|</span>
       <i class="fa fa-eye"></i>
       <span><span class="language" data-lan="view">浏览量</span>：<span class="leancloud-visitors-count"></span></span>
@@ -369,26 +586,64 @@
   </div>
 </section>
             <div class="post-body next-md-body" id="post_body">
-              <pre><code class="language-css">select {
-    /*Chrome和Firefox里面的边框是不一样的，所以复写了一下*/
-    border: solid 1px #000;
-
-    /*很关键：将默认的select选择框样式清除*/
-    appearance:none;
-    -moz-appearance:none;
-    -webkit-appearance:none;
-
-    /*在选择框的最右侧中间显示小箭头图片*/
-    background: url(&quot;http://ourjs.github.io/static/2015/arrow.png&quot;) no-repeat scroll right center transparent;
-
-
-    /*为下拉小箭头留出一点位置，避免被文字覆盖*/
-    padding-right: 14px;
-
-
-    /*清除ie的默认选择框样式清除，隐藏下拉箭头*/
-    select::-ms-expand { display: none; }
+              <h1 id="javascript">JavaScript</h1>
+<p>原生javascript没有List</p>
+<h2 id="遍历数组">遍历数组</h2>
+<pre><code class="language-javascript">{
+    let array = new Array();
+    array.push(&quot;test1&quot;);
+    array.push(&quot;test2&quot;);
+    array.forEach(v =&gt; console.log(v));	    // test1 test2
 }
+</code></pre>
+<h2 id="遍历map">遍历map</h2>
+<pre><code class="language-javascript">{
+    let map = new Map();
+    map.set(&quot;1&quot;,&quot;test1&quot;);
+    map.set(&quot;2&quot;,&quot;test2&quot;);
+    map.forEach((v,k,map) =&gt; console.log({k,v}));   // {k: &quot;1&quot;, v: &quot;test1&quot;} {k: &quot;2&quot;, v: &quot;test2&quot;}
+}
+</code></pre>
+<h2 id="遍历对象">遍历对象</h2>
+<pre><code class="language-javascript">{
+    let object = new Object();
+    object = {1:&quot;test1&quot;,2:&quot;test2&quot;};
+    for(let k in object){
+        let v = object[i];
+        console.log({k,v})    // {k: &quot;1&quot;, v: &quot;test1&quot;} {k: &quot;2&quot;, v: &quot;test2&quot;}
+    }
+}
+</code></pre>
+<h1 id="python">python</h1>
+<h2 id="遍历数组-2">遍历数组</h2>
+<pre><code class="language-python">list = [1, 2, 3, 4]
+for i in range(len(list)):
+    print(&quot;序号：%s   值：%s&quot; % (i + 1, list[i]))  # 序号：1   值：1 序号：2   值：2 序号：3   值：3 序号：4   值：4
+</code></pre>
+<h2 id="遍历map字典">遍历map(字典)</h2>
+<pre><code class="language-python">map = {&quot;a&quot;: &quot;1&quot;, &quot;b&quot;: &quot;2&quot;, &quot;c&quot;: &quot;3&quot;}
+
+for k, v in map.items():
+    print({k, v})  # {&quot;1&quot;, &quot;a&quot;} {&quot;2&quot;, &quot;b&quot;} {&quot;3&quot;, &quot;c&quot;}
+</code></pre>
+<h2 id="遍历json对象">遍历json对象</h2>
+<pre><code class="language-python">import json
+json = &quot;{ &quot;name&quot;:&quot;Bill&quot;, &quot;age&quot;:63, &quot;city&quot;:&quot;Seattle&quot;}&quot;
+map = json.loads(json)
+for k, v in map.items():
+    print({k, v})
+</code></pre>
+<h1 id="java">java</h1>
+<h2 id="遍历list">遍历list</h2>
+<pre><code class="language-java">String[] array = {&quot;1&quot; ,&quot;2&quot;, &quot;3&quot;, &quot;4&quot;};
+List&lt;String&gt; list = Arrays.asList(array);
+list.forEach(v -&gt; System.out.println(v));   // 1 2 3 4
+</code></pre>
+<h2 id="遍历map-2">遍历map</h2>
+<pre><code class="language-java">Map&lt;String, String&gt; map = new HashMap&lt;&gt;();
+map.put(&quot;1&quot;, &quot;test1&quot;);
+map.put(&quot;2&quot;, &quot;test2&quot;);
+map.forEach((k, v) -&gt; System.out.println(&quot;k:&quot; + k + &quot; v:&quot; + v)); // k:1 v:test1 k:2 v:test2
 </code></pre>
 
             </div>
@@ -402,7 +657,7 @@
     </li>
     <li class="post-copyright-link">
       <strong class="language" data-lan="link">本文链接：</strong>
-      <a href="https://clearlove443.github.io/EIm2DvbAz/" title="修改css中select的下拉箭头样式">https://clearlove443.github.io/EIm2DvbAz/</a>
+      <a href="https://clearlove443.github.io/bu-tong-yu-yan-bian-li-list-map-he-dui-xiang/" title="不同语言遍历list map 和对象">https://clearlove443.github.io/bu-tong-yu-yan-bian-li-list-map-he-dui-xiang/</a>
     </li>
     <li class="post-copyright-license">
       <strong class="language" data-lan="copyright">版权声明： </strong>
@@ -411,19 +666,27 @@
   </ul>
   <div class="tags">
     
-      <a href="https://clearlove443.github.io/VP6SqdiuD/"># select</a>
+      <a href="https://clearlove443.github.io/2PlYWPlIF/"># list</a>
     
-      <a href="https://clearlove443.github.io/EUwKkiqiL/"># css</a>
+      <a href="https://clearlove443.github.io/CfZeBrZuA/"># map</a>
+    
+      <a href="https://clearlove443.github.io/eQfKHXc2A/"># JavaScript</a>
+    
+      <a href="https://clearlove443.github.io/fgqMyhyli/"># Python</a>
     
   </div>
   <div class="nav">
     <div class="nav-prev">
       
+        <i class="fa fa-chevron-left"></i>
+        <a class="nav-pc-next" title="CSS基础-块级元素与行内元素" href="https://clearlove443.github.io/css-ji-chu-kuai-ji-yuan-su-yu-xing-nei-yuan-su/">CSS基础-块级元素与行内元素</a class="nav-pc-next">
+        <a class="nav-mobile-prev" title="CSS基础-块级元素与行内元素" href="https://clearlove443.github.io/css-ji-chu-kuai-ji-yuan-su-yu-xing-nei-yuan-su/">上一篇</a>
+      
     </div>
     <div class="nav-next">
       
-        <a class="nav-pc-next" title="html 滚动条拉不到最底下" href="https://clearlove443.github.io/hUR_fwtxZ/">html 滚动条拉不到最底下</a>
-        <a class="nav-mobile-next" title="html 滚动条拉不到最底下" href="https://clearlove443.github.io/hUR_fwtxZ/">下一篇</a>
+        <a class="nav-pc-next" title="JavaScript 中 require 和 import 的区别" href="https://clearlove443.github.io/javascript-zhong-require-he-import-de-qu-bie/">JavaScript 中 require 和 import 的区别</a>
+        <a class="nav-mobile-next" title="JavaScript 中 require 和 import 的区别" href="https://clearlove443.github.io/javascript-zhong-require-he-import-de-qu-bie/">下一篇</a>
         <i class="fa fa-chevron-right"></i>
       
     </div>
