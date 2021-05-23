@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://clearlove443.github.io/</id>
     <title>Gridea</title>
-    <updated>2021-05-22T13:54:31.488Z</updated>
+    <updated>2021-05-23T11:59:10.497Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://clearlove443.github.io/"/>
     <link rel="self" href="https://clearlove443.github.io/atom.xml"/>
@@ -11,1703 +11,452 @@
     <icon>https://clearlove443.github.io/favicon.ico</icon>
     <rights>All rights reserved 2021, Gridea</rights>
     <entry>
-        <title type="html"><![CDATA[修改css中select的下拉箭头样式]]></title>
-        <id>https://clearlove443.github.io/EIm2DvbAz/</id>
-        <link href="https://clearlove443.github.io/EIm2DvbAz/">
+        <title type="html"><![CDATA[Angular 模态框]]></title>
+        <id>https://clearlove443.github.io/GKbqe4RBZ/</id>
+        <link href="https://clearlove443.github.io/GKbqe4RBZ/">
         </link>
-        <updated>2021-05-16T04:16:45.000Z</updated>
-        <content type="html"><![CDATA[<pre><code class="language-css">select {
-    /*Chrome和Firefox里面的边框是不一样的，所以复写了一下*/
-    border: solid 1px #000;
-
-    /*很关键：将默认的select选择框样式清除*/
-    appearance:none;
-    -moz-appearance:none;
-    -webkit-appearance:none;
-
-    /*在选择框的最右侧中间显示小箭头图片*/
-    background: url(&quot;http://ourjs.github.io/static/2015/arrow.png&quot;) no-repeat scroll right center transparent;
-
-
-    /*为下拉小箭头留出一点位置，避免被文字覆盖*/
-    padding-right: 14px;
-
-
-    /*清除ie的默认选择框样式清除，隐藏下拉箭头*/
-    select::-ms-expand { display: none; }
-}
-</code></pre>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[html 滚动条拉不到最底下]]></title>
-        <id>https://clearlove443.github.io/hUR_fwtxZ/</id>
-        <link href="https://clearlove443.github.io/hUR_fwtxZ/">
-        </link>
-        <updated>2021-05-16T03:46:35.000Z</updated>
-        <content type="html"><![CDATA[<p>容器使用绝对定位<code>position: fixed;</code>后, 高度就不会被计算在父容器里面。就会造成把一些元素遮挡住。<br>
-解决办法：添加一个空的容器。用来代替不被计算的容器。</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[将HTML特殊转义为实体字符]]></title>
-        <id>https://clearlove443.github.io/3opacq1jP/</id>
-        <link href="https://clearlove443.github.io/3opacq1jP/">
-        </link>
-        <updated>2021-05-16T03:39:01.000Z</updated>
-        <content type="html"><![CDATA[<p>前端开发工作中，经常需要将HTML的左右尖括号等转义成实体形式。我们不能把&lt;，&gt;，&amp;等直接显示在最终看到的网页里。需要将其转义后才能在网页上显示。</p>
-<p>转义字符（Escape Sequence）也称字符实体(Character Entity)。定义转义字符串的主要原因是</p>
+        <updated>2021-05-23T09:51:12.000Z</updated>
+        <content type="html"><![CDATA[<p>在项目开发的过程中肯定需要弹出视图，这种视图称之为模态框。</p>
 <ol>
-<li>“&lt;”和“&gt;”等符号已经用来表示HTML TAG，因此不能直接当作文本中的符号来使用。但有时需求是在HTML页面上使用这些符号，所以需要定义它的转义字符串。</li>
-<li>有些字符在ASCII字符集中没有定义（如版权符号“©”）。因此需要使用转义字符（“©”对应的转义字符是“©”）来表示。</li>
+<li><a href="https://devui.design/components/zh-cn/modal/demo#template-content">DevUI</a><br>
+<a href="https://github.com/DevCloudFE/ng-devui/tree/master/devui/pagination">源码</a></li>
 </ol>
-<p>这里提供两个函数escape和unescape，分别实现将HTML转义为实体和回转。</p>
-<h1 id="方式一-一个映射表正则替换">方式一、一个映射表+正则替换</h1>
-<pre><code class="language-javascript">var keys = Object.keys || function(obj) {
-    obj = Object(obj)
-    var arr = []   
-    for (var a in obj) arr.push(a)
-    return arr
-}
-var invert = function(obj) {
-    obj = Object(obj)
-    var result = {}
-    for (var a in obj) result[obj[a]] = a
-    return result
-}
-`var entityMap = {
-    escape: {
-      '&amp;': '&amp;',
-      '&lt;': '&lt;',
-      '&gt;': '&gt;',
-      '&quot;': '&quot;',
-      &quot;'&quot;: '''
+<p><a href="https://juejin.cn/post/6844904151730782221">手动重写</a><br>
+<a href="https://github.com/kagol/components">源码</a></p>
+<ol start="2">
+<li><a href="https://valor-software.com/ngx-bootstrap/#/pagination#pagination-rotate">NGX-Bootstrap</a><br>
+<a href="https://github.com/valor-software/ngx-bootstrap/tree/development/src/pagination">源码</a></li>
+</ol>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[用js实现模糊查询的几种方法]]></title>
+        <id>https://clearlove443.github.io/oynVguj0l/</id>
+        <link href="https://clearlove443.github.io/oynVguj0l/">
+        </link>
+        <updated>2021-05-23T09:35:08.000Z</updated>
+        <content type="html"><![CDATA[<ol>
+<li>indexof 方法</li>
+</ol>
+<pre><code>语法：stringObject.indexOf(searchvalue, fromindex)
+</code></pre>
+<pre><code>参数：searchvalue 必需。规定需检索的字符串值。 fromindex 可选的整数参数。规定在字符串中开始检索的位置。它的合法取值是 0 到 stringObject.length - 1。如省略该参数，则将从字符串的首字符开始检索。
+</code></pre>
+<pre><code>说明：该方法将从头到尾地检索字符串 stringObject，看它是否含有子串 searchvalue。开始检索的位置在字符串的 fromindex 处或字符串的开头（没有指定 fromindex 时）。如果找到一个 searchvalue，则返回 searchvalue 的第一次出现的位置。stringObject 中的字符位置是从 0 开始的。如果没有找到，将返回 -1。
+</code></pre>
+<pre><code class="language-javaScript">/**
+   * 使用indexof方法实现模糊查询
+   * @param  {Array}  list     进行查询的数组
+   * @param  {String} keyWord  查询的关键词
+   * @return {Array}           查询的结果
+   */
+  function fuzzyQuery(list, keyWord) {
+    var arr = [];
+    for (var i = 0; i &lt; list.length; i++) {
+      if (list[i].indexOf(keyWord) &gt;= 0) {
+        arr.push(list[i]);
+      }
     }
-}`
-entityMap.unescape = invert(entityMap.escape)
-var entityReg = {
-    escape: RegExp('[' + keys(entityMap.escape).join('') + ']', 'g'),
-    unescape: RegExp('(' + keys(entityMap.unescape).join('|') + ')', 'g')
-}
- 
-// 将HTML转义为实体
-function escape(html) {
-    if (typeof html !== 'string') return ''
-    return html.replace(entityReg.escape, function(match) {
-        return entityMap.escape[match]
-    })
-}
-// 将实体转回为HTML
-function unescape(str) {
-    if (typeof str !== 'string') return ''
-    return str.replace(entityReg.unescape, function(match) {
-        return entityMap.unescape[match]
-    })   
-}
-</code></pre>
-<h1 id="方式二-利用浏览器dom-api">方式二、利用浏览器DOM API</h1>
-<pre><code class="language-javascript">// 将HTML转义为实体
-function escape(html){
-    var elem = document.createElement('div')
-    var txt = document.createTextNode(html)
-    elem.appendChild(txt)
-    return elem.innerHTML;
-}
-// 将实体转回为HTML
-function unescape(str) {
-    var elem = document.createElement('div')
-    elem.innerHTML = str
-    return elem.innerText || elem.textContent
-}
-</code></pre>
-<p>有个缺陷是只能转义“&lt; &gt; &amp; ”，对于单引号，双引号都不转义。另外一些非ASCII也不能转义。选择时须注意。</p>
-<h1 id="比较">比较：</h1>
-<p>方式1 代码量较大，但灵活性，完整性都比方式2强。可根据需求添加或减少映射表entityMap，且可以运行在任意JS环境中。</p>
-<p>方式2 为hack方式，代码量少很多，利用浏览器内部API就行了转义和转回（主流浏览器都支持）。不具完整性，很明显只能在浏览器环境中使用（比如不能在Node.js中跑）。</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[HTML、CSS知识点总结]]></title>
-        <id>https://clearlove443.github.io/l-XCTPBqa/</id>
-        <link href="https://clearlove443.github.io/l-XCTPBqa/">
-        </link>
-        <updated>2021-05-16T01:02:55.000Z</updated>
-        <content type="html"><![CDATA[<h1 id="htmlcss基础">html+css基础</h1>
-<h2 id="html和css的关系">Html和CSS的关系</h2>
-<p>学习web前端开发基础技术需要掌握：HTML、CSS、JavaScript语言。下面我们就来了解下这三门技术都是用来实现什么的：</p>
-<ol>
-<li>
-<p>HTML是网页内容的载体。内容就是网页制作者放在页面上想要让用户浏览的信息，可以包含文字、图片、视频等。</p>
-</li>
-<li>
-<p>CSS样式是表现。就像网页的外衣。比如，标题字体、颜色变化，或为标题加入背景图片、边框等。所有这些用来改变内容外观的东西称之为表现。</p>
-</li>
-<li>
-<p>JavaScript是用来实现网页上的特效效果。如：鼠标滑过弹出下拉菜单。或鼠标滑过表格的背景颜色改变。还有焦点新闻（新闻图片）的轮换。可以这么理解，有动画的，有交互的一般都是用JavaScript来实现的。</p>
-</li>
-</ol>
-<h2 id="标签大小写">标签大小写</h2>
-<ol>
-<li>HTML标签不区分大小写，<code>&lt;h1&gt;和&lt;H1&gt;</code>是一样的，但建议小写，因为大部分程序员都以小写为准。</li>
-</ol>
-<h2 id="固定的结构">固定的结构</h2>
-<p>一个HTML文件是有自己固定的结构的。</p>
-<pre><code class="language-html">&lt;html&gt;
-    &lt;head&gt;...&lt;/head&gt;
-    &lt;body&gt;...&lt;/body&gt;
-&lt;/html&gt;
-</code></pre>
-<p>代码讲解：</p>
-<ol>
-<li><code>&lt;html&gt;&lt;/html&gt;</code>称为根标签，所有的网页标签都在<code>&lt;html&gt;</code>...<code>&lt;/html&gt;</code>中。</li>
-<li><code>&lt;head&gt;</code> 标签用于定义文档的头部，它是所有头部元素的容器。头部元素有<code>&lt;title&gt;、&lt;script&gt;、 &lt;style&gt;、&lt;link&gt;、 &lt;meta&gt;</code>等标签，头部标签在下一小节中会有详细介绍。</li>
-<li>在<code>&lt;body&gt;</code>和<code>&lt;/body&gt;</code>标签之间的内容是网页的主要内容，如<code>&lt;h1&gt;、&lt;p&gt;、&lt;a&gt;、&lt;img&gt;</code>等网页内容标签，在这里的标签中的内容会在浏览器中显示出来。</li>
-</ol>
-<h2 id="head-部分">head 部分</h2>
-<ol>
-<li>下面这些标签可用在 head 部分：</li>
-</ol>
-<pre><code class="language-html">&lt;head&gt;
-    &lt;title&gt;...&lt;/title&gt;
-    &lt;meta&gt;
-    &lt;link&gt;
-    &lt;style&gt;...&lt;/style&gt;
-    &lt;script&gt;...&lt;/script&gt;
-&lt;/head&gt;
+    return arr;
+  }
 </code></pre>
 <ol start="2">
-<li>代码注释不仅方便程序员自己回忆起以前代码的用途，还可以帮助其他程序员很快的读懂你的程序的功能，方便多人合作开发网页代码。</li>
+<li>split 方法</li>
 </ol>
-<p>语法：</p>
-<!--注释文字 -->
-<ol start="3">
-<li>CSS注释代码</li>
-</ol>
-<p>就像在Html的注释一样，在CSS中也有注释语句：用/<em>注释语句</em>/来标明（Html中使用<!--注释语句-->)</p>
-<h2 id="语义化">语义化</h2>
-<ol>
-<li>
-<p>语义化：说的通俗点就是：明白每个标签的用途（在什么情况下我可以使用这个标签才合理）比如，网页上的文章的标题就得用标题标签，网页上的各个栏目的栏目名称也可以使用标题标签。</p>
-</li>
-<li>
-<p>语义化的作用</p>
-</li>
-</ol>
-<ul>
-<li>
-<p>更容易被搜索引擎收录。</p>
-</li>
-<li>
-<p>更容易让屏幕阅读器读出网页内容。</p>
-</li>
-</ul>
-<h1 id="认识标签第一部分">认识标签（第一部分）</h1>
-<h2 id="p"><code>&lt;p&gt;</code></h2>
-<p>如果想在网页上显示文章，这时就需要<code>&lt;p&gt;</code>标签了，把文章的段落放到<code>&lt;p&gt;</code>标签中。</p>
-<p>语法：</p>
-<pre><code class="language-html">&lt;p&gt;段落文本&lt;/p&gt;
+<pre><code>语法：stringObject.split(separator, howmany)
 </code></pre>
-<h2 id="hx"><code>&lt;hx&gt;</code></h2>
-<p>标题标签一共有6个，h1、h2、h3、h4、h5、h6分别为一级标题、二级标题、三级标题、四级标题、五级标题、六级标题。并且依据重要性递减。<code>&lt;h1&gt;</code>是最高的等级。</p>
-<p>语法：</p>
-<pre><code class="language-html">&lt;hx&gt;标题文本&lt;/hx&gt;(x为1-6)
+<pre><code>参数：separator 必需。字符串或正则表达式，从该参数指定的地方分割 stringObject。howmany 可选。该参数可指定返回的数组的最大长度。如果设置了该参数，返回的子串不会多于这个参数指定的数组。如果没有设置该参数，整个字符串都会被分割，不考虑它的长度。
 </code></pre>
-<p>文章的标题前面已经说过了，可以使用标题标签，另外网页上的各个栏目的标题也可使用它们</p>
-<h2 id="strongem"><code>&lt;strong&gt;/&lt;em&gt;</code></h2>
-<p>有了段落又有了标题，现在如果想在一段话中特别强调某几个文字，这时候就可以用到<code>&lt;em&gt;</code>或<code>&lt;strong&gt;</code>标签。</p>
-<p>但两者在强调的语气上有区别:<code>&lt;em&gt;</code> 表示强调，<code>&lt;strong&gt;</code> 表示更强烈的强调。并且在浏览器中<code>&lt;em&gt;</code> 默认用斜体表示，<code>&lt;strong&gt;</code> 用粗体表示。两个标签相比，目前国内前端程序员更喜欢使用<code>&lt;strong&gt;</code>表示强调</p>
-<h2 id="em-strong-span的区别"><code>&lt;em&gt;、&lt;strong&gt;、&lt;span&gt;</code>的区别：</h2>
-<ol>
-<li>
-<p><code>&lt;em&gt;</code>和<code>&lt;strong&gt;</code>标签是为了强调一段话中的关键字时使用，它们的语义是强调。</p>
-</li>
-<li>
-<p><code>&lt;span&gt;</code>标签是没有语义的，它的作用就是为了设置单独的样式用的，把一段话圈起来，然后用css设置样式。</p>
-</li>
-</ol>
-<h2 id="qblockquote"><code>&lt;q&gt;/&lt;blockquote&gt;</code></h2>
-<h3 id="q标签短文本引用">q标签，短文本引用</h3>
-<p>比如在你的网页的文章里想引用某个作家的一句诗，这样会使你的文章更加出彩，那么<q>标签是你所需要的。<br>
-语法：</p>
-<pre><code class="language-html">&lt;q&gt;引用文本&lt;/q&gt;
+<pre><code>说明：该方法通过在 separator 指定的边界处将字符串 stringObject 分割成子串并返回子串数组。返回的数组中的字串不包括 separator 自身。如果 stringObject 中不存在 separator，将返回一个只包含stringObject的数组。故可以根据返回数组的长度来判断是否存在子字符串 separator 。
 </code></pre>
-<ol>
-<li>
-<p>注意要引用的文本不用加双引号，浏览器会对q标签自动添加双引号。</p>
-</li>
-<li>
-<p>注意这里用<code>&lt;q&gt;</code>标签的真正关键点不是它的默认样式双引号（如果这样我们不如自己在键盘上输入双引号就行了），而是它的语义：引用别人的话</p>
-</li>
-</ol>
-<h3 id="blockquote标签长文本引用">blockquote标签，长文本引用</h3>
-<p><code>&lt;blockquote&gt;</code>的作用也是引用别人的文本。但它是对长文本的引用</p>
-<p><code>&lt;q&gt;</code>标签是对简短文本的引用，比如说引用一句话就用到<code>&lt;q&gt;</code>标签。</p>
-<p>语法:</p>
-<pre><code class="language-html">&lt;blockquote&gt;引用文本&lt;/blockquote&gt;
-</code></pre>
-<p>浏览器对<code>&lt;blockquote&gt;</code>标签的解析是缩进样式</p>
-<h2 id="br"><code>&lt;br/&gt;</code></h2>
-<p>换行标签<code>&lt;br/&gt;</code><br>
-<br/>标签作用相当于word文档中的回车。只有一个开始标签，没有结束标签。</p>
-<h2 id="hr"><code>&lt;hr/&gt;</code></h2>
-<p>分割线标签<code>&lt;hr/&gt;</code><br>
-<code>&lt;hr/&gt;</code>标签的在浏览器中的默认样式线条比较粗，颜色为灰色</p>
-<h2 id="nbsp"><code>&amp;nbsp;</code></h2>
-<p>html特殊字符</p>
-<p>空格：<code>&amp;nbsp;</code>(;分号必不可少)</p>
-<h2 id="address"><code>&lt;address&gt;</code></h2>
-<p>address标签，为网页加入地址信息</p>
-<p>语法：</p>
-<pre><code class="language-html">&lt;address&gt;地址信息&lt;/address&gt;
-</code></pre>
-<p>如：</p>
-<p><code>&lt;address&gt;</code>北京市西城区德外大街10号<code>&lt;/address&gt;</code></p>
-<p>在浏览器上显示的样式为斜体，如果不喜欢斜体，当然可以，可以在后面的课程中使用css样式来修改它<code>&lt;address&gt;</code>标签的默认样式</p>
-<h2 id="code"><code>&lt;code&gt;</code></h2>
-<p>在介绍语言技术的网站中，必免不了在网页中显示一些计算机专业的编程代码，当代码为一行代码时，你就可以使用<code>&lt;code&gt;</code>标签了，如下面例子：</p>
-<pre><code class="language-html">&lt;code&gt;var i=i+300;&lt;/code&gt;
-</code></pre>
-<p>语法：</p>
-<pre><code class="language-html">&lt;code&gt;代码语言&lt;/code&gt;
-</code></pre>
-<p>注意：在文章中一般如果要插入多行代码时不能使用<code>&lt;code&gt;</code>标签，如果是多行代码，可以使用<code>&lt;pre&gt;</code>标签。</p>
-<p><code>&lt;pre&gt;</code> 标签的主要作用:预格式化的文本。被包围在 pre 元素中的文本通常会保留空格和换行符。如果用以前的方法，回车需要输入<code>&lt;br&gt;</code>签，空格需要输入<code>&amp;nbsp;</code>。</p>
-<p>注意：<code>&lt;pre&gt;</code>标签不只是为显示计算机的源代码时用的，在你需要在网页中预显示格式时都可以使用它，只是<code>&lt;pre&gt;</code>标签的一个常见应用就是用来展示计算机的源代码。</p>
-<h1 id="认识标签第二部分">认识标签（第二部分）</h1>
-<h2 id="无序列表">无序列表</h2>
-<p>ul-li是没有前后顺序的信息列表。</p>
-<p>语法：</p>
-<pre><code class="language-html">&lt;ul&gt;
-    &lt;li&gt;信息&lt;/li&gt;
-    &lt;li&gt;信息&lt;/li&gt;
-    ......
-&lt;/ul&gt;
-</code></pre>
-<p>举例：</p>
-<pre><code class="language-html">&lt;ul&gt;
-    &lt;li&gt;精彩少年&lt;/li&gt;
-    &lt;li&gt;美丽突然出现&lt;/li&gt;
-    &lt;li&gt;触动心灵的旋律&lt;/li&gt;
-&lt;/ul&gt;
-</code></pre>
-<p>ul-li在网页中显示的默认样式一般为：每项li前都自带一个圆点</p>
-<h2 id="有序列表">有序列表</h2>
-<p>语法：</p>
-<pre><code class="language-html">&lt;ol&gt;
-    &lt;li&gt;信息&lt;/li&gt;
-    &lt;li&gt;信息&lt;/li&gt;
-    ......
-&lt;/ol&gt;
-</code></pre>
-<p>举例：</p>
-<p>下面是一个热点课程下载排行榜：</p>
-<pre><code>&lt;ol&gt;
-    &lt;li&gt;前端开发面试心法 &lt;/li&gt;
-    &lt;li&gt;零基础学习html&lt;/li&gt;
-    &lt;li&gt;JavaScript全攻略&lt;/li&gt;
-&lt;/ol&gt;
-</code></pre>
-<p><code>&lt;ol&gt;</code>在网页中显示的默认样式一般为：每项<code>&lt;li&gt;</code>前都自带一个序号，序号默认从1开始</p>
-<h2 id="div容器标签"><code>&lt;div&gt;</code>容器标签</h2>
-<p>在网页制作过程过中，可以把一些独立的逻辑部分划分出来，放在一个<code>&lt;div&gt;</code>标签中，这个<code>&lt;div&gt;</code>标签的作用就相当于一个容器。</p>
-<p>语法：</p>
-<pre><code class="language-html">&lt;div&gt;…&lt;/div&gt;
-</code></pre>
-<p>确定逻辑部分：</p>
-<p>什么是逻辑部分？它是页面上相互关联的一组元素。如网页中的独立的栏目版块，就是一个典型的逻辑部分。如下图所示：图中用红色边框标出的部分就是一个逻辑部分，就可以使用<code>&lt;div&gt;</code>标签作为容器</p>
-<p>注释：<code>&lt;div&gt;</code> 是一个块级元素，也就是说，浏览器通常会在 div 元素前后放置一个换行符。</p>
-<h2 id="创建表格">创建表格</h2>
-<p>创建表格的五个元素：</p>
-<p>table、tbody、tr、th、td</p>
-<ol>
-<li>
-<p><code>&lt;table&gt;…&lt;/table&gt;</code>：整个表格以<code>&lt;table&gt;</code>标记开始、<code>&lt;/table&gt;</code>标记结束。</p>
-</li>
-<li>
-<p><code>&lt;tbody&gt;…&lt;/tbody&gt;</code>：当表格内容非常多时，表格会下载一点显示一点，但如果加上<code>&lt;tbody&gt;</code>标签后，这个表格就要等表格内容全部下载完才会显示。如右侧代码编辑器中的代码。（这个标签基本上不怎么用了）</p>
-</li>
-<li>
-<p><code>&lt;tr&gt;…&lt;/tr&gt;</code>：表格的一行，所以有几对tr 表格就有几行。</p>
-</li>
-<li>
-<p><code>&lt;td&gt;…&lt;/td&gt;</code>：表格的一个单元格，一行中包含几对<code>&lt;td&gt;...&lt;td/&gt;</code>，说明一行中就有几列。</p>
-</li>
-<li>
-<p><code>&lt;th&gt;…&lt;/th&gt;</code>：表格的头部的一个单元格，表格表头。</p>
-</li>
-<li>
-<p>表格中列的个数，取决于一行中数据单元格的个数。</p>
-</li>
-</ol>
-<p>表格还是需要添加一些标签进行优化，可以添加标题和摘要</p>
-<p><code>&lt;table summary=&quot;本表格记录2012年到2013年库存记录，记录包括U盘和耳机库存量&quot;&gt;</code></p>
-<p><code>&lt;caption&gt;2012年到2013年库存记录&lt;/caption&gt;</code></p>
-<h2 id="超链接">超链接</h2>
-<p>使用<code>&lt;a&gt;</code>标签，链接到别一个页面</p>
-<p>使用<code>&lt;a&gt;</code>标签可实现超链接，它在网页制作中可以说是无处不在，只要有链接的地方，就会有这个标签。</p>
-<p>语法：</p>
-<pre><code class="language-html">&lt;a href = &quot;目标网址&quot;&gt;链接显示的文本&lt;/a&gt;
-</code></pre>
-<p>例如：</p>
-<pre><code class="language-html">&lt;a href = &quot;http://www.imooc.com&quot;&gt;click here!&lt;/a&gt;
-</code></pre>
-<p>上面例子作用是单击click here!文字，网页链接到<a href="http://www.imooc.com">慕课网</a>这个网页。</p>
-<h2 id="网页插入图片">网页插入图片</h2>
-<p>认识<code>&lt;img&gt;</code>标签，为网页插入图片</p>
-<p>在网页的制作中为使网页炫丽美观，肯定是缺少不了图片，可以使用<code>&lt;img&gt;</code>标签来插入图片。</p>
-<p>语法：</p>
-<pre><code class="language-html">&lt;img src=&quot;图片地址&quot; alt=&quot;下载失败时的替换文本&quot; title = &quot;提示文本&quot;&gt;
-</code></pre>
-<p>举例：</p>
-<pre><code class="language-html">&lt;img src = &quot;myimage.gif&quot; alt = &quot;My Image&quot; title = &quot;My Image&quot; /&gt;
-</code></pre>
-<p>讲解：</p>
-<ol>
-<li>
-<p>src：标识图像的位置；</p>
-</li>
-<li>
-<p>alt：指定图像的描述性文本，当图像不可见时（下载不成功时），可看到该属性指定的文本；</p>
-</li>
-<li>
-<p>title：提供在图像可见时对图像的描述(鼠标滑过图片时显示的文本)；</p>
-</li>
-<li>
-<p>图像可以是GIF，PNG，JPEG格式的图像文件。</p>
-</li>
-</ol>
-<h1 id="表单标签与用户进行交互">表单标签（与用户进行交互）</h1>
-<h2 id="form"><code>&lt;form&gt;</code></h2>
-<p>表单是可以把浏览者输入的数据传送到服务器端，这样服务器端程序就可以处理表单传过来的数据。</p>
-<p>语法：</p>
-<pre><code class="language-html">&lt;form method=&quot;传送方式&quot; action=&quot;服务器文件&quot;&gt;
-</code></pre>
-<p>讲解：</p>
-<ol>
-<li>
-<p><code>&lt;form&gt;</code> ：<code>&lt;form&gt;</code>标签是成对出现的，以<code>&lt;form&gt;</code>开始，以<code>&lt;/form&gt;</code>结束。</p>
-</li>
-<li>
-<p>action ：浏览者输入的数据被传送到的地方,比如一个PHP页面(save.php)。</p>
-</li>
-<li>
-<p>method ： 数据传送的方式（get/post）。</p>
-</li>
-</ol>
-<h2 id="input"><code>&lt;input&gt;</code></h2>
-<p><code>&lt;input&gt;</code>输入框</p>
-<p>文本输入框、密码输入框</p>
-<p>当用户要在表单中键入字母、数字等内容时，就会用到文本输入框。文本框也可以转化为密码输入框。</p>
-<p>语法：</p>
-<pre><code class="language-html">&lt;form&gt;
-    &lt;input type=&quot;text/password&quot; name=&quot;名称&quot; value=&quot;文本&quot; /&gt;
-&lt;/form&gt;
-</code></pre>
-<ol>
-<li>type：</li>
-</ol>
-<p>当type=&quot;text&quot;时，输入框为文本输入框;</p>
-<p>当type=&quot;password&quot;时, 输入框为密码输入框。</p>
-<ol start="2">
-<li>
-<p>name：为文本框命名，以备后台程序ASP 、PHP使用。</p>
-</li>
-<li>
-<p>value：为文本输入框设置默认值。(一般起到提示作用)</p>
-</li>
-</ol>
-<h2 id="textarea"><code>&lt;textarea&gt;</code></h2>
-<p>文本域，支持多行文本输入</p>
-<p>当用户需要在表单中输入大段文字时，需要用到文本输入域。</p>
-<p>语法：</p>
-<pre><code class="language-html">&lt;textarea rows=&quot;行数&quot; cols=&quot;列数&quot;&gt;文本&lt;/textarea&gt;
-</code></pre>
-<ol>
-<li>
-<p><code>&lt;textarea&gt;</code>标签是成对出现的，以<code>&lt;textarea&gt;</code>开始，以<code>&lt;/textarea&gt;</code>结束。</p>
-</li>
-<li>
-<p>cols ：多行输入域的列数。</p>
-</li>
-<li>
-<p>rows ：多行输入域的行数。</p>
-</li>
-</ol>
-<h2 id="单选框复选框">单选框，复选框</h2>
-<p>单选框，复选框</p>
-<p>语法：</p>
-<pre><code class="language-html">&lt;input type=&quot;radio/checkbox&quot; value=&quot;值&quot; name=&quot;名称&quot; checked=&quot;checked&quot;/&gt;
-</code></pre>
-<ol>
-<li>
-<p>type:</p>
-<p>当type=&quot;radio&quot;时，控件为单选框</p>
-<p>当type=&quot;checkbox&quot;时，控件为复选框</p>
-</li>
-<li>
-<p>value：提交数据到服务器的值（后台程序PHP使用）</p>
-</li>
-<li>
-<p>name：为控件命名，以备后台程序ASP、PHP使用</p>
-</li>
-<li>
-<p>checked：当设置checked=&quot;checked&quot;时，该选项被默认选中</p>
-</li>
-</ol>
-<p>注意：同一组的单选按钮，name取值一定要一致，这样同一组的单选按钮才可以起到单选的作用。</p>
-<h2 id="select"><code>&lt;select&gt;</code></h2>
-<p>下拉列表框，节省空间</p>
-<p>下拉列表在网页中也常会用到，它可以有效的节省网页空间。既可以单选、又可以多选。</p>
-<p>语法：</p>
-<pre><code class="language-html">&lt;option value=&quot;提交值&quot;&gt;选项&lt;/option&gt;
-</code></pre>
-<p>提交值是向服务器提交的值，选项是显示的值。</p>
-<pre><code class="language-html">&lt;form action=&quot;save.php&quot; method=&quot;post&quot; &gt;
-    &lt;label&gt;爱好:&lt;/label&gt;
-    &lt;select&gt;
-        &lt;option value=&quot;看书&quot;&gt;看书&lt;/option&gt;
-        &lt;option value=&quot;旅游&quot; selected=&quot;selected&quot;&gt;旅游&lt;/option&gt;
-        &lt;option value=&quot;运动&quot;&gt;运动&lt;/option&gt;
-        &lt;option value=&quot;购物&quot;&gt;购物&lt;/option&gt;
-    &lt;/select&gt;
-&lt;/form&gt;
-</code></pre>
-<h2 id="下拉列表框进行多选">下拉列表框进行多选</h2>
-<p>使用下拉列表框进行多选</p>
-<p>下拉列表也可以进行多选操作，在<code>&lt;select&gt;</code>标签中设置<code>multiple=&quot;multiple&quot;</code>属性，</p>
-<p>就可以实现多选功能，进行多选时按下Ctrl键同时进行单击，可以选择多个选项。</p>
-<p>如下代码：</p>
-<pre><code class="language-html">&lt;form action=&quot;save.php&quot; method=&quot;post&quot; &gt;
-    &lt;label&gt;爱好:&lt;/label&gt;
-    &lt;select multiple=&quot;multiple&quot;&gt;
-        &lt;option value=&quot;看书&quot;&gt;看书&lt;/option&gt;
-        &lt;option value=&quot;旅游&quot;&gt;旅游&lt;/option&gt;
-        &lt;option value=&quot;运动&quot;&gt;运动&lt;/option&gt;
-        &lt;option value=&quot;购物&quot;&gt;购物&lt;/option&gt;
-    &lt;/select&gt;
-&lt;/form&gt;
-</code></pre>
-<h2 id="提交按钮">提交按钮</h2>
-<p>提交按钮：当用户需要提交表单信息到服务器时，需要用到提交按钮。</p>
-<p>语法：</p>
-<pre><code class="language-html">&lt;input type=&quot;submit&quot; value=&quot;提交&quot;&gt;
-</code></pre>
-<ol>
-<li>
-<p>type：只有当type值设置为submit时，按钮才有提交作用</p>
-</li>
-<li>
-<p>value：按钮上显示的文字</p>
-</li>
-</ol>
-<h2 id="重置按钮">重置按钮</h2>
-<p>重置按钮，重置表单信息</p>
-<p>当用户需要重置表单信息到初始时的状态时，比如用户输入“用户名”后，发现书写有误，可以使用重置按钮使输入框恢复到初始状态。只需要把type设置为&quot;reset&quot;就可以。</p>
-<p>语法：</p>
-<pre><code class="language-html">&lt;input type=&quot;reset&quot; value=&quot;重置&quot;&gt;
-</code></pre>
-<ol>
-<li>
-<p>type：只有当type值设置为reset时，按钮才有重置作用</p>
-</li>
-<li>
-<p>value：按钮上显示的文字</p>
-</li>
-</ol>
-<h1 id="css样式">css样式</h1>
-<h2 id="认识css样式">认识css样式</h2>
-<p>CSS全称为“层叠样式表 (Cascading Style Sheets)”，它主要是用于定义HTML内容在浏览器内的显示样式，如文字大小、颜色、字体加粗等。</p>
-<p>如下列代码：</p>
-<pre><code class="language-css">p{
-    font-size:12px;
-    color:red;
-    font-weight:bold;
-}
-</code></pre>
-<p>使用CSS样式的一个好处是通过定义某个样式，可以让不同网页位置的文字有着统一的字体、字号或者颜色等。</p>
-<h2 id="css代码语法">CSS代码语法</h2>
-<p>css 样式由选择符和声明组成，而声明又由属性和值组成</p>
-<p>选择符{属性:值}</p>
-<pre><code class="language-css">p{color:red;}
-</code></pre>
-<p>选择符：又称选择器，指明网页中要应用样式规则的元素，如本例中是网页中所有的段（p）的文字将变成蓝色，而其他的元素（如ol）不会受到影响。</p>
-<p>声明：在英文大括号“｛｝”中的的就是声明，属性和值之间用英文冒号“：”分隔。当有多条声明时，中间可以英文分号“;”分隔，如下所示：</p>
-<pre><code class="language-css">p{font-size:12px;color:red;}
-</code></pre>
-<h2 id="插入形式">插入形式</h2>
-<p>从CSS 样式代码插入的形式来看基本可以分为以下3种：</p>
-<p>内联式、嵌入式和外部式三种</p>
-<ol>
-<li>内联式css样式</li>
-</ol>
-<p>就是把css代码直接写在现有的HTML标签中，如下面代码：</p>
-<pre><code class="language-css">&lt;p style=&quot;color:red&quot;&gt;这里文字是红色。&lt;/p&gt;
-</code></pre>
-<p>css样式代码要写在style=&quot;&quot;双引号中，如果有多条css样式代码设置可以写在一起，中间用分号隔开。如下代码：</p>
-<pre><code class="language-css">&lt;p style=&quot;color:red;font-size:12px&quot;&gt;这里文字是红色。&lt;/p&gt;
-</code></pre>
-<ol start="2">
-<li>嵌入式css样式，</li>
-</ol>
-<p>就是可以把css样式代码写在<code>&lt;style type=&quot;text/css&quot;&gt;&lt;/style&gt;</code>标签之间。如下面代码实现把三个<code>&lt;span&gt;</code>标签中的文字设置为红色：</p>
-<pre><code class="language-css">&lt;style type=&quot;text/css&quot;&gt;
-span{
-    color:red;
-}
-&lt;/style&gt;
-</code></pre>
-<p>嵌入式css样式必须写在<code>&lt;style&gt;&lt;/style&gt;</code>之间，并且一般情况下嵌入式css样式写在<code>&lt;head&gt;&lt;/head&gt;</code>之间。</p>
-<ol start="3">
-<li>外部式css样式</li>
-</ol>
-<p>写在单独的一个文件中</p>
-<p>外部式css样式(也可称为外联式)就是把css代码写一个单独的外部文件中，这个css样式文件以“.css”为扩展名，在<code>&lt;head&gt;</code>内（不是在<code>&lt;style&gt;</code>标签内）使用<code>&lt;link&gt;</code>标签将css样式文件链接到HTML文件内，如下面代码：</p>
-<pre><code class="language-html">&lt;link href=&quot;base.css&quot; rel=&quot;stylesheet&quot; type=&quot;text/css&quot; /&gt;
-</code></pre>
-<p><strong>注意：</strong></p>
-<ol>
-<li>
-<p>css样式文件名称以有意义的英文字母命名，如 main.css。</p>
-</li>
-<li>
-<p><code>rel=&quot;stylesheet&quot; type=&quot;text/css&quot;</code> 是固定写法不可修改。</p>
-</li>
-<li>
-<p><code>&lt;link&gt;</code>标签位置一般写在<code>&lt;head&gt;</code>标签之内。</p>
-</li>
-</ol>
-<h1 id="css选择器">CSS选择器</h1>
-<p>每一条css样式定义由两部分组成，形式如下：</p>
-<p>选择器{</p>
-<p>样式;</p>
-<p>}</p>
-<p>在{}之前的部分就是“选择器”，“选择器”指明了{}中的“样式”的作用对象，也就是“样式”作用于网页中的哪些元素</p>
-<h2 id="标签选择器">标签选择器</h2>
-<p>标签选择器其实就是html代码中的标签。如右侧代码编辑器中的<code>&lt;html&gt;、&lt;body&gt;、&lt;h1&gt;、&lt;p&gt;、&lt;img&gt;</code>。例如下面代码：</p>
-<pre><code class="language-css">p{font-size:12px;line-height:1.6em;}
-</code></pre>
-<p>上面的css样式代码的作用：为p标签设置12px字号，行间距设置1.6em的样式。</p>
-<h2 id="类选择器">类选择器</h2>
-<p>类选择器在css样式编码中是最常用到的，如右侧代码编辑器中的代码:可以实现为“胆小如鼠”、“勇气”字体设置为红色。</p>
-<p>语法：</p>
-<p>.类选器名称{css样式代码;}</p>
-<p>注意：</p>
-<ol>
-<li>
-<p>英文圆点开头</p>
-</li>
-<li>
-<p>其中类选器名称可以任意起名（但不要起中文噢）</p>
-</li>
-</ol>
-<p>使用方法：</p>
-<p>第一步：使用合适的标签把要修饰的内容标记起来，如下：</p>
-<pre><code class="language-html">&lt;span&gt;胆小如鼠&lt;/span&gt;
-</code></pre>
-<p>第二步：使用class=&quot;类选择器名称&quot;为标签设置一个类，如下：</p>
-<pre><code class="language-html">&lt;span class=&quot;stress&quot;&gt;胆小如鼠&lt;/span&gt;
-</code></pre>
-<p>第三步：设置类选器css样式，如下：</p>
-<pre><code class="language-css">.stress{color:red;}/*类前面要加入一个英文圆点*/
-</code></pre>
-<h2 id="id选择器">ID选择器</h2>
-<p>在很多方面，ID选择器都类似于类选择符，但也有一些重要的区别：</p>
-<ol>
-<li>
-<p>为标签设置id=&quot;ID名称&quot;，而不是class=&quot;类名称&quot;。</p>
-</li>
-<li>
-<p>ID选择符的前面是井号（#）号，而不是英文圆点（.）。</p>
-</li>
-</ol>
-<h2 id="类和id选择器的区别">类和ID选择器的区别</h2>
-<p>相同点：可以应用于任何元素</p>
-<p>不同点：</p>
-<ol>
-<li>ID选择器只能在文档中使用一次。与类选择器不同，在一个HTML文档中，ID选择器只能使用一次，而且仅一次。而类选择器可以使用多次。</li>
-</ol>
-<p>下面代码是正确的：</p>
-<pre><code class="language-html">&lt;p&gt;三年级时，我还是一个&lt;span class=&quot;stress&quot;&gt;胆小如鼠&lt;/span&gt;的小女孩，上课从来不敢回答老师提出的问题，生怕回答错了老师会批评我。就一直没有这个&lt;span class=&quot;stress&quot;&gt;勇气&lt;/span&gt;来回答老师提出的问题。&lt;/p&gt;
-</code></pre>
-<p>而下面代码是错误的：</p>
-<pre><code class="language-html">&lt;p&gt;三年级时，我还是一个&lt;span id=&quot;stress&quot;&gt;胆小如鼠&lt;/span&gt;的小女孩，上课从来不敢回答老师提出的问题，生怕回答错了老师会批评我。就一直没有这个&lt;span id=&quot;stress&quot;&gt;勇气&lt;/span&gt;来回答老师提出的问题。&lt;/p&gt;
-</code></pre>
-<ol start="2">
-<li>可以使用类选择器词列表方法为一个元素同时设置多个样式。我们可以为一个元素同时设多个样式，但只可以用类选择器的方法实现，ID选择器是不可以的（不能使用 ID 词列表）。</li>
-</ol>
-<p>下面的代码是正确的(完整代码见右侧代码编辑器)</p>
-<pre><code class="language-css">.stress{
-    color:red
-}
-.bigsize{
-    font-size:25px;
-}
-</code></pre>
-<pre><code class="language-html">&lt;p&gt;到了&lt;span class=&quot;stress bigsize&quot;&gt;三年级&lt;/span&gt;下学期时，我们班上了一节公开课...&lt;/p&gt;
-</code></pre>
-<p>上面代码的作用是为“三年级”三个文字设置文本颜色为红色并且字号为25px</p>
-<p>下面的代码是不正确的(完整代码见右侧代码编辑器)</p>
-<pre><code class="language-css">#stressid{
-    color:red;
-}
-
-#bigsizeid{
-    font-size:25px;
-}
-</code></pre>
-<pre><code class="language-html">&lt;p&gt;到了&lt;span id=&quot;stressid bigsizeid&quot;&gt;三年级&lt;/span&gt;下学期时，我们班上了一节公开课...&lt;/p&gt;
-</code></pre>
-<p>上面代码不可以实现为“三年级”三个文字设置文本颜色为红色并且字号为25px的作用。</p>
-<h2 id="子选择器">子选择器</h2>
-<p>还有一个比较有用的选择器子选择器，即大于符号(&gt;),用于选择指定标签元素的子元素。如下面的代码：</p>
-<pre><code class="language-css">.food&gt;li{border:1px solid red;}
-</code></pre>
-<p>这行代码会使class名为food下的子元素li加入红色实线边框。</p>
-<h2 id="包含后代选择器">包含(后代)选择器</h2>
-<p>包含选择器，即加入空格,用于选择指定标签元素下的后辈元素。如右侧代码编辑器中的代码：</p>
-<pre><code class="language-css">.first span{color:red;}
-</code></pre>
-<p>请注意这个选择器与子选择器的区别</p>
-<ol>
-<li>
-<p>子选择器（child selector）仅是指它的直接后代，或者你可以理解为作用于子元素的第一代后代</p>
-</li>
-<li>
-<p>后代选择器是作用于所有子后代元素。后代选择器通过空格来进行选择，而子选择器是通过“&gt;”进行选择。</p>
-</li>
-</ol>
-<p>总结：&gt;作用于元素的第一代后代，空格作用于元素的所有后代。</p>
-<h1 id="通用选择器">通用选择器</h1>
-<p>通用选择器是功能最强大的选择器，它使用一个（*）号指定，它的作用是匹配html中任意标签元素，如下使用下面代码使用html中任意标签元素字体颜色全部设置为红色：</p>
-<pre><code class="language-css">* {color:red;}
-</code></pre>
-<h2 id="伪类选择符">伪类选择符</h2>
-<p>更有趣的是伪类选择符，为什么叫做伪类选择符，它允许给html不存在的标签设置样式，比如说我们给html中一个标签元素的鼠标滑过的状态来设置字体颜色：</p>
-<pre><code class="language-css">a:hover{color:red;}
-</code></pre>
-<p>这行代码会使被<code>&lt;a&gt;&lt;/a&gt;</code>标签包裹的文字内容中的“胆小如鼠”字体颜色在鼠标滑过时变为红色。</p>
-<h2 id="分组选择符">分组选择符</h2>
-<p>当你想为html中多个标签元素设置同一个样式时，可以使用分组选择符（，），如下代码为右侧代码编辑器中的h1、span标签同时设置字体颜色为红色：</p>
-<pre><code class="language-css">h1,span{color:red;}
-</code></pre>
-<p>它相当于下面两行代码：</p>
-<pre><code class="language-css">h1{color:red;}
-
-span{color:red;}
-</code></pre>
-<h1 id="css的继承-层叠和特殊性">CSS的继承、层叠和特殊性。</h1>
-<h2 id="继承">继承</h2>
-<p>CSS的某些样式是具有继承性的，那么什么是继承呢？继承是一种规则，它允许样式不仅应用于某个特定html标签元素，而且应用于其后代。比如下面代码：如某种颜色应用于p标签，这个颜色设置不仅应用p标签，还应用于p标签中的所有子元素文本，这里子元素为span标签。</p>
-<p>但注意有一些css样式是不具有继承性的。如border:1px solid red;</p>
-<h2 id="权值">权值</h2>
-<p>根据权值来判断使用哪个css样式</p>
-<p>浏览器是根据权值来判断使用哪种css样式的，权值高的就使用哪种css样式。</p>
-<p>下面是权值的规则：</p>
-<p>标签的权值为1，类选择符的权值为10，ID选择符的权值最高为100。例如下面的代码：</p>
-<pre><code class="language-css">p{color:red;} /*权值为1*/
-
-p span{color:green;} /*权值为1+1=2*/
-
-.warning{color:white;} /*权值为10*/
-
-p span.warning{color:purple;} /*权值为1+1+10=12*/
-
-#footer .note p{color:yellow;} /*权值为100+10+1=111*/
-</code></pre>
-<p>注意：还有一个权值比较特殊--继承也有权值但很低，有的文献提出它只有0.1，所以可以理解为继承的权值最低</p>
-<h2 id="层叠">层叠</h2>
-<p>我们来思考一个问题：如果在html文件中对于同一个元素可以有多个css样式存在并且这多个css样式具有相同权重值怎么办？好，这一小节中的层叠帮你解决这个问题。</p>
-<p>层叠就是在html文件中对于同一个元素可以有多个css样式存在，当有相同权重的样式存在时，会根据这些css样式的前后顺序来决定，处于最后面的css样式会被应用。</p>
-<p>如下面代码:</p>
-<pre><code class="language-css">p{color:red;}
-
-p{color:green;}
-
-&lt;p class=&quot;first&quot;&gt;三年级时，我还是一个&lt;span&gt;胆小如鼠&lt;/span&gt;的小女孩。&lt;/p&gt;
-</code></pre>
-<p>最后 p 中的文本会设置为green，这个层叠很好理解，理解为后面的样式会覆盖前面的样式。</p>
-<p>所以前面的css样式优先级就不难理解了：</p>
-<p>内联样式表（标签内部）&gt; 嵌入样式表（当前文件中）&gt; 外部样式表（外部文件中）。</p>
-<h2 id="重要性">重要性</h2>
-<p>重要性</p>
-<p>我们在做网页代码的时，有些特殊的情况需要为某些样式设置具有最高权值，怎么办？这时候我们可以使用!important来解决。</p>
-<p>如下代码：</p>
-<pre><code class="language-css">p{color:red!important;}
-
-p{color:green;}
-
-&lt;p class=&quot;first&quot;&gt;三年级时，我还是一个&lt;span&gt;胆小如鼠&lt;/span&gt;的小女孩。&lt;/p&gt;
-</code></pre>
-<p>这时 p 段落中的文本会显示的red红色。</p>
-<p>注意：!important要写在分号的前面</p>
-<h1 id="css格式化排版">CSS格式化排版</h1>
-<h2 id="文字排版">文字排版</h2>
-<ol>
-<li>文字排版--字体</li>
-</ol>
-<p>我们可以使用css样式为网页中的文字设置字体、字号、颜色等样式属性。下面我们来看一个例子，下面代码实现：为网页中的文字设置字体为宋体。</p>
-<pre><code class="language-css">body{font-family:&quot;宋体&quot;;}
-</code></pre>
-<p>这里注意不要设置不常用的字体，因为如果用户本地电脑上如果没有安装你设置的字体，就会显示浏览器默认的字体。（因为用户是否可以看到你设置的字体样式取决于用户本地电脑上是否安装你设置的字体。）</p>
-<ol start="2">
-<li>文字排版--字号、颜色</li>
-</ol>
-<p>可以使用下面代码设置网页中文字的字号为12像素，并把字体颜色设置为#666(灰色)：</p>
-<pre><code class="language-css">body{font-size:12px;color:#666}
+<pre><code class="language-javascript">  /**
+   * 使用spilt方法实现模糊查询
+   * @param  {Array}  list     进行查询的数组
+   * @param  {String} keyWord  查询的关键词
+   * @return {Array}           查询的结果
+   */
+  function fuzzyQuery(list, keyWord) {
+    var arr = [];
+    for (var i = 0; i &lt; list.length; i++) {
+      if (list[i].split(keyWord).length &gt; 1) {
+        arr.push(list[i]);
+      }
+    }
+    return arr;
+  }
 </code></pre>
 <ol start="3">
-<li>文字排版--粗体</li>
+<li>match 方法</li>
 </ol>
-<p>我们还可以使用css样式来改变文字的样式：粗体、斜体、下划线、删除线，可以使用下面代码实现设置文字以粗体样式显示出来。</p>
-<pre><code class="language-css">p span{font-weight:bold;}
+<pre><code>语法：stringObject.match(searchvalue) 或 stringObject.match(regexp)
+</code></pre>
+<pre><code>参数：searchvalue 必需。规定要检索的字符串值。regexp 必需。规定要匹配的模式的 RegExp 对象。如果该参数不是 RegExp 对象，则需要首先把它传递给 RegExp 构造函数，将其转换为 RegExp 对象。
+</code></pre>
+<pre><code>说明：该方法将在字符串 stringObject 内检索指定的值，或找到一个或多个正则表达式的匹配。如果没有找到任何匹配的文本，将返回 null 。否则，它将返回一个数组，其中存放了与它找到的匹配文本有关的信息。
+</code></pre>
+<pre><code class="language-javascript">/**
+   * 使用match方法实现模糊查询
+   * @param  {Array}  list     进行查询的数组
+   * @param  {String} keyWord  查询的关键词
+   * @return {Array}           查询的结果
+   */
+  function fuzzyQuery(list, keyWord) {
+    var arr = [];
+    for (var i = 0; i &lt; list.length; i++) {
+      if (list[i].match(keyWord) != null) {
+        arr.push(list[i]);
+      }
+    }
+    return arr;
+  }
 </code></pre>
 <ol start="4">
-<li>文字排版--斜体</li>
+<li>test方法（正则匹配）</li>
 </ol>
-<p>以下代码可以实现文字以斜体样式在浏览器中显示：</p>
-<pre><code class="language-css">p a{font-style:italic;}
-
-&lt;p&gt;三年级时，我还是一个&lt;a&gt;胆小如鼠&lt;/a&gt;的小女孩。&lt;/p&gt;
+<pre><code>语法：RegExpObject.test(string)
 </code></pre>
-<ol start="5">
-<li>文字排版--下划线</li>
-</ol>
-<p>有些情况下想为文字设置为下划线样式，这样可以在视觉上强调文字，可以使用下面代码来实现：</p>
-<pre><code class="language-css">p a{text-decoration:underline;}
-
-&lt;p&gt;三年级时，我还是一个&lt;a&gt;胆小如鼠&lt;/a&gt;的小女孩。&lt;/p&gt;
+<pre><code>参数：string 必需。要检测的字符串。
 </code></pre>
-<p>删除线，在电商网站上经常见。</p>
-<pre><code class="language-css">p a{text-decoration:line-through;}
+<pre><code>说明：该方法用于检测一个字符串是否匹配某个模式。如果字符串 string 中含有与 RegExpObject 匹配的文本，则返回 true，否则返回 false。
 </code></pre>
-<h2 id="段落排版">段落排版</h2>
-<ol>
-<li>段落排版--缩进</li>
-</ol>
-<p>中文文字中的段前习惯空两个文字的空白，这个特殊的样式可以用下面代码来实现：</p>
-<pre><code class="language-css">p{text-indent:2em;}
-</code></pre>
-<p>注意：2em的意思就是文字的2倍大小。</p>
-<ol start="2">
-<li>段落排版--行间距</li>
-</ol>
-<p>这一小节我们来学习一下另一个在段落排版中起重要作用的行间距属性（line-height），如下代码实现设置段落行间距为1.5倍。</p>
-<pre><code class="language-css">p{line-height:1.5em;}
-</code></pre>
-<ol start="3">
-<li>段落排版--字间距、字母间距</li>
-</ol>
-<p>文字间隔、字母间隔设置：</p>
-<p>如果想在网页排版中设置文字间隔或者字母间隔就可以使用 letter-spacing来实现，如下面代码：</p>
-<pre><code class="language-css">h1{
-    letter-spacing:50px;
-}
-
-...
-
-&lt;h1&gt;了不起的盖茨比&lt;/h1&gt;
-</code></pre>
-<p>注意：这个样式使用在英文单词时，是设置字母与字母之间的间距。</p>
-<p>单词间距设置：</p>
-<p>如果我想设置英文单词之间的间距呢？可以使用word-spacing来实现。如下代码：</p>
-<pre><code class="language-css">h1{
-    word-spacing:50px;
-}
-...
-&lt;h1&gt;welcome to imooc!&lt;/h1&gt;
-</code></pre>
-<h1 id="css盒模型">CSS盒模型</h1>
-<h2 id="元素分类">元素分类</h2>
-<p>在讲解CSS布局之前，我们需要提前知道一些知识，在CSS中，html中的标签元素大体被分为三种不同的类型：块状元素、内联元素和内联块状元素。</p>
-<p>常用的块状元素有：</p>
-<p><code>&lt;div&gt;、&lt;p&gt;、&lt;h1&gt;...&lt;h6&gt;、&lt;ol&gt;、&lt;ul&gt;、&lt;dl&gt;、&lt;table&gt;、&lt;address&gt;、&lt;blockquote&gt; 、&lt;form&gt;</code></p>
-<p>常用的内联元素有：</p>
-<p><code>&lt;a&gt;、&lt;span&gt;、&lt;br&gt;、&lt;i&gt;、&lt;em&gt;、&lt;strong&gt;、&lt;label&gt;、&lt;q&gt;、&lt;var&gt;、&lt;cite&gt;、&lt;code&gt;</code></p>
-<p>常用的内联块状元素有：</p>
-<p><code>&lt;img&gt;、&lt;input&gt;</code></p>
-<h2 id="元素分类-块级元素">元素分类--块级元素</h2>
-<p>什么是块级元素？在html中<code>&lt;div&gt;、 &lt;p&gt;、&lt;h1&gt;、&lt;form&gt;、&lt;ul&gt;</code> 和 <code>&lt;li&gt;</code>就是块级元素。设置display:block就是将元素显示为块级元素。如下代码就是将行内元素a转换为块状元素，从页使用a元素具有块状元素特点。</p>
-<pre><code class="language-css">a{display:block;}
-</code></pre>
-<p>块级元素特点：</p>
-<ol>
-<li>
-<p>每个块级元素都从新的一行开始，并且其后的元素也另起一行。（真霸道，一个块级元素独占一行）</p>
-</li>
-<li>
-<p>元素的高度、宽度、行高以及顶和底边距都可设置。</p>
-</li>
-<li>
-<p>元素宽度在不设置的情况下，是它本身父容器的100%（和父元素的宽度一致），除非设定一个宽度。</p>
-</li>
-</ol>
-<h2 id="元素分类-行内元素">元素分类--行内元素</h2>
-<p>在html中，<code>&lt;span&gt;、&lt;a&gt;、&lt;label&gt;、&lt;input&gt;、 &lt;img&gt;</code>、 <code>&lt;strong&gt;</code> 和<code>&lt;em&gt;</code>就是典型的行内元素（inline）元素。当然块状元素也可以通过代码display:inline将元素设置为行内元素。</p>
-<p>行内元素特点：</p>
-<ol>
-<li>
-<p>和其他元素都在一行上；</p>
-</li>
-<li>
-<p>元素的高度、宽度、行高及顶部和底部边距不可设置；</p>
-</li>
-<li>
-<p>元素的宽度就是它包含的文字或图片的宽度，不可改变。</p>
-</li>
-</ol>
-<h2 id="元素分类-内联块状元素">元素分类--内联块状元素</h2>
-<p>内联块状元素（inline-block）就是同时具备内联元素、块状元素的特点，代码display:inline-block就是将元素设置为内联块状元素。(css2.1新增)，<code>&lt;img&gt;、&lt;input&gt;</code>标签就是这种内联块状标签。</p>
-<p>inline-block元素特点：</p>
-<ol>
-<li>
-<p>和其他元素都在一行上；</p>
-</li>
-<li>
-<p>元素的高度、宽度、行高以及顶和底边距都可设置。</p>
-</li>
-</ol>
-<h2 id="盒模型-边框一">盒模型--边框（一）</h2>
-<p>盒子模型的边框就是围绕着内容及补白的线，这条线你可以设置它的粗细、样式和颜色(边框三个属性)。</p>
-<p>如下面代码为div来设置边框粗细为2px、样式为实心的、颜色为红色的边框：</p>
-<pre><code class="language-css">div{
-    border:2px solid red;
+<pre><code class="language-javascript"> /**
+ * 使用test方法实现模糊查询
+ * @param  {Array}  list     原数组
+ * @param  {String} keyWord  查询的关键词
+ * @return {Array}           查询的结果
+ */
+function fuzzyQuery(list, keyWord) {
+  var reg =  new RegExp(keyWord);
+  var arr = [];
+  for (var i = 0; i &lt; list.length; i++) {
+    if (reg.test(list[i])) {
+      arr.push(list[i]);
+    }
+  }
+  return arr;
 }
 </code></pre>
-<p>上面是border代码的缩写形式，可以分开写：</p>
-<pre><code class="language-css">div{
-    border-width:2px;
-    border-style:solid;
-    border-color:red;
-}
+<h1 id="性能测试">性能测试</h1>
+<pre><code>测试条件：一个长度为100的数组，每个方法测试50次，取平均值。
+indexof 方法耗费时间： 0.048ms
+split 方法耗费时间： 0.037ms
+match 方法耗费时间： 0.178ms
+test 方法耗费时间： 0.039ms
 </code></pre>
-<p><strong>注意：</strong></p>
+<h1 id="结论">结论</h1>
 <ol>
-<li>border-style（边框样式）常见样式有：</li>
+<li>
+<p>从上面测试结果可以看出在几百几千甚至几万条数据量的情况下，前端去处理都是没问题的，相比发送一个 ajax 请求去后台来说，前端还是具有很大优势的，能节省不少时间。</p>
+</li>
+<li>
+<p>相比其他方法，match 方法性能最差，消耗的时间差不多是其他方法的3-4倍，虽说这一点点时间相比发送ajax来说，也算提高了很多既然我们在一开始就是为了提高用户体验，那么我们也应该追求极致啦，所以 match 选手落败。</p>
+</li>
+<li>
+<p>除了 match 方法，其他三个方法在性能上差不多。不过在这里有一点需要提出的就是， test 方法因为使用到了正则表达式，所以能够实现的功能会比较强大，写出来的代码也更加简洁。打个比方，在不区分大小写的模糊搜索条件下， test 方法只需在正则表达式中添加修饰符 i 即可实现不区分大小写，而 indexof 方法和 split 方法则要通过多次的方法调用和逻辑运算符才能实现效果。</p>
+</li>
 </ol>
-<p>dashed（虚线）| dotted（点线）| solid（实线）。</p>
-<ol start="2">
-<li>border-color（边框颜色）中的颜色可设置为十六进制颜色，如:</li>
-</ol>
-<p>border-color:#888;//前面的井号不要忘掉。</p>
-<h2 id="盒模型-边框二">盒模型--边框（二）</h2>
-<p>现在有一个问题，如果有想为p标签单独设置下边框，而其它三边都不设置边框样式怎么办呢？css样式中允许只为一个方向的边框设置样式：</p>
-<pre><code class="language-css">div{border-bottom:1px solid red;}
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Vs Code 关闭单词拼写错误 警告 Unknown word]]></title>
+        <id>https://clearlove443.github.io/GA8lSdhvw/</id>
+        <link href="https://clearlove443.github.io/GA8lSdhvw/">
+        </link>
+        <updated>2021-05-23T09:29:36.000Z</updated>
+        <content type="html"><![CDATA[<p>快捷键 <kbd>Ctrl</kbd>+<kbd>,</kbd> 打开settings.json，添加如下设置</p>
+<pre><code>&quot;cSpell.diagnosticLevel&quot;: &quot;Hint&quot;,
 </code></pre>
-<p>同样可以使用下面代码实现其它三边上、右、左边框的设置：</p>
-<pre><code class="language-css">border-top:1px solid red;
-
-border-right:1px solid red;
-
-border-left:1px solid red;
-···
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Vs code TSLint 运行报错]]></title>
+        <id>https://clearlove443.github.io/zS_mPjZ_2/</id>
+        <link href="https://clearlove443.github.io/zS_mPjZ_2/">
+        </link>
+        <updated>2021-05-23T09:22:48.000Z</updated>
+        <content type="html"><![CDATA[<pre><code>Not using the local TSLint version found for '/Users/myname/myproject/client/src/app/likes/likee/likee.component.ts'. To enable code execution from the current workspace you must enable workspace library execution.
 </code></pre>
-<h2 id="盒模型-边界">盒模型--边界</h2>
-<p>元素与其它元素之间的距离可以使用边界（margin）来设置。边界也是可分为上、右、下、左。如下代码：</p>
-<pre><code class="language-css">div{margin:20px 10px 15px 30px;}
+<p>打开快捷键<kbd>Ctrl </kbd>+<kbd>Shift </kbd>+<kbd>P</kbd></p>
+<p>选择<code>TSLint: Manage workspace library execution</code></p>
+<p>然后按回车</p>
+<p>选择<code>enable workspace library execution</code>选项<br>
+按回车确认</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[如何用NPM快速删除文件夹]]></title>
+        <id>https://clearlove443.github.io/AEASEoAzM/</id>
+        <link href="https://clearlove443.github.io/AEASEoAzM/">
+        </link>
+        <updated>2021-05-23T09:12:46.000Z</updated>
+        <content type="html"><![CDATA[<p>通过npm安装删除工具</p>
+<pre><code class="language-npm">npm install rimraf -g
+安装淘宝镜像后可以使用
+cnpm install rimraf -g   命令行语句，速度会更快
 </code></pre>
-<p>也可以分开写：</p>
-<pre><code class="language-css">div{
-    margin-top:20px;
-    margin-right:10px;
-    margin-bottom:15px;
-    margin-left:30px;
-}
+<p>使用删除命令</p>
+<pre><code class="language-npm">rimraf node_modules (可以替换其他文件夹)
 </code></pre>
-<p>如果上下左右的边界都为10px;可以这么写：</p>
-<pre><code class="language-css">div{ margin:10px;}
-</code></pre>
-<p>如果上下边界一样为10px，左右一样为20px，可以这么写：</p>
-<pre><code class="language-css">div{ margin:10px 20px;}
-</code></pre>
-<p>总结一下：padding和margin的区别，padding在边框里，margin在边框外。</p>
-<h2 id="盒模型-填充">盒模型--填充</h2>
-<p>元素内容与边框之间是可以设置距离的，称之为填充。填充也可分为上、右、下、左。如下代码：</p>
-<pre><code class="language-css">div{padding:20px 10px15px 30px;}
-</code></pre>
-<p>顺序一定不要搞混。可以分开写上面代码：</p>
-<pre><code class="language-css">div{
-    padding-top:20px;
-    padding-right:10px;
-    padding-bottom:15px;
-    padding-left:30px;
-}
-</code></pre>
-<p>如果上、右、下、左的填充都为10px;可以这么写</p>
-<pre><code class="language-css">div{padding:10px;}
-</code></pre>
-<p>如果上下填充一样为10px，左右一样为20px，可以这么写：</p>
-<pre><code class="language-css">div{padding:10px 20px;}
-</code></pre>
-<h2 id="盒模型代码简写">盒模型代码简写</h2>
-<p>还记得在讲盒模型时外边距(margin)、内边距(padding)和边框(border)设置上下左右四个方向的边距是按照顺时针方向设置的：上右下左。具体应用在margin和padding的例子如下：</p>
-<pre><code class="language-css">margin:10px 15px 12px 14px;/*上设置为10px、右设置为15px、下设置为12px、左设置为14px*/
-</code></pre>
-<p>通常有下面三种缩写方法:</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[CSS-水平居中、垂直居中、水平垂直居中]]></title>
+        <id>https://clearlove443.github.io/koXAnwdaZ/</id>
+        <link href="https://clearlove443.github.io/koXAnwdaZ/">
+        </link>
+        <updated>2021-05-23T07:52:20.000Z</updated>
+        <content type="html"><![CDATA[<h1 id="水平居中">水平居中</h1>
+<h2 id="水平居中可分为行内元素水平居中和块级元素水平居中">水平居中可分为行内元素水平居中和块级元素水平居中</h2>
 <ol>
-<li>如果top、right、bottom、left的值相同，如下面代码：</li>
+<li>行内元素水平居中<br>
+这里行内元素是指文本text、图像img、按钮超链接等，只需给父元素设置text-align:center即可实现。</li>
 </ol>
-<pre><code class="language-css">margin:10px 10px 10px 10px;
-</code></pre>
-<p>可缩写为：</p>
-<pre><code class="language-css">margin:10px;
+<pre><code class="language-css">.center{
+        text-align:center;
+}
+&lt;div class=&quot;center&quot;&gt;水平居中&lt;/div&gt;
 </code></pre>
 <ol start="2">
-<li>如果top和bottom值相同、left和 right的值相同，如下面代码：</li>
+<li>块级元素水平居中</li>
 </ol>
-<pre><code class="language-css">margin:10px 20px 10px 20px;
+<ul>
+<li>定宽块级元素水平居中<br>
+只需给需要居中的块级元素加margin:0 auto即可，但这里需要注意的是，这里块状元素的宽度width值一定要有</li>
+</ul>
+<pre><code class="language-css">.center{
+      width:200px;
+      margin:0 auto;
+      border:1px solid red;
+  }
+  &lt;div class=&quot;center&quot;&gt;水平居中&lt;/div&gt;
 </code></pre>
-<p>可缩写为：</p>
-<pre><code class="language-css">margin:10px 20px;
+<ul>
+<li>不定宽块级元素水平居中</li>
+</ul>
+<p>不定宽，即块级元素宽度不固定</p>
+<p>方法1：设置table<br>
+通过给要居中显示的元素，设置display:table，然后设置margin:0 auto来实现</p>
+<pre><code class="language-css">.center{
+     display:table;
+     margin:0 auto;
+     border:1px solid red;
+ }
+ &lt;div class=&quot;center&quot;&gt;水平居中&lt;/div&gt;
 </code></pre>
-<ol start="3">
-<li>如果left和right的值相同，如下面代码：</li>
-</ol>
-<pre><code class="language-css">margin:10px 20px 30px 20px;
+<p>方法2：设置inline-block（多个块状元素）<br>
+子元素设置inline-block，同时父元素设置text-align:center</p>
+<pre><code class="language-css">.center{
+      text-align:center;
+  }
+  .inlineblock-div{
+      display:inline-block;
+  }
+  &lt;div class=&quot;center&quot;&gt;
+      &lt;div class=&quot;inlineblock-div&quot;&gt;1&lt;/div&gt;
+      &lt;div class=&quot;inlineblock-div&quot;&gt;2&lt;/div&gt;
+  &lt;/div&gt;
 </code></pre>
-<p>可缩写为：</p>
-<pre><code class="language-css">margin:10px 20px 30px;
+<p>方法3：设置flex布局<br>
+只需把要处理的块状元素的父元素设置display:flex,justify-content:center;</p>
+<pre><code class="language-css">.center{
+      display:flex;
+      justify-content:center;
+  }
+  &lt;div class=&quot;center&quot;&gt;
+      &lt;div class=&quot;flex-div&quot;&gt;1&lt;/div&gt;
+      &lt;div class=&quot;flex-div&quot;&gt;2&lt;/div&gt;
+  &lt;/div&gt;
 </code></pre>
-<p>注意：padding、border的缩写方法和margin是一致的。</p>
-<h2 id="颜色值缩写">颜色值缩写</h2>
-<p>关于颜色的css样式也是可以缩写的，当你设置的颜色是16进制的色彩值时，如果每两位的值相同，可以缩写一半。</p>
-<p>例子1：</p>
-<pre><code class="language-css">p{color:#000000;}
-</code></pre>
-<p>可以缩写为：</p>
-<pre><code class="language-css">p{color: #000;}
-</code></pre>
-<p>例子2：</p>
-<pre><code class="language-css">p{color: #336699;}
-</code></pre>
-<p>可以缩写为：</p>
-<pre><code class="language-css">p{color: #369;}
-</code></pre>
-<h1 id="css布局模型">CSS布局模型</h1>
-<h2 id="css布局模型-2">css布局模型</h2>
-<p>清楚了CSS 盒模型的基本概念、 盒模型类型， 我们就可以深入探讨网页布局的基本模型了。布局模型与盒模型一样都是 CSS 最基本、 最核心的概念。 但布局模型是建立在盒模型基础之上，又不同于我们常说的 CSS 布局样式或 CSS 布局模板。如果说布局模型是本，那么 CSS 布局模板就是末了，是外在的表现形式。</p>
-<p>CSS包含3种基本的布局模型，用英文概括为：Flow、Layer 和 Float。</p>
-<p>在网页中，元素有三种布局模型：</p>
-<ol>
+<p>方法4：position + 负margin；<br>
+方法5：position + margin：auto；<br>
+方法6：position + transform；</p>
+<p>注：这里方法4、5、6同下面垂直居中一样的道理，只不过需要把top/bottom改为left/right，在垂直居中部分会详细讲述。</p>
+<h1 id="垂直居中">垂直居中</h1>
+<h2 id="单行文本垂直居中">单行文本垂直居中</h2>
+<ul>
 <li>
-<p>流动模型（Flow）</p>
+<p>设置paddingtop=paddingbottom；或</p>
 </li>
 <li>
-<p>浮动模型 (Float)</p>
+<p>设置line-height=height；</p>
+<h2 id="多行文本垂直居中">多行文本垂直居中</h2>
+<p>通过设置父元素table，子元素table-cell和vertical-align<br>
+vertical-align:middle的意思是把元素放在父元素的中部</p>
 </li>
-<li>
-<p>层模型（Layer）</p>
-</li>
-</ol>
-<h2 id="流动模型">流动模型</h2>
-<p>流动（Flow）：自上而下。</p>
-<p>先来说一说流动模型，流动（Flow）是默认的网页布局模式。也就是说网页在默认状态下的 HTML 网页元素都是根据流动模型来分布网页内容的。</p>
-<p>流动布局模型具有2个比较典型的特征：</p>
-<p>第一点，块状元素都会在所处的包含元素内自上而下按顺序垂直延伸分布，因为在默认状态下，块状元素的宽度都为100%。实际上，块状元素都会以行的形式占据位置。如右侧代码编辑器中三个块状元素标签(div，h1，p)宽度显示为100%。</p>
-<p>第二点，在流动模型下，内联元素都会在所处的包含元素内从左到右水平分布显示。（内联元素可不像块状元素这么霸道独占一行）</p>
-<p>右侧代码编辑器中内联元素标签a、span、em、strong都是内联元素。</p>
-<h2 id="浮动模型">浮动模型</h2>
-<p>块状元素这么霸道都是独占一行，如果现在我们想让两个块状元素并排显示，怎么办呢？不要着急，设置元素浮动就可以实现这一愿望。任何元素在默认情况下是不能浮动的，但可以用CSS定义为浮动，如div、p、table、img等元素都可以被定义为浮动。如下代码可以实现两个div元素一行显示。</p>
-<pre><code class="language-css">div{
-    width:200px;
-    height:200px;
-    border:2px red solid;
-    float:left;
+</ul>
+<pre><code class="language-css">.center{
+	width:200px;
+	height:300px;
+	display:table;
+	border: 2px solid blue;	
 }
-
-&lt;div id=&quot;div1&quot;&gt;&lt;/div&gt;
-
-&lt;div id=&quot;div2&quot;&gt;&lt;/div&gt;
-</code></pre>
-<p>注意：设置浮动的同时一定要先设置块状元素的宽度，且需要浮动的几个元素宽度加起来一定要小于容器元素的宽度。</p>
-<h2 id="层模型">层模型</h2>
-<p>什么是层布局模型？层布局模型就像是图像软件PhotoShop中非常流行的图层编辑功能一样，每个图层能够精确定位操作，但在网页设计领域，由于网页大小的活动性，层布局没能受到热捧。但是在网页上局部使用层布局还是有其方便之处的。下面我们来学习一下html中的层布局。</p>
-<p>如何让html元素在网页中精确定位，就像图像软件PhotoShop中的图层一样可以对每个图层能够精确定位操作。CSS定义了一组定位（positioning）属性来支持层布局模型。</p>
-<p>层模型有三种形式：</p>
-<ol>
-<li>
-<p>绝对定位(position: absolute)</p>
-</li>
-<li>
-<p>相对定位(position: relative)</p>
-</li>
-<li>
-<p>固定定位(position: fixed)</p>
-</li>
-</ol>
-<h3 id="层模型-绝对定位相对于父类">层模型--绝对定位（相对于父类）</h3>
-<p>如果想为元素设置层模型中的绝对定位，需要设置position:absolute(表示绝对定位)，这条语句的作用将元素从文档流中拖出来，然后使用left、right、top、bottom属性相对于其最接近的一个具有定位属性的父包含块进行绝对定位。如果不存在这样的包含块，则相对于body元素，即相对于浏览器窗口。</p>
-<p>如下面代码可以实现div元素相对于浏览器窗口向右移动100px，向下移动50px。</p>
-<pre><code class="language-css">div{
-    width:200px;
-    height:200px;
-    border:2px red solid;
-    position:absolute;
-    left:100px;
-    top:50px;
-}
-
-&lt;div id=&quot;div1&quot;&gt;&lt;/div&gt;
-</code></pre>
-<h3 id="层模型-相对定位相对于以前">层模型--相对定位（相对于以前）</h3>
-<p>如果想为元素设置层模型中的相对定位，需要设置position:relative（表示相对定位），它通过left、right、top、bottom属性确定元素在正常文档流中的偏移位置。相对定位完成的过程是首先按static(float)方式生成一个元素(并且元素像层一样浮动了起来)，然后相对于以前的位置移动，移动的方向和幅度由left、right、top、bottom属性确定，偏移前的位置保留不动。</p>
-<p>如下代码实现相对于以前位置向下移动50px，向右移动100px;</p>
-<pre><code class="language-css">#div1{
-    width:200px;
-    height:200px;
-    border:2px red solid;
-    position:relative;
-    left:100px;
-    top:50px;
-}
-
-&lt;div id=&quot;div1&quot;&gt;&lt;/div&gt;
-</code></pre>
-<h3 id="层模型-固定定位相对于网页窗口">层模型--固定定位（相对于网页窗口）</h3>
-<p>固定住某一坐标。</p>
-<p>fixed：表示固定定位，与absolute定位类型类似，但它的相对移动的坐标是视图（屏幕内的网页窗口）本身。由于视图本身是固定的，它不会随浏览器窗口的滚动条滚动而变化，除非你在屏幕中移动浏览器窗口的屏幕位置，或改变浏览器窗口的显示大小，因此固定定位的元素会始终位于浏览器窗口内视图的某个位置，不会受文档流动影响，这与background-attachment:fixed?属性功能相同。以下代码可以实现相对于浏览器视图向右移动100px，向下移动50px。并且拖动滚动条时位置固定不变。</p>
-<pre><code class="language-css">#div1{
-    width:200px;
-    height:200px;
-    border:2px red solid;
-    position:fixed;
-    left:100px;
-    top:50px;
-}
-</code></pre>
-<h2 id="relative与absolute组合使用">Relative与Absolute组合使用</h2>
-<p>小伙伴们学习了12-6小节的相对定位的方法：使用position:absolute可以实现被设置元素相对于浏览器（body）设置定位以后，大家有没有想过可不可以相对于其它元素进行定位呢？答案是肯定的，当然可以。使用position:relative来帮忙，但是必须遵守下面规范：</p>
-<p>1、参照定位的元素必须是相对定位元素的前辈元素：</p>
-<pre><code class="language-html">&lt;div id=&quot;box1&quot;&gt;&lt;!--参照定位的元素--&gt;
-
-&lt;div id=&quot;box2&quot;&gt;相对参照元素进行定位&lt;/div&gt;&lt;!--相对定位元素--&gt;
-
+.table-div{
+	display:table-cell;
+	verticaL-aLign: middle;
+	border:IJX solid red;
+)
+&lt;div class=&quot;center&quot;&gt;
+	&lt;div class=&quot;table-div”&gt;多行文本垂直居中〈/div&gt;
 &lt;/div&gt;
 </code></pre>
-<p>从上面代码可以看出box1是box2的父元素（父元素当然也是前辈元素了）。</p>
-<p>2、参照定位的元素必须加入position:relative;</p>
-<pre><code class="language-css">#box1{
-    width:200px;
-    height:200px;
-    position:relative;
+<h2 id="块级元素垂直居中">块级元素垂直居中</h2>
+<p>flex布局</p>
+<p>在需要垂直居中的父元素上，设置display:flex和align-items：center<br>
+要求：父元素必须显示设置height值</p>
+<pre><code class="language-css">.center{
+	width:200px;
+	height:300px;
+	display:flex;
+	align-items：center
 }
+&lt;div class=&quot;center&quot;&gt;
+	&lt;div&gt;垂直居中〈/div&gt;
+&lt;/div&gt;
 </code></pre>
-<p>3、定位元素加入position:absolute，便可以使用top、bottom、left、right来进行偏移定位了。</p>
-<pre><code class="language-css">#box2{
-    position:absolute;
-    top:20px;
-    left:30px;
-}
+<h2 id="水平垂直居中">水平垂直居中</h2>
+<ul>
+<li>方法1：flex布局</li>
+</ul>
+<pre><code class="language-css">   .box{
+         height:600px;           
+         display:flex;
+         justify-content:center;  //子元素水平居中
+         align-items:center;      //子元素垂直居中
+           /* aa只要三句话就可以实现不定宽高水平垂直居中。 */
+    }
+    .box&gt;div{
+        background: green;
+        width: 200px;
+        height: 200px;
+    }
 </code></pre>
-<p>这样box2就可以相对于父元素box1定位了（这里注意参照物就可以不是浏览器了，而可以自由设置了）。</p>
+<ul>
+<li>方法2：绝对定位+margin:auto</li>
+</ul>
+<pre><code class="language-css">    div{
+        width: 200px;
+        height: 200px;
+        background: green;
+        
+        position:absolute;
+        left:0;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        margin: auto;
+    }
+</code></pre>
+<ul>
+<li>方法3：绝对定位+负margin</li>
+</ul>
+<pre><code class="language-css">    div{
+        width:200px;
+        height: 200px;
+        background:green;
+        
+        position: absolute;
+        left:50%;
+        top:50%;
+        margin-left:-100px;
+        margin-top:-100px;
+    }
+</code></pre>
+<ul>
+<li>方法4：绝对定位+transform</li>
+</ul>
+<pre><code class="language-css">    div{
+        width: 200px;
+        height: 200px;
+        background: green;
+        
+        position:absolute;
+        left:50%;    /* 定位父级的50% */
+        top:50%;
+        transform: translate(-50%,-50%); /*自己的50% */
+    }
+</code></pre>
+<ul>
+<li>方法5：table-cell实现居中</li>
+</ul>
+<pre><code class="language-css">
+设置
+display:table-cell;
+text-align:center;
+vertical-align: middle;
+</code></pre>
 ]]></content>
     </entry>
     <entry>
-        <title type="html"><![CDATA[一些有用的网站集锦]]></title>
-        <id>https://clearlove443.github.io/DBgvbp5Vm/</id>
-        <link href="https://clearlove443.github.io/DBgvbp5Vm/">
+        <title type="html"><![CDATA[在VSCode中默认使用settings.json中定义的TypeScript版本]]></title>
+        <id>https://clearlove443.github.io/pzFblNeuC/</id>
+        <link href="https://clearlove443.github.io/pzFblNeuC/">
         </link>
-        <updated>2021-05-15T05:28:26.000Z</updated>
-        <content type="html"><![CDATA[<h1 id="front">Front</h1>
-<ul>
-<li>
-<p>CSS、JavaScript 查找浏览器兼容性<br>
-<a href="https://caniuse.com/">caniuse</a></p>
-</li>
-<li>
-<p>html 官方文档<br>
-<a href="https://html.spec.whatwg.org/">HTML</a></p>
-</li>
-<li>
-<p>MDN WEB DOC<br>
-<a href="https://developer.mozilla.org/">MDN WEB DOC</a></p>
-</li>
-<li>
-<p>JSON 工具<br>
-<a href="https://www.bejson.com/json/col2json/">Excel转Json</a></p>
-</li>
-</ul>
-<h1 id="api">API</h1>
-<ul>
-<li>
-<p>postwoman<br>
-<a href="https://postwoman.com.cn/">postwoman</a></p>
-</li>
-<li>
-<p>maven、gradle 依赖包<br>
-<a href="https://mvnrepository.com/">mvnrepository</a></p>
-</li>
-<li>
-<p>CORS support in Spring Framework<br>
-<a href="https://spring.io/blog/2015/06/08/cors-support-in-spring-framework#javaconfig">CROS</a></p>
-</li>
-</ul>
-<h1 id="database">Database</h1>
-<ul>
-<li>
-<p>SQL Server 数据类型<br>
-<a href="https://docs.microsoft.com/zh-cn/sql/t-sql/data-types/data-types-transact-sql?view=sql-server-ver15">SQL Server Data Types</a></p>
-</li>
-<li>
-<p>PostgreSQL 数据类型<br>
-<a href="https://www.postgresql.org/docs/9.1/datatype.html">PostgreSQL Data Types</a></p>
-</li>
-<li>
-<p>PostgreSQL_通过 schema 控制用户权限<br>
-<a href="https://juejin.cn/post/6844903842107097102">PostgreSQL schema</a></p>
-</li>
-</ul>
-<h1 id="tool">Tool</h1>
-<ul>
-<li>各种在线工具<br>
-<a href="https://tool.lu/">tools</a></li>
-</ul>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[html 中引用资源路径问题]]></title>
-        <id>https://clearlove443.github.io/html-zhong-yin-yong-zi-yuan-lu-jing-wen-ti/</id>
-        <link href="https://clearlove443.github.io/html-zhong-yin-yong-zi-yuan-lu-jing-wen-ti/">
-        </link>
-        <updated>2021-05-15T04:51:09.000Z</updated>
-        <content type="html"><![CDATA[<p>../和./和/的区别</p>
-<p>./ 当前目录<br>
-../ 父级目录<br>
-/ 根目录</p>
-<p>./SRC/  这样写表示，当前目录中的SRC文件夹；  ../SRC/  这样写表示，当前目录的上一层目录中SRC文件夹； /SRC/   这样写表示，项目根目录（可以指磁盘根目录，也可以指项目根目录，具体根据实际情况而定）</p>
-<p>比如说<code>C:\Users\jj\Desktop\colors7\index.html</code>中 的<code>&lt;link type=&quot;text/css&quot; href=&quot;/css/index.css&quot;&gt;</code>会跳到<code>file:///C:/css/index.css</code> 。就报错啦</p>
-<p>什么？ 你要直接写 href=&quot;css/index.css&quot;？目前的测试效果是等同于当前目录，即./</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[修改 PowerShell 代码页为 UTF-8]]></title>
-        <id>https://clearlove443.github.io/xiu-gai-powershell-dai-ma-ye-wei-utf-8/</id>
-        <link href="https://clearlove443.github.io/xiu-gai-powershell-dai-ma-ye-wei-utf-8/">
-        </link>
-        <updated>2021-05-15T04:10:42.000Z</updated>
-        <content type="html"><![CDATA[<h1 id="通过注册表修改">通过注册表修改</h1>
-<p>以下代码存为 *.reg 文件：</p>
-<pre><code>Windows Registry Editor Version 5.00
-
-[HKEY_CURRENT_USER\Console\%SystemRoot%_System32_WindowsPowerShell_v1.0_powershell.exe]
-&quot;CodePage&quot;=dword:0000fde9
+        <updated>2021-05-23T07:43:53.000Z</updated>
+        <content type="html"><![CDATA[<p>当VSCode打开typescript文件,使用node_modules里面的TypeScript版本，而不是VSCode的版本</p>
+<p>快捷键 <kbd>Ctrl</kbd>+<kbd>,</kbd> 打开settings.json，添加如下设置</p>
+<pre><code class="language-json">&quot;typescript.tsdk&quot;: &quot;node_modules/typescript/lib&quot;,
 </code></pre>
-<p>双击运行此文件。</p>
-<p>注：</p>
-<ul>
-<li>
-<p>65001(UTF-8) 的十六进制表示为：0000fde9</p>
-</li>
-<li>
-<p>963(GBK) 的十六进制表示为：000003a8</p>
-</li>
-</ul>
-<h1 id="手动修改">手动修改</h1>
-<p>每次启动后输入：<code>chcp 65001</code></p>
-<h1 id="第三方控制台">第三方控制台</h1>
-<p><code>Conemu/Cmder</code></p>
-<p>在此 Settings&gt;Startup&gt;Environment 选项下，添加 chcp 65001<br>
-注：yarn 的进度条在其中有问题</p>
+<p>然后打开右下角typescript版本，选择<code>Use Workspace Version</code></p>
 ]]></content>
     </entry>
     <entry>
-        <title type="html"><![CDATA[CSS Flex 布局]]></title>
-        <id>https://clearlove443.github.io/css-flex-bu-ju/</id>
-        <link href="https://clearlove443.github.io/css-flex-bu-ju/">
+        <title type="html"><![CDATA[Windows 中的 mklink 命令]]></title>
+        <id>https://clearlove443.github.io/A6C7VQx3z/</id>
+        <link href="https://clearlove443.github.io/A6C7VQx3z/">
         </link>
-        <updated>2021-05-15T03:17:30.000Z</updated>
-        <content type="html"><![CDATA[<h1 id="flex-基本概念">Flex 基本概念：</h1>
-<p><img src="https://clearlove443.github.io//post-images/1621048971492.png" alt="" loading="lazy"><br>
-在 flex 容器中默认存在两条轴，水平主轴(main axis) 和垂直的交叉轴(cross axis)，这是默认的设置，当然你可以通过修改使垂直方向变为主轴，水平方向变为交叉轴，这个我们后面再说。<br>
-在容器中的每个单元块被称之为 flex item，每个项目占据的主轴空间为 (main size), 占据的交叉轴的空间为 (cross size)。<br>
-这里需要强调，不能先入为主认为宽度就是 main size，高度就是 cross size，这个还要取决于你主轴的方向，如果你垂直方向是主轴，那么项目的高度就是 main size。</p>
-<h1 id="flex-容器">Flex 容器：</h1>
-<p>首先，实现 flex 布局需要先指定一个容器，任何一个容器都可以被指定为 flex 布局，这样容器内部的元素就可以使用 flex 来进行布局。</p>
-<pre><code class="language-css">.container {
-    display: flex | inline-flex;       //可以有两种取值
-}
+        <updated>2021-05-23T07:38:12.000Z</updated>
+        <content type="html"><![CDATA[<p>Windows链接</p>
+<p>比如把修改VScode 插件安装目录</p>
+<p>把C:\Users{username}.vscode\extensions(默认插件位置)的extensions文件夹整个剪切到你想换的位置</p>
+<p>cmd 执行</p>
+<pre><code>mklink /D &quot;C:\Users\{username}\.vscode\extensions&quot; &quot;剪切后的路径&quot;
 </code></pre>
-<p>分别生成一个块状或行内的 flex 容器盒子。简单说来，如果你使用块元素如 div，你就可以使用 flex，而如果你使用行内元素，你可以使用 inline-flex。</p>
-<p><strong>需要注意的是：当时设置 flex 布局之后，子元素的 float、clear、vertical-align 的属性将会失效。</strong></p>
-<p>有下面六种属性可以设置在容器上，它们分别是：</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[node安装后的设置(node_global和node_cache) - windows]]></title>
+        <id>https://clearlove443.github.io/QZWvM_NYv/</id>
+        <link href="https://clearlove443.github.io/QZWvM_NYv/">
+        </link>
+        <updated>2021-05-23T07:31:26.000Z</updated>
+        <content type="html"><![CDATA[<p>使用npm安装模块分为本地安装和全局安装。</p>
+<p>本地安装：npm install express    会安装到当前项目</p>
+<p>全局安装：npm install express -g  会安装到指定的目录(node_global)</p>
+<p>另外，如果没有设置全局目录node_global，那么全局安装的文件将会保存到 C:\Users\hades\AppData\Roaming\npm (hases是自己设置的计算机名字)</p>
+<p>安装好node后，要设置一下node_global和node_cache(node缓存文件夹)</p>
 <ol>
-<li>flex-direction</li>
-<li>flex-wrap</li>
-<li>flex-flow</li>
-<li>justify-content</li>
-<li>align-items</li>
-<li>align-content</li>
+<li>
+<p>在node安装目录创建node_global和node_cache文件夹</p>
+</li>
+<li>
+<p>设置环境变量：</p>
+</li>
 </ol>
-<h2 id="flex-direction-决定主轴的方向即项目的排列方向"><strong>flex-direction: 决定主轴的方向(即项目的排列方向)</strong></h2>
-<pre><code class="language-css">.container {
-    flex-direction: row | row-reverse | column | column-reverse;
-}
-</code></pre>
-<p>默认值：row，主轴为水平方向，起点在左端。<br>
-<img src="https://clearlove443.github.io//post-images/1621049217411.png" alt="" loading="lazy"></p>
-<p>row-reverse：主轴为水平方向，起点在右端<br>
-<img src="https://clearlove443.github.io//post-images/1621049252735.png" alt="" loading="lazy"></p>
-<p>column：主轴为垂直方向，起点在上沿<br>
-<img src="https://clearlove443.github.io//post-images/1621049291796.png" alt="" loading="lazy"></p>
-<p>column-reverse：主轴为垂直方向，起点在下沿<br>
-<img src="https://clearlove443.github.io//post-images/1621049332850.png" alt="" loading="lazy"></p>
-<h2 id="flex-wrap-决定容器内项目是否可换行"><strong>flex-wrap: 决定容器内项目是否可换行</strong></h2>
-<p>默认情况下，项目都排在主轴线上，使用 flex-wrap 可实现项目的换行。</p>
-<pre><code class="language-css">.container {
-    flex-wrap: nowrap | wrap | wrap-reverse;
-}
-</code></pre>
-<p>默认值：nowrap 不换行，即当主轴尺寸固定时，当空间不足时，项目尺寸会随之调整而并不会挤到下一行。<br>
-<img src="https://clearlove443.github.io//post-images/1621049612229.png" alt="" loading="lazy"><br>
-wrap：项目主轴总尺寸超出容器时换行，第一行在上方<br>
-<img src="https://clearlove443.github.io//post-images/1621049641985.png" alt="" loading="lazy"><br>
-wrap-reverse：换行，第一行在下方<br>
-<img src="https://clearlove443.github.io//post-images/1621049689998.png" alt="" loading="lazy"></p>
-<h2 id="flex-flow-flex-direction-和-flex-wrap-的简写形式"><strong>flex-flow: flex-direction 和 flex-wrap 的简写形式</strong></h2>
-<pre><code class="language-css">.container {
-    flex-flow: &lt;flex-direction&gt; || &lt;flex-wrap&gt;;
-}
-</code></pre>
-<p>默认值为: row nowrap，感觉没什么卵用，老老实实分开写就好了。这样就不用记住这个属性了。</p>
-<h2 id="justify-content定义了项目在主轴的对齐方式"><strong>justify-content：定义了项目在主轴的对齐方式</strong></h2>
-<pre><code class="language-css">.container {
-    justify-content: flex-start | flex-end | center | space-between | space-around;
-}
-</code></pre>
-<p><strong>建立在主轴为水平方向时测试，即 flex-direction: row</strong><br>
-默认值: flex-start 左对齐<br>
-<img src="https://clearlove443.github.io//post-images/1621049868381.png" alt="" loading="lazy"><br>
-flex-end：右对齐<br>
-<img src="https://clearlove443.github.io//post-images/1621049897223.png" alt="" loading="lazy"><br>
-center：居中<br>
-<img src="https://clearlove443.github.io//post-images/1621049940597.png" alt="" loading="lazy"><br>
-space-between：两端对齐，项目之间的间隔相等，即剩余空间等分成间隙。<br>
-<img src="https://clearlove443.github.io//post-images/1621049973681.png" alt="" loading="lazy"><br>
-space-around：每个项目两侧的间隔相等，所以项目之间的间隔比项目与边缘的间隔大一倍。<br>
-<img src="https://clearlove443.github.io//post-images/1621050008821.png" alt="" loading="lazy"></p>
-<h2 id="align-items-定义了项目在交叉轴上的对齐方式"><strong>align-items: 定义了项目在交叉轴上的对齐方式</strong></h2>
-<pre><code class="language-css">.container {
-    align-items: flex-start | flex-end | center | baseline | stretch;
-}
-</code></pre>
-<p><strong>建立在主轴为水平方向时测试，即 flex-direction: row</strong><br>
-默认值为 stretch 即如果项目未设置高度或者设为 auto，将占满整个容器的高度。<br>
-<img src="https://clearlove443.github.io//post-images/1621050095241.png" alt="" loading="lazy"><br>
-假设容器高度设置为 100px，而项目都没有设置高度的情况下，则项目的高度也为 100px。<br>
-flex-start：交叉轴的起点对齐<br>
-<img src="https://clearlove443.github.io//post-images/1621050113240.png" alt="" loading="lazy"><br>
-假设容器高度设置为 100px，而项目分别为 20px, 40px, 60px, 80px, 100px, 则如上图显示。<br>
-flex-end：交叉轴的终点对齐<br>
-<img src="https://clearlove443.github.io//post-images/1621050134538.png" alt="" loading="lazy"><br>
-center：交叉轴的中点对齐<br>
-<img src="https://clearlove443.github.io//post-images/1621050170920.png" alt="" loading="lazy"><br>
-baseline: 项目的第一行文字的基线对齐<br>
-<img src="https://clearlove443.github.io//post-images/1621050193759.png" alt="" loading="lazy"><br>
-以文字的底部为主，仔细看图可以理解。</p>
-<h2 id="align-content-定义了多根轴线的对齐方式如果项目只有一根轴线那么该属性将不起作用"><strong>align-content: 定义了多根轴线的对齐方式，如果项目只有一根轴线，那么该属性将不起作用</strong></h2>
-<pre><code class="language-css">.container {
-    align-content: flex-start | flex-end | center | space-between | space-around | stretch;
-}
-</code></pre>
-<p>这个这样理解：</p>
-<p>当你 flex-wrap 设置为 nowrap 的时候，容器仅存在一根轴线，因为项目不会换行，就不会产生多条轴线。</p>
-<p>当你 flex-wrap 设置为 wrap 的时候，容器可能会出现多条轴线，这时候你就需要去设置多条轴线之间的对齐方式了。</p>
-<p>建立在主轴为水平方向时测试，即 flex-direction: row, flex-wrap: wrap</p>
-<p>默认值为 stretch，看下面的图就很好理解了<br>
-<img src="https://clearlove443.github.io//post-images/1621050293135.png" alt="" loading="lazy"><br>
-从图可以看出又三条轴线(因为容器宽度有限)，当值为 stretch 时会三条轴线平分容器的垂直方向上的空间。</p>
-<p>值得注意的是，虽然在每条轴线上项目的默认值也为 stretch，但是由于我每个项目我都设置了高度，所以它并没有撑开整个容器。如果项目不设置高度的话就会变成下面这样：<br>
-<img src="https://clearlove443.github.io//post-images/1621050309523.png" alt="" loading="lazy"><br>
-这个我在前面也有提到(align-items)，这里重点还是理解三条轴线会平分垂直轴上的空间。</p>
-<p>flex-start：轴线全部在交叉轴上的起点对齐<br>
-<img src="https://clearlove443.github.io//post-images/1621050326437.png" alt="" loading="lazy"><br>
-flex-end：轴线全部在交叉轴上的终点对齐<br>
-<img src="https://clearlove443.github.io//post-images/1621050345264.png" alt="" loading="lazy"><br>
-center：轴线全部在交叉轴上的中间对齐<br>
-<img src="https://clearlove443.github.io//post-images/1621050363709.png" alt="" loading="lazy"><br>
-space-between：轴线两端对齐，之间的间隔相等，即剩余空间等分成间隙。<br>
-<img src="https://clearlove443.github.io//post-images/1621050381176.png" alt="" loading="lazy"><br>
-space-around：每个轴线两侧的间隔相等，所以轴线之间的间隔比轴线与边缘的间隔大一倍。<br>
-<img src="https://clearlove443.github.io//post-images/1621050401011.png" alt="" loading="lazy"></p>
-<p>到这里关于容器上的所有属性都讲完了，接下来就来讲讲关于在 flex item 上的属性</p>
-<h1 id="flex-项目属性">Flex 项目属性：</h1>
-<p>有六种属性可运用在 item 项目上：</p>
-<ol>
-<li>order</li>
-<li>flex-basis</li>
-<li>flex-grow</li>
-<li>flex-shrink</li>
-<li>flex</li>
-<li>align-self</li>
+<p>用户变量设置：将用户变量中 PATH 的值改成 D:\Program Files\nodejs\node_global，没有PATH，可以直接添加。</p>
+<p>系统变量设置：添加变量 NODE_PATH  值为：D:\Program Files\nodejs\node_modules</p>
+<ol start="3">
+<li>打开cmd，执行</li>
 </ol>
-<h2 id="order-定义项目在容器中的排列顺序数值越小排列越靠前默认值为-0"><strong>order: 定义项目在容器中的排列顺序，数值越小，排列越靠前，默认值为 0</strong></h2>
-<pre><code class="language-css">.item {
-    order: &lt;integer&gt;;
-}
-</code></pre>
-<p><img src="https://clearlove443.github.io//post-images/1621050559125.png" alt="" loading="lazy"><br>
-在 HTML 结构中，虽然 -2，-1 的 item 排在后面，但是由于分别设置了 order，使之能够排到最前面</p>
-<h2 id="flex-basis-定义了在分配多余空间之前项目占据的主轴空间浏览器根据这个属性计算主轴是否有多余空间"><strong>flex-basis: 定义了在分配多余空间之前，项目占据的主轴空间，浏览器根据这个属性，计算主轴是否有多余空间</strong></h2>
-<pre><code class="language-css">.item {
-    flex-basis: &lt;length&gt; | auto;
-}
-</code></pre>
-<p>默认值：auto，即项目本来的大小, 这时候 item 的宽高取决于 width 或 height 的值。</p>
-<p><strong>当主轴为水平方向的时候，当设置了 flex-basis，项目的宽度设置值会失效，flex-basis 需要跟 flex-grow 和 flex-shrink 配合使用才能发挥效果。</strong></p>
-<ul>
-<li>当 flex-basis 值为 0 % 时，是把该项目视为零尺寸的，故即使声明该尺寸为 140px，也并没有什么用。</li>
-<li>当 flex-basis 值为 auto 时，则跟根据尺寸的设定值(假如为 100px)，则这 100px 不会纳入剩余空间。</li>
-</ul>
-<h2 id="flex-grow-定义项目的放大比例"><strong>flex-grow: 定义项目的放大比例</strong></h2>
-<pre><code class="language-css">.item {
-    flex-grow: &lt;number&gt;;
-}
-</code></pre>
-<p>默认值为 0，即如果存在剩余空间，也不放大<br>
-<img src="https://clearlove443.github.io//post-images/1621050729793.png" alt="" loading="lazy"><br>
-当所有的项目都以 flex-basis 的值进行排列后，仍有剩余空间，那么这时候 flex-grow 就会发挥作用了。<br>
-如果所有项目的 flex-grow 属性都为 1，则它们将等分剩余空间。(如果有的话)</p>
-<p>如果一个项目的 flex-grow 属性为 2，其他项目都为 1，则前者占据的剩余空间将比其他项多一倍。</p>
-<p>当然如果当所有项目以 flex-basis 的值排列完后发现空间不够了，且 flex-wrap：nowrap 时，此时 flex-grow 则不起作用了，这时候就需要接下来的这个属性。</p>
-<h2 id="flex-shrink-定义了项目的缩小比例"><strong>flex-shrink: 定义了项目的缩小比例</strong></h2>
-<pre><code class="language-css">.item {
-    flex-shrink: &lt;number&gt;;
-}
-</code></pre>
-<p>默认值: 1，即如果空间不足，该项目将缩小，负值对该属性无效。<br>
-<img src="https://clearlove443.github.io//post-images/1621050789296.png" alt="" loading="lazy"><br>
-这里可以看出，虽然每个项目都设置了宽度为 50px，但是由于自身容器宽度只有 200px，这时候每个项目会被同比例进行缩小，因为默认值为 1。<br>
-同理可得：</p>
-<p>如果所有项目的 flex-shrink 属性都为 1，当空间不足时，都将等比例缩小。</p>
-<p>如果一个项目的 flex-shrink 属性为 0，其他项目都为 1，则空间不足时，前者不缩小。</p>
-<h2 id="flex-flex-grow-flex-shrink-和-flex-basis的简写"><strong>flex: flex-grow, flex-shrink 和 flex-basis的简写</strong></h2>
-<pre><code class="language-css">.item{
-    flex: none | [ &lt;'flex-grow'&gt; &lt;'flex-shrink'&gt;? || &lt;'flex-basis'&gt; ]
-} 
-</code></pre>
-<p>flex 的默认值是以上三个属性值的组合。假设以上三个属性同样取默认值，则 flex 的默认值是 0 1 auto。</p>
-<p>有关快捷值：auto (1 1 auto) 和 none (0 0 auto)</p>
-<p>关于 flex 取值，还有许多特殊的情况，可以按以下来进行划分：</p>
-<ul>
-<li>当 flex 取值为一个非负数字，则该数字为 flex-grow 值，flex-shrink 取 1，flex-basis 取 0%，如下是等同的：</li>
-</ul>
-<pre><code class="language-css">.item {flex: 1;}
-.item {
-   flex-grow: 1;
-   flex-shrink: 1;
-   flex-basis: 0%;
-}
-</code></pre>
-<ul>
-<li>当 flex 取值为 0 时，对应的三个值分别为 0 1 0%</li>
-</ul>
-<pre><code class="language-css">.item {flex: 0;}
-.item {
-    flex-grow: 0;
-    flex-shrink: 1;
-    flex-basis: 0%;
-}
-</code></pre>
-<ul>
-<li>当 flex 取值为一个长度或百分比，则视为 flex-basis 值，flex-grow 取 1，flex-shrink 取 1，有如下等同情况（注意 0% 是一个百分比而不是一个非负数字）</li>
-</ul>
-<pre><code class="language-css">.item-1 {flex: 0%;}
-.item-1 {
-    flex-grow: 1;
-    flex-shrink: 1;
-    flex-basis: 0%;
-}
+<pre><code class="language-cmd">npm config set prefix &quot;D:\Program Files\nodejs\node_global&quot;   
 
-.item-2 {flex: 24px;}
-.item-2 {
-    flex-grow: 1;
-    flex-shrink: 1;
-    flex-basis: 24px;
-}
+npm config set cache &quot;D:\Program Files\nodejs\node_cache&quot;
 </code></pre>
-<ul>
-<li>当 flex 取值为两个非负数字，则分别视为 flex-grow 和 flex-shrink 的值，flex-basis 取 0%，如下是等同的：</li>
-</ul>
-<pre><code class="language-css">.item {flex: 2 3;}
-.item {
-    flex-grow: 2;
-    flex-shrink: 3;
-    flex-basis: 0%;
-}
-</code></pre>
-<ul>
-<li>当 flex 取值为一个非负数字和一个长度或百分比，则分别视为 flex-grow 和 flex-basis 的值，flex-shrink 取 1，如下是等同的：</li>
-</ul>
-<pre><code class="language-css">.item {flex: 11 32px;}
-.item {
-    flex-grow: 11;
-    flex-shrink: 1;
-    flex-basis: 32px;
-}
-</code></pre>
-<p>容器下的子元素的宽度和比容器和小的时候起作用。 grow 定义了子元素的尺寸增长因子，容器中除去子元素之和剩下的尺寸会按照各个子元素的 grow 值进行平分加大各个子元素上。</p>
-<ol>
-<li>当 flex-wrap 为 wrap | wrap-reverse，且子项宽度和不及父容器宽度时，flex-grow 会起作用，子项会根据 flex-grow 设定的值放大（为0的项不放大）</li>
-<li>当 flex-wrap 为 wrap | wrap-reverse，且子项宽度和超过父容器宽度时，首先一定会换行，换行后，每一行的右端都可能会有剩余空间（最后一行包含的子项可能比前几行少，所以剩余空间可能会更大），这时 flex-grow 会起作用，若当前行所有子项的 flex-grow 都为0，则剩余空间保留，若当前行存在一个子项的 flex-grow 不为0，则剩余空间会被 flex-grow 不为0的子项占据</li>
-<li>当 flex-wrap 为 nowrap，且子项宽度和不及父容器宽度时，flex-grow 会起作用，子项会根据 flex-grow 设定的值放大（为0的项不放大）</li>
-<li>当 flex-wrap 为 nowrap，且子项宽度和超过父容器宽度时，flex-shrink 会起作用，子项会根据 flex-shrink 设定的值进行缩小（为0的项不缩小）。但这里有一个较为特殊情况，就是当这一行所有子项 flex-shrink 都为0时，也就是说所有的子项都不能缩小，就会出现讨厌的横向滚动条</li>
-<li>总结上面四点，可以看出不管在什么情况下，在同一时间，flex-shrink 和 flex-grow 只有一个能起作用，这其中的道理细想起来也很浅显：空间足够时，flex-grow 就有发挥的余地，而空间不足时，flex-shrink 就能起作用。当然，flex-wrap 的值为 wrap | wrap-reverse 时，表明可以换行，既然可以换行，一般情况下空间就总是足够的，flex-shrink 当然就不会起作用</li>
+<ol start="4">
+<li>有时候用npm拉取包可能会很慢，可以用淘宝npm镜像代替npm进行拉包，就像github和gitee</li>
 </ol>
-<h2 id="align-self-允许单个项目有与其他项目不一样的对齐方式"><strong>align-self: 允许单个项目有与其他项目不一样的对齐方式</strong></h2>
-<p>单个项目覆盖 align-items 定义的属性</p>
-<p>默认值为 auto，表示继承父元素的 align-items 属性，如果没有父元素，则等同于 stretch。</p>
-<pre><code class="language-css">.item {
-     align-self: auto | flex-start | flex-end | center | baseline | stretch;
-}
+<p>执行：</p>
+<pre><code class="language-cmd">npm install -g cnpm --registry=https://registry.npm.taobao.org
 </code></pre>
-<p>这个跟 align-items 属性时一样的，只不过 align-self 是对单个项目生效的，而 align-items 则是对容器下的所有项目生效的。<br>
-<img src="https://clearlove443.github.io//post-images/1621051180455.png" alt="" loading="lazy"></p>
 ]]></content>
     </entry>
     <entry>
-        <title type="html"><![CDATA[CSS display 属性详解]]></title>
-        <id>https://clearlove443.github.io/css-display-shu-xing-xiang-jie/</id>
-        <link href="https://clearlove443.github.io/css-display-shu-xing-xiang-jie/">
+        <title type="html"><![CDATA[Vs Code 格式化代码]]></title>
+        <id>https://clearlove443.github.io/Cj2448i6d/</id>
+        <link href="https://clearlove443.github.io/Cj2448i6d/">
         </link>
-        <updated>2021-05-15T02:49:56.000Z</updated>
-        <content type="html"><![CDATA[<h1 id="display的所有属性">display的所有属性</h1>
-<pre><code>/* CSS 1 */
-display: none;
-display: inline;
-display: block;
-display: list-item;
-
-/* CSS 2.1 */
-display: inline-block;
-
-display: table;
-display: inline-table;
-display: table-cell;
-display: table-column;
-display: table-column-group;
-display: table-footer-group;
-display: table-header-group;
-display: table-row;
-display: table-row-group;
-display: table-caption;
-/* CSS 2.1 */
-
-/* CSS 3 */
-display: inline-list-item;
-display: flex;
-display: box;
-display: inline-flex;
-
-display: grid;
-display: inline-grid;
-
-display: ruby;
-display: ruby-base;
-display: ruby-text;
-display: ruby-base-container;
-display: ruby-text-container;
-/* CSS 3 */
-
-/* Experimental values */
-display: contents;
-display: run-in;
-/* Experimental values */
-
-/* Global values */
-display: inherit;
-display: initial;
-display: unset;
-</code></pre>
-<p>下面就display的重要属性进行讲解，并配合一些相关的例子</p>
-<h1 id="基本属性">基本属性</h1>
-<h2 id="display-none"><strong>display: none</strong></h2>
-<p>none 是 CSS 1 就提出来的属性，将元素设置为none的时候既不会占据空间，也无法显示，相当于该元素不存在。<br>
-该属性可以用来改善重排与重绘，同时我也经常用它来做模态窗等效果。</p>
-<h2 id="display-inline"><strong>display: inline</strong></h2>
-<p>inline也是 CSS 1 提出的属性，它主要用来设置行内元素属性，设置了该属性之后设置高度、宽度都无效，同时text-align属性设置也无效，但是设置了line-height会让inline元素居中</p>
-<h2 id="display-block"><strong>display: block</strong></h2>
-<p>设置元素为块状元素，如果不指定宽高，默认会继承父元素的宽度，并且独占一行，即使宽度有剩余也会独占一行，高度一般以子元素撑开的高度为准，当然也可以自己设置宽度和高度。</p>
-<h2 id="display-list-item"><strong>display: list-item</strong></h2>
-<p>此属性默认会把元素作为列表显示，要完全模仿列表的话还需要加上 <code>list-style-position，list-style-type</code></p>
-<h2 id="display-inline-block"><strong>display: inline-block</strong></h2>
-<p><code>inline-block</code>为 CSS 2.1 新增的属性。 <code>inline-block</code>既具有block的宽高特性又具有inline的同行元素特性。 通过<code>inline-block</code>结合<code>text-align: justify</code> 还可以实现固定宽高的列表两端对齐布局</p>
-<h2 id="display-table"><strong>display: table</strong></h2>
-<p>table 此元素会作为块级表格来显示（类似table），表格前后带有换行符。CSS表格能够解决所有那些我们在使用绝对定位和浮动定位进行多列布局时所遇到的问题。例如，<code>display:table</code>的CSS声明能够让一个HTML元素和它的子节点像table元素一样。使用基于表格的CSS布局，使我们能够轻松定义一个单元格的边界、背景等样式， 而不会产生因为使用了table那样的制表标签所导致的语义化问题。</p>
-<p>利用table的特性，我们能够轻易的实现三栏布局，并且能够兼容IE8</p>
-<h2 id="display-inline-list-item"><strong>display: inline-list-item</strong></h2>
-<p>我在MDN上面看到有这个属性，但是我实际尝试发现这个属性是不能使用的，在 <a href="https://caniuse.com/?search=inline-list-item">caniuse</a> 上面也没有找到这个元素的兼容性，所以应该是不能使用的，支持度全无。</p>
-<h2 id="display-flex"><strong>display: flex</strong></h2>
-<p>flex是一种弹性布局属性<br>
-<strong>注意，设为Flex布局以后，子元素的float、clear和vertical-align属性将失效。</strong><br>
-主要属性有两大类：容器属性和项目的属性</p>
-<h3 id="容器属性">容器属性</h3>
-<ul>
-<li>flex-direction: 属性决定主轴的方向（即项目的排列方向）。</li>
-<li>flex-wrap: 默认情况下，项目都排在一条线（又称&quot;轴线&quot;）上。flex-wrap属性定义，如果一条轴线排不下，如何换行。</li>
-<li>flex-flow: 属性是flex-direction属性和flex-wrap属性的简写形式，默认值为row nowrap。</li>
-<li>justify-content: 属性定义了项目在主轴上的对齐方式。</li>
-<li>align-items: 属性定义项目在交叉轴上如何对齐。</li>
-<li>align-content: 属性定义了多根轴线的对齐方式。如果项目只有一根轴线，该属性不起作用。</li>
-</ul>
-<h3 id="项目属性">项目属性</h3>
-<ul>
-<li>order: 定义项目的排列顺序。数值越小，排列越靠前，默认为0。</li>
-<li>flex-grow: 定义项目的放大比例，默认为0，即如果存在剩余空间，也不放大。</li>
-<li>flex-shrink: 属性定义了项目的缩小比例，默认为1，即如果空间不足，该项目将缩小。</li>
-<li>flex-basis: 属性定义了在分配多余空间之前，项目占据的主轴空间（main size）。浏览器根据这个属性，计算主轴是否有多余空间。它的默认值为auto，即项目的本来大小。</li>
-<li>flex: 属性是flex-grow, flex-shrink 和 flex-basis的简写，默认值为0 1 auto。后两个属性可选。</li>
-<li>align-self: 属性允许单个项目有与其他项目不一样的对齐方式，可覆盖align-items属性。默认值为auto，表示继承父元素的align-items属性，如果没有父元素，则等同于stretch。</li>
-</ul>
-<h2 id="display-webkit-box"><strong>display: -webkit-box</strong></h2>
-<p>由于某X5浏览器某些版本还不支持最新版的flex布局，所以为了保证良好的运行，建议还是使用display: box，box和flex布局的主要差别如下:</p>
-<h3 id="容器属性-2">容器属性</h3>
-<ul>
-<li>display: box<br>
-该显示样式的新值可将此元素及其直系子代加入弹性框模型中。Flexbox 模型只适用于直系子代。</li>
-<li>box-orient<br>
-值：horizontal | vertical | inherit<br>
-框的子代是如何排列的？还有两个值：inline-axis（真正的默认值）和 block-axis，但是它们分别映射到水平和垂直方向。</li>
-<li>box-pack<br>
-值：start | end | center | justify<br>
-设置沿 box-orient 轴的框排列方式。因此，如果 box-orient 是水平方向，就会选择框的子代的水平排列方式，反之亦然。</li>
-<li>box-align<br>
-值：start | end | center | baseline | stretch<br>
-基本上而言是 box-pack 的同级属性。设置框的子代在框中的排列方式。如果方向是水平的，该属性就会决定垂直排列，反之亦然。</li>
-</ul>
-<h3 id="项目属性-2">项目属性</h3>
-<ul>
-<li>box-flex<br>
-值：0 | 任意整数<br>
-该子代的弹性比。弹性比为 1 的子代占据父代框的空间是弹性比为 2 的同级属性的两倍。其默认值为 0，也就是不具有弹性</li>
-</ul>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[CSS基础-块级元素与行内元素]]></title>
-        <id>https://clearlove443.github.io/css-ji-chu-kuai-ji-yuan-su-yu-xing-nei-yuan-su/</id>
-        <link href="https://clearlove443.github.io/css-ji-chu-kuai-ji-yuan-su-yu-xing-nei-yuan-su/">
-        </link>
-        <updated>2021-05-15T02:29:52.000Z</updated>
-        <content type="html"><![CDATA[<pre><code>文章总结了什么是块级元素、行内元素；有哪些块级元素、行内元素；块级元素与行内元素间的相互转换；行内置换元素的特殊性。
-</code></pre>
-<h1 id="什么是块级元素-行内元素">什么是块级元素、行内元素</h1>
-<table>
-<thead>
-<tr>
-<th style="text-align:left"></th>
-<th style="text-align:left">是否独占一行</th>
-<th style="text-align:left">width、height</th>
-<th style="text-align:left">padding、margin</th>
-<th style="text-align:left">默认宽高</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">块级元素</td>
-<td style="text-align:left">是</td>
-<td style="text-align:left">有效</td>
-<td style="text-align:left">有效</td>
-<td style="text-align:left">撑满父元素</td>
-</tr>
-<tr>
-<td style="text-align:left">行内元素</td>
-<td style="text-align:left">否</td>
-<td style="text-align:left">无效</td>
-<td style="text-align:left">padding有效；margin水平方向有效，竖直方向无效</td>
-<td style="text-align:left">随内部元素的内容变化</td>
-</tr>
-<tr>
-<td style="text-align:left">行内块级元素</td>
-<td style="text-align:left">否</td>
-<td style="text-align:left">有效</td>
-<td style="text-align:left">有效</td>
-<td style="text-align:left">随内部元素的内容变化</td>
-</tr>
-</tbody>
-</table>
-<h2 id="块级元素">块级元素：</h2>
-<pre><code>独占一行；元素的宽高、以及内外边距都可设置；元素宽度在不设置的情况下，是它本身父容器的100%
-</code></pre>
-<h2 id="行内元素">行内元素：</h2>
-<pre><code>不会自动进行换行；元素的宽高不可设置；内边距可以设置、外边距水平方向有效，竖直方向无效；元素宽度在不设置的情况下，随内部元素的内容变化。
-</code></pre>
-<h1 id="有哪些块级元素-行内元素">有哪些块级元素、行内元素</h1>
-<h2 id="常见块级元素">常见块级元素：</h2>
-<pre><code>div , h1---h6 , p , ul , ol , dl , table , form
-</code></pre>
-<ul>
-<li>div - 常用块级元素，也是css layout的主要标签</li>
-<li>h1---h6 标题</li>
-<li>p - 段落</li>
-<li>ul - 非排序列表</li>
-<li>ol - 排序表单</li>
-<li>dl - 定义列表</li>
-<li>table - 表格</li>
-<li>form - 交互表单</li>
-<li>hr - 水平分隔线</li>
-<li>pre - 格式化文本</li>
-<li>address - 地址</li>
-<li>blockquote - 块引用</li>
-<li>header - HTML5区段头或页头。</li>
-<li>footer - HTML5区段尾或页尾。</li>
-<li>section - HTML5一个页面区段。</li>
-<li>article - HTML5文章内容。</li>
-<li>aside - HTML5伴随内容。</li>
-<li>hgroup - HTML5标题组。</li>
-<li>menu - HTML5菜单列表</li>
-<li>figcaption - HTML5图文信息组标题</li>
-<li>figure - HTML5图文信息组</li>
-<li>audio - HTML5音频播放</li>
-<li>video - HTML5视频</li>
-<li>output - HTML5表单输出</li>
-</ul>
-<h2 id="常见行内元素">常见行内元素：</h2>
-<pre><code>span , a  ,strong  ,b ,em  , i  , big  ,small  ,label 
-img , input  , select ,textarea（属于行内置换元素，下文详解）
-</code></pre>
-<ul>
-<li>span - 常用内联容器，定义文本内区块</li>
-<li>a - 锚点</li>
-<li>strong - 粗体强调</li>
-<li>b - 粗体</li>
-<li>em - 强调</li>
-<li>i - 斜体</li>
-<li>small - 小字体文本</li>
-<li>big - 大字体</li>
-<li>sub - 下标</li>
-<li>sup - 上标</li>
-<li>label - 表格标签</li>
-<li>img - 图片* input - 输入框</li>
-<li>select - 项目选择</li>
-<li>textarea - 多行文本输入框</li>
-<li>abbr - 缩写</li>
-<li>code - 计算机代码(在引用源码的时候需要)</li>
-<li>acronym - 首字</li>
-<li>bdo - bidi override</li>
-<li>br - 换行</li>
-<li>cite - 引用</li>
-<li>dfn - 定义字段</li>
-<li>font - 字体设定(不推荐)</li>
-<li>kbd - 定义键盘文本</li>
-<li>q - 短引用</li>
-<li>s - 中划线(不推荐)</li>
-<li>samp - 定义范例计算机代码</li>
-<li>strike - 中划线</li>
-<li>tt - 电传文本</li>
-<li>u - 下划线</li>
-<li>var - 定义变量</li>
-</ul>
-<h1 id="行内元素与块级元素间的相互转换">行内元素与块级元素间的相互转换</h1>
-<pre><code>行内元素和块级元素都不是绝对的，可以相互转换,，通常有这些方式可以转换。
-</code></pre>
-<ol>
-<li>display，将元素设置为块级、行内或是其它。</li>
-<li>float，隐形地把内联元素转换为行内块级元素。不会占据一行，相当于display：inline-block;</li>
-<li>position,属性值为absolute、fixed时,隐形地把内联元素转换为块级元素，其它属性值不会做转换。</li>
-</ol>
-<h1 id="置换元素">置换元素</h1>
-<p><code>&lt;img&gt;、&lt;input&gt;、&lt;textarea&gt;、&lt;select&gt;、&lt;object&gt;</code>是行内元素，但是它们却可以设置宽高，这是为什么呢？因为它们是行内置换元素。<br>
-置换元素：内容不受CSS视觉格式化模型控制，CSS渲染模型并不考虑对此内容的渲染，且元素本身一般拥有固有尺寸（宽度，高度，宽高比）的元素，被称之为置换元素。浏览器根据元素的标签和属性，来决定元素的具体显示内容。 例如：浏览器会根据<code>&lt;img&gt;</code>标签的src属性的值来读取图片信息并显示出来，而如果查看html代码，则看不到图片的实际内容；<code>&lt;input&gt;</code>标签的type属性来决定是显示输入框，还是单选按钮等。<br>
-置换元素在其显示中生成了框，这也就是有的内联元素能够设置宽高的原因。</p>
+        <updated>2021-05-23T07:24:12.000Z</updated>
+        <content type="html"><![CDATA[<p><strong>使用快捷键</strong><br>
+<kbd>alt</kbd>+<kbd>shift</kbd>+<kbd>f</kbd></p>
 ]]></content>
     </entry>
 </feed>

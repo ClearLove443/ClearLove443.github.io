@@ -9,7 +9,7 @@
 <meta name="description" content="温故而知新">
 <meta name="theme-color" content="#000">
 <title>Gridea</title>
-<link rel="shortcut icon" href="/favicon.ico?v=1621691664242">
+<link rel="shortcut icon" href="/favicon.ico?v=1621771145592">
 <link rel="stylesheet" href="/media/css/muse.css">
 <link rel="stylesheet" href="/media/fonts/font-awesome.css">
 <link
@@ -185,19 +185,19 @@
     <div class="sidebar-item-box">
       <a href="/archives/">
         
-        <span class="site-item-stat-count">38</span>
+        <span class="site-item-stat-count">48</span>
         <span class="site-item-stat-name language" data-lan="article">文章</span>
       </a>
     </div>
     <div class="sidebar-item-box">
       <a href="">
-        <span class="site-item-stat-count">30</span>
+        <span class="site-item-stat-count">40</span>
         <span class="site-item-stat-name language" data-lan="category">分类</span>
       </a>
     </div>
     <div class="sidebar-item-box">
       <a href="/tags/">
-        <span class="site-item-stat-count">30</span>
+        <span class="site-item-stat-count">40</span>
         <span class="site-item-stat-name language" data-lan="tag">标签</span>
       </a>
     </div>
@@ -489,6 +489,425 @@
       <hr>
     </div>
     <div class="result" id="result">
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://clearlove443.github.io/GKbqe4RBZ/"" data-c="
+          &lt;p&gt;在项目开发的过程中肯定需要弹出视图，这种视图称之为模态框。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a href=&#34;https://devui.design/components/zh-cn/modal/demo#template-content&#34;&gt;DevUI&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;https://github.com/DevCloudFE/ng-devui/tree/master/devui/pagination&#34;&gt;源码&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;a href=&#34;https://juejin.cn/post/6844904151730782221&#34;&gt;手动重写&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;https://github.com/kagol/components&#34;&gt;源码&lt;/a&gt;&lt;/p&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;&lt;a href=&#34;https://valor-software.com/ngx-bootstrap/#/pagination#pagination-rotate&#34;&gt;NGX-Bootstrap&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;https://github.com/valor-software/ngx-bootstrap/tree/development/src/pagination&#34;&gt;源码&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+">Angular 模态框</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://clearlove443.github.io/oynVguj0l/"" data-c="
+          &lt;ol&gt;
+&lt;li&gt;indexof 方法&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code&gt;语法：stringObject.indexOf(searchvalue, fromindex)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;参数：searchvalue 必需。规定需检索的字符串值。 fromindex 可选的整数参数。规定在字符串中开始检索的位置。它的合法取值是 0 到 stringObject.length - 1。如省略该参数，则将从字符串的首字符开始检索。
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;说明：该方法将从头到尾地检索字符串 stringObject，看它是否含有子串 searchvalue。开始检索的位置在字符串的 fromindex 处或字符串的开头（没有指定 fromindex 时）。如果找到一个 searchvalue，则返回 searchvalue 的第一次出现的位置。stringObject 中的字符位置是从 0 开始的。如果没有找到，将返回 -1。
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&#34;language-javaScript&#34;&gt;/**
+   * 使用indexof方法实现模糊查询
+   * @param  {Array}  list     进行查询的数组
+   * @param  {String} keyWord  查询的关键词
+   * @return {Array}           查询的结果
+   */
+  function fuzzyQuery(list, keyWord) {
+    var arr = [];
+    for (var i = 0; i &amp;lt; list.length; i++) {
+      if (list[i].indexOf(keyWord) &amp;gt;= 0) {
+        arr.push(list[i]);
+      }
+    }
+    return arr;
+  }
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;split 方法&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code&gt;语法：stringObject.split(separator, howmany)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;参数：separator 必需。字符串或正则表达式，从该参数指定的地方分割 stringObject。howmany 可选。该参数可指定返回的数组的最大长度。如果设置了该参数，返回的子串不会多于这个参数指定的数组。如果没有设置该参数，整个字符串都会被分割，不考虑它的长度。
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;说明：该方法通过在 separator 指定的边界处将字符串 stringObject 分割成子串并返回子串数组。返回的数组中的字串不包括 separator 自身。如果 stringObject 中不存在 separator，将返回一个只包含stringObject的数组。故可以根据返回数组的长度来判断是否存在子字符串 separator 。
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;  /**
+   * 使用spilt方法实现模糊查询
+   * @param  {Array}  list     进行查询的数组
+   * @param  {String} keyWord  查询的关键词
+   * @return {Array}           查询的结果
+   */
+  function fuzzyQuery(list, keyWord) {
+    var arr = [];
+    for (var i = 0; i &amp;lt; list.length; i++) {
+      if (list[i].split(keyWord).length &amp;gt; 1) {
+        arr.push(list[i]);
+      }
+    }
+    return arr;
+  }
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;match 方法&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code&gt;语法：stringObject.match(searchvalue) 或 stringObject.match(regexp)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;参数：searchvalue 必需。规定要检索的字符串值。regexp 必需。规定要匹配的模式的 RegExp 对象。如果该参数不是 RegExp 对象，则需要首先把它传递给 RegExp 构造函数，将其转换为 RegExp 对象。
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;说明：该方法将在字符串 stringObject 内检索指定的值，或找到一个或多个正则表达式的匹配。如果没有找到任何匹配的文本，将返回 null 。否则，它将返回一个数组，其中存放了与它找到的匹配文本有关的信息。
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;/**
+   * 使用match方法实现模糊查询
+   * @param  {Array}  list     进行查询的数组
+   * @param  {String} keyWord  查询的关键词
+   * @return {Array}           查询的结果
+   */
+  function fuzzyQuery(list, keyWord) {
+    var arr = [];
+    for (var i = 0; i &amp;lt; list.length; i++) {
+      if (list[i].match(keyWord) != null) {
+        arr.push(list[i]);
+      }
+    }
+    return arr;
+  }
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ol start=&#34;4&#34;&gt;
+&lt;li&gt;test方法（正则匹配）&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code&gt;语法：RegExpObject.test(string)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;参数：string 必需。要检测的字符串。
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;说明：该方法用于检测一个字符串是否匹配某个模式。如果字符串 string 中含有与 RegExpObject 匹配的文本，则返回 true，否则返回 false。
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt; /**
+ * 使用test方法实现模糊查询
+ * @param  {Array}  list     原数组
+ * @param  {String} keyWord  查询的关键词
+ * @return {Array}           查询的结果
+ */
+function fuzzyQuery(list, keyWord) {
+  var reg =  new RegExp(keyWord);
+  var arr = [];
+  for (var i = 0; i &amp;lt; list.length; i++) {
+    if (reg.test(list[i])) {
+      arr.push(list[i]);
+    }
+  }
+  return arr;
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h1 id=&#34;性能测试&#34;&gt;性能测试&lt;/h1&gt;
+&lt;pre&gt;&lt;code&gt;测试条件：一个长度为100的数组，每个方法测试50次，取平均值。
+indexof 方法耗费时间： 0.048ms
+split 方法耗费时间： 0.037ms
+match 方法耗费时间： 0.178ms
+test 方法耗费时间： 0.039ms
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h1 id=&#34;结论&#34;&gt;结论&lt;/h1&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;从上面测试结果可以看出在几百几千甚至几万条数据量的情况下，前端去处理都是没问题的，相比发送一个 ajax 请求去后台来说，前端还是具有很大优势的，能节省不少时间。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;相比其他方法，match 方法性能最差，消耗的时间差不多是其他方法的3-4倍，虽说这一点点时间相比发送ajax来说，也算提高了很多既然我们在一开始就是为了提高用户体验，那么我们也应该追求极致啦，所以 match 选手落败。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;除了 match 方法，其他三个方法在性能上差不多。不过在这里有一点需要提出的就是， test 方法因为使用到了正则表达式，所以能够实现的功能会比较强大，写出来的代码也更加简洁。打个比方，在不区分大小写的模糊搜索条件下， test 方法只需在正则表达式中添加修饰符 i 即可实现不区分大小写，而 indexof 方法和 split 方法则要通过多次的方法调用和逻辑运算符才能实现效果。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+">用js实现模糊查询的几种方法</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://clearlove443.github.io/GA8lSdhvw/"" data-c="
+          &lt;p&gt;快捷键 &lt;kbd&gt;Ctrl&lt;/kbd&gt;+&lt;kbd&gt;,&lt;/kbd&gt; 打开settings.json，添加如下设置&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;&amp;quot;cSpell.diagnosticLevel&amp;quot;: &amp;quot;Hint&amp;quot;,
+&lt;/code&gt;&lt;/pre&gt;
+">Vs Code 关闭单词拼写错误 警告 Unknown word</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://clearlove443.github.io/zS_mPjZ_2/"" data-c="
+          &lt;pre&gt;&lt;code&gt;Not using the local TSLint version found for &#39;/Users/myname/myproject/client/src/app/likes/likee/likee.component.ts&#39;. To enable code execution from the current workspace you must enable workspace library execution.
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;打开快捷键&lt;kbd&gt;Ctrl &lt;/kbd&gt;+&lt;kbd&gt;Shift &lt;/kbd&gt;+&lt;kbd&gt;P&lt;/kbd&gt;&lt;/p&gt;
+&lt;p&gt;选择&lt;code&gt;TSLint: Manage workspace library execution&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;然后按回车&lt;/p&gt;
+&lt;p&gt;选择&lt;code&gt;enable workspace library execution&lt;/code&gt;选项&lt;br&gt;
+按回车确认&lt;/p&gt;
+">Vs code TSLint 运行报错</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://clearlove443.github.io/AEASEoAzM/"" data-c="
+          &lt;p&gt;通过npm安装删除工具&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-npm&#34;&gt;npm install rimraf -g
+安装淘宝镜像后可以使用
+cnpm install rimraf -g   命令行语句，速度会更快
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;使用删除命令&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-npm&#34;&gt;rimraf node_modules (可以替换其他文件夹)
+&lt;/code&gt;&lt;/pre&gt;
+">如何用NPM快速删除文件夹</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://clearlove443.github.io/koXAnwdaZ/"" data-c="
+          &lt;h1 id=&#34;水平居中&#34;&gt;水平居中&lt;/h1&gt;
+&lt;h2 id=&#34;水平居中可分为行内元素水平居中和块级元素水平居中&#34;&gt;水平居中可分为行内元素水平居中和块级元素水平居中&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;行内元素水平居中&lt;br&gt;
+这里行内元素是指文本text、图像img、按钮超链接等，只需给父元素设置text-align:center即可实现。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;.center{
+        text-align:center;
+}
+&amp;lt;div class=&amp;quot;center&amp;quot;&amp;gt;水平居中&amp;lt;/div&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;块级元素水平居中&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;定宽块级元素水平居中&lt;br&gt;
+只需给需要居中的块级元素加margin:0 auto即可，但这里需要注意的是，这里块状元素的宽度width值一定要有&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;.center{
+      width:200px;
+      margin:0 auto;
+      border:1px solid red;
+  }
+  &amp;lt;div class=&amp;quot;center&amp;quot;&amp;gt;水平居中&amp;lt;/div&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;不定宽块级元素水平居中&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;不定宽，即块级元素宽度不固定&lt;/p&gt;
+&lt;p&gt;方法1：设置table&lt;br&gt;
+通过给要居中显示的元素，设置display:table，然后设置margin:0 auto来实现&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;.center{
+     display:table;
+     margin:0 auto;
+     border:1px solid red;
+ }
+ &amp;lt;div class=&amp;quot;center&amp;quot;&amp;gt;水平居中&amp;lt;/div&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;方法2：设置inline-block（多个块状元素）&lt;br&gt;
+子元素设置inline-block，同时父元素设置text-align:center&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;.center{
+      text-align:center;
+  }
+  .inlineblock-div{
+      display:inline-block;
+  }
+  &amp;lt;div class=&amp;quot;center&amp;quot;&amp;gt;
+      &amp;lt;div class=&amp;quot;inlineblock-div&amp;quot;&amp;gt;1&amp;lt;/div&amp;gt;
+      &amp;lt;div class=&amp;quot;inlineblock-div&amp;quot;&amp;gt;2&amp;lt;/div&amp;gt;
+  &amp;lt;/div&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;方法3：设置flex布局&lt;br&gt;
+只需把要处理的块状元素的父元素设置display:flex,justify-content:center;&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;.center{
+      display:flex;
+      justify-content:center;
+  }
+  &amp;lt;div class=&amp;quot;center&amp;quot;&amp;gt;
+      &amp;lt;div class=&amp;quot;flex-div&amp;quot;&amp;gt;1&amp;lt;/div&amp;gt;
+      &amp;lt;div class=&amp;quot;flex-div&amp;quot;&amp;gt;2&amp;lt;/div&amp;gt;
+  &amp;lt;/div&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;方法4：position + 负margin；&lt;br&gt;
+方法5：position + margin：auto；&lt;br&gt;
+方法6：position + transform；&lt;/p&gt;
+&lt;p&gt;注：这里方法4、5、6同下面垂直居中一样的道理，只不过需要把top/bottom改为left/right，在垂直居中部分会详细讲述。&lt;/p&gt;
+&lt;h1 id=&#34;垂直居中&#34;&gt;垂直居中&lt;/h1&gt;
+&lt;h2 id=&#34;单行文本垂直居中&#34;&gt;单行文本垂直居中&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;设置paddingtop=paddingbottom；或&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;设置line-height=height；&lt;/p&gt;
+&lt;h2 id=&#34;多行文本垂直居中&#34;&gt;多行文本垂直居中&lt;/h2&gt;
+&lt;p&gt;通过设置父元素table，子元素table-cell和vertical-align&lt;br&gt;
+vertical-align:middle的意思是把元素放在父元素的中部&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;.center{
+	width:200px;
+	height:300px;
+	display:table;
+	border: 2px solid blue;	
+}
+.table-div{
+	display:table-cell;
+	verticaL-aLign: middle;
+	border:IJX solid red;
+)
+&amp;lt;div class=&amp;quot;center&amp;quot;&amp;gt;
+	&amp;lt;div class=&amp;quot;table-div”&amp;gt;多行文本垂直居中〈/div&amp;gt;
+&amp;lt;/div&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;块级元素垂直居中&#34;&gt;块级元素垂直居中&lt;/h2&gt;
+&lt;p&gt;flex布局&lt;/p&gt;
+&lt;p&gt;在需要垂直居中的父元素上，设置display:flex和align-items：center&lt;br&gt;
+要求：父元素必须显示设置height值&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;.center{
+	width:200px;
+	height:300px;
+	display:flex;
+	align-items：center
+}
+&amp;lt;div class=&amp;quot;center&amp;quot;&amp;gt;
+	&amp;lt;div&amp;gt;垂直居中〈/div&amp;gt;
+&amp;lt;/div&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;水平垂直居中&#34;&gt;水平垂直居中&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;方法1：flex布局&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;   .box{
+         height:600px;           
+         display:flex;
+         justify-content:center;  //子元素水平居中
+         align-items:center;      //子元素垂直居中
+           /* aa只要三句话就可以实现不定宽高水平垂直居中。 */
+    }
+    .box&amp;gt;div{
+        background: green;
+        width: 200px;
+        height: 200px;
+    }
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;方法2：绝对定位+margin:auto&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;    div{
+        width: 200px;
+        height: 200px;
+        background: green;
+        
+        position:absolute;
+        left:0;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        margin: auto;
+    }
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;方法3：绝对定位+负margin&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;    div{
+        width:200px;
+        height: 200px;
+        background:green;
+        
+        position: absolute;
+        left:50%;
+        top:50%;
+        margin-left:-100px;
+        margin-top:-100px;
+    }
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;方法4：绝对定位+transform&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;    div{
+        width: 200px;
+        height: 200px;
+        background: green;
+        
+        position:absolute;
+        left:50%;    /* 定位父级的50% */
+        top:50%;
+        transform: translate(-50%,-50%); /*自己的50% */
+    }
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;方法5：table-cell实现居中&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;
+设置
+display:table-cell;
+text-align:center;
+vertical-align: middle;
+&lt;/code&gt;&lt;/pre&gt;
+">CSS-水平居中、垂直居中、水平垂直居中</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://clearlove443.github.io/pzFblNeuC/"" data-c="
+          &lt;p&gt;当VSCode打开typescript文件,使用node_modules里面的TypeScript版本，而不是VSCode的版本&lt;/p&gt;
+&lt;p&gt;快捷键 &lt;kbd&gt;Ctrl&lt;/kbd&gt;+&lt;kbd&gt;,&lt;/kbd&gt; 打开settings.json，添加如下设置&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-json&#34;&gt;&amp;quot;typescript.tsdk&amp;quot;: &amp;quot;node_modules/typescript/lib&amp;quot;,
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;然后打开右下角typescript版本，选择&lt;code&gt;Use Workspace Version&lt;/code&gt;&lt;/p&gt;
+">在VSCode中默认使用settings.json中定义的TypeScript版本</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://clearlove443.github.io/A6C7VQx3z/"" data-c="
+          &lt;p&gt;Windows链接&lt;/p&gt;
+&lt;p&gt;比如把修改VScode 插件安装目录&lt;/p&gt;
+&lt;p&gt;把C:\Users{username}.vscode\extensions(默认插件位置)的extensions文件夹整个剪切到你想换的位置&lt;/p&gt;
+&lt;p&gt;cmd 执行&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;mklink /D &amp;quot;C:\Users\{username}\.vscode\extensions&amp;quot; &amp;quot;剪切后的路径&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+">Windows 中的 mklink 命令</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://clearlove443.github.io/QZWvM_NYv/"" data-c="
+          &lt;p&gt;使用npm安装模块分为本地安装和全局安装。&lt;/p&gt;
+&lt;p&gt;本地安装：npm install express    会安装到当前项目&lt;/p&gt;
+&lt;p&gt;全局安装：npm install express -g  会安装到指定的目录(node_global)&lt;/p&gt;
+&lt;p&gt;另外，如果没有设置全局目录node_global，那么全局安装的文件将会保存到 C:\Users\hades\AppData\Roaming\npm (hases是自己设置的计算机名字)&lt;/p&gt;
+&lt;p&gt;安装好node后，要设置一下node_global和node_cache(node缓存文件夹)&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;在node安装目录创建node_global和node_cache文件夹&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;设置环境变量：&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;用户变量设置：将用户变量中 PATH 的值改成 D:\Program Files\nodejs\node_global，没有PATH，可以直接添加。&lt;/p&gt;
+&lt;p&gt;系统变量设置：添加变量 NODE_PATH  值为：D:\Program Files\nodejs\node_modules&lt;/p&gt;
+&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;打开cmd，执行&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code class=&#34;language-cmd&#34;&gt;npm config set prefix &amp;quot;D:\Program Files\nodejs\node_global&amp;quot;   
+
+npm config set cache &amp;quot;D:\Program Files\nodejs\node_cache&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ol start=&#34;4&#34;&gt;
+&lt;li&gt;有时候用npm拉取包可能会很慢，可以用淘宝npm镜像代替npm进行拉包，就像github和gitee&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;执行：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-cmd&#34;&gt;npm install -g cnpm --registry=https://registry.npm.taobao.org
+&lt;/code&gt;&lt;/pre&gt;
+">node安装后的设置(node_global和node_cache) - windows</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://clearlove443.github.io/Cj2448i6d/"" data-c="
+          &lt;p&gt;&lt;strong&gt;使用快捷键&lt;/strong&gt;&lt;br&gt;
+&lt;kbd&gt;alt&lt;/kbd&gt;+&lt;kbd&gt;shift&lt;/kbd&gt;+&lt;kbd&gt;f&lt;/kbd&gt;&lt;/p&gt;
+">Vs Code 格式化代码</a>
+      </div>
       
       <div class="item">
         <a class="result-title" style="opacity: 0;" href="https://clearlove443.github.io/EIm2DvbAz/"" data-c="
@@ -2738,21 +3157,26 @@ Note right of C: 没人陪我玩
           &lt;h1 id=&#34;一组件之间传值的方法&#34;&gt;一.组件之间传值的方法&lt;/h1&gt;
 &lt;h2 id=&#34;1父子组件之间的传值方法&#34;&gt;1.父子组件之间的传值方法&lt;/h2&gt;
 &lt;h3 id=&#34;11-ininput和output方法&#34;&gt;1.1 @InInput和@Output方法&lt;/h3&gt;
-&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;export class testExample implements OnInit{
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;·子组件 component.ts
+export class testExample implements OnInit{
 	@Input test:any = {};
 	@Output testFun = new EventEmitter&amp;lt;any&amp;gt;();
 }
-&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;&amp;lt;test-example [test]=&amp;quot;test&amp;quot; (testFun)=&amp;quot;testFun($event)&amp;quot;&amp;gt;&amp;lt;/test-example&amp;gt;
+
+
+父组件模版引用子组件
+&amp;lt;test-example [test]=&amp;quot;test&amp;quot; (testFun)=&amp;quot;testFun($event)&amp;quot;&amp;gt;&amp;lt;/test-example&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;@Input修饰的变量为父组件传入子组件的输入属性. @Outpue修饰的子组件传入父组件的输出属性.&lt;/p&gt;
 &lt;h3 id=&#34;12-inputs和outputs&#34;&gt;1.2 inputs和outputs&lt;/h3&gt;
-&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;@Component({
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;子组件 component.ts
+@Component({
      //...
     inputs:[&#39;test&#39;],
     outputs:[&#39;testFun&#39;]
 })
  
+ 父组件模版引用子组件
 export class testExample implements OnInit{
     test:any = {};
     testFun = new 	EventEmitter&amp;lt;any&amp;gt;();
