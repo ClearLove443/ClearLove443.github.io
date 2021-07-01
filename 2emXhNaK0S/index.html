@@ -9,7 +9,7 @@
 <meta name="description" content="温故而知新">
 <meta name="theme-color" content="#000">
 <title>Gridea</title>
-<link rel="shortcut icon" href="/favicon.ico?v=1621771145592">
+<link rel="shortcut icon" href="/favicon.ico?v=1625150264699">
 <link rel="stylesheet" href="/media/css/muse.css">
 <link rel="stylesheet" href="/media/fonts/font-awesome.css">
 <link
@@ -185,19 +185,19 @@
     <div class="sidebar-item-box">
       <a href="/archives/">
         
-        <span class="site-item-stat-count">48</span>
+        <span class="site-item-stat-count">50</span>
         <span class="site-item-stat-name language" data-lan="article">文章</span>
       </a>
     </div>
     <div class="sidebar-item-box">
       <a href="">
-        <span class="site-item-stat-count">40</span>
+        <span class="site-item-stat-count">41</span>
         <span class="site-item-stat-name language" data-lan="category">分类</span>
       </a>
     </div>
     <div class="sidebar-item-box">
       <a href="/tags/">
-        <span class="site-item-stat-count">40</span>
+        <span class="site-item-stat-count">41</span>
         <span class="site-item-stat-name language" data-lan="tag">标签</span>
       </a>
     </div>
@@ -281,6 +281,10 @@
       
       
       
+      
+      
+      
+      
       <a href="https://clearlove443.github.io/QZWvM_NYv/">
         <div class="motion-warpper">
           <div class="tag-post-node">
@@ -291,6 +295,10 @@
           </div>
         </div>
       </a>
+      
+      
+      
+      
       
       
       
@@ -750,6 +758,14 @@
     <div class="result" id="result">
       
       <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://clearlove443.github.io/jxSX4_1H8/"" data-c="
+          &lt;p&gt;使用&lt;a href=&#34;https://docs.microsoft.com/zh-cn/sql/tools/sqlpackage/sqlpackage-export?view=sql-server-ver15&#34;&gt;SqlPackage&lt;/a&gt;工具进行备份。&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;sqlpackage.exe /TargetFile:&amp;quot;C:\sqlpackageoutput\sqldb-coredx-runtime-ac-dev001.bacpac&amp;quot; /Action:Export /SourceServerName:&amp;quot;DLC00PF2JDV3NL&amp;quot; /SourceDatabaseName:&amp;quot;mdmDB&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+">SQL Server 数据库备份成二进制文件</a>
+      </div>
+      
+      <div class="item">
         <a class="result-title" style="opacity: 0;" href="https://clearlove443.github.io/GKbqe4RBZ/"" data-c="
           &lt;p&gt;在项目开发的过程中肯定需要弹出视图，这种视图称之为模态框。&lt;/p&gt;
 &lt;ol&gt;
@@ -759,8 +775,16 @@
 &lt;p&gt;&lt;a href=&#34;https://juejin.cn/post/6844904151730782221&#34;&gt;手动重写&lt;/a&gt;&lt;br&gt;
 &lt;a href=&#34;https://github.com/kagol/components&#34;&gt;源码&lt;/a&gt;&lt;/p&gt;
 &lt;ol start=&#34;2&#34;&gt;
-&lt;li&gt;&lt;a href=&#34;https://valor-software.com/ngx-bootstrap/#/pagination#pagination-rotate&#34;&gt;NGX-Bootstrap&lt;/a&gt;&lt;br&gt;
-&lt;a href=&#34;https://github.com/valor-software/ngx-bootstrap/tree/development/src/pagination&#34;&gt;源码&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;https://ng-bootstrap.github.io/#/components/modal/examples&#34;&gt;NG-Bootstrap&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;https://valor-software.com/ngx-bootstrap/#/pagination#pagination-rotate&#34;&gt;NGX-Bootstrap&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;https://github.com/valor-software/ngx-bootstrap/tree/development/src/pagination&#34;&gt;源码&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;https://ng-zorro.gitee.io/&#34;&gt;ng-zorro&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
 &lt;/ol&gt;
 ">Angular 模态框</a>
       </div>
@@ -1166,6 +1190,36 @@ npm config set cache &amp;quot;D:\Program Files\nodejs\node_cache&amp;quot;
           &lt;p&gt;&lt;strong&gt;使用快捷键&lt;/strong&gt;&lt;br&gt;
 &lt;kbd&gt;alt&lt;/kbd&gt;+&lt;kbd&gt;shift&lt;/kbd&gt;+&lt;kbd&gt;f&lt;/kbd&gt;&lt;/p&gt;
 ">Vs Code 格式化代码</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://clearlove443.github.io/jHceDjoeh/"" data-c="
+          &lt;p&gt;默认情况下，Angular 6以上将应用程序的angularCompilerOption：preserveWhitespaces设置为false。就会导致元素之间没有间距。&lt;/p&gt;
+&lt;p&gt;解决办法如下&lt;/p&gt;
+&lt;p&gt;目前，在JIT模式下，我们可以将其设置为 CompileOptions :&lt;br&gt;
+main.ts&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-typescript&#34;&gt;platformBrowserDynamic().bootstrapModule(AppModule, { preserveWhitespaces: true });
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;对于aot，我们必须将此选项添加到&lt;br&gt;
+tsconfig.app.json&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-json&#34;&gt;{
+  &amp;quot;extends&amp;quot;: &amp;quot;../tsconfig.json&amp;quot;,
+  &amp;quot;compilerOptions&amp;quot;: {
+    &amp;quot;outDir&amp;quot;: &amp;quot;../out-tsc/app&amp;quot;,
+    &amp;quot;baseUrl&amp;quot;: &amp;quot;./&amp;quot;,
+    &amp;quot;module&amp;quot;: &amp;quot;es2015&amp;quot;,
+    &amp;quot;types&amp;quot;: []
+  },
+  &amp;quot;exclude&amp;quot;: [
+    &amp;quot;test.ts&amp;quot;,
+    &amp;quot;**/*.spec.ts&amp;quot;
+  ],
+  &amp;quot;angularCompilerOptions&amp;quot;: {
+&amp;quot;preserveWhitespaces&amp;quot;: true
+  }
+}
+&lt;/code&gt;&lt;/pre&gt;
+">Angular 元素之间没有间距</a>
       </div>
       
       <div class="item">

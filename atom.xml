@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://clearlove443.github.io/</id>
     <title>Gridea</title>
-    <updated>2021-05-23T11:59:10.497Z</updated>
+    <updated>2021-07-01T14:37:57.728Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://clearlove443.github.io/"/>
     <link rel="self" href="https://clearlove443.github.io/atom.xml"/>
@@ -10,6 +10,17 @@
     <logo>https://clearlove443.github.io/images/avatar.png</logo>
     <icon>https://clearlove443.github.io/favicon.ico</icon>
     <rights>All rights reserved 2021, Gridea</rights>
+    <entry>
+        <title type="html"><![CDATA[SQL Server 数据库备份成二进制文件]]></title>
+        <id>https://clearlove443.github.io/jxSX4_1H8/</id>
+        <link href="https://clearlove443.github.io/jxSX4_1H8/">
+        </link>
+        <updated>2021-06-19T09:05:46.000Z</updated>
+        <content type="html"><![CDATA[<p>使用<a href="https://docs.microsoft.com/zh-cn/sql/tools/sqlpackage/sqlpackage-export?view=sql-server-ver15">SqlPackage</a>工具进行备份。</p>
+<pre><code class="language-bash">sqlpackage.exe /TargetFile:&quot;C:\sqlpackageoutput\sqldb-coredx-runtime-ac-dev001.bacpac&quot; /Action:Export /SourceServerName:&quot;DLC00PF2JDV3NL&quot; /SourceDatabaseName:&quot;mdmDB&quot;
+</code></pre>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Angular 模态框]]></title>
         <id>https://clearlove443.github.io/GKbqe4RBZ/</id>
@@ -24,8 +35,16 @@
 <p><a href="https://juejin.cn/post/6844904151730782221">手动重写</a><br>
 <a href="https://github.com/kagol/components">源码</a></p>
 <ol start="2">
-<li><a href="https://valor-software.com/ngx-bootstrap/#/pagination#pagination-rotate">NGX-Bootstrap</a><br>
-<a href="https://github.com/valor-software/ngx-bootstrap/tree/development/src/pagination">源码</a></li>
+<li>
+<p><a href="https://ng-bootstrap.github.io/#/components/modal/examples">NG-Bootstrap</a></p>
+</li>
+<li>
+<p><a href="https://valor-software.com/ngx-bootstrap/#/pagination#pagination-rotate">NGX-Bootstrap</a><br>
+<a href="https://github.com/valor-software/ngx-bootstrap/tree/development/src/pagination">源码</a></p>
+</li>
+<li>
+<p><a href="https://ng-zorro.gitee.io/">ng-zorro</a></p>
+</li>
 </ol>
 ]]></content>
     </entry>
@@ -447,16 +466,6 @@ npm config set cache &quot;D:\Program Files\nodejs\node_cache&quot;
 <p>执行：</p>
 <pre><code class="language-cmd">npm install -g cnpm --registry=https://registry.npm.taobao.org
 </code></pre>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Vs Code 格式化代码]]></title>
-        <id>https://clearlove443.github.io/Cj2448i6d/</id>
-        <link href="https://clearlove443.github.io/Cj2448i6d/">
-        </link>
-        <updated>2021-05-23T07:24:12.000Z</updated>
-        <content type="html"><![CDATA[<p><strong>使用快捷键</strong><br>
-<kbd>alt</kbd>+<kbd>shift</kbd>+<kbd>f</kbd></p>
 ]]></content>
     </entry>
 </feed>
