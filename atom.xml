@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://clearlove443.github.io/</id>
     <title>Gridea</title>
-    <updated>2021-07-11T03:34:00.999Z</updated>
+    <updated>2021-07-11T04:03:05.581Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://clearlove443.github.io/"/>
     <link rel="self" href="https://clearlove443.github.io/atom.xml"/>
@@ -10,6 +10,21 @@
     <logo>https://clearlove443.github.io/images/avatar.png</logo>
     <icon>https://clearlove443.github.io/favicon.ico</icon>
     <rights>All rights reserved 2021, Gridea</rights>
+    <entry>
+        <title type="html"><![CDATA[docker 可视化管理 Portainer]]></title>
+        <id>https://clearlove443.github.io/p4DvMnCaf/</id>
+        <link href="https://clearlove443.github.io/p4DvMnCaf/">
+        </link>
+        <updated>2021-07-11T03:48:29.000Z</updated>
+        <content type="html"><![CDATA[<h1 id="portainer-server-deployment">Portainer Server Deployment</h1>
+<pre><code class="language-bash">docker volume create portainer_data
+docker run -d -p 8000:8000 -p 9000:9000 --name=portainer --restart=always -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer-ce
+</code></pre>
+<h1 id="portainer-agent-only-deployment">Portainer Agent Only Deployment</h1>
+<pre><code class="language-bash">docker run -d -p 9001:9001 --name portainer_agent --restart=always -v /var/run/docker.sock:/var/run/docker.sock -v /var/lib/docker/volumes:/var/lib/docker/volumes portainer/agent
+</code></pre>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Docker Desktop(WSL2)修改镜像存储位置]]></title>
         <id>https://clearlove443.github.io/_xMrzJo_w/</id>
@@ -35,9 +50,22 @@ wsl --unregister docker-desktop-data
 <pre><code class="language-bash">wsl --import docker-desktop D:\docker\wsl\distro docker-desktop.tar --version 2
 wsl --import docker-desktop-data D:\docker\wsl\data docker-desktop-data.tar --version 2
 </code></pre>
-<p>设置默认子系统</p>
+<p>查看当前 Windows 10 PC 中已安装的 Linux 发行版</p>
+<pre><code class="language-bash">wslconfig /setdefault Name
+</code></pre>
+<p>设置默认Linux发行版</p>
 <pre><code class="language-bash">wslconfig /setdefault docker-desktop
 </code></pre>
+<p>运行多个Linux发行版</p>
+<p>在 Windows 10 中安装好多套 Linux 发行版之后，即便没将它设置为默认的 Linux 环境，也可以启动使用。例如，用户可以直接在「开始」菜单中找到启动 Ubuntu、openSUSE Leap 和 SUSE Linux Enterprise Server 系统的快捷方式，并同时运行三套独立的环境。</p>
+<p>如果你没在 Microsoft Store 中选择将 Linux 发行版的快捷方式固定到「开始」菜单，也只需要使用其命令名称即可从命令行或快捷方式启动 Linux 发行版。以下启动三个 Linux 发行版所需的命令：</p>
+<pre><code class="language-bash">　　Ubuntu： ubuntu
+
+　　openSUSE Leap 42： opensuse-42
+
+　　SUSE Linux Enterprise Server 12： sles-12
+</code></pre>
+<p>例如，即使 Ubuntu 是你的默认环境，仍然可以通过运行 opensuse-42 命令从任何地方启动 openSUSE。</p>
 ]]></content>
     </entry>
     <entry>
@@ -300,17 +328,6 @@ test 方法耗费时间： 0.039ms
 <p>除了 match 方法，其他三个方法在性能上差不多。不过在这里有一点需要提出的就是， test 方法因为使用到了正则表达式，所以能够实现的功能会比较强大，写出来的代码也更加简洁。打个比方，在不区分大小写的模糊搜索条件下， test 方法只需在正则表达式中添加修饰符 i 即可实现不区分大小写，而 indexof 方法和 split 方法则要通过多次的方法调用和逻辑运算符才能实现效果。</p>
 </li>
 </ol>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Vs Code 关闭单词拼写错误 警告 Unknown word]]></title>
-        <id>https://clearlove443.github.io/GA8lSdhvw/</id>
-        <link href="https://clearlove443.github.io/GA8lSdhvw/">
-        </link>
-        <updated>2021-05-23T09:29:36.000Z</updated>
-        <content type="html"><![CDATA[<p>快捷键 <kbd>Ctrl</kbd>+<kbd>,</kbd> 打开settings.json，添加如下设置</p>
-<pre><code>&quot;cSpell.diagnosticLevel&quot;: &quot;Hint&quot;,
-</code></pre>
 ]]></content>
     </entry>
 </feed>

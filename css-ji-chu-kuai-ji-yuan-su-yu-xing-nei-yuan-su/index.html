@@ -9,7 +9,7 @@
 <meta name="description" content="温故而知新">
 <meta name="theme-color" content="#000">
 <title>CSS基础-块级元素与行内元素 | Gridea</title>
-<link rel="shortcut icon" href="/favicon.ico?v=1625974323822">
+<link rel="shortcut icon" href="/favicon.ico?v=1625976180014">
 <link rel="stylesheet" href="/media/css/muse.css">
 <link rel="stylesheet" href="/media/fonts/font-awesome.css">
 <link
@@ -203,7 +203,7 @@
     <div class="sidebar-item-box">
       <a href="/archives/">
         
-        <span class="site-item-stat-count">56</span>
+        <span class="site-item-stat-count">57</span>
         <span class="site-item-stat-name language" data-lan="article">文章</span>
       </a>
     </div>
@@ -1184,6 +1184,18 @@ img , input  , select ,textarea（属于行内置换元素，下文详解）
     <div class="result" id="result">
       
       <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://clearlove443.github.io/p4DvMnCaf/"" data-c="
+          &lt;h1 id=&#34;portainer-server-deployment&#34;&gt;Portainer Server Deployment&lt;/h1&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;docker volume create portainer_data
+docker run -d -p 8000:8000 -p 9000:9000 --name=portainer --restart=always -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer-ce
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h1 id=&#34;portainer-agent-only-deployment&#34;&gt;Portainer Agent Only Deployment&lt;/h1&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;docker run -d -p 9001:9001 --name portainer_agent --restart=always -v /var/run/docker.sock:/var/run/docker.sock -v /var/lib/docker/volumes:/var/lib/docker/volumes portainer/agent
+&lt;/code&gt;&lt;/pre&gt;
+">docker 可视化管理 Portainer</a>
+      </div>
+      
+      <div class="item">
         <a class="result-title" style="opacity: 0;" href="https://clearlove443.github.io/_xMrzJo_w/"" data-c="
           &lt;p&gt;查看子系统&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;wsl -l -v --all
@@ -1204,9 +1216,22 @@ wsl --unregister docker-desktop-data
 &lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;wsl --import docker-desktop D:\docker\wsl\distro docker-desktop.tar --version 2
 wsl --import docker-desktop-data D:\docker\wsl\data docker-desktop-data.tar --version 2
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;设置默认子系统&lt;/p&gt;
+&lt;p&gt;查看当前 Windows 10 PC 中已安装的 Linux 发行版&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;wslconfig /setdefault Name
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;设置默认Linux发行版&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;wslconfig /setdefault docker-desktop
 &lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;运行多个Linux发行版&lt;/p&gt;
+&lt;p&gt;在 Windows 10 中安装好多套 Linux 发行版之后，即便没将它设置为默认的 Linux 环境，也可以启动使用。例如，用户可以直接在「开始」菜单中找到启动 Ubuntu、openSUSE Leap 和 SUSE Linux Enterprise Server 系统的快捷方式，并同时运行三套独立的环境。&lt;/p&gt;
+&lt;p&gt;如果你没在 Microsoft Store 中选择将 Linux 发行版的快捷方式固定到「开始」菜单，也只需要使用其命令名称即可从命令行或快捷方式启动 Linux 发行版。以下启动三个 Linux 发行版所需的命令：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;　　Ubuntu： ubuntu
+
+　　openSUSE Leap 42： opensuse-42
+
+　　SUSE Linux Enterprise Server 12： sles-12
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;例如，即使 Ubuntu 是你的默认环境，仍然可以通过运行 opensuse-42 命令从任何地方启动 openSUSE。&lt;/p&gt;
 ">Docker Desktop(WSL2)修改镜像存储位置</a>
       </div>
       
@@ -2891,6 +2916,8 @@ border-left:1px solid red;
 &lt;li&gt;各种在线工具&lt;br&gt;
 &lt;a href=&#34;https://tool.lu/&#34;&gt;tools&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
+&lt;h1 id=&#34;docker&#34;&gt;docker&lt;/h1&gt;
+&lt;p&gt;&lt;a href=&#34;https://hub.docker.com/&#34;&gt;docker&lt;/a&gt;&lt;/p&gt;
 ">一些有用的网站集锦</a>
       </div>
       
