@@ -9,7 +9,7 @@
 <meta name="description" content="温故而知新">
 <meta name="theme-color" content="#000">
 <title>SQL Server 数据库备份成二进制文件 | Gridea</title>
-<link rel="shortcut icon" href="/favicon.ico?v=1625150264699">
+<link rel="shortcut icon" href="/favicon.ico?v=1625974323822">
 <link rel="stylesheet" href="/media/css/muse.css">
 <link rel="stylesheet" href="/media/fonts/font-awesome.css">
 <link
@@ -202,19 +202,19 @@
     <div class="sidebar-item-box">
       <a href="/archives/">
         
-        <span class="site-item-stat-count">50</span>
+        <span class="site-item-stat-count">56</span>
         <span class="site-item-stat-name language" data-lan="article">文章</span>
       </a>
     </div>
     <div class="sidebar-item-box">
       <a href="">
-        <span class="site-item-stat-count">41</span>
+        <span class="site-item-stat-count">43</span>
         <span class="site-item-stat-name language" data-lan="category">分类</span>
       </a>
     </div>
     <div class="sidebar-item-box">
       <a href="/tags/">
-        <span class="site-item-stat-count">41</span>
+        <span class="site-item-stat-count">43</span>
         <span class="site-item-stat-name language" data-lan="tag">标签</span>
       </a>
     </div>
@@ -392,6 +392,10 @@
   </div>
   <div class="nav">
     <div class="nav-prev">
+      
+        <i class="fa fa-chevron-left"></i>
+        <a class="nav-pc-next" title="Windows 10 Docker InvalidOperationException Failed to set version to docker-desktop: exit code: -1" href="https://clearlove443.github.io/IlQNbjYzn/">Windows 10 Docker InvalidOperationException Failed to set version to docker-desktop: exit code: -1</a class="nav-pc-next">
+        <a class="nav-mobile-prev" title="Windows 10 Docker InvalidOperationException Failed to set version to docker-desktop: exit code: -1" href="https://clearlove443.github.io/IlQNbjYzn/">上一篇</a>
       
     </div>
     <div class="nav-next">
@@ -853,6 +857,114 @@
       <hr>
     </div>
     <div class="result" id="result">
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://clearlove443.github.io/_xMrzJo_w/"" data-c="
+          &lt;p&gt;查看子系统&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;wsl -l -v --all
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;docker-desktop是存放程序的，docker-desktop-data是存放镜像的，这两个wsl子系统都是默认放在系统盘的。&lt;br&gt;
+删除所有的image/container/wsl/hyperv数据：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Troubleshoot =&amp;gt; Clean / Purge data =&amp;gt; hyperv
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;导出wsl子系统镜像:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;wsl --export docker-desktop docker-desktop.tar
+wsl --export docker-desktop-data docker-desktop-data.tar
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;删除子系统镜像&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;wsl --unregister docker-desktop
+wsl --unregister docker-desktop-data
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;重新创建wsl子系统：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;wsl --import docker-desktop D:\docker\wsl\distro docker-desktop.tar --version 2
+wsl --import docker-desktop-data D:\docker\wsl\data docker-desktop-data.tar --version 2
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;设置默认子系统&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;wslconfig /setdefault docker-desktop
+&lt;/code&gt;&lt;/pre&gt;
+">Docker Desktop(WSL2)修改镜像存储位置</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://clearlove443.github.io/BHcRhfhx4/"" data-c="
+          &lt;p&gt;cmd 运行&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;docker run --name some-postgres -e POSTGRES_PASSWORD=postgres -d -p 5432:5432 postgres
+&lt;/code&gt;&lt;/pre&gt;
+">WIndows 10 Docker desktop creat Postgres engine</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://clearlove443.github.io/funVxpRfy/"" data-c="
+          &lt;p&gt;cmd 运行&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;docker run -e &#39;ACCEPT_EULA=Y&#39; -e &#39;SA_PASSWORD=!SqlServer2&#39; -p 1433:1433 -d mcr.microsoft.com/mssql/server:2019-latest
+&lt;/code&gt;&lt;/pre&gt;
+">WIndows 10 Docker desktop creat Sql Server 2019 engine</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://clearlove443.github.io/mtktwAkOk/"" data-c="
+          &lt;p&gt;cmd 管理员运行&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;net stop winnat
+net start winnat
+&lt;/code&gt;&lt;/pre&gt;
+">Docker error "Ports are not available" on Windows 10 </a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://clearlove443.github.io/jlMpUapWA/"" data-c="
+          &lt;h1 id=&#34;docker-desktop-设置&#34;&gt;docker desktop 设置&lt;/h1&gt;
+&lt;p&gt;Settings  =&amp;gt; Docker Engine&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-json&#34;&gt;{
+  &amp;quot;registry-mirrors&amp;quot;: [
+    &amp;quot;https://0hgxc31r.mirror.aliyuncs.com&amp;quot;,
+    &amp;quot;https://docker.mirrors.ustc.edu.cn/&amp;quot;,
+    &amp;quot;https://hub-mirror.c.163.com/&amp;quot;,
+    &amp;quot;https://reg-mirror.qiniu.com&amp;quot;
+  ],
+  &amp;quot;insecure-registries&amp;quot;: [],
+  &amp;quot;debug&amp;quot;: false,
+  &amp;quot;experimental&amp;quot;: true,
+  &amp;quot;features&amp;quot;: {
+    &amp;quot;buildkit&amp;quot;: true
+  },
+  &amp;quot;builder&amp;quot;: {
+    &amp;quot;gc&amp;quot;: {
+      &amp;quot;enabled&amp;quot;: true,
+      &amp;quot;defaultKeepStorage&amp;quot;: &amp;quot;20GB&amp;quot;
+    }
+  }
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h1 id=&#34;vmmen-设置&#34;&gt;Vmmen  设置&lt;/h1&gt;
+&lt;p&gt;C:\Users&amp;lt;username&amp;gt; 利用新建 .wslconfig文件&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;[wsl2]
+memory=2GB
+swap=0
+localhostForwarding=true
+&lt;/code&gt;&lt;/pre&gt;
+">Windows 10 Docker desktop 初始设置</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://clearlove443.github.io/IlQNbjYzn/"" data-c="
+          &lt;p&gt;&lt;img src=&#34;https://clearlove443.github.io//post-images/1625972721746.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
+cmd/shell下执行&lt;/p&gt;
+&lt;p&gt;netsh winsock reset&lt;/p&gt;
+&lt;p&gt;然后重启docker就好了（临时方案，管不了多久，基本上重启电脑就不行了），久而久之就渴望一种永久的方法，不过还好找着了&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;&lt;strong&gt;&lt;strong&gt;&lt;strong&gt;&lt;strong&gt;&lt;strong&gt;&lt;strong&gt;&lt;strong&gt;&lt;strong&gt;&lt;strong&gt;下面是永久方案&lt;/strong&gt;&lt;/strong&gt;&lt;/strong&gt;&lt;/strong&gt;&lt;/strong&gt;&lt;/strong&gt;&lt;/strong&gt;&lt;/strong&gt;&lt;/strong&gt;&lt;/strong&gt;&lt;/em&gt;*****&lt;/p&gt;
+&lt;p&gt;1.下载NoLsp(需要使用VPN等)&lt;/p&gt;
+&lt;p&gt;http://www.proxifier.com/tmp/Test20200228/NoLsp.exe&lt;/p&gt;
+&lt;p&gt;2.下载的文件建议放在C:\Windows\System32下，也可以随便放，位置你知道就行，如果不是NoLsp.exe建议重命名一下，当前也可以不重命名，使用方便就行了&lt;/p&gt;
+&lt;p&gt;cmd下执行（管理员模式）&lt;/p&gt;
+&lt;p&gt;NoLsp.exe c:\windows\system32\wsl.exe&lt;/p&gt;
+&lt;p&gt;如果不对，肯定是路径不对。&lt;/p&gt;
+&lt;p&gt;3.启动 wsl&lt;/p&gt;
+&lt;p&gt;执行wsl&lt;/p&gt;
+&lt;p&gt;4.效果图&lt;br&gt;
+&lt;img src=&#34;https://clearlove443.github.io//post-images/1625972788739.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
+&lt;p&gt;5.重启Restart Docker Desktop&lt;/p&gt;
+">Windows 10 Docker InvalidOperationException Failed to set version to docker-desktop: exit code: -1</a>
+      </div>
       
       <div class="item">
         <a class="result-title" style="opacity: 0;" href="https://clearlove443.github.io/jxSX4_1H8/"" data-c="

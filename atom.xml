@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://clearlove443.github.io/</id>
     <title>Gridea</title>
-    <updated>2021-07-01T14:37:57.728Z</updated>
+    <updated>2021-07-11T03:32:25.866Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://clearlove443.github.io/"/>
     <link rel="self" href="https://clearlove443.github.io/atom.xml"/>
@@ -10,6 +10,132 @@
     <logo>https://clearlove443.github.io/images/avatar.png</logo>
     <icon>https://clearlove443.github.io/favicon.ico</icon>
     <rights>All rights reserved 2021, Gridea</rights>
+    <entry>
+        <title type="html"><![CDATA[Docker Desktop(WSL2)修改镜像存储位置]]></title>
+        <id>https://clearlove443.github.io/_xMrzJo_w/</id>
+        <link href="https://clearlove443.github.io/_xMrzJo_w/">
+        </link>
+        <updated>2021-07-11T03:28:43.000Z</updated>
+        <content type="html"><![CDATA[<p>查看子系统</p>
+<pre><code class="language-bash">wsl -l -v --all
+</code></pre>
+<p>docker-desktop是存放程序的，docker-desktop-data是存放镜像的，这两个wsl子系统都是默认放在系统盘的。<br>
+删除所有的image/container/wsl/hyperv数据：</p>
+<pre><code>Troubleshoot =&gt; Clean / Purge data =&gt; hyperv
+</code></pre>
+<p>导出wsl子系统镜像:</p>
+<pre><code class="language-bash">wsl --export docker-desktop docker-desktop.tar
+wsl --export docker-desktop-data docker-desktop-data.tar
+</code></pre>
+<p>删除子系统镜像</p>
+<pre><code class="language-bash">wsl --unregister docker-desktop
+wsl --unregister docker-desktop-data
+</code></pre>
+<p>重新创建wsl子系统：</p>
+<pre><code class="language-bash">wsl --import docker-desktop D:\docker\wsl\distro docker-desktop.tar --version 2
+wsl --import docker-desktop-data D:\docker\wsl\data docker-desktop-data.tar --version 2
+</code></pre>
+<p>设置默认子系统</p>
+<pre><code class="language-bash">wslconfig /setdefault docker-desktop
+</code></pre>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[WIndows 10 Docker desktop creat Postgres engine]]></title>
+        <id>https://clearlove443.github.io/BHcRhfhx4/</id>
+        <link href="https://clearlove443.github.io/BHcRhfhx4/">
+        </link>
+        <updated>2021-07-11T03:27:34.000Z</updated>
+        <content type="html"><![CDATA[<p>cmd 运行</p>
+<pre><code>docker run --name some-postgres -e POSTGRES_PASSWORD=postgres -d -p 5432:5432 postgres
+</code></pre>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[WIndows 10 Docker desktop creat Sql Server 2019 engine]]></title>
+        <id>https://clearlove443.github.io/funVxpRfy/</id>
+        <link href="https://clearlove443.github.io/funVxpRfy/">
+        </link>
+        <updated>2021-07-11T03:24:22.000Z</updated>
+        <content type="html"><![CDATA[<p>cmd 运行</p>
+<pre><code class="language-bash">docker run -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=!SqlServer2' -p 1433:1433 -d mcr.microsoft.com/mssql/server:2019-latest
+</code></pre>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Docker error "Ports are not available" on Windows 10 ]]></title>
+        <id>https://clearlove443.github.io/mtktwAkOk/</id>
+        <link href="https://clearlove443.github.io/mtktwAkOk/">
+        </link>
+        <updated>2021-07-11T03:22:19.000Z</updated>
+        <content type="html"><![CDATA[<p>cmd 管理员运行</p>
+<pre><code class="language-bash">net stop winnat
+net start winnat
+</code></pre>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Windows 10 Docker desktop 初始设置]]></title>
+        <id>https://clearlove443.github.io/jlMpUapWA/</id>
+        <link href="https://clearlove443.github.io/jlMpUapWA/">
+        </link>
+        <updated>2021-07-11T03:07:53.000Z</updated>
+        <content type="html"><![CDATA[<h1 id="docker-desktop-设置">docker desktop 设置</h1>
+<p>Settings  =&gt; Docker Engine</p>
+<pre><code class="language-json">{
+  &quot;registry-mirrors&quot;: [
+    &quot;https://0hgxc31r.mirror.aliyuncs.com&quot;,
+    &quot;https://docker.mirrors.ustc.edu.cn/&quot;,
+    &quot;https://hub-mirror.c.163.com/&quot;,
+    &quot;https://reg-mirror.qiniu.com&quot;
+  ],
+  &quot;insecure-registries&quot;: [],
+  &quot;debug&quot;: false,
+  &quot;experimental&quot;: true,
+  &quot;features&quot;: {
+    &quot;buildkit&quot;: true
+  },
+  &quot;builder&quot;: {
+    &quot;gc&quot;: {
+      &quot;enabled&quot;: true,
+      &quot;defaultKeepStorage&quot;: &quot;20GB&quot;
+    }
+  }
+}
+</code></pre>
+<h1 id="vmmen-设置">Vmmen  设置</h1>
+<p>C:\Users&lt;username&gt; 利用新建 .wslconfig文件</p>
+<pre><code>[wsl2]
+memory=2GB
+swap=0
+localhostForwarding=true
+</code></pre>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Windows 10 Docker InvalidOperationException Failed to set version to docker-desktop: exit code: -1]]></title>
+        <id>https://clearlove443.github.io/IlQNbjYzn/</id>
+        <link href="https://clearlove443.github.io/IlQNbjYzn/">
+        </link>
+        <updated>2021-07-11T03:04:27.000Z</updated>
+        <content type="html"><![CDATA[<p><img src="https://clearlove443.github.io//post-images/1625972721746.png" alt="" loading="lazy"><br>
+cmd/shell下执行</p>
+<p>netsh winsock reset</p>
+<p>然后重启docker就好了（临时方案，管不了多久，基本上重启电脑就不行了），久而久之就渴望一种永久的方法，不过还好找着了</p>
+<p><em><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong>下面是永久方案</strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></em>*****</p>
+<p>1.下载NoLsp(需要使用VPN等)</p>
+<p>http://www.proxifier.com/tmp/Test20200228/NoLsp.exe</p>
+<p>2.下载的文件建议放在C:\Windows\System32下，也可以随便放，位置你知道就行，如果不是NoLsp.exe建议重命名一下，当前也可以不重命名，使用方便就行了</p>
+<p>cmd下执行（管理员模式）</p>
+<p>NoLsp.exe c:\windows\system32\wsl.exe</p>
+<p>如果不对，肯定是路径不对。</p>
+<p>3.启动 wsl</p>
+<p>执行wsl</p>
+<p>4.效果图<br>
+<img src="https://clearlove443.github.io//post-images/1625972788739.png" alt="" loading="lazy"></p>
+<p>5.重启Restart Docker Desktop</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[SQL Server 数据库备份成二进制文件]]></title>
         <id>https://clearlove443.github.io/jxSX4_1H8/</id>
@@ -184,287 +310,6 @@ test 方法耗费时间： 0.039ms
         <updated>2021-05-23T09:29:36.000Z</updated>
         <content type="html"><![CDATA[<p>快捷键 <kbd>Ctrl</kbd>+<kbd>,</kbd> 打开settings.json，添加如下设置</p>
 <pre><code>&quot;cSpell.diagnosticLevel&quot;: &quot;Hint&quot;,
-</code></pre>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Vs code TSLint 运行报错]]></title>
-        <id>https://clearlove443.github.io/zS_mPjZ_2/</id>
-        <link href="https://clearlove443.github.io/zS_mPjZ_2/">
-        </link>
-        <updated>2021-05-23T09:22:48.000Z</updated>
-        <content type="html"><![CDATA[<pre><code>Not using the local TSLint version found for '/Users/myname/myproject/client/src/app/likes/likee/likee.component.ts'. To enable code execution from the current workspace you must enable workspace library execution.
-</code></pre>
-<p>打开快捷键<kbd>Ctrl </kbd>+<kbd>Shift </kbd>+<kbd>P</kbd></p>
-<p>选择<code>TSLint: Manage workspace library execution</code></p>
-<p>然后按回车</p>
-<p>选择<code>enable workspace library execution</code>选项<br>
-按回车确认</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[如何用NPM快速删除文件夹]]></title>
-        <id>https://clearlove443.github.io/AEASEoAzM/</id>
-        <link href="https://clearlove443.github.io/AEASEoAzM/">
-        </link>
-        <updated>2021-05-23T09:12:46.000Z</updated>
-        <content type="html"><![CDATA[<p>通过npm安装删除工具</p>
-<pre><code class="language-npm">npm install rimraf -g
-安装淘宝镜像后可以使用
-cnpm install rimraf -g   命令行语句，速度会更快
-</code></pre>
-<p>使用删除命令</p>
-<pre><code class="language-npm">rimraf node_modules (可以替换其他文件夹)
-</code></pre>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[CSS-水平居中、垂直居中、水平垂直居中]]></title>
-        <id>https://clearlove443.github.io/koXAnwdaZ/</id>
-        <link href="https://clearlove443.github.io/koXAnwdaZ/">
-        </link>
-        <updated>2021-05-23T07:52:20.000Z</updated>
-        <content type="html"><![CDATA[<h1 id="水平居中">水平居中</h1>
-<h2 id="水平居中可分为行内元素水平居中和块级元素水平居中">水平居中可分为行内元素水平居中和块级元素水平居中</h2>
-<ol>
-<li>行内元素水平居中<br>
-这里行内元素是指文本text、图像img、按钮超链接等，只需给父元素设置text-align:center即可实现。</li>
-</ol>
-<pre><code class="language-css">.center{
-        text-align:center;
-}
-&lt;div class=&quot;center&quot;&gt;水平居中&lt;/div&gt;
-</code></pre>
-<ol start="2">
-<li>块级元素水平居中</li>
-</ol>
-<ul>
-<li>定宽块级元素水平居中<br>
-只需给需要居中的块级元素加margin:0 auto即可，但这里需要注意的是，这里块状元素的宽度width值一定要有</li>
-</ul>
-<pre><code class="language-css">.center{
-      width:200px;
-      margin:0 auto;
-      border:1px solid red;
-  }
-  &lt;div class=&quot;center&quot;&gt;水平居中&lt;/div&gt;
-</code></pre>
-<ul>
-<li>不定宽块级元素水平居中</li>
-</ul>
-<p>不定宽，即块级元素宽度不固定</p>
-<p>方法1：设置table<br>
-通过给要居中显示的元素，设置display:table，然后设置margin:0 auto来实现</p>
-<pre><code class="language-css">.center{
-     display:table;
-     margin:0 auto;
-     border:1px solid red;
- }
- &lt;div class=&quot;center&quot;&gt;水平居中&lt;/div&gt;
-</code></pre>
-<p>方法2：设置inline-block（多个块状元素）<br>
-子元素设置inline-block，同时父元素设置text-align:center</p>
-<pre><code class="language-css">.center{
-      text-align:center;
-  }
-  .inlineblock-div{
-      display:inline-block;
-  }
-  &lt;div class=&quot;center&quot;&gt;
-      &lt;div class=&quot;inlineblock-div&quot;&gt;1&lt;/div&gt;
-      &lt;div class=&quot;inlineblock-div&quot;&gt;2&lt;/div&gt;
-  &lt;/div&gt;
-</code></pre>
-<p>方法3：设置flex布局<br>
-只需把要处理的块状元素的父元素设置display:flex,justify-content:center;</p>
-<pre><code class="language-css">.center{
-      display:flex;
-      justify-content:center;
-  }
-  &lt;div class=&quot;center&quot;&gt;
-      &lt;div class=&quot;flex-div&quot;&gt;1&lt;/div&gt;
-      &lt;div class=&quot;flex-div&quot;&gt;2&lt;/div&gt;
-  &lt;/div&gt;
-</code></pre>
-<p>方法4：position + 负margin；<br>
-方法5：position + margin：auto；<br>
-方法6：position + transform；</p>
-<p>注：这里方法4、5、6同下面垂直居中一样的道理，只不过需要把top/bottom改为left/right，在垂直居中部分会详细讲述。</p>
-<h1 id="垂直居中">垂直居中</h1>
-<h2 id="单行文本垂直居中">单行文本垂直居中</h2>
-<ul>
-<li>
-<p>设置paddingtop=paddingbottom；或</p>
-</li>
-<li>
-<p>设置line-height=height；</p>
-<h2 id="多行文本垂直居中">多行文本垂直居中</h2>
-<p>通过设置父元素table，子元素table-cell和vertical-align<br>
-vertical-align:middle的意思是把元素放在父元素的中部</p>
-</li>
-</ul>
-<pre><code class="language-css">.center{
-	width:200px;
-	height:300px;
-	display:table;
-	border: 2px solid blue;	
-}
-.table-div{
-	display:table-cell;
-	verticaL-aLign: middle;
-	border:IJX solid red;
-)
-&lt;div class=&quot;center&quot;&gt;
-	&lt;div class=&quot;table-div”&gt;多行文本垂直居中〈/div&gt;
-&lt;/div&gt;
-</code></pre>
-<h2 id="块级元素垂直居中">块级元素垂直居中</h2>
-<p>flex布局</p>
-<p>在需要垂直居中的父元素上，设置display:flex和align-items：center<br>
-要求：父元素必须显示设置height值</p>
-<pre><code class="language-css">.center{
-	width:200px;
-	height:300px;
-	display:flex;
-	align-items：center
-}
-&lt;div class=&quot;center&quot;&gt;
-	&lt;div&gt;垂直居中〈/div&gt;
-&lt;/div&gt;
-</code></pre>
-<h2 id="水平垂直居中">水平垂直居中</h2>
-<ul>
-<li>方法1：flex布局</li>
-</ul>
-<pre><code class="language-css">   .box{
-         height:600px;           
-         display:flex;
-         justify-content:center;  //子元素水平居中
-         align-items:center;      //子元素垂直居中
-           /* aa只要三句话就可以实现不定宽高水平垂直居中。 */
-    }
-    .box&gt;div{
-        background: green;
-        width: 200px;
-        height: 200px;
-    }
-</code></pre>
-<ul>
-<li>方法2：绝对定位+margin:auto</li>
-</ul>
-<pre><code class="language-css">    div{
-        width: 200px;
-        height: 200px;
-        background: green;
-        
-        position:absolute;
-        left:0;
-        top: 0;
-        bottom: 0;
-        right: 0;
-        margin: auto;
-    }
-</code></pre>
-<ul>
-<li>方法3：绝对定位+负margin</li>
-</ul>
-<pre><code class="language-css">    div{
-        width:200px;
-        height: 200px;
-        background:green;
-        
-        position: absolute;
-        left:50%;
-        top:50%;
-        margin-left:-100px;
-        margin-top:-100px;
-    }
-</code></pre>
-<ul>
-<li>方法4：绝对定位+transform</li>
-</ul>
-<pre><code class="language-css">    div{
-        width: 200px;
-        height: 200px;
-        background: green;
-        
-        position:absolute;
-        left:50%;    /* 定位父级的50% */
-        top:50%;
-        transform: translate(-50%,-50%); /*自己的50% */
-    }
-</code></pre>
-<ul>
-<li>方法5：table-cell实现居中</li>
-</ul>
-<pre><code class="language-css">
-设置
-display:table-cell;
-text-align:center;
-vertical-align: middle;
-</code></pre>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[在VSCode中默认使用settings.json中定义的TypeScript版本]]></title>
-        <id>https://clearlove443.github.io/pzFblNeuC/</id>
-        <link href="https://clearlove443.github.io/pzFblNeuC/">
-        </link>
-        <updated>2021-05-23T07:43:53.000Z</updated>
-        <content type="html"><![CDATA[<p>当VSCode打开typescript文件,使用node_modules里面的TypeScript版本，而不是VSCode的版本</p>
-<p>快捷键 <kbd>Ctrl</kbd>+<kbd>,</kbd> 打开settings.json，添加如下设置</p>
-<pre><code class="language-json">&quot;typescript.tsdk&quot;: &quot;node_modules/typescript/lib&quot;,
-</code></pre>
-<p>然后打开右下角typescript版本，选择<code>Use Workspace Version</code></p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Windows 中的 mklink 命令]]></title>
-        <id>https://clearlove443.github.io/A6C7VQx3z/</id>
-        <link href="https://clearlove443.github.io/A6C7VQx3z/">
-        </link>
-        <updated>2021-05-23T07:38:12.000Z</updated>
-        <content type="html"><![CDATA[<p>Windows链接</p>
-<p>比如把修改VScode 插件安装目录</p>
-<p>把C:\Users{username}.vscode\extensions(默认插件位置)的extensions文件夹整个剪切到你想换的位置</p>
-<p>cmd 执行</p>
-<pre><code>mklink /D &quot;C:\Users\{username}\.vscode\extensions&quot; &quot;剪切后的路径&quot;
-</code></pre>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[node安装后的设置(node_global和node_cache) - windows]]></title>
-        <id>https://clearlove443.github.io/QZWvM_NYv/</id>
-        <link href="https://clearlove443.github.io/QZWvM_NYv/">
-        </link>
-        <updated>2021-05-23T07:31:26.000Z</updated>
-        <content type="html"><![CDATA[<p>使用npm安装模块分为本地安装和全局安装。</p>
-<p>本地安装：npm install express    会安装到当前项目</p>
-<p>全局安装：npm install express -g  会安装到指定的目录(node_global)</p>
-<p>另外，如果没有设置全局目录node_global，那么全局安装的文件将会保存到 C:\Users\hades\AppData\Roaming\npm (hases是自己设置的计算机名字)</p>
-<p>安装好node后，要设置一下node_global和node_cache(node缓存文件夹)</p>
-<ol>
-<li>
-<p>在node安装目录创建node_global和node_cache文件夹</p>
-</li>
-<li>
-<p>设置环境变量：</p>
-</li>
-</ol>
-<p>用户变量设置：将用户变量中 PATH 的值改成 D:\Program Files\nodejs\node_global，没有PATH，可以直接添加。</p>
-<p>系统变量设置：添加变量 NODE_PATH  值为：D:\Program Files\nodejs\node_modules</p>
-<ol start="3">
-<li>打开cmd，执行</li>
-</ol>
-<pre><code class="language-cmd">npm config set prefix &quot;D:\Program Files\nodejs\node_global&quot;   
-
-npm config set cache &quot;D:\Program Files\nodejs\node_cache&quot;
-</code></pre>
-<ol start="4">
-<li>有时候用npm拉取包可能会很慢，可以用淘宝npm镜像代替npm进行拉包，就像github和gitee</li>
-</ol>
-<p>执行：</p>
-<pre><code class="language-cmd">npm install -g cnpm --registry=https://registry.npm.taobao.org
 </code></pre>
 ]]></content>
     </entry>
