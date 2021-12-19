@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Windows 10 Docker InvalidOperationException Failed to set version to docker-desktop: exit code: -1 | clearlove&#39;s blog</title>
+    <meta name="generator" content="VuePress 1.8.0">
+    <link rel="icon" href="/favicon.ico">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="apple-touch-icon" href="/icon_vuepress_reco.png">
+    <link rel="mask-icon" href="/icon_vuepress_reco.svg" color="#42b983">
+    <meta name="description" content="禅与计算机编程艺术">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    <meta name="theme-color" content="#42b983">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="msapplication-TileImage" content="/icon_vuepress_reco.png">
+    <meta name="msapplication-TileColor" content="#000000">
+    
+    <link rel="preload" href="/assets/css/0.styles.4112788f.css" as="style"><link rel="preload" href="/assets/js/app.dfaaa849.js" as="script"><link rel="preload" href="/assets/js/3.779ffeb8.js" as="script"><link rel="preload" href="/assets/js/1.ab13f454.js" as="script"><link rel="prefetch" href="/assets/js/10.d80bfb32.js"><link rel="prefetch" href="/assets/js/100.4e47f128.js"><link rel="prefetch" href="/assets/js/101.688cf44f.js"><link rel="prefetch" href="/assets/js/102.d0f94271.js"><link rel="prefetch" href="/assets/js/103.9cd6531d.js"><link rel="prefetch" href="/assets/js/104.9a73db81.js"><link rel="prefetch" href="/assets/js/105.1a9a8ba7.js"><link rel="prefetch" href="/assets/js/106.1935b675.js"><link rel="prefetch" href="/assets/js/107.49fe4c5b.js"><link rel="prefetch" href="/assets/js/108.e2b1842f.js"><link rel="prefetch" href="/assets/js/109.609bb559.js"><link rel="prefetch" href="/assets/js/11.fe670115.js"><link rel="prefetch" href="/assets/js/110.3964501c.js"><link rel="prefetch" href="/assets/js/111.1e24f49c.js"><link rel="prefetch" href="/assets/js/112.22db1471.js"><link rel="prefetch" href="/assets/js/113.52d17d8c.js"><link rel="prefetch" href="/assets/js/114.eb50462c.js"><link rel="prefetch" href="/assets/js/115.50d8ac46.js"><link rel="prefetch" href="/assets/js/116.0fb0641b.js"><link rel="prefetch" href="/assets/js/117.e147f3e7.js"><link rel="prefetch" href="/assets/js/118.dccf2227.js"><link rel="prefetch" href="/assets/js/119.b6f6788a.js"><link rel="prefetch" href="/assets/js/12.c13ecfa5.js"><link rel="prefetch" href="/assets/js/120.960af88c.js"><link rel="prefetch" href="/assets/js/121.0187d6e9.js"><link rel="prefetch" href="/assets/js/122.6801c764.js"><link rel="prefetch" href="/assets/js/123.5fb9c3fc.js"><link rel="prefetch" href="/assets/js/124.465fcfd6.js"><link rel="prefetch" href="/assets/js/125.4f60196a.js"><link rel="prefetch" href="/assets/js/126.1ab093db.js"><link rel="prefetch" href="/assets/js/127.5044fc5e.js"><link rel="prefetch" href="/assets/js/128.b7d70fba.js"><link rel="prefetch" href="/assets/js/129.5fafcd14.js"><link rel="prefetch" href="/assets/js/13.c239b2c1.js"><link rel="prefetch" href="/assets/js/130.9ccf4e58.js"><link rel="prefetch" href="/assets/js/131.2218e6e0.js"><link rel="prefetch" href="/assets/js/132.c66d12ee.js"><link rel="prefetch" href="/assets/js/133.b53d69c7.js"><link rel="prefetch" href="/assets/js/134.cc4af804.js"><link rel="prefetch" href="/assets/js/135.85588d9e.js"><link rel="prefetch" href="/assets/js/136.72b0b527.js"><link rel="prefetch" href="/assets/js/137.ea2f13e4.js"><link rel="prefetch" href="/assets/js/138.6ec85512.js"><link rel="prefetch" href="/assets/js/139.2b976790.js"><link rel="prefetch" href="/assets/js/14.7ca11566.js"><link rel="prefetch" href="/assets/js/140.9bf6cf7f.js"><link rel="prefetch" href="/assets/js/141.2fa8c8c0.js"><link rel="prefetch" href="/assets/js/142.f29b92c4.js"><link rel="prefetch" href="/assets/js/143.764663da.js"><link rel="prefetch" href="/assets/js/144.39de20ba.js"><link rel="prefetch" href="/assets/js/145.9f84a02e.js"><link rel="prefetch" href="/assets/js/146.02ae8fc4.js"><link rel="prefetch" href="/assets/js/147.57e57fca.js"><link rel="prefetch" href="/assets/js/148.95166b3d.js"><link rel="prefetch" href="/assets/js/149.bad33088.js"><link rel="prefetch" href="/assets/js/15.65f42266.js"><link rel="prefetch" href="/assets/js/150.8d13edc1.js"><link rel="prefetch" href="/assets/js/151.28d0e697.js"><link rel="prefetch" href="/assets/js/152.44ce9f6d.js"><link rel="prefetch" href="/assets/js/153.6cedeb9f.js"><link rel="prefetch" href="/assets/js/154.1818aca3.js"><link rel="prefetch" href="/assets/js/155.3c05706a.js"><link rel="prefetch" href="/assets/js/156.a11be0f4.js"><link rel="prefetch" href="/assets/js/157.6bca2edf.js"><link rel="prefetch" href="/assets/js/158.b81461dd.js"><link rel="prefetch" href="/assets/js/159.3cc3d1dd.js"><link rel="prefetch" href="/assets/js/16.43214976.js"><link rel="prefetch" href="/assets/js/160.56bbb39a.js"><link rel="prefetch" href="/assets/js/161.ce6b7736.js"><link rel="prefetch" href="/assets/js/162.c16a9441.js"><link rel="prefetch" href="/assets/js/163.aaf2b1ec.js"><link rel="prefetch" href="/assets/js/164.b8b94eb1.js"><link rel="prefetch" href="/assets/js/165.25802d71.js"><link rel="prefetch" href="/assets/js/166.60304cfb.js"><link rel="prefetch" href="/assets/js/167.3e239706.js"><link rel="prefetch" href="/assets/js/168.0ddd9c4d.js"><link rel="prefetch" href="/assets/js/169.536b07cd.js"><link rel="prefetch" href="/assets/js/17.7cf0a65e.js"><link rel="prefetch" href="/assets/js/170.360ce86b.js"><link rel="prefetch" href="/assets/js/171.bcfe1a4b.js"><link rel="prefetch" href="/assets/js/172.b78973e5.js"><link rel="prefetch" href="/assets/js/173.5b3b9f87.js"><link rel="prefetch" href="/assets/js/174.609efde1.js"><link rel="prefetch" href="/assets/js/175.a29db410.js"><link rel="prefetch" href="/assets/js/176.a70a04d3.js"><link rel="prefetch" href="/assets/js/177.80165b3b.js"><link rel="prefetch" href="/assets/js/18.774b33e7.js"><link rel="prefetch" href="/assets/js/19.e2bc2ced.js"><link rel="prefetch" href="/assets/js/20.6c0ff2b9.js"><link rel="prefetch" href="/assets/js/21.6857f86d.js"><link rel="prefetch" href="/assets/js/22.d543e9ec.js"><link rel="prefetch" href="/assets/js/23.57c0972d.js"><link rel="prefetch" href="/assets/js/24.a1337803.js"><link rel="prefetch" href="/assets/js/25.1be7fefd.js"><link rel="prefetch" href="/assets/js/26.dfafc721.js"><link rel="prefetch" href="/assets/js/27.452494da.js"><link rel="prefetch" href="/assets/js/28.24622749.js"><link rel="prefetch" href="/assets/js/29.acafba94.js"><link rel="prefetch" href="/assets/js/30.ad4bf0e0.js"><link rel="prefetch" href="/assets/js/31.ad99bb6b.js"><link rel="prefetch" href="/assets/js/32.d391314c.js"><link rel="prefetch" href="/assets/js/33.2e5334e1.js"><link rel="prefetch" href="/assets/js/34.80ccb093.js"><link rel="prefetch" href="/assets/js/35.6f8cde14.js"><link rel="prefetch" href="/assets/js/36.2c5afca3.js"><link rel="prefetch" href="/assets/js/37.0371a0b2.js"><link rel="prefetch" href="/assets/js/38.cfdebbc9.js"><link rel="prefetch" href="/assets/js/39.4b29f826.js"><link rel="prefetch" href="/assets/js/4.cc389aba.js"><link rel="prefetch" href="/assets/js/40.b1d2639b.js"><link rel="prefetch" href="/assets/js/41.0bcf87a4.js"><link rel="prefetch" href="/assets/js/42.a4ab01fb.js"><link rel="prefetch" href="/assets/js/43.8af16f50.js"><link rel="prefetch" href="/assets/js/44.4ebc329a.js"><link rel="prefetch" href="/assets/js/45.65c6fce0.js"><link rel="prefetch" href="/assets/js/46.d014244b.js"><link rel="prefetch" href="/assets/js/47.c4aa88b0.js"><link rel="prefetch" href="/assets/js/48.5becf634.js"><link rel="prefetch" href="/assets/js/49.207d60e7.js"><link rel="prefetch" href="/assets/js/5.53ea00dc.js"><link rel="prefetch" href="/assets/js/50.61eb4331.js"><link rel="prefetch" href="/assets/js/51.0af48b8b.js"><link rel="prefetch" href="/assets/js/52.eb2253cb.js"><link rel="prefetch" href="/assets/js/53.e662d482.js"><link rel="prefetch" href="/assets/js/54.03c1cb8a.js"><link rel="prefetch" href="/assets/js/55.52433505.js"><link rel="prefetch" href="/assets/js/56.e4968aad.js"><link rel="prefetch" href="/assets/js/57.cce6fdb0.js"><link rel="prefetch" href="/assets/js/58.f3a7bbec.js"><link rel="prefetch" href="/assets/js/59.2b7240d5.js"><link rel="prefetch" href="/assets/js/6.bd2713b8.js"><link rel="prefetch" href="/assets/js/60.7228e5fc.js"><link rel="prefetch" href="/assets/js/61.9e389372.js"><link rel="prefetch" href="/assets/js/62.03f94963.js"><link rel="prefetch" href="/assets/js/63.e294e78c.js"><link rel="prefetch" href="/assets/js/64.f3759ee3.js"><link rel="prefetch" href="/assets/js/65.6a1f9b74.js"><link rel="prefetch" href="/assets/js/66.de6913fe.js"><link rel="prefetch" href="/assets/js/67.7cf27f4c.js"><link rel="prefetch" href="/assets/js/68.b5fbd8f5.js"><link rel="prefetch" href="/assets/js/69.3f276ca6.js"><link rel="prefetch" href="/assets/js/7.f971ad9b.js"><link rel="prefetch" href="/assets/js/70.dfaf3140.js"><link rel="prefetch" href="/assets/js/71.90a3c8da.js"><link rel="prefetch" href="/assets/js/72.3e589f7d.js"><link rel="prefetch" href="/assets/js/73.601f7f1a.js"><link rel="prefetch" href="/assets/js/74.7aff6619.js"><link rel="prefetch" href="/assets/js/75.b30066ce.js"><link rel="prefetch" href="/assets/js/76.37695872.js"><link rel="prefetch" href="/assets/js/77.a2e03d4f.js"><link rel="prefetch" href="/assets/js/78.610d1715.js"><link rel="prefetch" href="/assets/js/79.8f375913.js"><link rel="prefetch" href="/assets/js/8.ad5c8219.js"><link rel="prefetch" href="/assets/js/80.37c26b0f.js"><link rel="prefetch" href="/assets/js/81.b0c3711c.js"><link rel="prefetch" href="/assets/js/82.3d8fb335.js"><link rel="prefetch" href="/assets/js/83.d9d8d437.js"><link rel="prefetch" href="/assets/js/84.90cfbd22.js"><link rel="prefetch" href="/assets/js/85.a27e43a3.js"><link rel="prefetch" href="/assets/js/86.97173e6a.js"><link rel="prefetch" href="/assets/js/87.057d67f0.js"><link rel="prefetch" href="/assets/js/88.d457839b.js"><link rel="prefetch" href="/assets/js/89.b7ad9051.js"><link rel="prefetch" href="/assets/js/9.013db671.js"><link rel="prefetch" href="/assets/js/90.812d5670.js"><link rel="prefetch" href="/assets/js/91.38edb552.js"><link rel="prefetch" href="/assets/js/92.06c961e0.js"><link rel="prefetch" href="/assets/js/93.dfd66f31.js"><link rel="prefetch" href="/assets/js/94.e02611ab.js"><link rel="prefetch" href="/assets/js/95.6c4bb9d3.js"><link rel="prefetch" href="/assets/js/96.26a2bdc9.js"><link rel="prefetch" href="/assets/js/97.fe7acfec.js"><link rel="prefetch" href="/assets/js/98.716321a4.js"><link rel="prefetch" href="/assets/js/99.e7ab7c2f.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.4112788f.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container no-sidebar" data-v-ed7af0ae><div data-v-ed7af0ae><div id="loader-wrapper" class="loading-wrapper" data-v-d48f4d20 data-v-ed7af0ae data-v-ed7af0ae><div class="loader-main" data-v-d48f4d20><div data-v-d48f4d20></div><div data-v-d48f4d20></div><div data-v-d48f4d20></div><div data-v-d48f4d20></div></div> <!----> <!----></div> <div class="password-shadow password-wrapper-out" style="display:none;" data-v-faa80d68 data-v-ed7af0ae data-v-ed7af0ae><h3 class="title" style="display:none;" data-v-faa80d68 data-v-faa80d68>clearlove's blog</h3> <!----> <label id="box" class="inputBox" style="display:none;" data-v-faa80d68 data-v-faa80d68><input type="password" value="" data-v-faa80d68> <span data-v-faa80d68>Konck! Knock!</span> <button data-v-faa80d68>OK</button></label> <div class="footer" style="display:none;" data-v-faa80d68 data-v-faa80d68><span data-v-faa80d68><i class="iconfont reco-theme" data-v-faa80d68></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-faa80d68>vuePress-theme-reco</a></span> <span data-v-faa80d68><i class="iconfont reco-copyright" data-v-faa80d68></i> <a data-v-faa80d68><span data-v-faa80d68>Clear Love</span>
+            
+          <span data-v-faa80d68>2020 - </span>
+          2021
+        </a></span></div></div> <div class="hide" data-v-ed7af0ae><header class="navbar" data-v-ed7af0ae><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/favicon.jpg" alt="clearlove's blog" class="logo"> <span class="site-name">clearlove's blog</span></a> <div class="links"><div class="color-picker"><a class="color-button"><i class="iconfont reco-color"></i></a> <div class="color-picker-menu" style="display:none;"><div class="mode-options"><h4 class="title">Choose mode</h4> <ul class="color-mode-options"><li class="dark">dark</li><li class="auto active">auto</li><li class="light">light</li></ul></div></div></div> <div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link"><i class="iconfont reco-home"></i>
+  Home
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-category"></i>
+      Category
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/categories/front-end-js/" class="nav-link"><i></i>
+  front-end-js
+</a></li><li class="dropdown-item"><!----> <a href="/categories/favorite/" class="nav-link"><i></i>
+  favorite
+</a></li><li class="dropdown-item"><!----> <a href="/categories/java/" class="nav-link"><i></i>
+  java
+</a></li><li class="dropdown-item"><!----> <a href="/categories/command/" class="nav-link"><i></i>
+  command
+</a></li><li class="dropdown-item"><!----> <a href="/categories/deploy/" class="nav-link"><i></i>
+  deploy
+</a></li><li class="dropdown-item"><!----> <a href="/categories/setting/" class="nav-link"><i></i>
+  setting
+</a></li><li class="dropdown-item"><!----> <a href="/categories/linux/" class="nav-link"><i></i>
+  linux
+</a></li><li class="dropdown-item"><!----> <a href="/categories/front-end-angular/" class="nav-link"><i></i>
+  front-end-angular
+</a></li><li class="dropdown-item"><!----> <a href="/categories/front-end-css/" class="nav-link"><i></i>
+  front-end-css
+</a></li><li class="dropdown-item"><!----> <a href="/categories/database/" class="nav-link"><i></i>
+  database
+</a></li><li class="dropdown-item"><!----> <a href="/categories/docker-compose/" class="nav-link"><i></i>
+  docker-compose
+</a></li><li class="dropdown-item"><!----> <a href="/categories/security/" class="nav-link"><i></i>
+  security
+</a></li><li class="dropdown-item"><!----> <a href="/categories/docker/" class="nav-link"><i></i>
+  docker
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Big Data/" class="nav-link"><i></i>
+  Big Data
+</a></li><li class="dropdown-item"><!----> <a href="/categories/big-data/" class="nav-link"><i></i>
+  big-data
+</a></li><li class="dropdown-item"><!----> <a href="/categories/front-end-html/" class="nav-link"><i></i>
+  front-end-html
+</a></li><li class="dropdown-item"><!----> <a href="/categories/back-end-java/" class="nav-link"><i></i>
+  back-end-java
+</a></li><li class="dropdown-item"><!----> <a href="/categories/tools/" class="nav-link"><i></i>
+  tools
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Markdown/" class="nav-link"><i></i>
+  Markdown
+</a></li><li class="dropdown-item"><!----> <a href="/categories/back-end-maven/" class="nav-link"><i></i>
+  back-end-maven
+</a></li><li class="dropdown-item"><!----> <a href="/categories/python/" class="nav-link"><i></i>
+  python
+</a></li><li class="dropdown-item"><!----> <a href="/categories/hot-key/" class="nav-link"><i></i>
+  hot-key
+</a></li><li class="dropdown-item"><!----> <a href="/categories/cmd-command/" class="nav-link"><i></i>
+  cmd-command
+</a></li><li class="dropdown-item"><!----> <a href="/categories/wsl2/" class="nav-link"><i></i>
+  wsl2
+</a></li><li class="dropdown-item"><!----> <a href="/categories/wsl/" class="nav-link"><i></i>
+  wsl
+</a></li><li class="dropdown-item"><!----> <a href="/categories/powershell-command/" class="nav-link"><i></i>
+  powershell-command
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Linux/" class="nav-link"><i></i>
+  Linux
+</a></li></ul></div></div><div class="nav-item"><a href="/tag/" class="nav-link"><i class="iconfont reco-tag"></i>
+  Tag
+</a></div><div class="nav-item"><a href="/timeline/" class="nav-link"><i class="iconfont reco-date"></i>
+  TimeLine
+</a></div> <!----></nav></div></header> <div class="sidebar-mask" data-v-ed7af0ae></div> <aside class="sidebar" data-v-ed7af0ae><div class="personal-info-wrapper" data-v-1f4c79ea data-v-ed7af0ae><img src="/profile.png" alt="author-avatar" class="personal-img" data-v-1f4c79ea> <h3 class="name" data-v-1f4c79ea>
+    Clear Love
+  </h3> <div class="num" data-v-1f4c79ea><div data-v-1f4c79ea><h3 data-v-1f4c79ea>164</h3> <h6 data-v-1f4c79ea>Article</h6></div> <div data-v-1f4c79ea><h3 data-v-1f4c79ea>113</h3> <h6 data-v-1f4c79ea>Tag</h6></div></div> <ul class="social-links" data-v-1f4c79ea></ul> <hr data-v-1f4c79ea></div> <nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link"><i class="iconfont reco-home"></i>
+  Home
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-category"></i>
+      Category
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/categories/front-end-js/" class="nav-link"><i></i>
+  front-end-js
+</a></li><li class="dropdown-item"><!----> <a href="/categories/favorite/" class="nav-link"><i></i>
+  favorite
+</a></li><li class="dropdown-item"><!----> <a href="/categories/java/" class="nav-link"><i></i>
+  java
+</a></li><li class="dropdown-item"><!----> <a href="/categories/command/" class="nav-link"><i></i>
+  command
+</a></li><li class="dropdown-item"><!----> <a href="/categories/deploy/" class="nav-link"><i></i>
+  deploy
+</a></li><li class="dropdown-item"><!----> <a href="/categories/setting/" class="nav-link"><i></i>
+  setting
+</a></li><li class="dropdown-item"><!----> <a href="/categories/linux/" class="nav-link"><i></i>
+  linux
+</a></li><li class="dropdown-item"><!----> <a href="/categories/front-end-angular/" class="nav-link"><i></i>
+  front-end-angular
+</a></li><li class="dropdown-item"><!----> <a href="/categories/front-end-css/" class="nav-link"><i></i>
+  front-end-css
+</a></li><li class="dropdown-item"><!----> <a href="/categories/database/" class="nav-link"><i></i>
+  database
+</a></li><li class="dropdown-item"><!----> <a href="/categories/docker-compose/" class="nav-link"><i></i>
+  docker-compose
+</a></li><li class="dropdown-item"><!----> <a href="/categories/security/" class="nav-link"><i></i>
+  security
+</a></li><li class="dropdown-item"><!----> <a href="/categories/docker/" class="nav-link"><i></i>
+  docker
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Big Data/" class="nav-link"><i></i>
+  Big Data
+</a></li><li class="dropdown-item"><!----> <a href="/categories/big-data/" class="nav-link"><i></i>
+  big-data
+</a></li><li class="dropdown-item"><!----> <a href="/categories/front-end-html/" class="nav-link"><i></i>
+  front-end-html
+</a></li><li class="dropdown-item"><!----> <a href="/categories/back-end-java/" class="nav-link"><i></i>
+  back-end-java
+</a></li><li class="dropdown-item"><!----> <a href="/categories/tools/" class="nav-link"><i></i>
+  tools
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Markdown/" class="nav-link"><i></i>
+  Markdown
+</a></li><li class="dropdown-item"><!----> <a href="/categories/back-end-maven/" class="nav-link"><i></i>
+  back-end-maven
+</a></li><li class="dropdown-item"><!----> <a href="/categories/python/" class="nav-link"><i></i>
+  python
+</a></li><li class="dropdown-item"><!----> <a href="/categories/hot-key/" class="nav-link"><i></i>
+  hot-key
+</a></li><li class="dropdown-item"><!----> <a href="/categories/cmd-command/" class="nav-link"><i></i>
+  cmd-command
+</a></li><li class="dropdown-item"><!----> <a href="/categories/wsl2/" class="nav-link"><i></i>
+  wsl2
+</a></li><li class="dropdown-item"><!----> <a href="/categories/wsl/" class="nav-link"><i></i>
+  wsl
+</a></li><li class="dropdown-item"><!----> <a href="/categories/powershell-command/" class="nav-link"><i></i>
+  powershell-command
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Linux/" class="nav-link"><i></i>
+  Linux
+</a></li></ul></div></div><div class="nav-item"><a href="/tag/" class="nav-link"><i class="iconfont reco-tag"></i>
+  Tag
+</a></div><div class="nav-item"><a href="/timeline/" class="nav-link"><i class="iconfont reco-date"></i>
+  TimeLine
+</a></div> <!----></nav> <!----> </aside> <div class="password-shadow password-wrapper-in" style="display:none;" data-v-faa80d68 data-v-ed7af0ae><h3 class="title" style="display:none;" data-v-faa80d68 data-v-faa80d68>Windows 10 Docker InvalidOperationException Failed to set version to docker-desktop: exit code: -1</h3> <!----> <label id="box" class="inputBox" style="display:none;" data-v-faa80d68 data-v-faa80d68><input type="password" value="" data-v-faa80d68> <span data-v-faa80d68>Konck! Knock!</span> <button data-v-faa80d68>OK</button></label> <div class="footer" style="display:none;" data-v-faa80d68 data-v-faa80d68><span data-v-faa80d68><i class="iconfont reco-theme" data-v-faa80d68></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-faa80d68>vuePress-theme-reco</a></span> <span data-v-faa80d68><i class="iconfont reco-copyright" data-v-faa80d68></i> <a data-v-faa80d68><span data-v-faa80d68>Clear Love</span>
+            
+          <span data-v-faa80d68>2020 - </span>
+          2021
+        </a></span></div></div> <div data-v-ed7af0ae><main class="page" style="padding-right:0;"><!----> <!----> <!----> <!----> <!----> <!----></main> <!----></div></div></div></div><div class="global-ui"><div class="back-to-ceiling" style="right:1rem;bottom:6rem;width:2.5rem;height:2.5rem;border-radius:.25rem;line-height:2.5rem;display:none;" data-v-c6073ba8 data-v-c6073ba8><svg t="1574745035067" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5404" class="icon" data-v-c6073ba8><path d="M526.60727968 10.90185116a27.675 27.675 0 0 0-29.21455937 0c-131.36607665 82.28402758-218.69155461 228.01873535-218.69155402 394.07834331a462.20625001 462.20625001 0 0 0 5.36959153 69.94390903c1.00431239 6.55289093-0.34802892 13.13561351-3.76865779 18.80351572-32.63518765 54.11355614-51.75690182 118.55860487-51.7569018 187.94566865a371.06718723 371.06718723 0 0 0 11.50484808 91.98906777c6.53300375 25.50556257 41.68394495 28.14064038 52.69160883 4.22606766 17.37162448-37.73630017 42.14135425-72.50938081 72.80769204-103.21549295 2.18761121 3.04276886 4.15646224 6.24463696 6.40373557 9.22774369a1871.4375 1871.4375 0 0 0 140.04691725 5.34970492 1866.36093723 1866.36093723 0 0 0 140.04691723-5.34970492c2.24727335-2.98310674 4.21612437-6.18497483 6.3937923-9.2178004 30.66633723 30.70611158 55.4360664 65.4791928 72.80769147 103.21549355 11.00766384 23.91457269 46.15860503 21.27949489 52.69160879-4.22606768a371.15156223 371.15156223 0 0 0 11.514792-91.99901164c0-69.36717486-19.13165746-133.82216804-51.75690182-187.92578088-3.42062944-5.66790279-4.76302748-12.26056868-3.76865837-18.80351632a462.20625001 462.20625001 0 0 0 5.36959269-69.943909c-0.00994388-166.08943902-87.32547796-311.81420293-218.6915546-394.09823051zM605.93803103 357.87693858a93.93749974 93.93749974 0 1 1-187.89594924 6.1e-7 93.93749974 93.93749974 0 0 1 187.89594924-6.1e-7z" p-id="5405" data-v-c6073ba8></path><path d="M429.50777625 765.63860547C429.50777625 803.39355007 466.44236686 1000.39046097 512.00932183 1000.39046097c45.56695499 0 82.4922232-197.00623328 82.5015456-234.7518555 0-37.75494459-36.9345906-68.35043303-82.4922232-68.34111062-45.57627738-0.00932239-82.52019037 30.59548842-82.51086798 68.34111062z" p-id="5406" data-v-c6073ba8></path></svg></div></div></div>
+    <script src="/assets/js/app.dfaaa849.js" defer></script><script src="/assets/js/3.779ffeb8.js" defer></script><script src="/assets/js/1.ab13f454.js" defer></script>
+  </body>
+</html>
